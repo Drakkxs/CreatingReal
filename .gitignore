@@ -6,8 +6,6 @@
 !kubejs/**
 !scripts/
 !scripts/**
-!config/
-!config/**
 !*.md
 !*.gitattributes
 !*.gitignore
