@@ -1,0 +1,22 @@
+{
+  "registryName": "power_transformer",
+  "localizedName": "Power Transformer",
+  "structure": {
+    "pattern": [
+      ["sss", "sss", "sss"],
+      ["bmb", "iro", "bcb"],
+      [" b ", "brb", " b "],
+      [" b ", "brb", " b "],
+      [" b ", "bxb", " b "]
+    ],
+    "keys": {
+      "s": "minecraft:stone_bricks",
+      "b": "minecraft:iron_bars",
+      "i": "#modular_machinery_reborn:energyinputhatch",
+      "o": "#modular_machinery_reborn:energyoutputhatch",
+      "c": "#modular_machinery_reborn:casing",
+      "r": "#c:storage_blocks/redstone",
+      "x": "#c:storage_blocks/iron"
+    }
+  }
+}

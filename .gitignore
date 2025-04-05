@@ -1,0 +1,25 @@
+# Ignore everything
+*
+
+# But allow these specific files and directories
+!kubejs/
+!kubejs/**
+!scripts/
+!scripts/**
+!config/
+!config/**
+!*.md
+!*.gitattributes
+!*.gitignore
+
+# Re-Ignore these files and directories
+kubejs/jsconfig.json
+*archive*
+**/examples/**
+*example*
+*.log
+*.txt
+**probe**
+**probejs**
+*.disabled
+.probe
