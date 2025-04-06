@@ -1,5 +1,0 @@
-[Server]
-	#Allow Starting Health Tweaks
-	allowStartingHealthTweaks = true
-	#Starting Health of Player (Default:20)
-	startingHealth = 20

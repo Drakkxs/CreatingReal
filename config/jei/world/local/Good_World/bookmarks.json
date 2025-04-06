@@ -1,7 +1,0 @@
-[
-  {"version":2},
-  {"recipe":"create:crafting/kinetics/gearbox","recipeType":"minecraft:crafting","bookmarkType":"RECIPE"},
-  {"ingredient":{"id":"create:cogwheel"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"create:encased_chain_drive"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"recipe":"immersiveengineering:crafting/treated_wood_horizontal","recipeType":"minecraft:crafting","bookmarkType":"RECIPE"}
-]
