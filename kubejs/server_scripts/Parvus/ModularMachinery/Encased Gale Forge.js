@@ -114,7 +114,6 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
             let liveRecipes = this.getRecipeMap(machine);
 
             if (debug) {
-                console.log(`=== ADDING OUTPUT: ${machine} === `); 
                 console.log(`Input: ${input}, Output: ${result} count: ${count ?? 1}`);
             }
             
@@ -199,7 +198,7 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
 
                 /** If the output is new */
                 if (isNew) {
-                    if (debug) console.log(`Adding new recipe for output: ${output.item}`);
+                    console.log(`=== ADDING OUTPUT: ${machine} ${output.item} === `);
                     recipeMapHelper.addOutput(machine, forInput, output.item, output.count);
                     // Return true to indicate that the recipe was added
                     return true;
@@ -207,18 +206,26 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
 
                 /** If the output is not new */
                 if (!isNew) {
-                    if (debug) console.log(`Updating recipe for output: ${output.item}`);
+                    console.log(`=== UPDATING OUTPUT: ${machine} ${output.item} === `);
                     let recipe = live.recipeMap.get(forInput)
 
                     recipe.results.map(result => {
                         let newResult = {item: result.item, count: result.count}
                         if (result && result.item === output.item) {
+                            if (debug) {
+                                console.log(`Found existing output: ${result.item} with count: ${result.count}`);
+                            }
                             newResult.count = Math.max(result.count, output.count);
-                            console.log(`Updating recipe for output: ${output.item} with count: ${newResult.count}`);
+                            console.log(`New output: ${newResult.item} with count: ${newResult.count}`);
                             return newResult
                         }
                         return result
                     })
+
+                    if (debug) {
+                        console.log(`Updated recipe: ${forInput} has ${JSON.stringify(recipe.results)} results`);
+                    }
+                    live.recipeMap.set(forInput, recipe)
                     
                     // Return true to indicate that the recipe was updated
                     return true;
@@ -233,7 +240,7 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
     let coreRecipes = {
 
         /** The maximum number of results per recipe subtracted by 1 */
-        maxResults: 6,
+        maxResults: 17,
 
         /**
          * A map of recipes for the Encased GaleForge (EGF) machine.
@@ -255,17 +262,17 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
     let construct = {
         /**
          * Creates a structure with real and center calculation methods.
-         * @param {number} v - The initial value.
-         * @param {number} o - The offset value.
+         * @param {number} structValue - The initial value.
+         * @param {number} structOffset - The offset value.
          * @returns- The structure with methods.
          */
-        struct: (v, o) => ({
+        struct: (structValue, structOffset) => ({
 
             /**
              * Calculates the real value as the maximum of (v - o) and o
              * @returns {number} - The calculated real value.
              */
-            real() { return Math.max(v - o, o); },
+            real() { return Math.max(structValue - structOffset, structOffset); },
 
             /**
              * Calculates the center value as half of the real value, floored.
@@ -278,16 +285,17 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
              * @param {number} neededSlots - The number of slots that need to be displayed.
              * @param {number} tilesize - The size of the tile.
              * @param {number} x - The real x position of the UI.
+             * @param {number} reservedRows - The number of reserved rows.
              */
-            adjustHeight(neededSlots, tilesize, x) {
+            adjustHeight(neededSlots, tilesize, x, reservedRows) {
                 if (debug) console.log(`Adjusting height of UI for ${neededSlots} slots.`)
                 let columns = Math.ceil(x / tilesize)
-                let neededRows = Math.ceil(neededSlots / columns)
+                let neededRows = Math.ceil(neededSlots / columns) + reservedRows
                 let totalHeight = neededRows * tilesize
                 if (debug) console.log(`Needed rows: ${neededRows}, total height: ${totalHeight}`)
 
                 // Clamp the height to the current minimum or increase it
-                let y = Math.max(totalHeight + tilesize, 90)
+                let y = Math.min(Math.max(90, totalHeight), 256)
                 if (debug) console.log(`The new height of the UI is ${y} pixels.`)
                 return y
             },
@@ -427,10 +435,10 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
 
 
             if (debug) {
-            console.log(`===RECIPE===`)
+            console.log(`===RECIPE=== EGF`)
             console.log(`Processing recipe for: ${input}`)
             console.log(`The recipe object is: ${Object.getOwnPropertyNames(recipe)}`)
-            console.log(`The results of the recipe are: ${results.map(obj => `{${obj.item}, ${obj.count}}`)}`)
+            console.log(`The results of the recipe are: ${JSON.stringify(recipe.results)}`)
             console.log(`The time it takes to process the recipe is: ${time} ticks`)
             console.log(`The amount of experience points gained when the recipe is processed is: ${xp}`)
             }
@@ -438,7 +446,6 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
             results = results.filter((_, index) => index < coreRecipes.maxResults)
             
             // The energy bar is 3 tiles high and 1 tile wide
-            if (debug) console.log(`Energy origin: ${[0, 0]}`);
             // We need to reserve three slots for the energy bar
             for (let i = 0; i < 3; i++) {
                 ui.reserve(0, 0 + i * ui.tilesize)
@@ -446,9 +453,12 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
             machine.requireEnergy(processImpact, 0, 0)
             machine.renderProgress(true)
 
-            // The top row of the UI is reserved for special UI elements.
+            // The top row and first column of the UI is reserved for special UI elements.
             for (let i = 1; i < ui.columns(ui.tilesize); i++) {
                 ui.reserve(i * ui.tilesize, 0)
+            }
+            for (let i = 3; i < ui.rows(ui.tilesize); i++) {
+                ui.reserve(0, 0 + i * ui.tilesize)
             }
             machine.requireItem(input, 20, 0)
 
@@ -462,14 +472,14 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
             machine.progressY(0)
             machine.width(Math.max(90, (Math.min(ui.x.real() + (results.length), 256))))
             // Adjust the height of the UI dynamically
-            machine.height(ui.y.adjustHeight(results.length, ui.tilesize, ui.x.real()))
+            machine.height(ui.y.adjustHeight(results.length, ui.tilesize, ui.x.real(), Math.ceil(reserved.length / ui.columns(ui.tilesize))))
         }
 
         addRecipe("EGF", "1x minecraft:gold_ingot", {item: "minecraft:iron_ingot", count: 1})
         addRecipe("EGF", "1x minecraft:gold_ingot", {item: "minecraft:copper_ingot", count: 12})
         addRecipe("EGF", "1x minecraft:gold_ingot", {item: "minecraft:netherite_ingot", count: 18})
         addRecipe("EGF", "1x minecraft:gold_ingot", {item: "minecraft:copper_ingot", count: 12})
-        addRecipe("EGF", "1x minecraft:gold_ingot", {item: "#c:ingots", count: 1})
+        addRecipe("EGF", "1x minecraft:gold_ingot", {item: "#c:ingots", count: 2})
 
         coreRecipes.EGF.forEach((recipe, input) => {doEFG(input, recipe)})
     })
