@@ -2,9 +2,9 @@
 // requires: create
 // requires: modular_machinery_reborn
 // @ts-check
-// A upgrade to create's encased fan.
+// An upgrade to create's encased fan.
 
-let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
+
 
 
 // Immidately Invoked Function Expression to prevent polluting the global namespace
@@ -14,6 +14,15 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
      * Want some debug?
      */
     let debug = true
+
+    let classLongTag = Java.loadClass("net.minecraft.nbt.LongTag")
+    /**
+     * Converts a number to a `LongTag` for TypeScript use.
+     * @param {number} number - The number to convert.
+     */
+    function toLong(number) {
+        return new classLongTag(number).getAsLong()
+    }
 
     /**
      * Attempts to clean up a item id string.
@@ -38,7 +47,7 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
         if (debug) console.log(`Processed ingredient string: ${strIngredient}`);
 
         // Get an array of item IDs from the ingredient string using the Ingredient API
-        let arrIngredients = Ingredient.of(strIngredient).getItemIds().toArray().map(id => String(id))
+        let arrIngredients = Ingredient.of(strIngredient).stackArray.map(item => String(item.id))
         if (debug) console.log(`Item IDs obtained: ${arrIngredients}`);
         if (arrIngredients.length === 0) throw new Error(`No item IDs found for the input: ${strIngredient}`);
 
@@ -204,32 +213,6 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
                     return true;
                 }
 
-                /** If the output is not new */
-                if (!isNew) {
-                    console.log(`=== UPDATING OUTPUT: ${machine} ${output.item} === `);
-                    let recipe = live.recipeMap.get(forInput)
-
-                    recipe.results.map(result => {
-                        let newResult = {item: result.item, count: result.count}
-                        if (result && result.item === output.item) {
-                            if (debug) {
-                                console.log(`Found existing output: ${result.item} with count: ${result.count}`);
-                            }
-                            newResult.count = Math.max(result.count, output.count);
-                            console.log(`New output: ${newResult.item} with count: ${newResult.count}`);
-                            return newResult
-                        }
-                        return result
-                    })
-
-                    if (debug) {
-                        console.log(`Updated recipe: ${forInput} has ${JSON.stringify(recipe.results)} results`);
-                    }
-                    live.recipeMap.set(forInput, recipe)
-                    
-                    // Return true to indicate that the recipe was updated
-                    return true;
-                }
             })
         }
     }
@@ -240,10 +223,10 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
     let coreRecipes = {
 
         /** The maximum number of results per recipe subtracted by 1 */
-        maxResults: 17,
+        maxResults: 10,
 
         /**
-         * A map of recipes for the Encased GaleForge (EGF) machine.
+         * A map of recipes for the Engistic Fan (FAN) machine.
          * The key is the input item for the recipe and the value is an object containing the recipe details.
          * The recipe details object contains the following properties:
          *   results: An array of objects with the following properties:
@@ -253,7 +236,7 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
          *   time: The amount of time it takes to process the recipe in ticks
          * @type {Map<string, {results: {item: string, count: number}[], xp: number, time: number}>}
          */
-        EGF: new Map()
+        FAN: new Map()
     }
 
     /**
@@ -319,7 +302,7 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
     };
 
     MMREvents.machines(event => {
-        event.create("mmr:encased_galeforge").name("Encased GaleForge")
+        event.create("mmr:encased_fan").name("Engistic Fan")
             .color("#FF4d4d4d")
             .structure(
                 MMRStructureBuilder.create()
@@ -346,23 +329,29 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
     ServerEvents.recipes(event => {
 
         /**
-         * Processes all recipes for the Encased GaleForge (EGF) machine.
-         * Iterates over each recipe in the EGF map and executes the doEFG function.
+         * Processes all recipes for the Engistic Fan (FAN) machine.
+         * Iterates over each recipe in the FAN map and executes the doEFG function.
          * @param {{results: {item: string, count: number}[], xp: number, time: number}} recipe - The recipe object.
          * @param {string} input - The input item string.
          */
-        function doEFG(input, recipe) {
+        function doFAN(input, recipe) {
             /** The results of the recipe */
             let results = recipe.results
-            /** The time it takes to process the recipe */
+            /** The number of items in the recipe by adding the count of each result */
+            let ItemCount = results.map(r => r.count).reduce((a, b) => a + b, 0)
+            /** The time in ticks it takes to process the recipe */
             let time = recipe.time || 20
             /** The amount of experience points gained when the recipe is processed */
             let xp = recipe.xp || 0
+            /**
+             * The more items and the longer it spends processing the recipe, the more it works to process the recipe.
+             * The idea is that while the machine is faster, it is energy inefficient. It's designed for speed.
+             */
+            let collisionFactor = (ItemCount * time)
             /** The machine properties object */
-            let machine = event.recipes.modular_machinery_reborn.machine_recipe("mmr:encased_galeforge", time)
+            let machine = event.recipes.modular_machinery_reborn.machine_recipe("mmr:encased_fan", Math.floor(Math.max(time / 4, 20)))
 
-            /** A measurment of how taxing this recipe is on the machine. */
-            let processImpact = (5 * results.length)
+            
             
             /** A array of reserved slots
              * @type {Array<{x: number, y: number}>}
@@ -435,10 +424,10 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
 
 
             if (debug) {
-            console.log(`===RECIPE=== EGF`)
+            console.log(`===RECIPE=== ${machine}`)
             console.log(`Processing recipe for: ${input}`)
             console.log(`The recipe object is: ${Object.getOwnPropertyNames(recipe)}`)
-            console.log(`The results of the recipe are: ${JSON.stringify(recipe.results)}`)
+            console.log(`The ${results.length} results of the recipe are: ${JSON.stringify(results)}`)
             console.log(`The time it takes to process the recipe is: ${time} ticks`)
             console.log(`The amount of experience points gained when the recipe is processed is: ${xp}`)
             }
@@ -450,7 +439,8 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
             for (let i = 0; i < 3; i++) {
                 ui.reserve(0, 0 + i * ui.tilesize)
             }
-            machine.requireEnergy(processImpact, 0, 0)
+            if (debug) console.log(`Process impact: ${collisionFactor}`)
+            machine.requireEnergy(collisionFactor, 0, 0)
             machine.renderProgress(true)
 
             // The top row and first column of the UI is reserved for special UI elements.
@@ -465,22 +455,43 @@ let $ParseResults = Java.loadClass("com.mojang.brigadier.ParseResults");
             results.forEach((result, index) => {
                 let pos = ui.getTilePosition(index, ui.tilesize)
                 if (debug) console.log(`Producing item: ${result.item} with count: ${result.count} at position: ${[pos.x, pos.y]}`);
-                machine.produceItem(`${result.count}x ${result.item}`, pos.x, pos.y)
+                
+                machine.produceItem(result, 1, pos.x, pos.y)
             })
+            if (debug) console.log(`Proudcing ${results.length} items`)
 
             machine.progressX(40)
             machine.progressY(0)
-            machine.width(Math.max(90, (Math.min(ui.x.real() + (results.length), 256))))
+            // Math.max(90, (Math.min(ui.x.real() + (results.length), 256)))
+            // ui.y.adjustHeight(results.length, ui.tilesize, ui.x.real(), Math.ceil(reserved.length / ui.columns(ui.tilesize)))
+            let {x: width, y: height} = reserved.reduce((acc, pos) => ({
+                x: Math.max(acc.x, pos.x + ui.tilesize),
+                y: Math.max(acc.y, pos.y + ui.tilesize)
+            }), {x: 0, y: 0})
+            if (debug) console.log(`The width and height of the UI is: [${width}, ${height}]`)
+            machine.width(width)
             // Adjust the height of the UI dynamically
-            machine.height(ui.y.adjustHeight(results.length, ui.tilesize, ui.x.real(), Math.ceil(reserved.length / ui.columns(ui.tilesize))))
+            machine.height(height)
         }
 
-        addRecipe("EGF", "1x minecraft:gold_ingot", {item: "minecraft:iron_ingot", count: 1})
-        addRecipe("EGF", "1x minecraft:gold_ingot", {item: "minecraft:copper_ingot", count: 12})
-        addRecipe("EGF", "1x minecraft:gold_ingot", {item: "minecraft:netherite_ingot", count: 18})
-        addRecipe("EGF", "1x minecraft:gold_ingot", {item: "minecraft:copper_ingot", count: 12})
-        addRecipe("EGF", "1x minecraft:gold_ingot", {item: "#c:ingots", count: 2})
+        addRecipe("FAN", "1x minecraft:gold_ingot", {item: "minecraft:iron_ingot", count: 1})
+        addRecipe("FAN", "1x minecraft:gold_ingot", {item: "minecraft:copper_ingot", count: 12})
+        addRecipe("FAN", "1x minecraft:gold_ingot", {item: "minecraft:netherite_ingot", count: 18})
+        addRecipe("FAN", "1x minecraft:gold_ingot", {item: "minecraft:copper_ingot", count: 12})
+        addRecipe("FAN", "1x minecraft:gold_ingot", {item: "#c:ingots", count: 2})
 
-        coreRecipes.EGF.forEach((recipe, input) => {doEFG(input, recipe)})
+        coreRecipes.FAN.forEach((recipe, input) => {doFAN(input, recipe)})
+
+        let PackageItem = Java.loadClass("com.simibubi.create.content.logistics.box.PackageItem")
+        let ItemStackHandler = Java.loadClass("net.neoforged.neoforge.items.ItemStackHandler")
+        
+        // insert items into the handler
+        let handler = Ingredient.of({item: "minecraft:gold_ingot", count: 1}).asStack().items
+        handler.concat(Ingredient.of({item: "minecraft:gold_ingot", count: 1}).asStack().items)
+        // create a new PackageItem instance with the modified handler
+        let packageItem = PackageItem.containing(handler);
+
+        console.log(`The package object is: ${packageItem.toStringJS()}`)
     })
+
 })();
