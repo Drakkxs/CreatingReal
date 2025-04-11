@@ -259,6 +259,8 @@
                     return JsonIO.toArray(results).asList().stream().map((itemStack) => itemStack.asJsonObject).toList()
                 },  
 
+                //TODO: CONSIDER RESULTING EXP NUGGETS TO BE HANDLED LIKE CALCULATED EXP NUGGETS
+
                 /**
                  * Returns the number of experience Nuggets that will be created.
                  * Also adds the remaining extra.
