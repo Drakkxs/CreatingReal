@@ -154,7 +154,7 @@
      * @param {$KubeRecipe_} recipe - The recipe to check.
      */
     function canBeAutomated(recipe) {
-        return recipe.getPath().endsWith("_manual_only")
+        return !(recipe.getPath().endsWith("_manual_only"))
     }
 
     /**
@@ -191,28 +191,28 @@
     }
 
     MMREvents.machines(event => {
-        event.create("mmr:encased_fan").name("Engistic Fan")
-            .color("#FF4d4d4d")
-            .structure(
-                MMRStructureBuilder.create()
-                    .pattern(
-                        [
-                            ["aaa", "ecd", "aba"],
-                            ["ama", "aaa", "aaa"],
-                            ["f f", "   ", "f f"]
-                        ]
-                    )
-                    .keys(
-                        {
-                            "a": ["modular_machinery_reborn:casing_plain"],
-                            "b": ["#modular_machinery_reborn:energyinputhatch"],
-                            "c": ["modular_machinery_reborn:casing_firebox"],
-                            "d": ["#modular_machinery_reborn:inputbus"],
-                            "e": ["#modular_machinery_reborn:outputbus"],
-                            "f": ["modular_machinery_reborn:casing_vent"]
-                        }
-                    )
-            )
+        let builder = event.create("mmr:encased_fan")
+        builder.name("Engistic Fan")
+        builder.color("#FF4d4d4d")
+        function struct() {
+            return ( MMRStructureBuilder.create().pattern([
+                ["aaa", "ecd", "aba"],
+                ["ama", "aaa", "aaa"],
+                ["f f", "   ", "f f"]
+            ]).keys({
+                "a": ["modular_machinery_reborn:casing_plain"],
+                "b": ["#modular_machinery_reborn:energyinputhatch"],
+                "c": ["modular_machinery_reborn:casing_firebox"],
+                "d": ["#modular_machinery_reborn:inputbus"],
+                "e": ["#modular_machinery_reborn:outputbus"],
+                "f": ["modular_machinery_reborn:casing_vent"]
+            }) );
+        } 
+        builder.structure(struct());
+        builder.sound("idle", {
+            ambientSound: "mekanismgenerators:tile.generator.heat"
+         })
+        
     })
 
     ServerEvents.recipes(event => {
@@ -222,16 +222,16 @@
 
         event.forEachRecipe({type: "create:splashing"}, recipe => {
             if (debug) console.log(`Id: ${recipe.getId()} json: ${recipe.json.toString()}`)
-            doFAN(recipe)
         })
 
         event.forEachRecipe({type: "minecraft:smelting"}, recipe => {
             if (!canBeAutomated(recipe)) return
-            if (debug) console.log(`Id: ${recipe.getId()} json: ${recipe.json.toString()}`)  
+            if (debug) console.log(`Id: ${recipe.getId()} json: ${recipe.json.toString()}`)
+            doFANBLASTING(recipe)
         })
 
         /** @param {$KubeRecipe_} recipe  */
-        function doFAN(recipe) {
+        function doFANBLASTING(recipe) {
 
             let ui = constuctUI();
 
@@ -239,18 +239,40 @@
 
                 json: recipe.json,
 
-                objIngredient() {return this.json.get("ingredients").asJsonArray.asList().stream().findFirst().get().asJsonObject},
+                /** Returns the a Json array of ingredient objects */
+                objIngredient() {
+                    // Retrieve ingredients as an array of JSON objects
+                    let ingredients = [
+                        this.json.get("ingredient"),
+                        this.json.get("ingredients"),
+                    ].find(value => value)
+                    
+                    
+                    return JsonIO.toArray(ingredients).asList().stream().findFirst().get().asJsonObject
+                },
 
-                listObjResults() {return this.json.get("results").asJsonArray.asList().stream().map((
-                    itemStack) => itemStack.asJsonObject
-                ).toList()},
+                listObjResults() {
+                    let results = [
+                        this.json.get("result"),
+                        this.json.get("results"),
+                    ].find(value => value)
+
+                    return JsonIO.toArray(results).asList().stream().map((itemStack) => itemStack.asJsonObject).toList()
+                },  
 
                 /**
                  * Returns the number of experience Nuggets that will be created.
                  * Also adds the remaining extra.
                  */
                 xpNuggets() {
-                    let experience = 0;
+
+                    let raw = [
+                        this.json.get("xp"),
+                        this.json.get("experience"),
+                    ].find(value => value)
+
+                    let experience = raw ? raw.asInt : 0
+
                     for (let key in this.json) {
                         if (key.includes("experience") || key.includes("xp")) {
                             // If a key contains 'time', use its value (assuming it's an integer)
@@ -294,8 +316,8 @@
                     return processingTime
                 },
 
-                /** Four times faster than the processing time */
-                boostedTime() {return Math.max(5, Math.round(this.proccessingTime() / 4))},
+                /** Eight times faster than the processing time */
+                boostedTime() {return Math.max(0, Math.round(this.proccessingTime() / 8))},
 
                 /**
                  * The count of unique result objects.
