@@ -66,10 +66,11 @@
      */
     function constuctUI(t, x, a, y, b) {
         return {
+            MAX_UI_SIZE: 256,
             tilesize: t || 20,
-            reserved: [],
-            x: constructPOS.x(x || 150, a || 0),
-            y: constructPOS.y(y || 90, b || 14),
+            reservations: [],
+            x: constructPOS.x(x || 80, a || 0),
+            y: constructPOS.y(y || 60, b || 0),
 
             /**
              * Calculates the number of columns in the UI grid based on the tile width.
@@ -99,12 +100,12 @@
              * @param {number} x - The x-coordinate of the position to reserve.
              * @param {number} y - The y-coordinate of the position to reserve.
              */
-            reserve(x, y) {
-                if (this.reserved.find(pos => pos.x === x && pos.y === y)) {
+            reservePos(x, y) {
+                if (this.reservations.find(pos => pos.x === x && pos.y === y)) {
                     if (debug) console.log(`Position already reserved: ${[x, y]}`);
                     return;
                 }
-                this.reserved.push({ x: x, y: y });
+                this.reservations.push({ x: x, y: y });
                 if (debug) console.log(`Reserved position: ${[x, y]}`);
             },
 
@@ -113,8 +114,8 @@
              * @returns {{width: number, height: number}}
              */
             getReservedBoundingBox() {
-                let a = Math.min(256, this.tilesize + Math.max.apply(null, this.reserved.map(pos => pos.x)));
-                let b = Math.min(256, this.tilesize + Math.max.apply(null, this.reserved.map(pos => pos.y)))
+                let a = Math.min(this.MAX_UI_SIZE, this.tilesize + Math.max.apply(null, this.reservations.map(pos => pos.x)));
+                let b = Math.min(this.MAX_UI_SIZE, this.tilesize + Math.max.apply(null, this.reservations.map(pos => pos.y)))
                 if (debug) console.log(`Reserved bounding box: ${[a, b]}`);
                 return { width: a, height: b };
             },
@@ -123,24 +124,24 @@
              * Controls a grid structure for the UI.
              * This function takes an index and a tile size and returns the x and y position of the tile.
              * @param {number} index - The index of the tile.
+             * @param {boolean} [makeReservation]
              * @returns {{x: number, y: number}} - The x and y position of the tile.
              */
-            getTilePosition(index) {
-                let x = (index % this.columns()) * this.tilesize;
-                let y = Math.floor(index / this.columns()) * this.tilesize;
-
-                if (debug) console.log(`Initial tile position for index ${index}:${[ x, y ]}`);
+            getTilePosition(index, makeReservation) {
+                let x = 0;
+                let y = 0;
 
                 // Find next available position
-                while (this.reserved.some(pos => pos.x === x && pos.y === y)) {
+                while (this.reservations.some(pos => pos.x === x && pos.y === y)) {
                     if (debug) console.log(`Position occupied, searching for next: ${[x, y]}`);
                     index++;
+
                     x = (index % this.columns()) * this.tilesize;
                     y = Math.floor(index / this.columns()) * this.tilesize;
                 }
 
                 // Reserve this position
-                this.reserve(x, y);
+                if (makeReservation) this.reservePos(x, y);
 
                 if (debug) console.log(`Final tile position for index ${index}: ${[ x, y ]}`);
 
@@ -191,6 +192,9 @@
     }
 
     MMREvents.machines(event => {
+        // TODO: CONTROLLER MODEL
+        // TODO: MACHINE SOUNDS
+        // TODO: MACHINE RECIPE TYPES (BLASTING, HAUNTING, ETC)
         let builder = event.create("mmr:encased_fan")
         builder.name("Engistic Fan")
         builder.color("#FF4d4d4d")
@@ -209,9 +213,8 @@
             }) );
         } 
         builder.structure(struct());
-        builder.sound("idle", {
-            ambientSound: "mekanismgenerators:tile.generator.heat"
-         })
+        // TODO: SOUNDS
+        // builder.sound()
         
     })
 
@@ -219,10 +222,6 @@
 
         let classPackageItem = Java.loadClass("com.simibubi.create.content.logistics.box.PackageItem");
         let classProcessingRecipe = Java.loadClass("com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer")
-
-        event.forEachRecipe({type: "create:splashing"}, recipe => {
-            if (debug) console.log(`Id: ${recipe.getId()} json: ${recipe.json.toString()}`)
-        })
 
         event.forEachRecipe({type: "minecraft:smelting"}, recipe => {
             if (!canBeAutomated(recipe)) return
@@ -271,15 +270,9 @@
                         this.json.get("experience"),
                     ].find(value => value)
 
-                    let experience = raw ? raw.asInt : 0
-
-                    for (let key in this.json) {
-                        if (key.includes("experience") || key.includes("xp")) {
-                            // If a key contains 'time', use its value (assuming it's an integer)
-                            experience = Math.max(20, this.json[key].asInt);
-                            break;  // Exit loop once a match is found
-                        }
-                    }
+                    // Apparently this can be used on 'undefined' but not 'null'?
+                    // We give double the amount of xp here to compete with the crushers
+                    let experience = raw ? raw.asInt * 2 : 0
 
                     if (debug) console.log(`Experience: ${experience}`)
 
@@ -317,7 +310,7 @@
                 },
 
                 /** Eight times faster than the processing time */
-                boostedTime() {return Math.max(0, Math.round(this.proccessingTime() / 8))},
+                boostedTime() {return Math.max(1, Math.round(this.proccessingTime() / 8))},
 
                 /**
                  * The count of unique result objects.
@@ -353,60 +346,63 @@
                     return cost
                 },
             }
-            
-            let machine = event.recipes.modular_machinery_reborn.machine_recipe("mmr:encased_fan", cfgRecipe.boostedTime())
+            function toTick(any) {return any}
+            let machine = event.recipes.modular_machinery_reborn.machine_recipe("mmr:encased_fan", toTick(cfgRecipe.boostedTime()))
 
             machine.requireItem(jsonToItem(cfgRecipe.objIngredient().toString()), 1, 20, 0);
 
-            // The top row and first column of the UI is reserved for special UI elements.
-            for (let index = 1; index < ui.columns(); index++) {
-                ui.reserve(index * ui.tilesize, 0)
+            /** 
+             * The top row and first column of the UI is reserved for special UI elements. 
+             * Two slots in the top row are saved for the recipe's experience nuggets.
+            */
+            for (let index = 1; index < ui.columns() - 2; index++) {
+                ui.reservePos(index * ui.tilesize, 0)
             }
             for (let index = 0; index < ui.rows(); index++) {
-                ui.reserve(0, index * ui.tilesize)
+                ui.reservePos(0, index * ui.tilesize)
             }
 
-            /**
-             * The UI can only display 9 unique output items, but the actual output can exceed the stack limit.
-             * To work around this limitation, we can package multiple output items into a single "package" item (like a Shulker Box),
-             * allowing the recipe to still function correctly while keeping the UI display manageable.
-             */
+            let intialpos = ui.getTilePosition(0, false)
+            // Add the experience to the UI.
+            cfgRecipe.xpNuggets().forEach((nuggetStack, index) => {
+                let chance = nuggetStack.chance
+                let objItem = jsonToItem(JSON.stringify(nuggetStack.item))
+                let count = ("count" in objItem) ? objItem.count : 1
 
-            // Does the recipe have space for two slots?
-            if (cfgRecipe.amountObjItem() < 7) {
-                
-                // Add the items to be produced, and their chances to the UI.
-                for (let index = 0; index < cfgRecipe.amountObjItem(); index++) {
-                    let itemStack = cfgRecipe.listObjResults().get(index)
-                    let chance = itemStack.has("chance") ? Math.round(itemStack.get("chance").asFloat * 100) / 100 : 1.0
-                    let objItem = jsonToItem(itemStack.toString())
-                    let count = ("count" in objItem) ? objItem.count : 1
-                    
-                    let pos = ui.getTilePosition(index)
-                    if (debug) console.log(`Adding item: ${JSON.stringify(objItem)} with chance: ${chance} at ${pos.x}, ${pos.y}`)
-                    machine.produceItem(`${count}x ${objItem.item}`, chance, pos.x, pos.y)
+                // Ensure nuggets use as much space as they can instead of expanding downwards.
+                let pos = {x: intialpos.x + (index * ui.tilesize), y: intialpos.y}
+
+                // is the postion within bounds? If not, move down a row.
+                if (pos.y + ui.tilesize > ui.MAX_UI_SIZE) {
+                    pos.y = intialpos.y + (index * ui.tilesize)
                 }
+                ui.reservePos(pos.x, pos.y)
+                if (debug) console.log(`Adding nugget: ${JSON.stringify(objItem)} with chance: ${chance} at ${pos.x}, ${pos.y}`)
+                machine.produceItem(`${count}x ${objItem.item}`, nuggetStack.chance, pos.x, pos.y)
+            })
 
-                // Add the experience to the UI.
-                cfgRecipe.xpNuggets().forEach((nuggetStack, index) => {
-                    let chance = nuggetStack.chance
-                    let objItem = jsonToItem(JSON.stringify(nuggetStack.item))
-                    let count = ("count" in objItem) ? objItem.count : 1
+            // Update the initial position
+            intialpos = ui.getTilePosition(0, false)
+            // Add the items to be produced, and their chances to the UI.
+            for (let index = 0; index < cfgRecipe.amountObjItem(); index++) {
+                let itemStack = cfgRecipe.listObjResults().get(index)
+                let chance = itemStack.has("chance") ? Math.round(itemStack.get("chance").asFloat * 100) / 100 : 1.0
+                let objItem = jsonToItem(itemStack.toString())
+                let count = ("count" in objItem) ? objItem.count : 1
+                
+                // Ensure items use as much space as they can instead of only expanding downwards.
+                let pos = {x: intialpos.x + (index * ui.tilesize), y: intialpos.y}
 
-                    // Add the nugget to the UI. It will be placed next to the progress bar (40, 0).
-                    let pos = {x: ((index + 1) * ui.tilesize) + 40, y: 0}
-                    if (debug) console.log(`Adding nugget: ${JSON.stringify(objItem)} with chance: ${chance} at ${pos.x}, ${pos.y}`)
-                    machine.produceItem(`${count}x ${objItem.item}`, nuggetStack.chance, pos.x, pos.y)
-                })
-            } 
-            // The recipe is larger than 6 items, and requires special handling
-            else if (cfgRecipe.amountObjItem() > 6) {
+                // is the postion within bounds? If not, move down a row.
+                if (pos.y + ui.tilesize > ui.MAX_UI_SIZE) {
+                    pos.y = intialpos.y + (index * ui.tilesize)
+                }
+                ui.reservePos(pos.x, pos.y)
 
+                if (debug) console.log(`Adding item: ${JSON.stringify(objItem)} with chance: ${chance} at ${pos.x}, ${pos.y}`)
+                machine.produceItem(`${count}x ${objItem.item}`, chance, pos.x, pos.y)
             }
             
-            
-
-
             // Placing the progress bar just next to the required item.
             machine.progressX(35)
             machine.progressY(0)
@@ -419,4 +415,5 @@
 
         }
     })
+
 })();
