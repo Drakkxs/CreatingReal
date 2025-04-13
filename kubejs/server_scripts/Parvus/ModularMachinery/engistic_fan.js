@@ -4,7 +4,6 @@
 // @ts-check
 // An upgrade to create's encased fan.
 
-
 // Immidately Invoked Function Expression to prevent polluting the global namespace
 (() => {
 
@@ -74,7 +73,6 @@
 
             /**
              * Calculates the number of columns in the UI grid based on the tile width.
-             * @returns {number} - The number of columns.
              */
             columns() {
                 let numColumns = Math.ceil(this.x.real() / this.tilesize);
@@ -85,7 +83,6 @@
 
             /**
              * Calculates the number of rows in the UI grid based on the tile height.
-             * @returns {number} - The number of rows.
              */
             rows() {
                 let numRows = Math.ceil(this.y.real() / this.tilesize);
@@ -99,24 +96,22 @@
              * Adds the position to the reserved list to prevent other elements from being placed at the same coordinates.
              * @param {number} x - The x-coordinate of the position to reserve.
              * @param {number} y - The y-coordinate of the position to reserve.
+             * @param {String[]} party - The identifier for who is reserving the position.
              */
-            reservePos(x, y) {
-                if (this.reservations.find(pos => pos.x === x && pos.y === y)) {
-                    if (debug) console.log(`Position already reserved: ${[x, y]}`);
-                    return;
-                }
-                this.reservations.push({ x: x, y: y });
-                if (debug) console.log(`Reserved position: ${[x, y]}`);
+            reservePos(x, y, party) {
+                // Check if the position is already reserved
+                if (this.reservations.find(pos => pos.x === x && pos.y === y)) return;
+                this.reservations.push({ x: x, y: y, party: party });
+                if (debug) console.log(`Reserved position for ${this.reservations.slice(-1).map(pos => [pos.x, pos.y, pos.party])[0]}`);
             },
 
             /**
              * Returns the width and height of reserved positions
-             * @returns {{width: number, height: number}}
              */
             getReservedBoundingBox() {
                 let a = Math.min(this.MAX_UI_SIZE, this.tilesize + Math.max.apply(null, this.reservations.map(pos => pos.x)));
                 let b = Math.min(this.MAX_UI_SIZE, this.tilesize + Math.max.apply(null, this.reservations.map(pos => pos.y)))
-                if (debug) console.log(`Reserved bounding box: ${[a, b]}`);
+                if (debug) console.log(`UI Size: ${[a, b]}`);
                 return { width: a, height: b };
             },
 
@@ -124,31 +119,283 @@
              * Controls a grid structure for the UI.
              * This function takes an index and a tile size and returns the x and y position of the tile.
              * @param {number} index - The index of the tile.
+             * @param {String[]} party - The identifier for who is reserving the position.
              * @param {boolean} [makeReservation]
-             * @returns {{x: number, y: number}} - The x and y position of the tile.
+             * @param {number} [col]
+             * @param {number} [row]
              */
-            getTilePosition(index, makeReservation) {
+            getTilePosition(index, party, makeReservation, col, row) {
                 let x = 0;
                 let y = 0;
+                let orgIndex = index;
+                if (debug) console.log(`Getting tile position for index ${index}`);
+                // Calculate position, or use given values
+                let columns = col || this.columns();
+                let rows = row || this.rows();
 
                 // Find next available position
                 while (this.reservations.some(pos => pos.x === x && pos.y === y)) {
-                    if (debug) console.log(`Position occupied, searching for next: ${[x, y]}`);
                     index++;
-
-                    x = (index % this.columns()) * this.tilesize;
-                    y = Math.floor(index / this.columns()) * this.tilesize;
+                    x = (index % columns) * this.tilesize;
+                    y = Math.floor(index / columns) * this.tilesize;
+                    if ([x, y].some(pos => pos > this.MAX_UI_SIZE)) throw new Error("Too many UI elements");
                 }
 
                 // Reserve this position
-                if (makeReservation) this.reservePos(x, y);
+                if (makeReservation) this.reservePos(x, y, party);
 
-                if (debug) console.log(`Final tile position for index ${index}: ${[ x, y ]}`);
+                if (debug) console.log(`Final Pos: ${orgIndex} -> ${index}: ${[ x, y ]}`);
 
                 return { x: x, y: y };
+            },
+
+            /**
+             * Holds the initial position.
+             */
+            intialPos: undefined,
+
+            /**
+             * Gets a new position for a UI element based on the index of the element.
+             * @param {number} index
+             * @param {String[]} party
+             * @param {number} [col]
+             * @param {number} [row]
+             */
+            getNewPos(index, party, col, row) {
+                // Get intial position
+                if (!index) this.intialpos = this.getTilePosition(0, party, true, col, row);
+
+                // Ensure items use as much space as they can instead of only expanding downwards.
+                let pos = {x: this.intialpos.x + (index * this.tilesize), y: this.intialpos.y}
+                if (debug) console.log(`Initial position for index ${index}: ${[pos.x, pos.y]}`);
+
+                // The position is out of the UI.
+                if (pos.x > this.MAX_UI_SIZE) {
+                    // Move down a row
+                    pos.y = this.intialpos.y + (index * this.tilesize)
+                } 
+                // The position is reserved                
+                else if (this.reservations.find(p => p.x == pos.x && p.y == pos.y)) {
+                    pos = this.getTilePosition(0, party, false, col, row)
+                }
+                this.reservePos(pos.x, pos.y, party)
+                return pos
             }
         };
     }
+
+    /**
+     * Constructs a recipe object from a JSON object and some parameters.
+     * @param {$KubeRecipe_} recipe - The JSON object containing the recipe.
+     * @param {number} XP_PER - The number of experience points per experience nugget.
+     * @param {number} XP_MULTI - The multiplier for the experience points given by the recipe.
+     * @param {string} XP_ID - The ID of the experience nugget item.
+     * @param {number} MIN_TIME - The minimum processing time in ticks.
+     * @param {number} TIME_MULTI - The multiplier for the processing time to get the boosted time.
+     * @param {number} MIN_ENERGY_COST - The minimum energy cost in RF/t.
+     */
+    function constructRecipe(recipe, XP_PER, XP_MULTI, XP_ID, MIN_TIME, TIME_MULTI, MIN_ENERGY_COST) {
+        
+        return {
+
+        recipeJson: recipe.json,
+
+        /**
+         * Converts a JSON string to an item object.
+         * @param {string} strItemStack - The JSON string to convert.
+         * @returns {{chance: number, item: string, count: number}}
+         */
+        jsonToItem(strItemStack) {
+            /** @type {Object} */
+            let raw = {}
+            try {
+                raw = JSON.parse(strItemStack);
+                if (debug) console.log(`JSON: ${strItemStack}`);
+    
+                // Check if 'item' or 'id' exists
+                if ('item' in raw) {
+                    // If 'item' is an object, we extract the 'id'
+                    if (typeof raw.item === 'object' && raw.item !== null && 'id' in raw.item) {
+                        raw.item = raw.item.id; // Replace the item object with the id
+                    }
+                } else if ('id' in raw) {
+                    // If there's an 'id' but no 'item', assign the id to item
+                    raw.item = raw.id;
+                    delete raw.id;
+                }
+    
+            } catch (e) {
+                if (debug) console.error(`Invalid JSON: ${strItemStack}`, e);
+                return null; // Default return value for invalid JSON
+            }
+    
+            if (debug) console.log(`Item: ${JSON.stringify(raw)}`);
+            return raw;
+        },
+
+        /**
+         * Json to array
+         * @param {$JsonElement_} element - The JSON string to convert.
+         * @returns {import("com.google.gson.JsonElement").$JsonElement[]}
+         */
+        jsonToArray(element) {
+            return JsonIO.toArray(element).asList().stream().toArray();
+        },
+
+        /**
+         * Stops typescript from complaining
+         * It doesn't recognize tick duration type can be number
+         * @param {number & $TickDuration_} any
+         */
+        toTick(any) {
+            return any
+        },
+
+        /**
+         * Retrieves the first ingredient of the recipe as an item object.
+         */
+        inputIngredient() {
+            // Retrieve all ingredients as an array of JSON elements
+            let raw = [
+                this.recipeJson.get("ingredient"),
+                this.recipeJson.get("ingredients"),
+            ].find(value => value)
+
+            return this.jsonToArray(raw)
+            .map(value => {
+                // Convert the JSON element to a JSON object
+                let objItem = value.asJsonObject
+
+                // Add redudancy to avoid null pointer exceptions
+                objItem.has("count") || objItem.add("count", 1.0)
+                objItem.has("chance") || objItem.add("chance", 1.0)
+
+                // Convert the JSON object to an item object
+                return this.jsonToItem(objItem.toString())
+            })[0] // Return the first item object of the array
+        },
+
+        /**
+         * Retrieves the list of result objects from the recipe JSON and returns them as an array of item objects.
+         * An array of item objects as returned by jsonToItem.
+         * This includes the XP_ID
+         */
+        arrayResults() {
+            let raw = [
+                this.recipeJson.get("result"),
+                this.recipeJson.get("results"),
+            ].find(value => value)
+
+            return this.jsonToArray(raw)
+            .map(value => {
+                // Convert the JSON element to a JSON object
+                let objItem = value.asJsonObject
+
+                // Add redudancy to avoid null pointer exceptions
+                objItem.has("count") || objItem.add("count", 1.0)
+                objItem.has("chance") || objItem.add("chance", 1.0)
+
+                // Convert the JSON object to an item object
+                return this.jsonToItem(objItem.toString())
+            })
+        },  
+
+        //TODO: CONSIDER RESULTING EXP NUGGETS TO BE HANDLED LIKE CALCULATED EXP NUGGETS
+
+        /**
+         * Returns the number of experience Nuggets that will be created.
+         * Also adds the remaining extra.
+         */
+        xpNuggets() {
+
+            let raw = [
+                this.recipeJson.get("xp"),
+                this.recipeJson.get("experience"),
+            ].find(value => value)
+
+            // Apparently this can be used on 'undefined' but not 'null'?
+            // We give double the amount of xp here to compete with the crushers
+            let experience = raw ? raw.asNumber * XP_MULTI : 0
+
+            // Calculate the amount of nuggets from the recipe
+            experience = (
+                this.arrayResults()
+                // Filter the nuggets
+                .filter(item => item.item === XP_ID)
+                // Calculate the amount of xp
+                .reduce((a, b) => a + b.count, 0) * 3
+            )
+
+            if (debug && experience) console.log(`Experience: ${experience}`)
+
+            // One create experince nugget gives XP_PER xp points
+            let nuggets = [
+                // The amount of guaranteed nuggets
+                {chance: 1, item: XP_ID, count: Math.floor(experience / XP_PER)},
+
+                // The chance of extra nuggets
+                {chance: Math.round(((experience % XP_PER) / XP_PER) * 100) / 100, item: XP_ID, count: 1}
+            ].filter((nugget) => (nugget.chance && nugget.count))
+
+            if (debug && nuggets.length) console.log(`Made ${nuggets.length} nuggets`)
+
+            return nuggets
+        },
+
+        /** 
+         * Returns the processing time in ticks for the recipe
+         */
+        proccessingTime() {
+            // MIN_TIME is ticks, a single second.
+            let processingTime = MIN_TIME;
+
+            // Find the processing time
+            let raw = [
+                this.recipeJson.get("time"),
+                this.recipeJson.get("duration"),
+            ].find(value => value)
+
+            if (raw) processingTime = raw.asNumber
+
+            if (debug) console.log(`Processing time: ${processingTime}`)                 
+
+            return processingTime
+        },
+
+        /** 
+         * Eight times faster than the processing time
+         */
+        boostedTime() {
+            return this.toTick(Math.round(this.proccessingTime() / TIME_MULTI))
+        },
+
+        /**
+         * The count is calculated by summing the count of each result object.
+         */
+        sumItemcount() {
+            return (
+                this.arrayResults()
+                .reduce((a, b) => a + b.count, 0)
+            )
+        },
+        
+        /**
+         * The energy cost of this recipe in RF/t.
+         * The cost is calculated by multiplying the number of results by the processing time in ticks.
+         * The result count is the actual number of items produced by the recipe.
+         * The result is then clamped to a minimum of 1 RF/t.
+         * @param {Array} arrXp
+         */
+        energyCost(arrXp) {
+            arrXp = arrXp || this.xpNuggets();
+            let sumXp = arrXp.reduce((a, b) => a + b.count, 0);
+            let sumCost = this.sumItemcount() + (sumXp * XP_PER);
+            if (debug) console.log(`Sum Cost: ${sumCost}, XP per nugget: ${XP_PER}, Sum XP: ${sumXp}`);
+            let energyCost = sumCost * this.proccessingTime();
+            if (debug) console.log(`Energy Cost: ${energyCost}`);
+            return Math.max(MIN_ENERGY_COST, energyCost)
+        }
+    }}
 
     /**
      * A similar check to create if a recipe can be automated or not.
@@ -156,39 +403,6 @@
      */
     function canBeAutomated(recipe) {
         return !(recipe.getPath().endsWith("_manual_only"))
-    }
-
-    /**
-     * Converts a JSON string to an item object.
-     * @param {string} strItemStack - The JSON string to convert.
-     * @returns {object} - The item object. If the JSON is invalid, returns {"item": "minecraft:air"}.
-     */
-    function jsonToItem(strItemStack) {
-        /** @type {Object} */
-        let raw = {}
-        try {
-            raw = JSON.parse(strItemStack);
-            if (debug) console.log(`JSON: ${strItemStack}`);
-
-            // Check if 'item' or 'id' exists
-            if ('item' in raw) {
-                // If 'item' is an object, we extract the 'id'
-                if (typeof raw.item === 'object' && raw.item !== null && 'id' in raw.item) {
-                    raw.item = raw.item.id; // Replace the item object with the id
-                }
-            } else if ('id' in raw) {
-                // If there's an 'id' but no 'item', assign the id to item
-                raw.item = raw.id;
-                delete raw.id;
-            }
-
-        } catch (e) {
-            if (debug) console.error(`Invalid JSON: ${strItemStack}`, e);
-            return null; // Default return value for invalid JSON
-        }
-
-        if (debug) console.log(`Item: ${JSON.stringify(raw)}`);
-        return raw;
     }
 
     MMREvents.machines(event => {
@@ -220,200 +434,100 @@
 
     ServerEvents.recipes(event => {
 
-        let classPackageItem = Java.loadClass("com.simibubi.create.content.logistics.box.PackageItem");
-        let classProcessingRecipe = Java.loadClass("com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer")
+        /**
+         * Applies the FANBLASTING recipe transformer to all recipes of the given type, skipping manual-only recipes.
+         * @param {string} recipeType the type of recipes to transform
+         */
+        function Recipes(recipeType) {
+            return event.forEachRecipe({type: recipeType}, recipe => {
+                if (!canBeAutomated(recipe)) return null
+                if (debug) console.log(`
+                    ========================================
+                    DOING RECIPE: ${recipe.getId()} 
+                    With JSON: ${recipe.json.toString()}
+                    ========================================`)
+                return doFANBLASTING(recipe)
+            })
+        }
 
-        event.forEachRecipe({type: "minecraft:smelting"}, recipe => {
-            if (!canBeAutomated(recipe)) return
-            if (debug) console.log(`Id: ${recipe.getId()} json: ${recipe.json.toString()}`)
-            doFANBLASTING(recipe)
-        })
+        [
+            "minecraft:smelting",
+            "create:splashing",
+            "create:haunting",
+            "create:crushing"
+        ].forEach(Recipes)
 
-        /** @param {$KubeRecipe_} recipe  */
+        
+        /**
+         * FANBLASTING recipe transformer
+         * @param {$KubeRecipe_} recipe
+         */
         function doFANBLASTING(recipe) {
 
             let ui = constuctUI();
 
-            let cfgRecipe = {
+            let cfgRecipe = constructRecipe(recipe, 3, 2, "create:experience_nugget", 20, 8, 1);
 
-                json: recipe.json,
+            let machine = event.recipes.modular_machinery_reborn.machine_recipe("mmr:encased_fan", cfgRecipe.boostedTime())
 
-                /** Returns the a Json array of ingredient objects */
-                objIngredient() {
-                    // Retrieve ingredients as an array of JSON objects
-                    let ingredients = [
-                        this.json.get("ingredient"),
-                        this.json.get("ingredients"),
-                    ].find(value => value)
-                    
-                    
-                    return JsonIO.toArray(ingredients).asList().stream().findFirst().get().asJsonObject
-                },
+            machine.requireItem(cfgRecipe.inputIngredient(), 1, 20, 0);
 
-                listObjResults() {
-                    let results = [
-                        this.json.get("result"),
-                        this.json.get("results"),
-                    ].find(value => value)
-
-                    return JsonIO.toArray(results).asList().stream().map((itemStack) => itemStack.asJsonObject).toList()
-                },  
-
-                //TODO: CONSIDER RESULTING EXP NUGGETS TO BE HANDLED LIKE CALCULATED EXP NUGGETS
-
-                /**
-                 * Returns the number of experience Nuggets that will be created.
-                 * Also adds the remaining extra.
-                 */
-                xpNuggets() {
-
-                    let raw = [
-                        this.json.get("xp"),
-                        this.json.get("experience"),
-                    ].find(value => value)
-
-                    // Apparently this can be used on 'undefined' but not 'null'?
-                    // We give double the amount of xp here to compete with the crushers
-                    let experience = raw ? raw.asInt * 2 : 0
-
-                    if (debug) console.log(`Experience: ${experience}`)
-
-                    // One create experince nugget gives 3 xp points
-                    let nuggets = [
-                        // The amount of guaranteed nuggets
-                        {chance: 1, item: {id: "create:experience_nugget", count: Math.floor(experience / 3)}},
-
-                        // The chance of extra nuggets
-                        {chance: Math.round(((experience % 3) / 3) * 100) / 100, item: {id: "create:experience_nugget", count: 1}}
-                    ].filter((nugget) => (nugget.chance && nugget.item.count))
-
-                    if (debug) console.log(`Nuggets: ${JSON.stringify(nuggets)}`)
-
-                    return nuggets
-                },
-
-                /** 
-                 * Returns the processing time in ticks for the recipe
-                 */
-                proccessingTime() {
-                    // 20 is ticks, a single second.
-                    let processingTime = 20;
-                    // Iterate through all keys in the JSON object
-                    let raw = JSON.parse(this.json.toString())
-                    let key = Object.keys(raw).find(k => /^time|duration$/i.test(k));
-
-                    if (key) {
-                        processingTime = Math.max(20, raw[key].asInt)
-                    }
-
-                    if (debug) console.log(`Processing time: ${processingTime}`)                 
-
-                    return processingTime
-                },
-
-                /** Eight times faster than the processing time */
-                boostedTime() {return Math.max(1, Math.round(this.proccessingTime() / 8))},
-
-                /**
-                 * The count of unique result objects.
-                 */
-                amountObjItem() {
-                    let count = this.listObjResults().size()
-                    if (debug) console.log(`Result count: ${count}`);
-                    return count
-                },
-
-                /**
-                 * The count is calculated by summing the count of each result object.
-                 */
-                sumItemCount() {
-                    let sumItemCount = 0; this.listObjResults().stream().forEach((result) => {
-                    let count = result.has("count") ? sumItemCount += result.get("count").asInt : 1
-                    sumItemCount += count})
-                    return sumItemCount
-                },
-                
-                /**
-                 * The energy cost of this recipe in RF/t.
-                 * The cost is calculated by multiplying the number of results by the processing time in ticks.
-                 * The result count is the actual number of items produced by the recipe.
-                 * The result is then clamped to a minimum of 1 RF/t.
-                 */
-                energyCost() {
-                    let xpCost = this.xpNuggets().reduce((a, b) => a + b.item.count, 0);
-                    // The xp cost is by each point. Nuggets give 3 points.
-                    let sumCount = this.sumItemCount() + (xpCost * 3);
-                    let cost = Math.max(1, sumCount * this.proccessingTime()); 
-                    if (debug) console.log(`Energy cost: ${cost}`); 
-                    return cost
-                },
-            }
-            function toTick(any) {return any}
-            let machine = event.recipes.modular_machinery_reborn.machine_recipe("mmr:encased_fan", toTick(cfgRecipe.boostedTime()))
-
-            machine.requireItem(jsonToItem(cfgRecipe.objIngredient().toString()), 1, 20, 0);
+            let arryXpNuggets = cfgRecipe.xpNuggets();
 
             /** 
-             * The top row and first column of the UI is reserved for special UI elements. 
-             * Two slots in the top row are saved for the recipe's experience nuggets.
-            */
-            for (let index = 1; index < ui.columns() - 2; index++) {
-                ui.reservePos(index * ui.tilesize, 0)
+             * Reserves positions in the UI grid for special UI elements. 
+             * The top row and first column have reserved slots, with two slots allocated for experience nuggets.
+             */
+            let cols = ui.columns();
+            let rows = ui.rows();
+            let specialCols = cols - arryXpNuggets.length;
+            let specialRows = rows
+
+            if (debug) console.log(`Reserving top and bottom rows`);
+            if (debug && arryXpNuggets.length) console.log(`Making special reservations for ${arryXpNuggets.length} nuggets`);
+            for (let colIndex = 0; colIndex < specialCols; colIndex++) {
+                ui.reservePos(colIndex * ui.tilesize, 0, ["Top Row"]);
             }
-            for (let index = 0; index < ui.rows(); index++) {
-                ui.reservePos(0, index * ui.tilesize)
+            for (let rowIndex = 1; rowIndex < specialRows; rowIndex++) {
+                ui.reservePos(0, rowIndex * ui.tilesize, ["First Column"]);
             }
 
-            let intialpos = ui.getTilePosition(0, false)
             // Add the experience to the UI.
-            cfgRecipe.xpNuggets().forEach((nuggetStack, index) => {
-                let chance = nuggetStack.chance
-                let objItem = jsonToItem(JSON.stringify(nuggetStack.item))
-                let count = ("count" in objItem) ? objItem.count : 1
-
-                // Ensure nuggets use as much space as they can instead of expanding downwards.
-                let pos = {x: intialpos.x + (index * ui.tilesize), y: intialpos.y}
-
-                // is the postion within bounds? If not, move down a row.
-                if (pos.y + ui.tilesize > ui.MAX_UI_SIZE) {
-                    pos.y = intialpos.y + (index * ui.tilesize)
-                }
-                ui.reservePos(pos.x, pos.y)
-                if (debug) console.log(`Adding nugget: ${JSON.stringify(objItem)} with chance: ${chance} at ${pos.x}, ${pos.y}`)
-                machine.produceItem(`${count}x ${objItem.item}`, nuggetStack.chance, pos.x, pos.y)
+            arryXpNuggets
+            .forEach((objItem, index) => {
+                let stringObjItem = JSON.stringify(objItem)
+                let pos = ui.getNewPos(index, [`XP_ID ${stringObjItem}`], cols, rows)
+                if (debug) console.log(`Adding nugget: ${stringObjItem} with chance: ${objItem.chance} at ${pos.x}, ${pos.y}`)
+                machine.produceItem(`${objItem.count}x ${objItem.item}`, objItem.chance, pos.x, pos.y)
             })
 
-            // Update the initial position
-            intialpos = ui.getTilePosition(0, false)
             // Add the items to be produced, and their chances to the UI.
-            for (let index = 0; index < cfgRecipe.amountObjItem(); index++) {
-                let itemStack = cfgRecipe.listObjResults().get(index)
-                let chance = itemStack.has("chance") ? Math.round(itemStack.get("chance").asFloat * 100) / 100 : 1.0
-                let objItem = jsonToItem(itemStack.toString())
-                let count = ("count" in objItem) ? objItem.count : 1
-                
-                // Ensure items use as much space as they can instead of only expanding downwards.
-                let pos = {x: intialpos.x + (index * ui.tilesize), y: intialpos.y}
-
-                // is the postion within bounds? If not, move down a row.
-                if (pos.y + ui.tilesize > ui.MAX_UI_SIZE) {
-                    pos.y = intialpos.y + (index * ui.tilesize)
-                }
-                ui.reservePos(pos.x, pos.y)
-
-                if (debug) console.log(`Adding item: ${JSON.stringify(objItem)} with chance: ${chance} at ${pos.x}, ${pos.y}`)
-                machine.produceItem(`${count}x ${objItem.item}`, chance, pos.x, pos.y)
-            }
+            cfgRecipe.arrayResults()
+            // Filter out the XP_ID
+            .filter(objItem => objItem.item.toString() != cfgRecipe.XP_ID)
+            .forEach((objItem, index) => {
+                let stringObjItem = JSON.stringify(objItem)
+                // A new position for the item, and then produce the item
+                let pos = ui.getNewPos(index, [`Result ${objItem}`], cols, rows)
+                if (debug) console.log(`Adding item: ${stringObjItem} with chance: ${objItem.chance} at ${pos.x}, ${pos.y}`)
+                machine.produceItem(`${objItem.count}x ${objItem.item}`, objItem.chance, pos.x, pos.y)
+            })
             
             // Placing the progress bar just next to the required item.
             machine.progressX(35)
             machine.progressY(0)
 
-            machine.requireEnergy(cfgRecipe.energyCost(), 0, 0)
+            machine.requireEnergy(cfgRecipe.energyCost(arryXpNuggets), 0, 0)
 
             let dim = ui.getReservedBoundingBox()
             machine.width(dim.width)
             machine.height(dim.height)
+
+            // Display the reserved postions
+            if (debug) {
+                console.log('Reserved positions:');
+                console.log(ui.reservations.map(pos => [pos.x, pos.y, pos.party]).join('\n'));
+            }
 
         }
     })
