@@ -253,13 +253,16 @@
          */
         inputIngredient() {
             // Retrieve all ingredients as an array of JSON elements
-            let raw = [
-                this.recipeJson.get("ingredient"),
-                this.recipeJson.get("ingredients"),
-            ].find(value => value)
+            let raw = (
+                this.recipeJson.keySet().toArray()
+                .filter(key => (key.includes("ingredient") || key.includes("ingredients")))
+                .map(key => this.recipeJson.get(key))
+                .find(value => value)
+            )
 
             return this.jsonToArray(raw)
             .map(value => {
+                if (debug) console.log(`Ingredient Converting: ${value}`);
                 // Convert the JSON element to a JSON object
                 let objItem = value.asJsonObject
 
@@ -279,14 +282,15 @@
          */
         arrayResults() {
             let raw = (
-                Object.keys(this.recipeJson)
-                .filter(key => (key.includes("xp") || key.includes("experience")))
+                this.recipeJson.keySet().toArray()
+                .filter(key => (key.includes("result") || key.includes("results")))
                 .map(key => this.recipeJson.get(key))
                 .find(value => value)
             )
 
             return this.jsonToArray(raw)
             .map(value => {
+                if (debug) console.log(`Result Converting: ${value}`);
                 // Convert the JSON element to a JSON object
                 let objItem = value.asJsonObject
 
@@ -307,7 +311,7 @@
         xpNuggets(results) {
 
             let raw = (
-                Object.keys(this.recipeJson)
+                this.recipeJson.keySet().toArray()
                 .filter(key => (key.includes("xp") || key.includes("experience")))
                 .map(key => this.recipeJson.get(key))
                 .find(value => value)
@@ -323,7 +327,7 @@
 
             // Caluclated experience does not include recipe nuggets
             if (debug && experience) console.log(`Calculated Experience: ${experience}`)
-            if (debug && recipeNuggets) console.log(`Recipe Nuggets: ${JSON.stringify(recipeNuggets)}`)
+            if (debug && recipeNuggets.length) console.log(`Recipe Nuggets: ${JSON.stringify(recipeNuggets)}`)
             // One create experince nugget gives XP_PER xp points
             let nuggets = [
                 // The amount of guaranteed nuggets
