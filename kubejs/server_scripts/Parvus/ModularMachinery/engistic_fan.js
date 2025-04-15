@@ -128,7 +128,7 @@
                 let x = 0;
                 let y = 0;
                 let orgIndex = index;
-                if (debug) console.log(`Getting tile position for index ${index}`);
+                if (debug) console.log(`Getting tile position for: ${party}`);
                 // Calculate position, or use given values
                 let columns = col || this.columns();
                 let rows = row || this.rows();
@@ -155,7 +155,7 @@
             intialPos: undefined,
 
             /**
-             * Gets a new position for a UI element based on the index of the element.
+             * Calls getTilePosition with more efficient use of space
              * @param {number} index
              * @param {String[]} party
              * @param {number} [col]
@@ -163,21 +163,18 @@
              */
             getNewPos(index, party, col, row) {
                 // Get intial position
-                if (!index) this.intialpos = this.getTilePosition(0, party, true, col, row);
+                if (index == 0) this.intialpos = this.getTilePosition(index, party, false, col, row);
 
                 // Ensure items use as much space as they can instead of only expanding downwards.
                 let pos = {x: this.intialpos.x + (index * this.tilesize), y: this.intialpos.y}
-                if (debug) console.log(`Initial position for index ${index}: ${[pos.x, pos.y]}`);
+                if (debug) console.log(`Initial position for: ${party}: ${[pos.x, pos.y]}`);
 
-                // The position is out of the UI.
-                if (pos.x > this.MAX_UI_SIZE) {
-                    // Move down a row
-                    pos.y = this.intialpos.y + (index * this.tilesize)
-                } 
-                // The position is reserved                
-                else if (this.reservations.find(p => p.x == pos.x && p.y == pos.y)) {
-                    pos = this.getTilePosition(0, party, false, col, row)
+                // The position is out of the UI or already reserved
+                if (pos.x > this.MAX_UI_SIZE || this.reservations.find(p => p.x == pos.x && p.y == pos.y)) {
+                    // Get a new position
+                    pos = this.getTilePosition(index, party, false, col, row)
                 }
+
                 this.reservePos(pos.x, pos.y, party)
                 return pos
             }
@@ -210,7 +207,7 @@
             let raw = {}
             try {
                 raw = JSON.parse(strItemStack);
-                if (debug) console.log(`JSON: ${strItemStack}`);
+                if (debug) console.log(`ORGINANL ITEM: ${strItemStack}`);
     
                 // Check if 'item' or 'id' exists
                 if ('item' in raw) {
@@ -229,7 +226,7 @@
                 return null; // Default return value for invalid JSON
             }
     
-            if (debug) console.log(`Item: ${JSON.stringify(raw)}`);
+            if (debug) console.log(`PARSED ITEM: ${JSON.stringify(raw)}`);
             return raw;
         },
 
@@ -281,10 +278,12 @@
          * This includes the XP_ID
          */
         arrayResults() {
-            let raw = [
-                this.recipeJson.get("result"),
-                this.recipeJson.get("results"),
-            ].find(value => value)
+            let raw = (
+                Object.keys(this.recipeJson)
+                .filter(key => (key.includes("xp") || key.includes("experience")))
+                .map(key => this.recipeJson.get(key))
+                .find(value => value)
+            )
 
             return this.jsonToArray(raw)
             .map(value => {
@@ -300,34 +299,31 @@
             })
         },  
 
-        //TODO: CONSIDER RESULTING EXP NUGGETS TO BE HANDLED LIKE CALCULATED EXP NUGGETS
-
         /**
          * Returns the number of experience Nuggets that will be created.
          * Also adds the remaining extra.
+         * @param {{chance: number, item: string, count: number}[]} [results]
          */
-        xpNuggets() {
+        xpNuggets(results) {
 
-            let raw = [
-                this.recipeJson.get("xp"),
-                this.recipeJson.get("experience"),
-            ].find(value => value)
+            let raw = (
+                Object.keys(this.recipeJson)
+                .filter(key => (key.includes("xp") || key.includes("experience")))
+                .map(key => this.recipeJson.get(key))
+                .find(value => value)
+            )
 
-            // Apparently this can be used on 'undefined' but not 'null'?
             // We give double the amount of xp here to compete with the crushers
             let experience = raw ? raw.asNumber * XP_MULTI : 0
 
-            // Calculate the amount of nuggets from the recipe
-            experience = (
-                this.arrayResults()
-                // Filter the nuggets
-                .filter(item => item.item === XP_ID)
-                // Calculate the amount of xp
-                .reduce((a, b) => a + b.count, 0) * 3
-            )
+            results = results || this.arrayResults()
+            // Nuggets from the recipe
+            let recipeNuggets = results.filter(item => item.item === XP_ID)
+            
 
-            if (debug && experience) console.log(`Experience: ${experience}`)
-
+            // Caluclated experience does not include recipe nuggets
+            if (debug && experience) console.log(`Calculated Experience: ${experience}`)
+            if (debug && recipeNuggets) console.log(`Recipe Nuggets: ${JSON.stringify(recipeNuggets)}`)
             // One create experince nugget gives XP_PER xp points
             let nuggets = [
                 // The amount of guaranteed nuggets
@@ -335,10 +331,31 @@
 
                 // The chance of extra nuggets
                 {chance: Math.round(((experience % XP_PER) / XP_PER) * 100) / 100, item: XP_ID, count: 1}
-            ].filter((nugget) => (nugget.chance && nugget.count))
+            ].map((nugget, i) => {
+
+                // If this is the first nugget
+                if (i == 0) {
+                    // Add the recipe nuggets that are guaranteed
+                    nugget.count += (
+                        recipeNuggets
+                        .filter((nugget) => nugget.chance && nugget.chance === 1)
+                        .reduce((acc, xp) => acc + xp.count, 0)
+                    )
+                }
+
+                return nugget
+            }).concat(
+                // Add the recipe nuggets that have a chance of being created
+                recipeNuggets
+                    .filter((nugget) => nugget.chance && nugget.chance < 1)
+            )
+            
+            // Finally, filter out the nuggets that won't be created
+            .filter((nugget) => (nugget.chance && nugget.count))
 
             if (debug && nuggets.length) console.log(`Made ${nuggets.length} nuggets`)
 
+            // Return the array of nuggets
             return nuggets
         },
 
@@ -350,10 +367,12 @@
             let processingTime = MIN_TIME;
 
             // Find the processing time
-            let raw = [
-                this.recipeJson.get("time"),
-                this.recipeJson.get("duration"),
-            ].find(value => value)
+            let raw = (
+                Object.keys(this.recipeJson)
+                .filter(key => (key.includes("time") || key.includes("duration")))
+                .map(key => this.recipeJson.get(key))
+                .find(value => value)
+            )
 
             if (raw) processingTime = raw.asNumber
 
@@ -441,11 +460,10 @@
         function Recipes(recipeType) {
             return event.forEachRecipe({type: recipeType}, recipe => {
                 if (!canBeAutomated(recipe)) return null
-                if (debug) console.log(`
-                    ========================================
-                    DOING RECIPE: ${recipe.getId()} 
-                    With JSON: ${recipe.json.toString()}
-                    ========================================`)
+                if (debug) {
+                    console.log(`DOING RECIPE: ${recipe.getId()}`)
+                    console.log(`With JSON: ${recipe.json.toString()}`)
+                }
                 return doFANBLASTING(recipe)
             })
         }
@@ -457,6 +475,8 @@
             "create:crushing"
         ].forEach(Recipes)
 
+
+        // TODO: Handling Recipes that have the same input
         
         /**
          * FANBLASTING recipe transformer
@@ -465,14 +485,15 @@
         function doFANBLASTING(recipe) {
 
             let ui = constuctUI();
-
-            let cfgRecipe = constructRecipe(recipe, 3, 2, "create:experience_nugget", 20, 8, 1);
+            const XP_ID = "create:experience_nugget";
+            let cfgRecipe = constructRecipe(recipe, 3, 2, XP_ID, 20, 8, 1);
 
             let machine = event.recipes.modular_machinery_reborn.machine_recipe("mmr:encased_fan", cfgRecipe.boostedTime())
 
             machine.requireItem(cfgRecipe.inputIngredient(), 1, 20, 0);
 
-            let arryXpNuggets = cfgRecipe.xpNuggets();
+            let arryResults = cfgRecipe.arrayResults();
+            let arryXpNuggets = cfgRecipe.xpNuggets(arryResults);
 
             /** 
              * Reserves positions in the UI grid for special UI elements. 
@@ -494,23 +515,21 @@
 
             // Add the experience to the UI.
             arryXpNuggets
-            .forEach((objItem, index) => {
-                let stringObjItem = JSON.stringify(objItem)
-                let pos = ui.getNewPos(index, [`XP_ID ${stringObjItem}`], cols, rows)
-                if (debug) console.log(`Adding nugget: ${stringObjItem} with chance: ${objItem.chance} at ${pos.x}, ${pos.y}`)
-                machine.produceItem(`${objItem.count}x ${objItem.item}`, objItem.chance, pos.x, pos.y)
+            .forEach((obXp, index) => {
+                let pos = ui.getNewPos(index, [`XP_ID ${JSON.stringify(obXp)}`], cols, rows)
+                if (debug) console.log(`Adding nugget: ${JSON.stringify(obXp)} with chance: ${obXp.chance} at ${pos.x}, ${pos.y}`)
+                machine.produceItem(`${obXp.count}x ${obXp.item}`, obXp.chance, pos.x, pos.y)
             })
 
             // Add the items to be produced, and their chances to the UI.
-            cfgRecipe.arrayResults()
+            arryResults
             // Filter out the XP_ID
-            .filter(objItem => objItem.item.toString() != cfgRecipe.XP_ID)
-            .forEach((objItem, index) => {
-                let stringObjItem = JSON.stringify(objItem)
+            .filter(obItem => obItem.item !== XP_ID)
+            .forEach((obItem, index) => {
                 // A new position for the item, and then produce the item
-                let pos = ui.getNewPos(index, [`Result ${objItem}`], cols, rows)
-                if (debug) console.log(`Adding item: ${stringObjItem} with chance: ${objItem.chance} at ${pos.x}, ${pos.y}`)
-                machine.produceItem(`${objItem.count}x ${objItem.item}`, objItem.chance, pos.x, pos.y)
+                let pos = ui.getNewPos(index, [`Result ${JSON.stringify(obItem)}`], cols, rows)
+                if (debug) console.log(`Adding item: ${JSON.stringify(obItem)} with chance: ${obItem.chance} at ${pos.x}, ${pos.y}`)
+                machine.produceItem(`${obItem.count}x ${obItem.item}`, obItem.chance, pos.x, pos.y)
             })
             
             // Placing the progress bar just next to the required item.
