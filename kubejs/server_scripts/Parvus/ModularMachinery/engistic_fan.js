@@ -4,8 +4,6 @@
 // @ts-check
 // An upgrade to create's encased fan.
 
-let $InputBusItem = Java.loadClass("es.degrassi.mmreborn.common.item.InputBusItem");
-
 // Immidately Invoked Function Expression to prevent polluting the global namespace
 (() => {
 
@@ -422,10 +420,6 @@ let $InputBusItem = Java.loadClass("es.degrassi.mmreborn.common.item.InputBusIte
         }
     }}
 
- 
-
-    
-
     MMREvents.machines(event => {
         // TODO: CONTROLLER MODEL
         // TODO: MACHINE SOUNDS
@@ -453,280 +447,243 @@ let $InputBusItem = Java.loadClass("es.degrassi.mmreborn.common.item.InputBusIte
         
     })
 
-
-
-    ServerEvents.recipes(event => {
-
+    /**
+     * Construcuts the foundation for a machine to accept recipes.
+     * @param {string} MACH_ID - The ID of the machine.
+     * @param {$RecipesKubeEvent_} MACH_EVENT - The Recipe Event
+     */
+    function structMACH(MACH_ID, MACH_EVENT) {return {
 
         /**
-         * A similar check to create if a recipe can be automated or not.
+         * A map of recipes by their input. The keys are the input items or tags as strings.
+         * @type {Map<string, {
+         * time: number & $TickDuration_,
+         * energy: number,
+         * inputCount: number,
+         * inputChance: number,
+         * results: {item: string, count: number, chance: number}[]}>}
+         */
+        unifyMap: new Map(),
+
+        /**
+         * Create Mod-like check if a recipe can be automated or not.
          * @param {$KubeRecipe_} recipe - The recipe to check.
          */
-        function canBeAutomated(recipe) {
+        canBeAutomated(recipe) {
             return !(recipe.getPath().endsWith("_manual_only"))
-        }
+        },
 
-        // TODO: Handling Recipes that have the same input
-        let objFan = {
+        /**
+         * Sets the value for the given ingredient in the unifyMap.
+         * If the key does not exist, it creates a new entry.
+         * If the key does exist, it adds the values given to the existing entry.
+         * @param {{item: string, count: number, chance: number}} ingredient - The ingredient to set in the unifyMap
+         * @param {number & $TickDuration_} [time] - The time to add to the existing entry
+         * @param {number} [energy] - The energy to add to the existing entry
+         * @param {{item: string, count: number, chance: number}[]} [results] - The array of results to add to the existing entry
+         */
+        setMap(ingredient, time, energy, results) {
+            if (debug) console.log(`Key to parse: ${JSON.stringify(ingredient)}`)
+            if (debug && 'tag' in ingredient) console.log(`Tag to parse: ${ingredient.tag}`)
+            let newTime = time || 0
+            let newEnergy = energy || 0
+            let newCount = ingredient.count || 0
+            let newResults = results || []
+            Ingredient.of(ingredient).asStack().items.map(v => String(v.id)).forEach(strId => {
+                if (typeof strId !== "string") throw new Error
+                (`Why is ItemID not a string? It's a ${typeof strId}`)
 
-            /**
-             * A map of recipes by their input. The keys are the input items or tags as strings.
-             * @type {Map<string, {
-             * time: number & $TickDuration_,
-             * energy: number,
-             * inputCount: number,
-             * inputChance: number,
-             * results: {item: string, count: number, chance: number}[]}>}
-             */
-            unifyMap: new Map(),
+                let oriMap = this.unifyMap.get(strId)
+                let newMap;
+                if (!oriMap) {
+                    if (debug) console.log(`Creating new map for ${strId}`)
+                    newMap = {
+                        time: newTime,
+                        energy: newEnergy,
+                        inputCount: newCount,
+                        inputChance: ingredient.chance,
+                        results: newResults,
+                    };
+                } else if (oriMap) {
+                    if (debug) console.log(`Updating existing map for ${strId}`)
+                    newMap = {
+                        time: newTime + oriMap.time,
+                        energy: newEnergy + oriMap.energy,
+                        inputCount: newCount + ingredient.count,
+                        inputChance: Math.max(ingredient.chance || 0, oriMap.inputChance),
+                        results: oriMap.results.concat(newResults)
+                    };
+                }
 
+                // Update map
+                this.unifyMap.set(strId, newMap);
 
-            /**
-             * Sets the value for the given ingredient in the unifyMap.
-             * If the key does not exist, it creates a new entry.
-             * If the key does exist, it adds the values given to the existing entry.
-             * @param {{item: string, count: number, chance: number}} ingredient - The ingredient to set in the unifyMap
-             * @param {number & $TickDuration_} [time] - The time to add to the existing entry
-             * @param {number} [energy] - The energy to add to the existing entry
-             * @param {{item: string, count: number, chance: number}[]} [results] - The array of results to add to the existing entry
-             */
-            setMap(ingredient, time, energy, results) {
-                if (debug) console.log(`Key to parse: ${JSON.stringify(ingredient)}`)
-                if (debug && 'tag' in ingredient) console.log(`Tag to parse: ${ingredient.tag}`)
-                let newTime = time || 0
-                let newEnergy = energy || 0
-                let newCount = ingredient.count || 0
-                let newResults = results || []
-                Ingredient.of(ingredient).asStack().items.map(v => String(v.id)).forEach(strId => {
-                    if (typeof strId !== "string") throw new Error
-                    (`Why is ItemID not a string? It's a ${typeof strId}`)
+                // Check
+                if (debug) {
+                    if (!(this.unifyMap.has(strId))) throw new Error
+                    (`Could not find key: ${strId}, For: ${JSON.stringify(ingredient)}`)
+                    console.log(`Finished: ${strId} Map: ${Array.from(this.unifyMap.keys()).filter(key => key === strId).join(", ")}`)
+                }
 
-                    let oriMap = this.unifyMap.get(strId)
-                    let newMap;
-                    if (!oriMap) {
-                        if (debug) console.log(`Creating new map for ${strId}`)
-                        newMap = {
-                            time: newTime,
-                            energy: newEnergy,
-                            inputCount: newCount,
-                            inputChance: ingredient.chance,
-                            results: newResults,
-                        };
-                    } else if (oriMap) {
-                        if (debug) console.log(`Updating existing map for ${strId}`)
-                        newMap = {
-                            time: newTime + oriMap.time,
-                            energy: newEnergy + oriMap.energy,
-                            inputCount: newCount + ingredient.count,
-                            inputChance: Math.max(ingredient.chance || 0, oriMap.inputChance),
-                            results: oriMap.results.concat(newResults)
-                        };
-                    }
+            })
+        },
 
-                    // Update map
-                    this.unifyMap.set(strId, newMap);
+        /**
+         * Initializes the recipes
+         * Returns the input that was collected
+         * @param {$KubeRecipe_} recipe 
+         */
+        init(recipe) {
+            if(!(this.canBeAutomated(recipe))) return
+            if (debug) {
+                console.log(`DOING RECIPE: ${recipe.getId()}`)
+                console.log(`With JSON: ${recipe.json.toString()}`)
+            }
+            const XP_ID = "create:experience_nugget";
+            let cfgRecipe = constructRecipe(recipe, 3, 2, XP_ID, 20, 8, 1);
+            let boostedTime = cfgRecipe.boostedTime();
 
-                    // Check
-                    if (debug) {
-                        if (!(this.unifyMap.has(strId))) throw new Error
-                        (`Could not find key: ${strId}, For: ${JSON.stringify(ingredient)}`)
-                        console.log(`Finished: ${strId} Map: ${Array.from(this.unifyMap.keys()).filter(key => key === strId).join(", ")}`)
-                    }
+            let inputIngredient = cfgRecipe.inputIngredient();
+            // Add processing time
+            this.setMap(inputIngredient, boostedTime);
 
-                })
-            },
-   
-            /**
-             * Initializes the recipes
-             * Returns the input that was collected
-             * @param {$KubeRecipe_} recipe 
-             */
-            init(recipe) {
+            let arryResults = cfgRecipe.arrayResults();
+            let arryXpNuggets = cfgRecipe.xpNuggets(arryResults);
+            let energyCost = cfgRecipe.energyCost(arryXpNuggets)
+
+            // Add the experience to the UI.
+            arryXpNuggets
+            .forEach((obXp) => {
+                // Add the item to the map
+                this.setMap(inputIngredient, null, null, [obXp])
+            })
+
+            // Add the items to be produced, and their chances to the UI.
+            arryResults
+            // Filter out the XP_ID
+            .filter(obItem => obItem.item !== XP_ID)    
+            .forEach((obItem, index) => {
+                // Add the item to the map
+                this.setMap(inputIngredient, null, null, [obItem])
+            })
+            this.setMap(inputIngredient, null, energyCost, null);
+
+            return inputIngredient
+
+        },
+
+        /**
+         * Iterates over the unifyMap and creates a machine for each entry.
+         */
+        doUnify() {
+            this.unifyMap.forEach((recipe, key) => {
+
+                // If any part of the recipe is missing throw error.
+                let badparts = Object.keys(recipe).filter(key => !recipe[key])
+                if (badparts.length) throw new Error
+                (`Parts of this ${key} recipe are missing, Missing: ${badparts}`)
+
+                let ui = constuctUI();
+                let XP_ID = "create:experience_nugget";
                 
-                const XP_ID = "create:experience_nugget";
-                let cfgRecipe = constructRecipe(recipe, 3, 2, XP_ID, 20, 8, 1);
-                let boostedTime = cfgRecipe.boostedTime();
+                let boostedTime = recipe.time
+                let machine = MACH_EVENT.recipes.modular_machinery_reborn.machine_recipe(MACH_ID, boostedTime);
 
-                let inputIngredient = cfgRecipe.inputIngredient();
-                // Add processing time
-                this.setMap(inputIngredient, boostedTime);
+                let inputIngredient = {item: key, count: recipe.inputCount, chance: recipe.inputChance}
+                if (debug) console.log(`Parsing Key: ${JSON.stringify(inputIngredient)}`)
 
-                // machine.requireItem(inputIngredient, 1, 20, 0);
+                machine.requireItem(inputIngredient, 1, 20, 0);
 
-                let arryResults = cfgRecipe.arrayResults();
-                let arryXpNuggets = cfgRecipe.xpNuggets(arryResults);
-                let energyCost = cfgRecipe.energyCost(arryXpNuggets)
+                let arryResults = recipe.results
+                let arryXpNuggets = recipe.results.filter(result => result.item === XP_ID)
 
+                let cols = ui.columns();
+                let rows = ui.rows();
+                let specialTopSlots = 3;
+                let specialCols = 1;
+
+                // For each specialTopSlots
+                for (let colIndex = 0; colIndex < specialTopSlots; colIndex++) {
+                    ui.reservePos(colIndex * ui.tilesize, 0, ["Top Row"]);
+                }
+
+                // For specialCols column.
+                for (let cIndex = 0; cIndex < specialCols; cIndex++) {
+                /**
+                 * Reserve all the slots in that column
+                 */
+                for (let rIndex = 0; rIndex < rows; rIndex++) {
+                    ui.reservePos(cIndex, rIndex * ui.tilesize, [`Column ${cIndex}`]);
+                }}
 
                 // Add the experience to the UI.
                 arryXpNuggets
                 .forEach((obXp, index) => {
-                    // let pos = ui.getNewPos(index, [`XP_ID ${JSON.stringify(obXp)}`], cols, rows)
-                    // if (debug) console.log(`Adding nugget: ${JSON.stringify(obXp)} with chance: ${obXp.chance} at ${pos.x}, ${pos.y}`)
-                    // machine.produceItem(`${obXp.count}x ${obXp.item}`, obXp.chance, pos.x, pos.y)
+                    let pos = ui.getNewPos(index, [`XP_ID ${JSON.stringify(obXp)}`], cols, rows)
+                    if (debug) console.log(`Adding nugget: ${JSON.stringify(obXp)} with chance: ${obXp.chance} at ${pos.x}, ${pos.y}`)
+                    machine.produceItem(`${obXp.count}x ${obXp.item}`, obXp.chance, pos.x, pos.y)
                 
-                    // Add the item to the map
-                    this.setMap(inputIngredient, null, null, [obXp])
                 })
 
                 // Add the items to be produced, and their chances to the UI.
                 arryResults
                 // Filter out the XP_ID
-                .filter(obItem => obItem.item !== XP_ID)    
+                .filter(obItem => obItem.item !== XP_ID)
                 .forEach((obItem, index) => {
                     // A new position for the item, and then produce the item
-                    // let pos = ui.getNewPos(index, [`Result ${JSON.stringify(obItem)}`], cols, rows)
-                    // if (debug) console.log(`Adding item: ${JSON.stringify(obItem)} with chance: ${obItem.chance} at ${pos.x}, ${pos.y}`)
-                    // machine.produceItem(`${obItem.count}x ${obItem.item}`, obItem.chance, pos.x, pos.y)
+                    let pos = ui.getNewPos(index, [`Result ${JSON.stringify(obItem)}`], cols, rows)
+                    if (debug) console.log(`Adding item: ${JSON.stringify(obItem)} with chance: ${obItem.chance} at ${pos.x}, ${pos.y}`)
+                    machine.produceItem(`${obItem.count}x ${obItem.item}`, obItem.chance, pos.x, pos.y)
 
-                    // Add the item to the map
-                    this.setMap(inputIngredient, null, null, [obItem])
                 })
 
-                // machine.requireEnergy(cfgRecipe.energyCost(arryXpNuggets), 0, 0)
-                if (debug) console.log(`Passing Energy: ${energyCost}`)
-                this.setMap(inputIngredient, null, energyCost, null);
+                machine.requireEnergy(recipe.energy, 0, 0)
 
-                // let dim = ui.getReservedBoundingBox()
-                // machine.width(dim.width)
-                // machine.height(dim.height)
+                let dim = ui.getReservedBoundingBox()
+                machine.width(dim.width)
+                machine.height(dim.height)
 
                 // Placing the progress bar just next to the required item.
-                // let posProgress = {x: 35, y: 0}
-                // machine.progressX(posProgress.x)
-                // machine.progressY(posProgress.y)
+                let posProgress = {x: 35, y: 0}
+                machine.progressX(posProgress.x)
+                machine.progressY(posProgress.y)
 
-                return inputIngredient
-            },
-
-            /**
-             * Iterates over the unifyMap and creates a machine for each entry.
-             */
-            doUnify() {
-                this.unifyMap.forEach((recipe, key) => {
-
-                    // If any part of the recipe is missing throw error.
-                    let badparts = Object.keys(recipe).filter(key => !recipe[key])
-                    if (badparts.length) throw new Error
-                    (`Parts of this ${key} recipe are missing, Missing: ${badparts}`)
-
-                    let ui = constuctUI();
-                    let XP_ID = "create:experience_nugget";
-                    
-                    let boostedTime = recipe.time
-                    let machine = event.recipes.modular_machinery_reborn.machine_recipe("mmr:encased_fan", boostedTime);
-    
-                    let inputIngredient = {item: key, count: recipe.inputCount, chance: recipe.inputChance}
-                    if (debug) console.log(`Parsing Key: ${JSON.stringify(inputIngredient)}`)
-                    
-                    // Add processing time
-                    // this.addProccesingTime(inputIngredient, boostedTime);
-    
-                    machine.requireItem(inputIngredient, 1, 20, 0);
-    
-                    let arryResults = recipe.results
-                    let arryXpNuggets = recipe.results.filter(result => result.item === XP_ID)
-    
-                    let cols = ui.columns();
-                    let rows = ui.rows();
-                    let specialTopSlots = 3;
-                    let specialCols = 1;
-
-                    // For each specialTopSlots
-                    for (let colIndex = 0; colIndex < specialTopSlots; colIndex++) {
-                        ui.reservePos(colIndex * ui.tilesize, 0, ["Top Row"]);
-                    }
-
-                    // For specialCols column.
-                    for (let cIndex = 0; cIndex < specialCols; cIndex++) {
-                    /**
-                     * Reserve all the slots in that column
-                     */
-                    for (let rIndex = 0; rIndex < rows; rIndex++) {
-                        ui.reservePos(cIndex, rIndex * ui.tilesize, [`Column ${cIndex}`]);
-                    }}
-    
-                    // Add the experience to the UI.
-                    arryXpNuggets
-                    .forEach((obXp, index) => {
-                        let pos = ui.getNewPos(index, [`XP_ID ${JSON.stringify(obXp)}`], cols, rows)
-                        if (debug) console.log(`Adding nugget: ${JSON.stringify(obXp)} with chance: ${obXp.chance} at ${pos.x}, ${pos.y}`)
-                        machine.produceItem(`${obXp.count}x ${obXp.item}`, obXp.chance, pos.x, pos.y)
-                    
-                        // Add the item to the map
-                        // this.addItemSlot(inputIngredient, obXp)
-                    })
-    
-                    // Add the items to be produced, and their chances to the UI.
-                    arryResults
-                    // Filter out the XP_ID
-                    .filter(obItem => obItem.item !== XP_ID)
-                    .forEach((obItem, index) => {
-                        // A new position for the item, and then produce the item
-                        let pos = ui.getNewPos(index, [`Result ${JSON.stringify(obItem)}`], cols, rows)
-                        if (debug) console.log(`Adding item: ${JSON.stringify(obItem)} with chance: ${obItem.chance} at ${pos.x}, ${pos.y}`)
-                        machine.produceItem(`${obItem.count}x ${obItem.item}`, obItem.chance, pos.x, pos.y)
-    
-                        // Add the item to the map
-                        // this.addItemSlot(inputIngredient, obItem)
-                    })
-    
-                    machine.requireEnergy(recipe.energy, 0, 0)
-                    // this.addEnergyCost(inputIngredient, cfgRecipe.energyCost(arryXpNuggets));
-    
-                    let dim = ui.getReservedBoundingBox()
-                    machine.width(dim.width)
-                    machine.height(dim.height)
-    
-                    // Placing the progress bar just next to the required item.
-                    let posProgress = {x: 35, y: 0}
-                    machine.progressX(posProgress.x)
-                    machine.progressY(posProgress.y)
-    
-                    // Display the reserved postions
-                    if (debug) {
-                        console.log('Reserved positions:');
-                        console.log(ui.reservations.map(pos => [pos.x, pos.y, pos.party]).join('\n'));
-                    }
-
-
-                });
-
-
-            }
-
-
-        };
-
-        let fan = objFan
-        /**
-         * Applies the FANBLASTING recipe transformer to all recipes of the given type, skipping manual-only recipes.
-         * @param {string} recipeType the type of recipes to transform
-         */
-        function Recipes(recipeType) {
-            
-            event.forEachRecipe({type: recipeType}, recipe => {
-                if (!canBeAutomated(recipe)) return null
+                // Display the reserved postions
                 if (debug) {
-                    console.log(`DOING RECIPE: ${recipe.getId()}`)
-                    console.log(`With JSON: ${recipe.json.toString()}`)
+                    console.log('Reserved positions:');
+                    console.log(ui.reservations.map(pos => [pos.x, pos.y, pos.party]).join('\n'));
                 }
-                fan.init(recipe)
+
+
             });
 
-        };
 
-        [
-            "minecraft:smelting",
-            "create:splashing",
-            "create:haunting",
-            "create:crushing"
-        ].forEach(Recipes)
+        }
+    }};
+
+    /**
+     * A front facing function to assign machine recipes
+     * @param {$RecipesKubeEvent_} event
+     * @param {string} MACH_ID
+     * @param {string[]} MACH_TYPES
+     */
+    function recipesMACH(event, MACH_ID, MACH_TYPES) {
+        let fan = structMACH(MACH_ID, event);
         if (debug) console.log(`Begining Unification`)
+        MACH_TYPES.forEach((value) => event.forEachRecipe({type: value}, (recipe) => fan.init(recipe)));
+        if (debug) console.log(`Finalizing Unification`)
         fan.doUnify();
-
         if (debug) console.log(`A recipe: ${JSON.stringify(Array.from(fan.unifyMap.entries())[0])}`)
+    }
 
+    ServerEvents.recipes(event => {
+        debug = false
+        recipesMACH(event, "mmr:encased_fan", [
+            "minecraft:smelting",
+            "minecraft:blasting",
+            "minecraft:campfire_cooking",
+            "minecraft:smoking"
+        ])
 
     })
 
