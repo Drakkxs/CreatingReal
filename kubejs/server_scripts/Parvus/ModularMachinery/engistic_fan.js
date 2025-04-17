@@ -489,6 +489,8 @@
             let newEnergy = energy || 0
             let newCount = ingredient.count || 0
             let newResults = results || []
+
+            // For each itemstack of the matching ingredient
             Ingredient.of(ingredient).asStack().items.map(v => String(v.id)).forEach(strId => {
                 if (typeof strId !== "string") throw new Error
                 (`Why is ItemID not a string? It's a ${typeof strId}`)
@@ -505,14 +507,38 @@
                         results: newResults,
                     };
                 } else if (oriMap) {
-                    if (debug) console.log(`Updating existing map for ${strId}`)
+                    if (debug) console.log(`Updating existing map for ${strId}`) 
+                    
+                    // Create a new map of results with the same item combined
+                    let cleanResults = oriMap.results.concat(newResults).reduce((map, res) => {
+                        // Get the existing item with the same id or create a new one
+                        let oriItem = map.get(res.item)
+                        let newItem;
+                        if (!oriItem) {
+                          // If the item doesn't exist in the map, add it as is
+                          newItem = res
+                        } else if (oriItem.item === res.item) {
+                          // If the item does exist, take the maximum of each value
+                          newItem = {
+                            item: res.item,
+                            count: Math.max(oriItem.count, res.count),
+                            chance: Math.max(oriItem.chance, res.chance)
+                          }
+                        }
+
+                        // Add the new (or updated) item to the map
+                        map.set(res.item, newItem)
+                        return map;
+                    }, new Map());
+
                     newMap = {
                         time: newTime + oriMap.time,
                         energy: newEnergy + oriMap.energy,
                         inputCount: newCount + ingredient.count,
                         inputChance: Math.max(ingredient.chance || 0, oriMap.inputChance),
-                        results: oriMap.results.concat(newResults)
+                        results: Array.from(cleanResults.values()),
                     };
+                    
                 }
 
                 // Update map
@@ -683,9 +709,9 @@
             "minecraft:blasting",
             "minecraft:campfire_cooking",
             "minecraft:smoking"
-        ])
+        ]);
 
-    })
+    });
 
 
 })();
