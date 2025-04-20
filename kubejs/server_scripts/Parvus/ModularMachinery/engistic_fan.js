@@ -4,13 +4,14 @@
 // @ts-check
 // An upgrade to create's encased fan.
 
+
 // Immidately Invoked Function Expression to prevent polluting the global namespace
 (() => {
 
     /**
      * Want some debug?
      */
-    let debug = true
+    let debug = false
 
     /**
      * Constructs an object with methods to calculate real and center values based on input and offset.
@@ -18,17 +19,17 @@
     let constructPOS = {
         /**
          * Creates a structure with real and center calculation methods.
-         * @param {number} structValue - The initial value.
-         * @param {number} structOffset - The offset value.
+         * @param {number} dim - The initial value.
+         * @param {number} dimOffset - The offset value.
          * @returns- The structure with methods.
          */
-        struct: (structValue, structOffset) => ({
+        struct: (dim, dimOffset) => ({
 
             /**
              * Calculates the real value as the maximum of (v - o) and o
              * @returns {number} - The calculated real value.
              */
-            real() { return Math.max(structValue - structOffset, structOffset); },
+            real() { return Math.max(dim - dimOffset, dimOffset); },
 
             /**
              * Calculates the center value as half of the real value, floored.
@@ -39,43 +40,48 @@
 
         /**
          * Creates a structure using the given value and offset.
-         * @param {number} value - The initial value.
-         * @param {number} offset - The offset value.
+         * @param {number} width - The initial value.
+         * @param {number} wOffset - The offset value.
          * @returns - The structure with methods.
          */
-        x: function (value, offset) { return this.struct(value, offset); },
+        width: function (width, wOffset) { return this.struct(width, wOffset); },
 
         /**
          * Creates a structure using the maximum of the given value and 90, and the offset.
-         * @param {number} value - The initial value.
-         * @param {number} offset - The offset value.
+         * @param {number} height - The initial value.
+         * @param {number} hOffset - The offset value.
          * @returns - The structure with methods.
          */
-        y: function (value, offset) { return this.struct(value, offset); }
+        height: function (height, hOffset) { return this.struct(height, hOffset); }
     };
 
 
     /**
      * A function to create a structure for the UI.
      * @param {number} [t] - The size of the tile.
-     * @param {number} [x] - The initial x position of the UI.
-     * @param {number} [a] - The x offset of the UI.
-     * @param {number} [y] - The initial y position of the UI.
-     * @param {number} [b] - The y offset of the UI.
+     * @param {number} [uiSize] - The maximum size of the UI.
+     * @param {number} [width] - The initial x position of the UI.
+     * @param {number} [wOffset] - The x offset of the UI.
+     * @param {number} [height] - The initial y position of the UI.
+     * @param {number} [hOffset] - The y offset of the UI.
      */
-    function constuctUI(t, x, a, y, b) {
+    function constuctUI(t, uiSize, width, wOffset, height, hOffset) {
         return {
-            MAX_UI_SIZE: 256,
+            /** 
+             * The maximum size of the UI is hardcoded to 256
+             * However the largest recipe size will influence the JEI Category
+             */
+            MAX_UI_SIZE: uiSize | 256,
             tilesize: t || 20,
             reservations: [],
-            x: constructPOS.x(x || 80, a || 0),
-            y: constructPOS.y(y || 60, b || 0),
+            width: constructPOS.width(width || 80, wOffset || 0),
+            height: constructPOS.height(height || 60, hOffset || 0),
 
             /**
              * Calculates the number of columns in the UI grid based on the tile width.
              */
             columns() {
-                let numColumns = Math.ceil(this.x.real() / this.tilesize);
+                let numColumns = Math.ceil(this.width.real() / this.tilesize);
                 if (debug) console.log(`Calculated columns: ${numColumns}`);
                 if (Number.isInteger(numColumns)) return numColumns;
                 throw new Error("Invalid number of columns");
@@ -85,7 +91,7 @@
              * Calculates the number of rows in the UI grid based on the tile height.
              */
             rows() {
-                let numRows = Math.ceil(this.y.real() / this.tilesize);
+                let numRows = Math.ceil(this.height.real() / this.tilesize);
                 if (debug) console.log(`Calculated rows: ${numRows}`);
                 if (Number.isInteger(numRows)) return numRows;
                 throw new Error("Invalid number of rows");
@@ -125,58 +131,62 @@
              * @param {number} [row]
              */
             getTilePosition(index, party, makeReservation, col, row) {
-                let x = 0;
-                let y = 0;
+                let slot = { x: 0, y: 0 };
                 let orgIndex = index;
                 if (debug) console.log(`Getting tile position for: ${party}`);
-                // Calculate position, or use given values
-                let columns = col || this.columns();
-                let rows = row || this.rows();
 
                 // Find next available position
-                while (this.reservations.some(pos => pos.x === x && pos.y === y)) {
+                while (this.reservations.some(pos => pos.x === slot.x && pos.y === slot.y)) {
                     index++;
-                    x = (index % columns) * this.tilesize;
-                    y = Math.floor(index / columns) * this.tilesize;
-                    if ([x, y].some(pos => pos > this.MAX_UI_SIZE)) throw new Error("Too many UI elements");
+                    slot.x = (index % col) * this.tilesize;
+                    slot.y = Math.floor(index / col) * this.tilesize;
+                    if ([slot.x, slot.y].some(pos => pos > this.MAX_UI_SIZE)) throw new Error("Too many UI elements");
                 }
 
                 // Reserve this position
-                if (makeReservation) this.reservePos(x, y, party);
+                if (makeReservation) this.reservePos(slot.x, slot.y, party);
 
-                if (debug) console.log(`Final Pos: ${orgIndex} -> ${index}: ${[ x, y ]}`);
+                if (debug) console.log(`Final Pos: ${orgIndex} -> ${index}: ${[ slot.x, slot.y ]}`);
 
-                return { x: x, y: y };
+                return slot;
             },
 
             /**
              * Holds the initial position.
              */
             intialPos: undefined,
+            /**
+             * Holds the max column and row size of the UI.
+             */
+            maxDim: undefined,
 
             /**
-             * Calls getTilePosition with more efficient use of space
+             * Avoids vertically expanding the UI.
              * @param {number} index
              * @param {String[]} party
              * @param {number} [col]
              * @param {number} [row]
              */
             getNewPos(index, party, col, row) {
-                // Get intial position
-                if (index == 0) this.intialpos = this.getTilePosition(index, party, false, col, row);
-
-                // Ensure items use as much space as they can instead of only expanding downwards.
-                let pos = {x: this.intialpos.x + (index * this.tilesize), y: this.intialpos.y}
-                if (debug) console.log(`Initial position for: ${party}: ${[pos.x, pos.y]}`);
-
-                // The position is out of the UI or already reserved
-                if (pos.x > this.MAX_UI_SIZE || this.reservations.find(p => p.x == pos.x && p.y == pos.y)) {
-                    // Get a new position
-                    pos = this.getTilePosition(index, party, false, col, row)
+                // Some things only need to be done once
+                if (debug) console.log(`Index: ${index}`);
+                if (index == 0) this.intialPos = this.getTilePosition(index, party, false, col, row);
+                this.maxDim = this.maxDim || {
+                    col: Math.floor(this.MAX_UI_SIZE / this.tilesize),
+                    row: Math.floor(this.MAX_UI_SIZE / this.tilesize)
+                  };
+                let max = this.maxDim;
+                let slot = this.intialPos;
+                // Find next available position
+                while (this.reservations.some(pos => pos.x === slot.x && pos.y === slot.y)) {
+                    index++;
+                    slot.x = (index % max.col) * this.tilesize;
+                    slot.y = Math.floor(index / max.col) * this.tilesize;
+                    if ([slot.x, slot.y].some(pos => pos > this.MAX_UI_SIZE)) throw new Error("Too many UI elements");
                 }
-
-                this.reservePos(pos.x, pos.y, party)
-                return pos
+                
+                this.reservePos(slot.x, slot.y, party);
+                return slot;
             }
         };
     }
@@ -197,46 +207,40 @@
 
         recipeJson: recipe.json,
 
+        /** True json element type */
+        $JsonElement: {
+            element: JsonUtils.copy([])
+        },
+
         /**
          * Converts a JSON string to an item object.
          * @param {string} strItemStack - The JSON string to convert.
-         * @returns {{chance: number, item: string, count: number}}
+         * @returns {{item: string, count: number, chance: number}}
          */
         jsonToItem(strItemStack) {
             /** @type {Object} */
             let raw = {}
-            try {
-                raw = JSON.parse(strItemStack);
-                if (debug) console.log(`ORGINANL ITEM: ${strItemStack}`);
-    
-                // Check if 'item' or 'id' exists
-                if ('item' in raw) {
-                    // If 'item' is an object, we extract the 'id'
-                    if (typeof raw.item === 'object' && raw.item !== null && 'id' in raw.item) {
-                        raw.item = raw.item.id; // Replace the item object with the id
-                    }
-                } else if ('id' in raw) {
-                    // If there's an 'id' but no 'item', assign the id to item
-                    raw.item = raw.id;
-                    delete raw.id;
+            raw = JSON.parse(strItemStack);
+            if (debug) console.log(`ORGINANL ITEM: ${strItemStack}`);
+
+            // Check if 'item' or 'id' exists
+            if ('item' in raw) {
+                // If 'item' is an object, we extract the 'id'
+                if (typeof raw.item === 'object' && raw.item !== null && 'id' in raw.item) {
+                    raw.item = raw.item.id; // Replace the item object with the id
                 }
-    
-            } catch (e) {
-                if (debug) console.error(`Invalid JSON: ${strItemStack}`, e);
-                return null; // Default return value for invalid JSON
+            } else if ('id' in raw) {
+                // If there's an 'id' but no 'item', assign the id to item
+                raw.item = raw.id;
+                delete raw.id;
             }
+
+            // Fix count and chance
+            raw.count = raw.count || 1;
+            raw.chance = raw.chance || 1;
     
             if (debug) console.log(`PARSED ITEM: ${JSON.stringify(raw)}`);
             return raw;
-        },
-
-        /**
-         * Json to array
-         * @param {$JsonElement_} element - The JSON string to convert.
-         * @returns {import("com.google.gson.JsonElement").$JsonElement[]}
-         */
-        jsonToArray(element) {
-            return JsonIO.toArray(element).asList().stream().toArray();
         },
 
         /**
@@ -249,58 +253,77 @@
         },
 
         /**
-         * Retrieves the first ingredient of the recipe as an item object.
+         * Retrieves the items produced by the recipe as an array of item objects.
+         * @param {String[]} keys - Keys to search for in the recipe JSON.
          */
-        inputIngredient() {
-            // Retrieve all ingredients as an array of JSON elements
+        getItems(keys) {
+            // Retrieve raw data by filtering and mapping keys in the recipe JSON
             let raw = (
                 this.recipeJson.keySet().toArray()
-                .filter(key => (key.includes("ingredient") || key.includes("ingredients")))
+                .filter(prop => keys.some(srch => prop.includes(srch)))
                 .map(key => this.recipeJson.get(key))
                 .find(value => value)
-            )
+            );
 
-            return this.jsonToArray(raw)
-            .map(value => {
-                if (debug) console.log(`Ingredient Converting: ${value}`);
-                // Convert the JSON element to a JSON object
-                let objItem = value.asJsonObject
+            if (debug) console.log(`Raw Results for ${keys}: ${raw.toString()}`);
 
-                // Add redudancy to avoid null pointer exceptions
-                objItem.has("count") || objItem.add("count", 1.0)
-                objItem.has("chance") || objItem.add("chance", 1.0)
+            let json;
+            // Determine if the raw data is a JSON Array or Object
+            if (raw.isJsonArray()) {
+                json = Array.of(raw.asJsonArray.asList().toArray()).reduce((a, b) => a.concat(b), []);
+            } else if (raw.isJsonObject()) {
+                json = [raw.asJsonObject];
+            };
 
-                // Convert the JSON object to an item object
-                return this.jsonToItem(objItem.toString())
-            })[0] // Return the first item object of the array
+            if (debug) console.log(`JSON Elements: ${json.toString()}`);
+
+            // Map the JSON elements to item objects
+            let final = json.map(element => {
+                let objITEM = this.jsonToItem(element.toString());
+                console.log(`Mapped Item: ${JSON.stringify(objITEM)}`);
+                return objITEM;
+            }).reduce((acc, oriItem) => {
+                let stacks = Ingredient.of(oriItem).stacks.toArray()
+                    .map(stack => this.jsonToItem(stack.toJson().toString()))
+                    // Assign chance
+                    .map(stack => {
+                        return {
+                            item: stack.item,
+                            count: stack.count,
+                            chance: oriItem.chance
+                        }
+                    });
+                console.log(`Stacks: ${stacks.toString()}`);
+
+                return acc.concat(stacks);
+            }, []);
+
+            if (debug) console.log(`Final Found: ${JSON.stringify(final)}`);
+            if (!final.length) throw new Error("No final found");
+            return final;
+
+
         },
 
-        /**
-         * Retrieves the list of result objects from the recipe JSON and returns them as an array of item objects.
-         * An array of item objects as returned by jsonToItem.
-         * This includes the XP_ID
-         */
+
+        arrayIngredients() {
+            // Retrieve all ingredients as an array of JSON elements
+            return this.getItems([
+                "input",
+                "ingredient"
+            ]);
+            
+            
+        },
+
         arrayResults() {
-            let raw = (
-                this.recipeJson.keySet().toArray()
-                .filter(key => (key.includes("result") || key.includes("results")))
-                .map(key => this.recipeJson.get(key))
-                .find(value => value)
-            )
+            // Retrieve all results as an array of JSON elements
+            return this.getItems([
+                "output",
+                "result"
+            ]);
 
-            return this.jsonToArray(raw)
-            .map(value => {
-                if (debug) console.log(`Result Converting: ${value}`);
-                // Convert the JSON element to a JSON object
-                let objItem = value.asJsonObject
 
-                // Add redudancy to avoid null pointer exceptions
-                objItem.has("count") || objItem.add("count", 1.0)
-                objItem.has("chance") || objItem.add("chance", 1.0)
-
-                // Convert the JSON object to an item object
-                return this.jsonToItem(objItem.toString())
-            })
         },
 
         /**
@@ -312,7 +335,9 @@
 
             let raw = (
                 this.recipeJson.keySet().toArray()
-                .filter(key => (key.includes("xp") || key.includes("experience")))
+                .filter(key => (
+                    key.includes("xp") || 
+                    key.includes("experience")))
                 .map(key => this.recipeJson.get(key))
                 .find(value => value)
             )
@@ -320,7 +345,6 @@
             // We give double the amount of xp here to compete with the crushers
             let experience = raw ? raw.asNumber * XP_MULTI : 0
 
-            results = results || this.arrayResults()
             // Nuggets from the recipe
             let recipeNuggets = results.filter(item => item.item === XP_ID)
             
@@ -372,7 +396,7 @@
 
             // Find the processing time
             let raw = (
-                Object.keys(this.recipeJson)
+                this.recipeJson.keySet().toArray()
                 .filter(key => (key.includes("time") || key.includes("duration")))
                 .map(key => this.recipeJson.get(key))
                 .find(value => value)
@@ -410,42 +434,14 @@
          * @param {Array} arrXp
          */
         energyCost(arrXp) {
-            arrXp = arrXp || this.xpNuggets();
             let sumXp = arrXp.reduce((a, b) => a + b.count, 0);
             let sumCost = this.sumItemcount() + (sumXp * XP_PER);
             if (debug) console.log(`Sum Cost: ${sumCost}, XP per nugget: ${XP_PER}, Sum XP: ${sumXp}`);
             let energyCost = sumCost * this.proccessingTime();
             if (debug) console.log(`Energy Cost: ${energyCost}`);
-            return Math.max(MIN_ENERGY_COST, energyCost)
+            return Math.max(MIN_ENERGY_COST, (energyCost / 20));
         }
     }}
-
-    MMREvents.machines(event => {
-        // TODO: CONTROLLER MODEL
-        // TODO: MACHINE SOUNDS
-        // TODO: MACHINE RECIPE TYPES (BLASTING, HAUNTING, ETC)
-        let builder = event.create("mmr:encased_fan")
-        builder.name("Engistic Fan")
-        builder.color("#FF4d4d4d")
-        function struct() {
-            return ( MMRStructureBuilder.create().pattern([
-                ["aaa", "ecd", "aba"],
-                ["ama", "aaa", "aaa"],
-                ["f f", "   ", "f f"]
-            ]).keys({
-                "a": ["modular_machinery_reborn:casing_plain"],
-                "b": ["#modular_machinery_reborn:energyinputhatch"],
-                "c": ["modular_machinery_reborn:casing_firebox"],
-                "d": ["#modular_machinery_reborn:inputbus"],
-                "e": ["#modular_machinery_reborn:outputbus"],
-                "f": ["modular_machinery_reborn:casing_vent"]
-            }) );
-        } 
-        builder.structure(struct());
-        // TODO: SOUNDS
-        // builder.sound()
-        
-    })
 
     /**
      * Construcuts the foundation for a machine to accept recipes.
@@ -484,74 +480,76 @@
          */
         setMap(ingredient, time, energy, results) {
             if (debug) console.log(`Key to parse: ${JSON.stringify(ingredient)}`)
-            if (debug && 'tag' in ingredient) console.log(`Tag to parse: ${ingredient.tag}`)
             let newTime = time || 0
             let newEnergy = energy || 0
-            let newCount = ingredient.count || 0
+            let newCount = ingredient.count
             let newResults = results || []
 
-            // For each itemstack of the matching ingredient
-            Ingredient.of(ingredient).asStack().items.map(v => String(v.id)).forEach(strId => {
-                if (typeof strId !== "string") throw new Error
-                (`Why is ItemID not a string? It's a ${typeof strId}`)
+            if (typeof ingredient.item !== "string") throw new Error
+            (`Why is ItemID not a string? ${ingredient.item} is a ${typeof ingredient.item}`)
 
-                let oriMap = this.unifyMap.get(strId)
-                let newMap;
-                if (!oriMap) {
-                    if (debug) console.log(`Creating new map for ${strId}`)
-                    newMap = {
-                        time: newTime,
-                        energy: newEnergy,
-                        inputCount: newCount,
-                        inputChance: ingredient.chance,
-                        results: newResults,
-                    };
-                } else if (oriMap) {
-                    if (debug) console.log(`Updating existing map for ${strId}`) 
-                    
-                    // Create a new map of results with the same item combined
-                    let cleanResults = oriMap.results.concat(newResults).reduce((map, res) => {
-                        // Get the existing item with the same id or create a new one
-                        let oriItem = map.get(res.item)
-                        let newItem;
-                        if (!oriItem) {
-                          // If the item doesn't exist in the map, add it as is
-                          newItem = res
-                        } else if (oriItem.item === res.item) {
-                          // If the item does exist, take the maximum of each value
-                          newItem = {
-                            item: res.item,
-                            count: Math.max(oriItem.count, res.count),
-                            chance: Math.max(oriItem.chance, res.chance)
-                          }
+            let oriMap = this.unifyMap.get(ingredient.item)
+            let newMap;
+            if (!oriMap) {
+                if (debug) console.log(`Creating new map for ${ingredient.item}`)
+                newMap = {
+                    time: newTime,
+                    energy: newEnergy,
+                    inputCount: newCount,
+                    inputChance: ingredient.chance,
+                    results: newResults,
+                };
+            } else if (oriMap) {
+                if (debug) console.log(`Updating existing map for ${ingredient.item}`) 
+                
+                // Create a new map of results with the same item combined
+                let cleanResults = oriMap.results.concat(newResults).reduce((map, res) => {
+                    if (debug) console.log(`Cleaning result: ${JSON.stringify(res)}`)
+                    // If this isn't a valid item, ignore it
+                    if (!Ingredient.of(res.item)) {
+                        throw new Error(`Item |${res.item}| is not a valid item.`)
+                    }
+
+
+                    // Get the existing item with the same id or create a new one
+                    let oriItem = map.get(res.item);
+                    let newItem;
+                    if (!oriItem) {
+                        // If the item doesn't exist in the map, add it as is
+                        newItem = res
+                    } else if (oriItem.item === res.item) {
+                        // If the item does exist, take the maximum of each value
+                        newItem = {
+                        item: res.item,
+                        count: Math.max(oriItem.count, res.count),
+                        chance: Math.max(oriItem.chance, res.chance)
                         }
+                    }
 
-                        // Add the new (or updated) item to the map
-                        map.set(res.item, newItem)
-                        return map;
-                    }, new Map());
+                    // Add the new (or updated) item to the map
+                    map.set(res.item, newItem)
+                    return map;
+                }, new Map());
 
-                    newMap = {
-                        time: newTime + oriMap.time,
-                        energy: newEnergy + oriMap.energy,
-                        inputCount: newCount + ingredient.count,
-                        inputChance: Math.max(ingredient.chance || 0, oriMap.inputChance),
-                        results: Array.from(cleanResults.values()),
-                    };
-                    
-                }
+                newMap = {
+                    time: newTime + oriMap.time,
+                    energy: newEnergy + oriMap.energy,
+                    inputCount: Math.max(ingredient.count || 0, oriMap.inputCount),
+                    inputChance: Math.max(ingredient.chance || 0, oriMap.inputChance),
+                    results: Array.from(cleanResults.values()),
+                };
+            }
+            
+            // Update map
+            this.unifyMap.set(ingredient.item, newMap);
 
-                // Update map
-                this.unifyMap.set(strId, newMap);
+            // Check
+            if (debug) {
+                if (!(this.unifyMap.has(ingredient.item))) throw new Error
+                (`Could not find key: ${ingredient.item}, For: ${JSON.stringify(ingredient)}`)
+                console.log(`Finished: ${ingredient.item} Map: ${Array.from(this.unifyMap.keys()).filter(key => key === ingredient.item).join(", ")}`)
+            }
 
-                // Check
-                if (debug) {
-                    if (!(this.unifyMap.has(strId))) throw new Error
-                    (`Could not find key: ${strId}, For: ${JSON.stringify(ingredient)}`)
-                    console.log(`Finished: ${strId} Map: ${Array.from(this.unifyMap.keys()).filter(key => key === strId).join(", ")}`)
-                }
-
-            })
         },
 
         /**
@@ -569,32 +567,34 @@
             let cfgRecipe = constructRecipe(recipe, 3, 2, XP_ID, 20, 8, 1);
             let boostedTime = cfgRecipe.boostedTime();
 
-            let inputIngredient = cfgRecipe.inputIngredient();
-            // Add processing time
-            this.setMap(inputIngredient, boostedTime);
 
             let arryResults = cfgRecipe.arrayResults();
             let arryXpNuggets = cfgRecipe.xpNuggets(arryResults);
-            let energyCost = cfgRecipe.energyCost(arryXpNuggets)
+            let energyCost = cfgRecipe.energyCost(arryXpNuggets);
 
-            // Add the experience to the UI.
-            arryXpNuggets
-            .forEach((obXp) => {
-                // Add the item to the map
-                this.setMap(inputIngredient, null, null, [obXp])
-            })
+            for (let keyIngredient of cfgRecipe.arrayIngredients()) {
 
-            // Add the items to be produced, and their chances to the UI.
-            arryResults
-            // Filter out the XP_ID
-            .filter(obItem => obItem.item !== XP_ID)    
-            .forEach((obItem, index) => {
-                // Add the item to the map
-                this.setMap(inputIngredient, null, null, [obItem])
-            })
-            this.setMap(inputIngredient, null, energyCost, null);
+                // Add processing time
+                this.setMap(keyIngredient, boostedTime);
 
-            return inputIngredient
+                // Add the experience to the UI.
+                arryXpNuggets
+                .forEach((obXp) => {
+                    // Add the item to the map
+                    this.setMap(keyIngredient, null, null, [obXp])
+                })
+
+                // Add the items to be produced, and their chances to the UI.
+                arryResults
+                // Filter out the XP_ID
+                .filter(obItem => obItem.item !== XP_ID)    
+                .forEach((obItem, index) => {
+                    // Add the item to the map
+                    this.setMap(keyIngredient, null, null, [obItem])
+                })
+                this.setMap(keyIngredient, null, energyCost, null);
+
+            }
 
         },
 
@@ -618,7 +618,7 @@
                 let inputIngredient = {item: key, count: recipe.inputCount, chance: recipe.inputChance}
                 if (debug) console.log(`Parsing Key: ${JSON.stringify(inputIngredient)}`)
 
-                machine.requireItem(inputIngredient, 1, 20, 0);
+                machine.requireItem(inputIngredient, inputIngredient.chance, 20, 0);
 
                 let arryResults = recipe.results
                 let arryXpNuggets = recipe.results.filter(result => result.item === XP_ID)
@@ -648,7 +648,7 @@
                     let pos = ui.getNewPos(index, [`XP_ID ${JSON.stringify(obXp)}`], cols, rows)
                     if (debug) console.log(`Adding nugget: ${JSON.stringify(obXp)} with chance: ${obXp.chance} at ${pos.x}, ${pos.y}`)
                     machine.produceItem(`${obXp.count}x ${obXp.item}`, obXp.chance, pos.x, pos.y)
-                
+
                 })
 
                 // Add the items to be produced, and their chances to the UI.
@@ -656,6 +656,7 @@
                 // Filter out the XP_ID
                 .filter(obItem => obItem.item !== XP_ID)
                 .forEach((obItem, index) => {
+                    
                     // A new position for the item, and then produce the item
                     let pos = ui.getNewPos(index, [`Result ${JSON.stringify(obItem)}`], cols, rows)
                     if (debug) console.log(`Adding item: ${JSON.stringify(obItem)} with chance: ${obItem.chance} at ${pos.x}, ${pos.y}`)
@@ -695,21 +696,90 @@
      */
     function recipesMACH(event, MACH_ID, MACH_TYPES) {
         let fan = structMACH(MACH_ID, event);
-        if (debug) console.log(`Begining Unification`)
-        MACH_TYPES.forEach((value) => event.forEachRecipe({type: value}, (recipe) => fan.init(recipe)));
+        MACH_TYPES.forEach((value) => {
+            event.forEachRecipe({type: value}, (recipe) => {
+                fan.init(recipe)})
+        });
+
         if (debug) console.log(`Finalizing Unification`)
+        let recipe = JSON.stringify(Array.from(fan.unifyMap.entries())[0][1]);
+        if (debug) console.log(`A recipe: ${recipe}`)
         fan.doUnify();
-        if (debug) console.log(`A recipe: ${JSON.stringify(Array.from(fan.unifyMap.entries())[0])}`)
     }
 
+    /**
+     * Constructs and returns an object representing a machine builder for Engistic Fans.
+     * @param {string} MACH_ID - The unique identifier for the machine to be built.
+     * @returns An object containing machine configurations and a method
+     * to build the machine.
+     */
+    function machBuilder(MACH_ID){return {
+        machineType: new Map([
+            [
+                "blasting",
+                {
+                    id: MACH_ID.concat("_blasting"),
+                    name: "Engistic Fan - Blasting",
+                    colur: "#FF4d4d4d",
+                    core: "#create:fan_processing_catalysts/blasting",
+                    model: "minecraft:blast_furnace",
+                    recipeType: [
+                        "immersiveengineering:coke_oven",
+                        "minecraft:blasting",
+                        "minecraft:smelting"
+                    ],
+                },
+            ],
+        ]),
+
+        /**
+         * Build a fan machine with a core
+         * @param {$MachineBuilderJS$MachineKubeEvent_} MACH_EVENT 
+         * @param {string} MACH_TYPE
+         */
+        buildMACH(MACH_EVENT, MACH_TYPE) {
+            let machineType = this.machineType.get(MACH_TYPE)
+            let builder = MACH_EVENT.create(machineType.id)
+            builder.name("Engistic Fan")
+            builder.color(machineType.colur)
+            builder.controllerModel(ControllerModel.of(machineType.model))
+            builder.structure(
+                MMRStructureBuilder.create()
+                    .pattern([
+                        // Each array represents a row from left to right, front to back
+                        // m is the controller, a space is available space.
+                        [" m ", "   ", "   "],
+                        ["   ", " a ", "   "],
+                        ["   ", "   ", "   "]
+                      ])
+                    .keys({
+                        "a": [machineType.core],
+                    })
+            );
+            // TODO: SOUNDS
+            // builder.sound()
+        }
+    }};
+
+    /** The Engistic Fan */
+    let engisticFAN = machBuilder("mmr:engistic_fan");
+
+    MMREvents.machines(event => {
+        // TODO: CONTROLLER MODEL
+        // TODO: MACHINE SOUNDS
+        // TODO: MACHINE RECIPE TYPES (BLASTING, HAUNTING, ETC)
+        
+        /** Blasting Fan */
+        engisticFAN.buildMACH(event, "blasting");
+    })
+
     ServerEvents.recipes(event => {
-        debug = false
-        recipesMACH(event, "mmr:encased_fan", [
-            "minecraft:smelting",
-            "minecraft:blasting",
-            "minecraft:campfire_cooking",
-            "minecraft:smoking"
-        ]);
+
+        engisticFAN.machineType.forEach(type => {
+            recipesMACH(event, type.id, type.recipeType);
+        })
+
+
 
     });
 

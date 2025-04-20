@@ -1,0 +1,59 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "mythsandlegends-zapdos-1",
+      "pokemon": "zapdos",
+      "presets": [
+        "natural"
+      ],
+      "type": "pokemon",
+      "context": "grounded",
+      "bucket": "ultra-rare",
+      "level": "50-60",
+      "weight": 0.1,
+      "condition": {
+        "biomes": [
+          "minecraft:plains",
+          "minecraft:savanna"
+        ],
+        "key_item": "mythsandlegends:tidal_bell",
+        "item_requirement": [
+          {
+            "id": "cobblemon:thunder_stone",
+            "count": 3,
+            "consume": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "mythsandlegends-zapdos-2",
+      "pokemon": "zapdos",
+      "presets": [
+        "natural"
+      ],
+      "type": "pokemon",
+      "context": "grounded",
+      "bucket": "ultra-rare",
+      "level": "50-60",
+      "weight": 0.1,
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_sky",
+          "#cobblemon:is_mountain"
+        ],
+        "key_item": "mythsandlegends:tidal_bell",
+        "item_requirement": [
+          {
+            "id": "cobblemon:thunder_stone",
+            "count": 3,
+            "consume": true
+          }
+        ]
+      }
+    }
+  ]
+}

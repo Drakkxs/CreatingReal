@@ -9,41 +9,90 @@
     /**
      * Want some debug?
      */
-    let debug = true
+    let debug = false
 
-    /**
-     * Checks if the pokemon is a captured pokemon.
-     * @param {$Entity_} pokemon
-     * @returns {boolean} If the pokemon is a captured pokemon
-     */
-    function isCapturedPokemon(pokemon) {
-        // Check if the pokemon is a captured pokemon
-        let nbt = pokemon.nbt
-        if (!nbt) return false;
-        
-        let PokemonOriginalTrainer = nbt.getCompound("Pokemon").getString("PokemonOriginalTrainer").normalize()
+    let isPokemon = {
 
-        let result = null
-        try {
-            result = UUID.fromString(PokemonOriginalTrainer)
-        } catch (error) {
-            if (debug) console.log(error)
+
+        /**
+         * Checks if the pokemon is a captured pokemon.
+         * @param {$Entity_} pokemon
+         * @returns {boolean} If the pokemon is a captured pokemon
+         */
+        isCapturedPokemon(pokemon) {
+            // Check if the pokemon is a captured pokemon
+            let nbt = pokemon.nbt
+            if (!nbt) return false;
+            
+            let PokemonOriginalTrainer = nbt.getCompound("Pokemon").getString("PokemonOriginalTrainer").normalize()
+
+            let result = null
+            try {
+                result = UUID.fromString(PokemonOriginalTrainer)
+            } catch (error) {
+                if (debug) console.log(error)
+            }
+
+            return result !== null
+        },
+
+        /**
+         * Checks if the pokemon is a wild pokemon that just spawned.
+         * @param {$Entity_} missingNo
+         */
+        wildPokemonSpawn(missingNo) {
+
+            // Is this too old to be a new spawn?
+            if (missingNo.nbt.getInt("Age") < 0) return false
+
+            // Is this a wild pokemon?
+            if (this.isCapturedPokemon(missingNo)) return false
+
+            // This is a wild pokemon that just spawned
+            return true
+        },
+
+        /**
+         * Checks if the pokemon is a wild pokemon that just spawned.
+         * @param {$Entity_} missingNo
+         */
+        wildPokemon(missingNo) {
+
+            // Is this a wild pokemon?
+            if (this.isCapturedPokemon(missingNo)) return false
+
+            // This is a wild pokemon that just spawned
+            return true
         }
-
-        return result !== null
     }
 
+    // Stop the spawning of wild pokemon
     EntityEvents.spawned("cobblemon:pokemon", event => {
+
         // If the gamerule is on, exit logic
-        if (!event.entity.level.getGameRules().get("doMobSpawning")) return
+        if (event.level.gameRules.get("doMobSpawning").commandResult > 0) return
 
-        // Do not affect old pokemon with nbt
-        if (event.entity.nbt.getInt("Age") > 0) return
-        // Do not affect captured pokemon
-        if (isCapturedPokemon(event.entity)) return;
+        // Is this a wild pokemon?
+        if (!isPokemon.wildPokemon(event.entity)) return
 
+        if (debug) console.log(`Cancelling spawn of ${event.entity}`)
         // For non-captured pokemon, stop them from spawning.
         event.cancel()
+    })
+
+    // Remove all wild pokemon
+    EntityEvents.spawned("minecraft:item", event => {
+        // Butcher item
+        let checkBlock = event.entity.nbt.getString("id").normalize() == "minecraft:command_block"
+        let checkName = event.entity.customName.name === "BEGONE POKEMON"
+        if (checkBlock && checkName) {
+            event.server.tell("Begone Pokemon!")
+
+            // Butcher the pokemon
+            event.server.entities.stream().filter(entity => {
+                return isPokemon.wildPokemonSpawn(entity)
+            })
+        }
     })
     
 })();

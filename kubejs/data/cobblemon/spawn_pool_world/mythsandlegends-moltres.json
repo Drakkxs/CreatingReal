@@ -1,0 +1,60 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "mythsandlegends-moltres-1",
+      "pokemon": "moltres",
+      "presets": [
+        "natural"
+      ],
+      "type": "pokemon",
+      "context": "grounded",
+      "bucket": "ultra-rare",
+      "level": "50-60",
+      "weight": 0.1,
+      "condition": {
+        "biomes": [
+          "minecraft:badlands",
+          "minecraft:windswept_hills"
+        ],
+        "key_item": "mythsandlegends:tidal_bell",
+        "item_requirement": [
+          {
+            "id": "cobblemon:fire_stone",
+            "count": 3,
+            "consume": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "mythsandlegends-moltres-2",
+      "pokemon": "moltres",
+      "presets": [
+        "natural"
+      ],
+      "type": "pokemon",
+      "context": "grounded",
+      "bucket": "ultra-rare",
+      "level": "50-60",
+      "weight": 0.1,
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_volcanic",
+          "#cobblemon:is_thermal",
+          "#cobblemon:is_sky"
+        ],
+        "key_item": "mythsandlegends:tidal_bell",
+        "item_requirement": [
+          {
+            "id": "cobblemon:fire_stone",
+            "count": 3,
+            "consume": true
+          }
+        ]
+      }
+    }
+  ]
+}
