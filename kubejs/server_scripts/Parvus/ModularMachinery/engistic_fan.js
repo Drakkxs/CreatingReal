@@ -280,7 +280,7 @@
             // Map the JSON elements to item objects
             let final = json.map(element => {
                 let objITEM = this.jsonToItem(element.toString());
-                console.log(`Mapped Item: ${JSON.stringify(objITEM)}`);
+                if (debug) console.log(`Mapped Item: ${JSON.stringify(objITEM)}`);
                 return objITEM;
             }).reduce((acc, oriItem) => {
                 let stacks = Ingredient.of(oriItem).stacks.toArray()
@@ -293,7 +293,7 @@
                             chance: oriItem.chance
                         }
                     });
-                console.log(`Stacks: ${stacks.toString()}`);
+                if (debug) console.log(`Stacks: ${stacks.toString()}`);
 
                 return acc.concat(stacks);
             }, []);
