@@ -37,6 +37,20 @@
         },
 
         /**
+         * Checks if the pokemon is a wild pokemon.
+         * @param {$Entity_} missingNo
+         */
+        wildPokemon(missingNo) {
+
+            // Is this a captured pokemon?
+            if (this.isCapturedPokemon(missingNo)) return false
+
+            // Does it have a custom name?
+            if (missingNo.customName) return false
+
+        },
+
+        /**
          * Checks if the pokemon is a wild pokemon that just spawned.
          * @param {$Entity_} missingNo
          */
@@ -46,23 +60,8 @@
             if (missingNo.nbt.getInt("Age") < 0) return false
 
             // Is this a wild pokemon?
-            if (this.isCapturedPokemon(missingNo)) return false
+            if (this.wildPokemon(missingNo)) return true
 
-            // This is a wild pokemon that just spawned
-            return true
-        },
-
-        /**
-         * Checks if the pokemon is a wild pokemon that just spawned.
-         * @param {$Entity_} missingNo
-         */
-        wildPokemon(missingNo) {
-
-            // Is this a wild pokemon?
-            if (this.isCapturedPokemon(missingNo)) return false
-
-            // This is a wild pokemon that just spawned
-            return true
         }
     }
 
@@ -73,7 +72,7 @@
         if (event.level.gameRules.get("doMobSpawning").commandResult > 0) return
 
         // Is this a wild pokemon?
-        if (!isPokemon.wildPokemon(event.entity)) return
+        if (!isPokemon.wildPokemonSpawn(event.entity)) return
 
         if (debug) console.log(`Cancelling spawn of ${event.entity}`)
         // For non-captured pokemon, stop them from spawning.
@@ -83,16 +82,20 @@
     // Remove all wild pokemon
     EntityEvents.spawned("minecraft:item", event => {
         // Butcher item
-        let checkBlock = event.entity.nbt.getString("id").normalize() == "minecraft:command_block"
-        let checkName = event.entity.customName.name === "BEGONE POKEMON"
-        if (checkBlock && checkName) {
-            event.server.tell("Begone Pokemon!")
+        let butcherBlock = event.entity.nbt.getString("id").normalize() == "minecraft:command_block"
+        // let checkName = event.entity.customName.name === "BEGONE POKEMON"
+        let butcherName = event.entity.customName ? event.entity.customName.name === "BEGONE POKEMON" : false
+        if (!(butcherBlock || butcherName)) return
+        event.server.tell("Begone Pokemon!")
 
-            // Butcher the pokemon
-            event.server.entities.stream().filter(entity => {
-                return isPokemon.wildPokemonSpawn(entity)
-            })
-        }
+        // Butcher the pokemon
+        event.server.entities.stream().filter(entity => {
+            // Is this a wild pokemon?
+            return isPokemon.wildPokemon(entity)
+        }).forEach(entity => {
+            // Kill the pokemon that aren't wanted.
+            entity.kill()
+        })
     })
     
 })();
