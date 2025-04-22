@@ -9,58 +9,121 @@
     /**
      * Want some debug?
      */
-    let debug = false
+    let debug = true
 
-    let isPokemon = {
-
+    let itemGet = {
 
         /**
-         * Checks if the pokemon is a captured pokemon.
-         * @param {$Entity_} pokemon
-         * @returns {boolean} If the pokemon is a captured pokemon
+         * Gets the custom name.
+         * @param {$Entity_} missingNo
          */
-        isCapturedPokemon(pokemon) {
-            // Check if the pokemon is a captured pokemon
-            let nbt = pokemon.nbt
-            if (!nbt) return false;
-            
-            let PokemonOriginalTrainer = nbt.getCompound("Pokemon").getString("PokemonOriginalTrainer").normalize()
-
-            let result = null
+        customName(missingNo) {
             try {
-                result = UUID.fromString(PokemonOriginalTrainer)
+                let nbt = missingNo.nbt
+                let customName = JsonUtils.fromString(nbt.getCompound("Item").getAsString()).asJsonObject.get("components").asJsonObject.get("minecraft:custom_name").asString
+                if (debug && nbt) console.log(`Custom name retrieved: ${customName}`);
+                if (typeof customName.normalize() !== "string") return ""
+                return customName.normalize()
             } catch (error) {
-                if (debug) console.log(error)
+                return ""
             }
-
-            return result !== null
         },
 
         /**
-         * Checks if the pokemon is a wild pokemon.
+         * Gets the custom name.
          * @param {$Entity_} missingNo
          */
-        wildPokemon(missingNo) {
+        id(missingNo) {
+            try {
+                let nbt = missingNo.nbt
+                let customName = JsonUtils.fromString(nbt.getCompound("Item").getAsString()).asJsonObject.get("id").asString
+                if (debug && nbt) console.log(`Custom name retrieved: ${customName}`);
+                if (typeof customName.normalize() !== "string") return ""
+                return customName.normalize().trim()
+            } catch (error) {
+                return ""
+            }
+        }
+    }
 
-            // Is this a captured pokemon?
-            if (this.isCapturedPokemon(missingNo)) return false
+    /**
+     * Pokemon methods.
+     * @param {$Entity_} missingNo
+     */
+    function MaybeMon(missingNo) {
 
-            // Does it have a custom name?
-            if (missingNo.customName) return false
+        return {
 
-        },
+            /**
+             * Checks if the given entity is a Pokemon.
+             */
+            isPokemon() {
+                // Check if the pokemon is a pokemon
+                if (!missingNo) return false
+                if(!(missingNo.type === "cobblemon:pokemon")) return false
+                return true
+            },
 
-        /**
-         * Checks if the pokemon is a wild pokemon that just spawned.
-         * @param {$Entity_} missingNo
-         */
-        wildPokemonSpawn(missingNo) {
-
-            // Is this too old to be a new spawn?
-            if (missingNo.nbt.getInt("Age") < 0) return false
-
-            // Is this a wild pokemon?
-            if (this.wildPokemon(missingNo)) return true
+            /**
+             * Checks if the pokemon is a captured pokemon.
+             */
+            isCapturedPokemon() {
+                if (!this.isPokemon()) return false
+                // Check if the pokemon is a captured pokemon
+                let nbt = missingNo.nbt
+                if (!nbt) return false;
+                
+                let PokemonOriginalTrainer = nbt.getCompound("Pokemon").getString("PokemonOriginalTrainer").normalize()
+    
+                let result = null
+                try {
+                    result = UUID.fromString(PokemonOriginalTrainer)
+                } catch (error) {
+                    if (debug) console.log(error)
+                }
+    
+                return result !== null
+            },
+    
+            /**
+             * Checks if the pokemon is a wild pokemon.
+             */
+            isWildPokemon() {
+                if (!this.isPokemon()) return false
+    
+                // Is this a wild pokemon?
+                if (debug) console.log(`Checking if ${missingNo} is a wild pokemon`)
+    
+                // Is this a captured pokemon?
+                if (this.isCapturedPokemon()) {
+                    if (debug) console.log(`${missingNo} is not a wild pokemon.`)
+                    return false
+                }
+    
+                // Does it have a custom name?
+                if (missingNo.nbt.getString("CustomName")) {
+                    if (debug) console.log(`${missingNo} is not a wild pokemon.`)
+                    return false
+                }
+    
+                if (debug) console.log(`${missingNo} is a wild pokemon.`)
+                return true
+            },
+    
+            /**
+             * Checks if the pokemon is a wild pokemon that just spawned.
+             */
+            isWildPokemonSpawn() {
+                if (!this.isPokemon()) return false
+    
+                // Is this too old to be a new spawn?
+                if (missingNo.nbt.getInt("Age") < 0) return false
+    
+                // Is this a wild pokemon?
+                if (this.isWildPokemon()) return true
+    
+                return false
+            }
 
         }
     }
@@ -69,10 +132,13 @@
     EntityEvents.spawned("cobblemon:pokemon", event => {
 
         // If the gamerule is on, exit logic
-        if (event.level.gameRules.get("doMobSpawning").commandResult > 0) return
+        if (event.level.gameRules.get("doMobSpawning").commandResult) {
+            console.log("doMobSpawning gamerule is set, exiting logic")
+            return
+        }
 
         // Is this a wild pokemon?
-        if (!isPokemon.wildPokemonSpawn(event.entity)) return
+        if (!MaybeMon(event.entity).isWildPokemonSpawn()) return
 
         if (debug) console.log(`Cancelling spawn of ${event.entity}`)
         // For non-captured pokemon, stop them from spawning.
@@ -80,22 +146,29 @@
     })
 
     // Remove all wild pokemon
-    EntityEvents.spawned("minecraft:item", event => {
+    EntityEvents.spawned("minecraft:item", event => {   
         // Butcher item
-        let butcherBlock = event.entity.nbt.getString("id").normalize() == "minecraft:command_block"
-        // let checkName = event.entity.customName.name === "BEGONE POKEMON"
-        let butcherName = event.entity.customName ? event.entity.customName.name === "BEGONE POKEMON" : false
-        if (!(butcherBlock || butcherName)) return
-        event.server.tell("Begone Pokemon!")
+        let butcher = {
+            name: itemGet.customName(event.entity),
+            id: itemGet.id(event.entity)
+        }
+
+        if (debug) console.log(`Item spawned: ${butcher.name}, ${butcher.id}`)
+        
+        if (!(butcher.name == "BEGONE POKEMON" || butcher.id == "minecraft:command_block")) return
+        if (debug) event.server.tell("DIE!")
 
         // Butcher the pokemon
         event.server.entities.stream().filter(entity => {
             // Is this a wild pokemon?
-            return isPokemon.wildPokemon(entity)
+            let isWild = MaybeMon(entity).isWildPokemon() || entity.type == "minecraft:item";
+            if (debug) console.log(`Entity: ${entity.username}, Is Wild: ${isWild}`);
+            return isWild;
         }).forEach(entity => {
+            if (debug) console.log(`Killing ${entity}`);
             // Kill the pokemon that aren't wanted.
-            entity.kill()
-        })
+            entity.remove("discarded");
+        });
     })
     
 })();
