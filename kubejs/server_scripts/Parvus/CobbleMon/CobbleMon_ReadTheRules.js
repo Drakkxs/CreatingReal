@@ -9,7 +9,7 @@
     /**
      * Want some debug?
      */
-    let debug = true
+    let debug = false
 
     let itemGet = {
 
