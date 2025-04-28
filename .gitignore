@@ -2,6 +2,7 @@
 *
 
 # But allow these specific files and directories
+!config/
 !kubejs/
 !kubejs/**
 !scripts/
@@ -9,6 +10,9 @@
 !*.md
 !*.gitattributes
 !*.gitignore
+
+# Allow these specific files and directories
+!config/almostunified/
 
 # Re-Ignore these files and directories
 kubejs/jsconfig.json
@@ -21,4 +25,3 @@ kubejs/jsconfig.json
 **probejs**
 *.disabled
 .probe
-config/**
