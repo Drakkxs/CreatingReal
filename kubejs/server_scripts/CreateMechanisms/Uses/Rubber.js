@@ -6,8 +6,12 @@ ServerEvents.recipes(event => {
             'BB'
         ],
         {
-            A: 'create:andesite_alloy',
-            B: 'createmechanisms:cured_rubber'
+            A: ['create:andesite_alloy']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0],
+            B: ['createmechanisms:cured_rubber']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0]
         }
     )
     event.shaped(
@@ -18,9 +22,15 @@ ServerEvents.recipes(event => {
             'BB'
         ],
         {
-            A: 'create:brass_ingot',
-            B: 'createmechanisms:cured_rubber',
-            C: 'create:electron_tube'
+            A: ['create:brass_ingot']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0],
+            B: ['createmechanisms:cured_rubber']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0],
+            C: ['create:electron_tube']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0]
         }
     )
     event.shaped(
@@ -30,8 +40,12 @@ ServerEvents.recipes(event => {
             'B'
         ],
         {
-            A: 'create:andesite_alloy',
-            B: 'createmechanisms:cured_rubber'
+            A: ['create:andesite_alloy']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0],
+            B: ['createmechanisms:cured_rubber']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0]
         }
     )
     event.shaped(
@@ -42,9 +56,15 @@ ServerEvents.recipes(event => {
             'B'
         ],
         {
-            A: 'create:brass_ingot',
-            B: 'createmechanisms:cured_rubber',
-            C: 'create:electron_tube'
+            A: ['create:brass_ingot']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0],
+            B: ['createmechanisms:cured_rubber']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0],
+            C: ['create:electron_tube']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0]
         }
     )
     event.shaped(
@@ -55,9 +75,15 @@ ServerEvents.recipes(event => {
             'B'
         ],
         {
-            A: 'create:item_vault',
-            B: 'create:andesite_alloy',
-            C: 'createmechanisms:cured_rubber'
+            A: ['create:item_vault']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0],
+            B: ['create:andesite_alloy']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0],
+            C: ['createmechanisms:cured_rubber']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0]
         }
     )
     event.shaped(
@@ -67,7 +93,9 @@ ServerEvents.recipes(event => {
             'AAA'
         ],
         {
-            A: 'createmechanisms:cured_rubber'
+            A: ['createmechanisms:cured_rubber']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0]
         }
     )
 })

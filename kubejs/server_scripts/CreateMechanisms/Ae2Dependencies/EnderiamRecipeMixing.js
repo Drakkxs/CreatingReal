@@ -10,11 +10,13 @@ ServerEvents.recipes(event => {
                "item": "ae2:ender_dust"
            },
            {
-               "type": "fluid_stack",
+               "type": "fluid_tag",
                "amount": 1000,
-               "fluid": "minecraft:water"
+               "fluid_tag": "minecraft:water"
            }
-       ],
+       ]
+       // Use tags instead of static items
+       .map(a => getUnifiedTag(a)),
        "results": [
            {
              "amount": 1000,

@@ -6,9 +6,14 @@ ServerEvents.recipes(event => {
            ' c '
        ],
        {
-           a: 'create:zinc_ingot',
+           a: ['create:zinc_ingot']
+           // Use tags instead of static items
+           .map(a => getUnifiedTag(a))[0],
+
            b: 'createmechanisms:wooden_mechanism',  //arg 3: the mapping object
-           c: 'create:iron_sheet'
+           c: ['create:iron_sheet']
+           // Use tags instead of static items
+           .map(a => getUnifiedTag(a))[0]
        }
    )
 })

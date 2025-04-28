@@ -7,10 +7,18 @@ ServerEvents.recipes(event => {
            ' d '
        ],
        {
-           a: 'create:copper_nugget',
-           b: 'createmechanisms:cured_rubber',  //arg 3: the mapping object
+           a: ['create:copper_nugget']
+           // Use tags instead of static items
+           .map(a => getUnifiedTag(a))[0],
+
+           b: ['createmechanisms:cured_rubber']
+           .map(a => getUnifiedTag(a))[0],  //arg 3: the mapping object
+
            c: 'createmechanisms:wooden_mechanism',
-           d: 'create:copper_sheet'
+           
+           d: ['create:copper_sheet']
+           // Use tags instead of static items
+           .map(a => getUnifiedTag(a))[0]
        }
    )
 })

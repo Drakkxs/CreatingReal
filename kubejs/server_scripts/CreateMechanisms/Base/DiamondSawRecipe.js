@@ -9,6 +9,8 @@ ServerEvents.recipes(event => {
        {
            a: '#minecraft:planks',
            b: '#c:gems/diamond',
-           c: 'minecraft:stick'       }
+           c: ['minecraft:stick']
+           // Use tags instead of static items
+           .map(a => getUnifiedTag(a))[0]       }
    )
 })

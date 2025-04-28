@@ -54,7 +54,9 @@ ServerEvents.recipes(event => {
                "ingredients": [
                    { "item": "createmechanisms:incomplete_ender_mechanism" },
                    { "item": "create:powdered_obsidian" }
-               ],
+               ]
+               // Use tags instead of static items
+               .map(a => getUnifiedTag(a)),
                "results": [
                    {
                        "item": {
@@ -68,7 +70,9 @@ ServerEvents.recipes(event => {
                "ingredients": [
                    { "item": "createmechanisms:incomplete_ender_mechanism" },
                    { "item": "ae2:ender_dust" }
-               ],
+               ]
+               // Use tags instead of static items
+               .map(a => getUnifiedTag(a)),
                "results": [
                    {
                        "item": {

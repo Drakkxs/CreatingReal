@@ -1,3 +1,4 @@
+// ignored: true
 ServerEvents.recipes(event => {
    event.custom({
        "type": "create:milling",
@@ -5,7 +6,9 @@ ServerEvents.recipes(event => {
            {
                "item": "minecraft:ender_pearl"
            }
-       ],
+       ]
+       // Use tags instead of static items
+       .map(a => getUnifiedTag(a)),
        "processing_time": 250,
        "results": [
            {

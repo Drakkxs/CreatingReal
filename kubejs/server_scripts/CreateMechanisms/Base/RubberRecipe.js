@@ -15,11 +15,13 @@ ServerEvents.recipes(event => {
                "item": "minecraft:kelp"
            },
            {
-               "type": "fluid_stack",
-               "amount": 250,
-               "fluid": "minecraft:water"
+               "type": "fluid_tag",
+               "amount": 1000,
+               "fluid_tag": "minecraft:water"
            }
-       ],
+       ]
+       // Use tags instead of static items
+       .map(a => getUnifiedTag(a)),
        "results": [
            {
                "chance": 1.0,

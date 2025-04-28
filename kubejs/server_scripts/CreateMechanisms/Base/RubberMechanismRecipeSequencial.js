@@ -48,7 +48,9 @@ ServerEvents.recipes(event => {
                "ingredients": [
                    { "item": "createmechanisms:incomplete_rubber_mechanism" },
                    { "item": "create:copper_nugget" }
-               ],
+               ]
+               // Use tags instead of static items
+               .map(a => getUnifiedTag(a)),
                "results": [
                    {
                        "item": {

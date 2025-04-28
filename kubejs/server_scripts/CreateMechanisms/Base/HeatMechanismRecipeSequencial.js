@@ -1,9 +1,11 @@
 ServerEvents.recipes(event => {
    event.custom({
        "type": "create:sequenced_assembly",
-       "ingredient": {
+       "ingredient": [{
            "item": "createmechanisms:bronze"
-       },
+       }]
+       // Use tags instead of static items
+       .map(a => getUnifiedTag(a))[0],
        "loops": 5,
        "results": [
            {
@@ -34,7 +36,9 @@ ServerEvents.recipes(event => {
                "ingredients": [
                    { "item": "createmechanisms:incomplete_heat_mechanism" },
                    { "item": "minecraft:magma_block" }
-               ],
+               ]
+               // Use tags instead of static items
+               .map(a => getUnifiedTag(a)),
                "results": [
                    {
                        "item": {

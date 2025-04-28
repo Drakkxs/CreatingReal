@@ -16,7 +16,9 @@ ServerEvents.recipes(event => {
            {
                "item": "minecraft:iron_ingot"
            }
-       ],
+       ]
+       // Use tags instead of static items
+       .map(a => getUnifiedTag(a)),
        "results": [
            {
                "count": 4,

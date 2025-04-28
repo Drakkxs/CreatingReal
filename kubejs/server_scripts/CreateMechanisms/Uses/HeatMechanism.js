@@ -1,11 +1,13 @@
 ServerEvents.recipes(event => {
-    event.smithing(
+    unifiedSmithing(
+        event,
         'create:steam_whistle',                          // arg 1: output
         'createmechanisms:heat_mechanism',               // arg 2: the smithing template
         'minecraft:copper_block',                        // arg 3: the item to be upgraded
         'create:golden_sheet'                            // arg 4: the upgrade item
     )
-    event.smithing(
+    unifiedSmithing(
+        event,
         'create:steam_engine',                           // arg 1: output
         'createmechanisms:heat_mechanism',               // arg 2: the smithing template
         'minecraft:copper_block',                        // arg 3: the item to be upgraded
@@ -19,7 +21,9 @@ ServerEvents.recipes(event => {
             ' A '
         ],
         {
-            A: 'create:iron_sheet',
+            A: ['create:iron_sheet']
+            // Use tags instead of static items
+            .map(a => getUnifiedTag(a))[0],
             B: 'createmechanisms:heat_mechanism'
         }
     )

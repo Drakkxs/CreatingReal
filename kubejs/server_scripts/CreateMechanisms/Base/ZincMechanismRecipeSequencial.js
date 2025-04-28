@@ -1,9 +1,11 @@
 ServerEvents.recipes(event => {
    event.custom({
        "type": "create:sequenced_assembly",
-       "ingredient": {
+       "ingredient": [{
            "item": "create:iron_sheet"
-       },
+       }]
+       // Use tags instead of static items
+       .map(a => getUnifiedTag(a))[0],
        "loops": 3,
        "results": [
            {
@@ -19,7 +21,9 @@ ServerEvents.recipes(event => {
                "ingredients": [
                    { "item": "createmechanisms:incomplete_zinc_mechanism" },
                    { "item": "create:large_cogwheel" }
-               ],
+               ]
+               // Use tags instead of static items
+               .map(a => getUnifiedTag(a)),
                "results": [
                    {
                        "item": {
@@ -33,7 +37,9 @@ ServerEvents.recipes(event => {
                "ingredients": [
                    { "item": "createmechanisms:incomplete_zinc_mechanism" },
                    { "item": "create:cogwheel" }
-               ],
+               ]
+               // Use tags instead of static items
+               .map(a => getUnifiedTag(a)),
                "results": [
                    {
                        "item": {
@@ -47,7 +53,9 @@ ServerEvents.recipes(event => {
                "ingredients": [
                    { "item": "createmechanisms:incomplete_zinc_mechanism" },
                    { "item": "create:zinc_nugget" }
-               ],
+               ]
+               // Use tags instead of static items
+               .map(a => getUnifiedTag(a)),
                "results": [
                    {
                        "item": {
