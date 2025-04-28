@@ -1,4 +1,4 @@
-// priority: 0
+// priority: -10
 // requires: create
 // requires: modular_machinery_reborn
 // @ts-check
@@ -714,14 +714,15 @@
      * to build the machine.
      */
     function machBuilder(MACH_ID){return {
+        baseMachineID: MACH_ID,
         machineType: new Map([
             [
                 "blasting",
                 {
                     id: MACH_ID.concat("_blasting"),
                     name: "Engistic Fan - Blasting",
-                    colur: "#FF4d4d4d",
-                    core: "#create:fan_processing_catalysts/blasting",
+                    color: Color.rgba(22, 22, 22, 0).toHexString(),
+                    coreBlock: "#create:fan_processing_catalysts/blasting",
                     model: "minecraft:blast_furnace",
                     recipeType: [
                         "immersiveengineering:coke_oven",
@@ -733,6 +734,35 @@
         ]),
 
         /**
+         * Takes a core block string and returns an array of strings representing valid ingredient IDs.
+         * @param {string} coreFilter - The block ID or block tag
+         * @returns An array of strings representing valid ingredient IDs
+         */
+        parseBlockTag(coreFilter) {
+            let tagFilter = coreFilter.replace("#","")
+            let items = 
+            [].concat(Item.getTypeList().stream()
+                .filter(item => (
+                    [
+                    // Filter the item based on wheter its block of fluid has the tag or is the filter.
+                    Item.of(item).hasTag(tagFilter),
+                    Item.of(item).id == coreFilter,
+                    Block.getBlock(Item.of(item).block?.id).hasTag(tagFilter),
+                    Item.of(item).block?.id == coreFilter,
+                    Fluid.of(Item.of(item).id.replace("_bucket", ""))?.fluid.hasTag(tagFilter),
+                    Fluid.of(Item.of(item).id.replace("_bucket", ""))?.fluid.id == coreFilter
+                    ].some(b => b)
+                ))
+                .map(a => String(a))
+                .toList()
+            )
+
+            items = Array.from(new Set([].concat(items)))
+            if (items.length == 0) throw new Error(`Nothing found for ${JSON.stringify(coreFilter)}`)
+            return items
+        },
+
+        /**
          * Build a fan machine with a core
          * @param {$MachineBuilderJS$MachineKubeEvent_} MACH_EVENT 
          * @param {string} MACH_TYPE
@@ -741,7 +771,7 @@
             let machineType = this.machineType.get(MACH_TYPE)
             let builder = MACH_EVENT.create(machineType.id)
             builder.name("Engistic Fan")
-            builder.color(machineType.colur)
+            builder.color(machineType.color)
             builder.controllerModel(ControllerModel.of(machineType.model))
             builder.structure(
                 MMRStructureBuilder.create()
@@ -753,7 +783,7 @@
                         ["   ", "   ", "   "]
                       ])
                     .keys({
-                        "a": [machineType.core],
+                        "a": [machineType.coreBlock],
                     })
             );
             // TODO: SOUNDS
@@ -772,13 +802,40 @@
         /** Blasting Fan */
         engisticFAN.buildMACH(event, "blasting");
     })
-
+    
     ServerEvents.recipes(event => {
 
         engisticFAN.machineType.forEach(type => {
             recipesMACH(event, type.id, type.recipeType);
-        })
 
+            // ===============
+            // Machine Controller =
+            // 8 Encased Fan
+            // 1 Machine Core (And if fluid, a bucket.)
+            // Todo: Get texture for chromatic Compound. Done, it works with CreateCompounds.
+            // Todo: Block Models for machine recipe types.
+
+            // Scripts:
+            // Todo: Test kubeJS smelting recipes to be grabbed by fan type.
+            // Todo: Test coloring (modded) fan processing types.
+            // Todo: Sounds, Sounds! Feedback is important.
+
+            // ===============
+            
+            event.shaped(
+                `modular_machinery_reborn:controller[modular_machinery_reborn:machine="${type.id}"]`, // arg 1: output
+                [
+                    'aaa',
+                    'aba', // arg 2: the shape (array of strings)
+                    'aaa'
+                ],
+                {
+                    a: "create:encased_fan",
+                    b: engisticFAN.parseBlockTag(type.coreBlock),  //arg 3: the mapping object
+                }
+            )
+            
+        })
 
 
     });
