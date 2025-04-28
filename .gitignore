@@ -21,7 +21,7 @@ kubejs/jsconfig.json
 **probejs**
 *.disabled
 .probe
-config/**
+!config/almostunified/**
+
 
 # Track changes to these files
-!config/almostunified/**
