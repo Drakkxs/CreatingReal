@@ -21,6 +21,4 @@ kubejs/jsconfig.json
 **probejs**
 *.disabled
 .probe
-
-
-# Track changes to these files
+config/**
