@@ -7,12 +7,14 @@
 (() => {
     ServerEvents.recipes(event => {
         
+
         /**
          * Does mixing recipes
          * @param {"superheated"|"heated"|"none"} heat
          * @param {{count?: number, item?: string, tag?: string, 
          * type?: string, fluid?: string, fluid_stack?: string, amount?: number}[]} ingredients 
-         * @param {{chance?: number, count?: number, item?: {id: string}, amount?: number, id?: string, fluid?: string}[]} results 
+         * @param {{chance?: number, count?: number, item?: {id: string}, 
+         * amount?: number, id?: string, fluid?: string}[]} results 
          */
         function createMixing(heat, ingredients, results) {
             return event.custom({
@@ -104,7 +106,9 @@
             {item: {id: "create:refined_radiance_casing"}
         });
 
-        // Duping Recipes
+        /**
+         * Duping Recipes
+         */
         
         // 2 Nether Star =
         // 1 Shadow Steel
