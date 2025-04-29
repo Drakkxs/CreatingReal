@@ -717,18 +717,31 @@
         baseMachineID: MACH_ID,
         machineType: new Map([
             [
-                "blasting",
-                {
-                    id: MACH_ID.concat("_blasting"),
-                    name: "Engistic Fan - Blasting",
-                    color: Color.rgba(22, 22, 22, 0).toHexString(),
-                    coreBlock: "#create:fan_processing_catalysts/blasting",
-                    model: "minecraft:blast_furnace",
-                    recipeType: [
-                        "immersiveengineering:coke_oven",
-                        "minecraft:blasting",
-                        "minecraft:smelting"
-                    ],
+                "blasting", {
+                    id: MACH_ID.concat("_blasting"), name: "Engistic Fan - Blasting", color: Color.rgba(22, 22, 22, 0).toHexString(),
+                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/blasting", model: "minecraft:blast_furnace",
+                    recipeType: ["immersiveengineering:coke_oven", "minecraft:blasting", "minecraft:smelting"],
+                },
+            ],
+            [
+                "smoking", {
+                    id: MACH_ID.concat("_smoking"), name: "Engistic Fan - Smoking", color: Color.rgba(22, 22, 22, 0).toHexString(),
+                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/smoking", model: "minecraft:smoker",
+                    recipeType: ["minecraft:smoking", "minecraft:campfire_cooking"],
+                },
+            ],
+            [
+                "splashing", {
+                    id: MACH_ID.concat("_splashing"), name: "Engistic Fan - Splashing", color: Color.rgba(22, 22, 22, 0).toHexString(),
+                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/splashing", model: "minecraft:wet_sponge",
+                    recipeType: ["create:splashing"],
+                },
+            ],
+            [
+                "haunting", {
+                    id: MACH_ID.concat("_haunting"), name: "Engistic Fan - Haunting", color: Color.rgba(22, 22, 22, 0).toHexString(),
+                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/haunting", model: "respawn_anchor",
+                    recipeType: ["create:haunting"],
                 },
             ],
         ]),
@@ -770,7 +783,7 @@
         buildMACH(MACH_EVENT, MACH_TYPE) {
             let machineType = this.machineType.get(MACH_TYPE)
             let builder = MACH_EVENT.create(machineType.id)
-            builder.name("Engistic Fan")
+            builder.name(machineType.name)
             builder.color(machineType.color)
             builder.controllerModel(ControllerModel.of(machineType.model))
             builder.structure(
@@ -799,8 +812,10 @@
         // TODO: MACHINE SOUNDS
         // TODO: MACHINE RECIPE TYPES (BLASTING, HAUNTING, ETC)
         
-        /** Blasting Fan */
-        engisticFAN.buildMACH(event, "blasting");
+        /** All types of engistic fans */
+        engisticFAN.machineType.forEach((_, key) => {
+            engisticFAN.buildMACH(event, key);
+        })
     })
     
     ServerEvents.recipes(event => {
@@ -831,7 +846,7 @@
                 ],
                 {
                     a: "create:encased_fan",
-                    b: engisticFAN.parseBlockTag(type.coreBlock),  //arg 3: the mapping object
+                    b: [].concat(type.coreItem, engisticFAN.parseBlockTag(type.coreBlock)).filter(a => a),  //arg 3: the mapping object
                 }
             )
             
