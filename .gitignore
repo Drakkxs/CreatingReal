@@ -13,6 +13,7 @@
 
 # Allow these specific files and directories
 !config/almostunified/**
+!config/almostunified/unification/**
 
 # Re-Ignore these files and directories
 kubejs/jsconfig.json
