@@ -1,0 +1,18 @@
+{
+  "custom_tags": {
+    "almostunified:straws": [
+      "industrialforegoing:straw", 
+      "createaddition:straw"
+    ]
+  },
+  "tag_substitutions": {
+    "c:dusts/enderium": [
+      "c:dusts/ender_pearl"
+    ]
+  },
+  "item_tag_inheritance_mode": "ALLOW",
+  "item_tag_inheritance": {},
+  "block_tag_inheritance_mode": "ALLOW",
+  "block_tag_inheritance": {},
+  "emi_strict_hiding": true
+}
