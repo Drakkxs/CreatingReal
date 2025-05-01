@@ -12,7 +12,7 @@
 !*.gitignore
 
 # Allow these specific files and directories
-!config/almostunified/
+!config/almostunified/**
 
 # Re-Ignore these files and directories
 kubejs/jsconfig.json
