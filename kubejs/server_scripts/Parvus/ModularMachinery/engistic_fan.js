@@ -710,38 +710,44 @@
     /**
      * Constructs and returns an object representing a machine builder for Engistic Fans.
      * @param {string} MACH_ID - The unique identifier for the machine to be built.
+     * @param {string} traitItem - The item to be used as a trait for the machine.
      * @returns An object containing machine configurations and a method
      * to build the machine.
      */
-    function machBuilder(MACH_ID){return {
+    function machBuilder(MACH_ID, traitItem){return {
         baseMachineID: MACH_ID,
+        traitItem: traitItem,
         machineType: new Map([
             [
                 "blasting", {
-                    id: MACH_ID.concat("_blasting"), name: "Engistic Fan - Blasting", color: Color.rgba(22, 22, 22, 0).toHexString(),
+                    id: MACH_ID.concat("_blasting"), name: "Engistic Fan - Blasting", color: Color.rgba(43, 37, 37, 1),
                     coreItem: null, coreBlock: "#create:fan_processing_catalysts/blasting", model: "minecraft:blast_furnace",
                     recipeType: ["immersiveengineering:coke_oven", "minecraft:blasting", "minecraft:smelting"],
+                    gateItem: "createmechanisms:heat_mechanism"
                 },
             ],
             [
                 "smoking", {
-                    id: MACH_ID.concat("_smoking"), name: "Engistic Fan - Smoking", color: Color.rgba(22, 22, 22, 0).toHexString(),
+                    id: MACH_ID.concat("_smoking"), name: "Engistic Fan - Smoking", color: Color.rgba(22, 22, 22, 1),
                     coreItem: null, coreBlock: "#create:fan_processing_catalysts/smoking", model: "minecraft:smoker",
                     recipeType: ["minecraft:smoking", "minecraft:campfire_cooking"],
+                    gateItem: "createmechanisms:zinc_mechanism"
                 },
             ],
             [
                 "splashing", {
-                    id: MACH_ID.concat("_splashing"), name: "Engistic Fan - Splashing", color: Color.rgba(22, 22, 22, 0).toHexString(),
+                    id: MACH_ID.concat("_splashing"), name: "Engistic Fan - Splashing", color: Color.rgba(22, 22, 22, 1),
                     coreItem: null, coreBlock: "#create:fan_processing_catalysts/splashing", model: "minecraft:wet_sponge",
                     recipeType: ["create:splashing"],
+                    gateItem: "createmechanisms:rubber_mechanism"
                 },
             ],
             [
                 "haunting", {
-                    id: MACH_ID.concat("_haunting"), name: "Engistic Fan - Haunting", color: Color.rgba(22, 22, 22, 0).toHexString(),
+                    id: MACH_ID.concat("_haunting"), name: "Engistic Fan - Haunting", color: Color.rgba(22, 22, 22, 1),
                     coreItem: null, coreBlock: "#create:fan_processing_catalysts/haunting", model: "respawn_anchor",
                     recipeType: ["create:haunting"],
+                    gateItem: "createmechanisms:heat_mechanism"
                 },
             ],
         ]),
@@ -784,7 +790,7 @@
             let machineType = this.machineType.get(MACH_TYPE)
             let builder = MACH_EVENT.create(machineType.id)
             builder.name(machineType.name)
-            builder.color(machineType.color)
+            builder.color("#" + machineType.color.toHexString())
             builder.controllerModel(ControllerModel.of(machineType.model))
             builder.structure(
                 MMRStructureBuilder.create()
@@ -805,7 +811,7 @@
     }};
 
     /** The Engistic Fan */
-    let engisticFAN = machBuilder("mmr:engistic_fan");
+    let engisticFAN = machBuilder("mmr:engistic_fan", "create:encased_fan");
 
     MMREvents.machines(event => {
         // TODO: CONTROLLER MODEL
@@ -841,11 +847,12 @@
                 `modular_machinery_reborn:controller[modular_machinery_reborn:machine="${type.id}"]`, // arg 1: output
                 [
                     'aaa',
-                    'aba', // arg 2: the shape (array of strings)
+                    'abc', // arg 2: the shape (array of strings)
                     'aaa'
                 ],
                 {
-                    a: "create:encased_fan",
+                    a: engisticFAN.traitItem, // The defining trait of the engistic fan.
+                    c: type.gateItem || engisticFAN.traitItem, // A item that will be used as a gate
                     b: [].concat(type.coreItem, engisticFAN.parseBlockTag(type.coreBlock)).filter(a => a),  //arg 3: the mapping object
                 }
             )
