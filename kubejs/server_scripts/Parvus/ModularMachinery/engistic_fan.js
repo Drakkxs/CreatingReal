@@ -1,5 +1,6 @@
 // priority: -10
 // requires: create
+// requires: createmechanisms
 // requires: modular_machinery_reborn
 // @ts-check
 // An upgrade to create's encased fan.
@@ -714,38 +715,52 @@
      * @returns An object containing machine configurations and a method
      * to build the machine.
      */
-    function machBuilder(MACH_ID, traitItem){return {
+    function machBuilder(MACH_ID, traitItem){
+        
+        let bannedBlocks = [
+            // Create block tags don't check for empty or unlit blaze burners.
+            // Empty blaze burners are a gross shortcut
+            "create:blaze_burner", "create:lit_blaze_burner", "createaddition:liquid_blaze_burner"];
+        let bannedFluids = [""];
+        let bannedItems = [
+            // Empty blaze burners are still a gross shortcut
+            "create:empty_blaze_burner",];
+        return {
         baseMachineID: MACH_ID,
         traitItem: traitItem,
         machineType: new Map([
             [
                 "blasting", {
-                    id: MACH_ID.concat("_blasting"), name: "Engistic Fan - Blasting", color: Color.rgba(43, 37, 37, 1),
-                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/blasting", model: "minecraft:blast_furnace",
+                    id: MACH_ID.concat("_blasting"), name: "Engistic Encased Fan - Blasting", color: Color.rgba(52, 56, 62, 0.99),
+                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/blasting", model: "minecraft:black_glazed_terracotta",
+                    restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
                     recipeType: ["immersiveengineering:coke_oven", "minecraft:blasting", "minecraft:smelting"],
                     gateItem: "createmechanisms:heat_mechanism"
                 },
             ],
             [
                 "smoking", {
-                    id: MACH_ID.concat("_smoking"), name: "Engistic Fan - Smoking", color: Color.rgba(22, 22, 22, 1),
-                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/smoking", model: "minecraft:smoker",
+                    id: MACH_ID.concat("_smoking"), name: "Engistic Encased Fan - Smoking", color: Color.rgba(102, 57, 26, 0.99),
+                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/smoking", model: "minecraft:brown_glazed_terracotta",
+                    restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
                     recipeType: ["minecraft:smoking", "minecraft:campfire_cooking"],
                     gateItem: "createmechanisms:zinc_mechanism"
                 },
             ],
             [
                 "splashing", {
-                    id: MACH_ID.concat("_splashing"), name: "Engistic Fan - Splashing", color: Color.rgba(22, 22, 22, 1),
-                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/splashing", model: "minecraft:wet_sponge",
+                    id: MACH_ID.concat("_splashing"), name: "Engistic Encased Fan - Splashing", color: Color.rgba(43, 45, 148, 0.99),
+                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/splashing", model: "minecraft:blue_glazed_terracotta",
+                    restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
                     recipeType: ["create:splashing"],
                     gateItem: "createmechanisms:rubber_mechanism"
                 },
             ],
             [
                 "haunting", {
-                    id: MACH_ID.concat("_haunting"), name: "Engistic Fan - Haunting", color: Color.rgba(22, 22, 22, 1),
-                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/haunting", model: "respawn_anchor",
+                    id: MACH_ID.concat("_haunting"), name: "Engistic Encased Fan - Haunting", color: Color.rgba(99, 23, 148, 0.99),
+                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/haunting", model: "minecraft:purple_glazed_terracotta",
+                    restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
                     recipeType: ["create:haunting"],
                     gateItem: "createmechanisms:heat_mechanism"
                 },
@@ -753,32 +768,131 @@
         ]),
 
         /**
+         * Converts a fluid bucket item to its fluid equivalent.
+         * @param {string} item - The item ID of the fluid bucket
+         * @returns The fluid equivalent of the item, or null if item is not a fluid bucket
+         */
+        fluidItem(item) {
+            let f = Fluid.of(Item.of(item).id.replace("_bucket", ""))
+            if (f) return f;
+            else return null;
+        },
+
+        /**
+         * Handles figuring out if something is banned.
+         * @param {string} coreFilter - The filter identifier
+         * @param {"Blocks" | "Fluids" | "Items"} filterType - The type of filter
+         * @param {string} MACH_TYPE - The machine type for special treatment
+         * @returns A boolean representing whether something is banned
+         */
+        isBanned(coreFilter, filterType, MACH_TYPE) {
+            let machineType = this.machineType.get(MACH_TYPE)
+            return machineType[`restricted${filterType}`].some(banned => banned == coreFilter);
+        },
+
+        /**
          * Takes a core block string and returns an array of strings representing valid ingredient IDs.
-         * @param {string} coreFilter - The block ID or block tag
+         * @param {string} coreFilter - The filter identifier
+         * @param {string} MACH_TYPE - The machine type for special treatment
          * @returns An array of strings representing valid ingredient IDs
          */
-        parseBlockTag(coreFilter) {
+        parseBlocktoItems(coreFilter, MACH_TYPE) {
             let tagFilter = coreFilter.replace("#","")
             let items = 
             [].concat(Item.getTypeList().stream()
-                .filter(item => (
-                    [
-                    // Filter the item based on wheter its block of fluid has the tag or is the filter.
-                    Item.of(item).hasTag(tagFilter),
-                    Item.of(item).id == coreFilter,
-                    Block.getBlock(Item.of(item).block?.id).hasTag(tagFilter),
-                    Item.of(item).block?.id == coreFilter,
-                    Fluid.of(Item.of(item).id.replace("_bucket", ""))?.fluid.hasTag(tagFilter),
-                    Fluid.of(Item.of(item).id.replace("_bucket", ""))?.fluid.id == coreFilter
-                    ].some(b => b)
-                ))
+                .filter(strItem => !this.isBanned(strItem, "Items", MACH_TYPE))
+                .filter(strItem => {
+                    let obj = {
+                        fluid: this.fluidItem(strItem),
+                        stack: Item.of(strItem)
+                    }
+                    
+                    // Filter the item based on wheter its block or fluid has the tag or is the filter.
+                    let isValid = () => [
+                    Item.of(strItem).hasTag(tagFilter), (obj.stack.id == coreFilter),
+                    Item.of(strItem).block && (obj.stack.block.hasTag(tagFilter) || obj.stack.block.id == coreFilter),
+                    obj.fluid && (obj.fluid.hasTag(tagFilter) || obj.fluid.id == coreFilter)
+                    ].some(check => check)
+
+                    
+                    // Return the result
+                    return isValid()
+                })
                 .map(a => String(a))
                 .toList()
             )
 
             items = Array.from(new Set([].concat(items)))
-            if (items.length == 0) throw new Error(`Nothing found for ${JSON.stringify(coreFilter)}`)
             return items
+        },
+
+        /**
+         * Returns fluidstate from a block filter.
+         * @param {string} coreFilter - The filter identifier
+         * @param {string} MACH_TYPE - The machine type for special treatment
+         * @param {boolean} blockOnly - Whether to only return full fluid blocks
+         */
+        fluidStates(coreFilter, MACH_TYPE, blockOnly) {
+            let tagFilter = coreFilter.replace("#","")
+            let fluidBlockstates = 
+            [].concat(Fluid.getTypes().stream()
+                .filter(strFluid => !this.isBanned(strFluid, "Fluids", MACH_TYPE))
+                .filter(strFluid => {
+                    let fluid = Fluid.of(strFluid)
+                    
+                    let isValid = () => [
+                        fluid.hasTag(tagFilter),
+                        fluid.id == coreFilter
+                    ].some(check => check)
+
+                    return isValid()
+                })
+                .map(strId => Fluid.of(strId).fluid.defaultFluidState().createLegacyBlock())
+                .map(state => `${state.id}${state.properties.stream().map(p => {
+                    if (p.name == "level") return `${p.name}=${blockOnly ? 0: p.value(state).value()}`
+                    return p.value(state)}).toList()}`)
+                .toList()
+            )
+
+            return Array.from(new Set([].concat(fluidBlockstates)))
+        },
+
+        /**
+         * Returns blockstates from a block filter.
+         * Does not respect fixed coordinates
+         * @param {string} coreFilter
+         * @param {string} MACH_TYPE - The machine type for special treatment
+         */
+        blockstates(coreFilter, MACH_TYPE) {
+            let tagFilter = coreFilter.replace("#","")
+            let blockstates = 
+            [].concat(Block.getTypeList().stream()
+                .filter(strBlock => !this.isBanned(strBlock, "Blocks", MACH_TYPE))
+                .filter(strBlock => {
+                    let block = Block.getBlock(strBlock)
+
+                    let isValid = () => [
+                        block.hasTag(tagFilter),
+                        block.id == coreFilter
+                    ].some(b => b)
+
+                    return isValid()
+                })
+                .toList()
+            )
+
+            return Array.from(new Set([].concat(blockstates)))
+        },
+
+        /**
+         * Returns all states from a block filter.
+         * @param {string} coreFilter
+         * @param {string} MACH_TYPE - The machine type for special treatment
+         */
+        allBlockStates(coreFilter, MACH_TYPE) {
+            let states = [].concat(this.blockstates(coreFilter, MACH_TYPE), this.fluidStates(coreFilter, MACH_TYPE, true))
+            if (states.length > 40) throw new Error("Too many states, try a different filter")
+            return Array.from(new Set([].concat(states)))
         },
 
         /**
@@ -790,7 +904,8 @@
             let machineType = this.machineType.get(MACH_TYPE)
             let builder = MACH_EVENT.create(machineType.id)
             builder.name(machineType.name)
-            builder.color("#" + machineType.color.toHexString())
+            let color = machineType.color.createTextColor().toHexString()
+            builder.color(color)
             builder.controllerModel(ControllerModel.of(machineType.model))
             builder.structure(
                 MMRStructureBuilder.create()
@@ -802,7 +917,7 @@
                         ["   ", "   ", "   "]
                       ])
                     .keys({
-                        "a": [machineType.coreBlock],
+                        "a": this.allBlockStates(machineType.coreBlock, MACH_TYPE),
                     })
             );
             // TODO: SOUNDS
@@ -819,14 +934,14 @@
         // TODO: MACHINE RECIPE TYPES (BLASTING, HAUNTING, ETC)
         
         /** All types of engistic fans */
-        engisticFAN.machineType.forEach((_, key) => {
-            engisticFAN.buildMACH(event, key);
+        engisticFAN.machineType.forEach((_, typeKey) => {
+            engisticFAN.buildMACH(event, typeKey);
         })
     })
     
     ServerEvents.recipes(event => {
 
-        engisticFAN.machineType.forEach(type => {
+        engisticFAN.machineType.forEach((type, typeKey) => {
             recipesMACH(event, type.id, type.recipeType);
 
             // ===============
@@ -853,7 +968,7 @@
                 {
                     a: engisticFAN.traitItem, // The defining trait of the engistic fan.
                     c: type.gateItem || engisticFAN.traitItem, // A item that will be used as a gate
-                    b: [].concat(type.coreItem, engisticFAN.parseBlockTag(type.coreBlock)).filter(a => a),  //arg 3: the mapping object
+                    b: [].concat(type.coreItem, engisticFAN.parseBlocktoItems(type.coreBlock, typeKey)).filter(a => a),  //arg 3: the mapping object
                 }
             )
             
