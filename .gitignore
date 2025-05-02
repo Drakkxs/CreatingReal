@@ -25,5 +25,5 @@ kubejs/jsconfig.json
 **probe**
 **probejs**
 *.disabled
-.probe
-
+*.probe
+*.debug
