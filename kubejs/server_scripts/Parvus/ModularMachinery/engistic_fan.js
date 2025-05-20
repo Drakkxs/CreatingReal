@@ -718,13 +718,13 @@
     function machBuilder(MACH_ID, traitItem){
         
         let bannedBlocks = [
-            // Create block tags don't check for empty or unlit blaze burners.
-            // Empty blaze burners are a gross shortcut
-            "create:blaze_burner", "create:lit_blaze_burner", "createaddition:liquid_blaze_burner"];
+            "create:blaze_burner", 
+            "create:lit_blaze_burner",
+            "createaddition:liquid_blaze_burner",
+            "create_enchantment_industry:blaze_forger",
+            "create_enchantment_industry:blaze_enchanter"];
         let bannedFluids = [""];
-        let bannedItems = [
-            // Empty blaze burners are still a gross shortcut
-            "create:empty_blaze_burner",];
+        let bannedItems = ["create:empty_blaze_burner",];
         return {
         baseMachineID: MACH_ID,
         traitItem: traitItem,
