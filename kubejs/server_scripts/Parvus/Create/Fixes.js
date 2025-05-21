@@ -10,11 +10,6 @@
      */
     let debug = true
 
-    // Fixing recipes
-    ServerEvents.recipes(event => {
-        
-    })
-
     ServerEvents.tags('fluid', event => {
 
         event.add("c:molten_enderium", "createmechanisms:enderiam")
