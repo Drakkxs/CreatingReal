@@ -441,7 +441,7 @@
             if (debug) console.log(`Sum Cost: ${sumCost}, XP per nugget: ${XP_PER}, Sum XP: ${sumXp}`);
             let energyCost = sumCost * this.proccessingTime();
             if (debug) console.log(`Energy Cost: ${energyCost}`);
-            return Math.max(MIN_ENERGY_COST, (energyCost / 20));
+            return Math.max(MIN_ENERGY_COST, (energyCost / 20) + MIN_ENERGY_COST);
         }
     }}
 
