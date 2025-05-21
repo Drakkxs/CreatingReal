@@ -718,29 +718,20 @@
      */
     function machBuilder(MACH_ID, traitItem){
         
-        let bannedBlocks = [
-            // Create block tags don't check for empty or unlit blaze burners.
-            // Empty blaze burners are a gross shortcut
-            "create:blaze_burner", 
-            "create:lit_blaze_burner",
-            "createaddition:liquid_blaze_burner",
-            "create_enchantment_industry:blaze_forger",
-            "create_enchantment_industry:blaze_enchanter"];
+        let bannedBlocks = [""];
         let bannedFluids = [""];
-        let bannedItems = [
-            // Empty blaze burners are still a gross shortcut
-            "create:empty_blaze_burner"];
+        let bannedItems = [""];
         return {
         baseMachineID: MACH_ID,
         traitItem: traitItem,
         machineType: new Map([
             [
                 "freezer", {
-                    id: MACH_ID.concat("_freezer"), name: "Engistic Encased Fan - Freezer", color: Color.rgba(52, 56, 62, 0.99),
+                    id: MACH_ID.concat("_freezer"), name: "Engistic Encased Fan - Freezer", color: Color.rgba(37, 150, 190, 0.99),
                     coreItem: null, coreBlock: "#create_dragons_plus:passive_block_freezers", model: "minecraft:light_blue_glazed_terracotta",
                     restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
                     recipeType: ["create_dragons_plus:freezing"],
-                    gateItem: "createmechanisms:heat_mechanism"
+                    gateItem: "kubejs:cold_mechanism"
                 },
             ]
         ]),
