@@ -1,0 +1,65 @@
+// priority: 0
+// requires: modular_machinery_reborn
+// Recipes for machine parts.
+
+ServerEvents.recipes(event => {
+    /**
+     * Maps the values of the given object to their unified tags using getUnifiedTag.
+     * @param {Object<string, any>} mapping - An object where each key maps to a value to be unified.
+     * @returns {Object<string, any>} A new object with the same keys, where each value is the result of getUnifiedTag.
+     */
+    function mapTags(mapping) {
+        let result = {};
+        for (let key in mapping) {
+            let value = mapping[key];
+            // Only call getUnifiedTag if value is a string (item ID), otherwise pass through (e.g., Ingredient)
+            result[key] = (Item.isItem(value)) ? getUnifiedTag(value) : value;
+        }
+        return result
+    }
+    // Overworld tier ingredients
+    event.shaped(
+        Item.of("modular_machinery_reborn:casing_vent", 2), // arg 1: output
+        [
+            'rmr',
+            'c c', // arg 2: the shape (array of strings)
+            'rir'   
+        ],
+        mapTags({
+            i: 'minecraft:iron_ingot', // arg 3: the mapping for 'a'
+            m: ['create:nozzle', '#minecraft:wool'],
+            c: "modular_machinery_reborn:casing_plain",
+            r: 'minecraft:redstone'
+        })
+    )
+    event.shaped(
+        Item.of("modular_machinery_reborn:casing_gearbox", 2),
+        [
+            'rmr',
+            'c c',
+            'rir'   
+        ],
+        mapTags({
+            i: 'minecraft:copper_ingot',
+            m: ['create:gearbox', 'minecraft:chiseled_copper'],
+            c: "modular_machinery_reborn:casing_plain",
+            r: 'minecraft:redstone'
+        })
+    )
+    
+    // Nether tier ingredients
+    event.shaped(
+        Item.of("modular_machinery_reborn:casing_circuitry", 2),
+        [
+            'rmr',
+            'c c',
+            'rir'
+        ],
+        mapTags({
+            i: 'minecraft:comparator',
+            m: ["minecraft:redstone_lamp","minecraft:copper_bulb"],
+            c: "modular_machinery_reborn:casing_plain",
+            r: 'minecraft:redstone'
+        })
+    )
+})
