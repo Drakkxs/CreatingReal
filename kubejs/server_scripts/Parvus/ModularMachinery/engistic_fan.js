@@ -440,7 +440,8 @@
             if (debug) console.log(`Sum Cost: ${sumCost}, XP per nugget: ${XP_PER}, Sum XP: ${sumXp}`);
             let energyCost = sumCost * this.proccessingTime();
             if (debug) console.log(`Energy Cost: ${energyCost}`);
-            return Math.max(MIN_ENERGY_COST, (energyCost / 20) + MIN_ENERGY_COST);
+            // Keep even integers
+            return Math.max(MIN_ENERGY_COST, Math.ceil(((energyCost / 20) + MIN_ENERGY_COST) / 2) * 2);
         }
     }}
 
@@ -565,7 +566,7 @@
                 console.log(`With JSON: ${recipe.json.toString()}`)
             }
             const XP_ID = "create:experience_nugget";
-            let cfgRecipe = constructRecipe(recipe, 3, 2, XP_ID, 20, 8, 79);
+            let cfgRecipe = constructRecipe(recipe, 3, 2, XP_ID, 20, 8, 80);
             let boostedTime = cfgRecipe.boostedTime();
 
 
