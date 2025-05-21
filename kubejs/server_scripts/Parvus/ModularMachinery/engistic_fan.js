@@ -565,7 +565,7 @@
                 console.log(`With JSON: ${recipe.json.toString()}`)
             }
             const XP_ID = "create:experience_nugget";
-            let cfgRecipe = constructRecipe(recipe, 3, 2, XP_ID, 20, 8, 1);
+            let cfgRecipe = constructRecipe(recipe, 3, 2, XP_ID, 20, 8, 80);
             let boostedTime = cfgRecipe.boostedTime();
 
 
