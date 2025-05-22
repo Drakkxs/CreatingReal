@@ -23,24 +23,24 @@ ServerEvents.recipes(event => {
     /** Hatches */
     let hatch = {
         input: [
-            "modular_machinery_reborn:energyinputhatch_tiny",
-            "modular_machinery_reborn:energyinputhatch_small",
-            "modular_machinery_reborn:energyinputhatch_normal",
-            "modular_machinery_reborn:energyinputhatch_reinforced",
-            "modular_machinery_reborn:energyinputhatch_big",
-            "modular_machinery_reborn:energyinputhatch_huge",
-            "modular_machinery_reborn:energyinputhatch_ludicrous",
-            "modular_machinery_reborn:energyinputhatch_ultimate",
+            "modular_machinery_reborn:experienceinputhatch_tiny",
+            "modular_machinery_reborn:experienceinputhatch_small",
+            "modular_machinery_reborn:experienceinputhatch_normal",
+            "modular_machinery_reborn:experienceinputhatch_reinforced",
+            "modular_machinery_reborn:experienceinputhatch_big",
+            "modular_machinery_reborn:experienceinputhatch_huge",
+            "modular_machinery_reborn:experienceinputhatch_ludicrous",
+            "modular_machinery_reborn:experienceinputhatch_vacuum"
         ],
         output: [
-            "modular_machinery_reborn:energyoutputhatch_tiny",
-            "modular_machinery_reborn:energyoutputhatch_small",
-            "modular_machinery_reborn:energyoutputhatch_normal",
-            "modular_machinery_reborn:energyoutputhatch_reinforced",
-            "modular_machinery_reborn:energyoutputhatch_big",
-            "modular_machinery_reborn:energyoutputhatch_huge",
-            "modular_machinery_reborn:energyoutputhatch_ludicrous",
-            "modular_machinery_reborn:energyoutputhatch_ultimate",
+            "modular_machinery_reborn:experienceoutputhatch_tiny",
+            "modular_machinery_reborn:experienceoutputhatch_small",
+            "modular_machinery_reborn:experienceoutputhatch_normal",
+            "modular_machinery_reborn:experienceoutputhatch_reinforced",
+            "modular_machinery_reborn:experienceoutputhatch_big",
+            "modular_machinery_reborn:experienceoutputhatch_huge",
+            "modular_machinery_reborn:experienceoutputhatch_ludicrous",
+            "modular_machinery_reborn:experienceoutputhatch_vacuum"
         ]
     }
 
@@ -72,6 +72,38 @@ ServerEvents.recipes(event => {
             o: event.shaped(outputHatch, pattern.reverse(), mapTags(outputKey))
         }
     }
+    
+    // Tiny Tier
+    createHatchRecipe(
+        Item.of(hatch.input[0], 1),
+        [
+            ' m ',
+            ' i ',
+            ' r '
+        ],
+        {
+            i: 'modular_machinery_reborn:casing_plain',
+            m: "minecraft:hopper",
+            // c: hatch.input[1],
+            r: 'minecraft:experience_bottle',
+        }
+    )
+
+    // Small Tier
+    createHatchRecipe(
+        Item.of(hatch.input[1], 1),
+        [
+            ' m ',
+            'ici',
+            'rir'
+        ],
+        {
+            i: 'modular_machinery_reborn:modularium',
+            m: "minecraft:hopper",
+            c: hatch.input[0],
+            r: 'minecraft:experience_bottle',
+        }
+    )
 
     // Normal Tier
     createHatchRecipe(
@@ -82,10 +114,10 @@ ServerEvents.recipes(event => {
             'rir'
         ],
         {
-            i: 'minecraft:redstone_block',
-            m: "minecraft:comparator",
+            i: 'modular_machinery_reborn:casing_plain',
+            m: "minecraft:hopper",
             c: hatch.input[1],
-            r: 'minecraft:redstone'
+            r: 'minecraft:experience_bottle',
         }
     )
 
@@ -98,10 +130,10 @@ ServerEvents.recipes(event => {
             'rir'
         ],
         {
-            i: 'minecraft:redstone_block',
-            m: "modular_machinery_reborn:casing_reinforced",
+            i: 'modular_machinery_reborn:casing_reinforced',
+            m: "minecraft:hopper_minecart",
             c: hatch.input[2],
-            r: 'minecraft:comparator',
+            r: 'minecraft:experience_bottle',
         }
     )
 
@@ -114,10 +146,10 @@ ServerEvents.recipes(event => {
             'rir'
         ],
         {
-            i: 'minecraft:redstone_block',
-            m: "modular_machinery_reborn:casing_reinforced",
+            i: 'modular_machinery_reborn:casing_reinforced',
+            m: hatch.input[0],
             c: hatch.input[3],
-            r: 'modular_machinery_reborn:casing_circuitry',
+            r: hatch.input[1],
         }
     )
 
@@ -131,9 +163,9 @@ ServerEvents.recipes(event => {
         ],
         {
             i: 'modular_machinery_reborn:casing_gearbox',
-            m: "modular_machinery_reborn:casing_reinforced",
+            m: hatch.input[1],
             c: hatch.input[4],
-            r: 'modular_machinery_reborn:casing_circuitry',
+            r: 'modular_machinery_reborn:casing_reinforced',
         }
     )
 
@@ -146,14 +178,14 @@ ServerEvents.recipes(event => {
             'rir'
         ],
         {
-            i: 'modular_machinery_reborn:casing_reinforced',
-            m: "modular_machinery_reborn:casing_vent",
+            i: hatch.input[2],
+            m: hatch.input[3],
             c: hatch.input[5],
-            r: 'modular_machinery_reborn:casing_circuitry',
+            r: 'modular_machinery_reborn:casing_vent',
         }
     )
 
-    // Ultimate Tier
+    // Vacuum Tier
     createHatchRecipe(
         Item.of(hatch.input[7], 1),
         [
@@ -163,9 +195,9 @@ ServerEvents.recipes(event => {
         ],
         {
             i: "minecraft:nether_star",
-            m: 'modular_machinery_reborn:casing_reinforced',
+            m: hatch.input[4],
             c: hatch.input[6],
-            r: 'modular_machinery_reborn:casing_circuitry',
+            r: hatch.input[3],
         }
     )
 

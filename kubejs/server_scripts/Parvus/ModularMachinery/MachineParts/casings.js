@@ -17,7 +17,23 @@ ServerEvents.recipes(event => {
         }
         return result
     }
-    // Overworld tier ingredients
+    
+    // Tier 1 Part
+    event.shaped(
+        Item.of("modular_machinery_reborn:casing_gearbox", 2),
+        [
+            'rmr',
+            'c c',
+            'rir'   
+        ],
+        mapTags({
+            i: 'minecraft:iron_ingot',
+            m: 'minecraft:chiseled_copper',
+            c: "modular_machinery_reborn:casing_reinforced",
+            r: 'minecraft:redstone'
+        })
+    )
+    // Tier 2 Part
     event.shaped(
         Item.of("modular_machinery_reborn:casing_vent", 2), // arg 1: output
         [
@@ -27,27 +43,12 @@ ServerEvents.recipes(event => {
         ],
         mapTags({
             i: 'minecraft:iron_ingot', // arg 3: the mapping for 'a'
-            m: ['create:nozzle', '#minecraft:wool'],
-            c: "modular_machinery_reborn:casing_plain",
+            m: '#minecraft:wool',
+            c: "modular_machinery_reborn:casing_gearbox",
             r: 'minecraft:redstone'
         })
     )
-    event.shaped(
-        Item.of("modular_machinery_reborn:casing_gearbox", 2),
-        [
-            'rmr',
-            'c c',
-            'rir'   
-        ],
-        mapTags({
-            i: 'minecraft:copper_ingot',
-            m: ['create:gearbox', 'minecraft:chiseled_copper'],
-            c: "modular_machinery_reborn:casing_plain",
-            r: 'minecraft:redstone'
-        })
-    )
-    
-    // Nether tier ingredients
+    // Tier 3 Part
     event.shaped(
         Item.of("modular_machinery_reborn:casing_circuitry", 2),
         [
@@ -57,9 +58,9 @@ ServerEvents.recipes(event => {
         ],
         mapTags({
             i: 'minecraft:comparator',
-            m: ["minecraft:redstone_lamp","minecraft:copper_bulb"],
-            c: "modular_machinery_reborn:casing_plain",
-            r: 'minecraft:redstone'
+            m: "minecraft:copper_bulb",
+            c: "modular_machinery_reborn:casing_vent",
+            r: "modular_machinery_reborn:casing_gearbox"
         })
     )
 })
