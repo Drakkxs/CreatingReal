@@ -728,7 +728,7 @@
         machineType: new Map([
             [
                 "freezer", {
-                    id: MACH_ID.concat("_freezer"), name: "Engistic Encased Fan - Freezer", color: Color.rgba(37, 150, 190, 0.99),
+                    id: MACH_ID.concat("_freezer"), name: "Engistic Encased Fan - Freezer", color: Color.rgba(201, 243, 248, 0.99),
                     coreItem: null, coreBlock: "#create_dragons_plus:passive_block_freezers", model: "minecraft:light_blue_glazed_terracotta",
                     restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
                     recipeType: ["create_dragons_plus:freezing"],
