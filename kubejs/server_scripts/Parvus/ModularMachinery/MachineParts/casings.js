@@ -24,7 +24,7 @@ ServerEvents.recipes(event => {
         [
             'rmr',
             'c c',
-            'rir'   
+            'rir'
         ],
         mapTags({
             i: 'minecraft:iron_ingot',
@@ -37,12 +37,12 @@ ServerEvents.recipes(event => {
     event.shaped(
         Item.of("modular_machinery_reborn:casing_vent", 2), // arg 1: output
         [
-            'rmr',
-            'c c', // arg 2: the shape (array of strings)
+            'rir',
+            'cmc', // arg 2: the shape (array of strings)
             'rir'   
         ],
         mapTags({
-            i: 'minecraft:iron_ingot', // arg 3: the mapping for 'a'
+            i: 'modular_machinery_reborn:casing_firebox', // arg 3: the mapping for 'a'
             m: '#minecraft:wool',
             c: "modular_machinery_reborn:casing_gearbox",
             r: 'minecraft:redstone'
