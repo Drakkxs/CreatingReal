@@ -17,7 +17,12 @@ ServerEvents.recipes(event => {
         }
         return result
     }
-    
+    // Machine Blueprint
+    event.shapeless(
+        Item.of("modular_machinery_reborn:blueprint", 1),
+        ['minecraft:paper', 'modular_machinery_reborn:modularium']
+        .map(i => getUnifiedTag(i)),
+    )
     // Tier 1 Part
     event.shaped(
         Item.of("modular_machinery_reborn:casing_gearbox", 2),
