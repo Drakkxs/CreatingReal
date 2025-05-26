@@ -71,6 +71,9 @@ ServerEvents.recipes(event => {
         }
     }
 
+    // Input to Output conversion recipe
+    
+
     // Normal Tier
     createHatchRecipe(
         Item.of(hatch.input[2], 1),
