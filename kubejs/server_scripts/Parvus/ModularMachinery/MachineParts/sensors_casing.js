@@ -79,7 +79,7 @@ ServerEvents.recipes(event => {
 
     // Time Counter
     createHatchRecipe(
-        Item.of(hatch.instrument[0], 2),
+        Item.of(hatch.instrument[0], 1),
         [
             'rmr',
             'ici',
@@ -96,7 +96,7 @@ ServerEvents.recipes(event => {
 
     // Height Meter
     createHatchRecipe(
-        Item.of(hatch.instrument[1], 2),
+        Item.of(hatch.instrument[1], 1),
         [
             'rmr',
             'ici',
@@ -112,7 +112,7 @@ ServerEvents.recipes(event => {
 
     // Weather Sensor
     createHatchRecipe(
-        Item.of(hatch.instrument[2], 2),
+        Item.of(hatch.instrument[2], 1),
         [
             'rgr',
             'ici',
@@ -129,7 +129,7 @@ ServerEvents.recipes(event => {
 
     // Biome Reader
     createHatchRecipe(
-        Item.of(hatch.instrument[3], 2),
+        Item.of(hatch.instrument[3], 1),
         [
             'rgr',
             'ici',
@@ -146,7 +146,7 @@ ServerEvents.recipes(event => {
 
     // Dimensional Detector
     createHatchRecipe(
-        Item.of(hatch.instrument[4], 2),
+        Item.of(hatch.instrument[4], 1),
         [
             'rcr',
             'ici',
@@ -162,7 +162,7 @@ ServerEvents.recipes(event => {
 
     // Chunkloader
     createHatchRecipe(
-        Item.of(hatch.instrument[5], 2),
+        Item.of(hatch.instrument[5], 1),
         [
             'rgr',
             'ici',
