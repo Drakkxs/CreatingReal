@@ -117,7 +117,7 @@ ServerEvents.recipes(event => {
             i: 'modular_machinery_reborn:casing_reinforced',
             m: hatch.input[0],
             c: hatch.input[3],
-            r: hatch.input[1],
+            r: "minecraft:cauldron",
         }
     )
 
