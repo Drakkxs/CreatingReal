@@ -72,6 +72,14 @@ ServerEvents.recipes(event => {
             o: event.shaped(outputHatch, pattern.reverse(), mapTags(outputKey))
         }
     }
+
+    // Create a shapeless recipe to convert input hatch to output hatch
+    for (let inputHatch of hatch.input) {
+        let outputHatch = hatch.output.find(i => i == inputHatch.replace("input", "output"))
+        if (outputHatch) {
+            event.shapeless(inputHatch, [outputHatch])
+        }
+    }
     
     // Tiny Tier
     createHatchRecipe(

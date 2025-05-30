@@ -71,8 +71,13 @@ ServerEvents.recipes(event => {
         }
     }
 
-    // Input to Output conversion recipe
-    
+    // Create a shapeless recipe to convert input hatch to output hatch
+    for (let inputHatch of hatch.input) {
+        let outputHatch = hatch.output.find(i => i == inputHatch.replace("input", "output"))
+        if (outputHatch) {
+            event.shapeless(inputHatch, [outputHatch])
+        }
+    }
 
     // Normal Tier
     createHatchRecipe(
