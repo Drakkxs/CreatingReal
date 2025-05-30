@@ -729,7 +729,7 @@
                 [
                     "freezer", {
                         id: MACH_ID.concat("_freezer"), name: "Draconic Encased Fan - Freezer", color: Color.rgba(201, 243, 248, 0.99),
-                        coreItem: null, coreBlock: "#create_dragons_plus:passive_block_freezers", model: "minecraft:light_blue_glazed_terracotta",
+                        coreItem: null, coreBlock: "#create_dd:fan_processing_catalysts/freezing", model: "minecraft:light_blue_glazed_terracotta",
                         restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
                         recipeType: ["create_dragons_plus:freezing"],
                         gateItem: "kubejs:cold_mechanism"
@@ -738,10 +738,19 @@
                 [
                     "ending", {
                         id: MACH_ID.concat("_ending"), name: "Draconic Encased Fan - Ending", color: Color.rgba(221, 104, 218, 0.99),
-                        coreItem: null, coreBlock: "minecraft:dragon_head", model: "minecraft:pink_glazed_terracotta",
+                        coreItem: null, coreBlock: "#create_dragons_plus:fan_processing_catalysts/ending", model: "minecraft:pink_glazed_terracotta",
                         restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
                         recipeType: ["create_dragons_plus:ending"],
                         gateItem: "createmechanisms:ender_mechanism"
+                    },
+                ],
+                [
+                    "sanding", {
+                        id: MACH_ID.concat("_sanding"), name: "Draconic Encased Fan - Sanding", color: Color.rgba(242, 176, 21, 0.99),
+                        coreItem: null, coreBlock: "#create_dragons_plus:fan_processing_catalysts/sanding", model: "minecraft:yellow_glazed_terracotta",
+                        restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
+                        recipeType: ["create:sandpaper_polishing"],
+                        gateItem: "createmechanisms:wooden_mechanism"
                     },
                 ]
         ]),
