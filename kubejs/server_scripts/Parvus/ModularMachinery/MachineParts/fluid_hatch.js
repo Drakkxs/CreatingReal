@@ -78,6 +78,7 @@ ServerEvents.recipes(event => {
         let outputHatch = hatch.output.find(i => i == inputHatch.replace("input", "output"))
         if (outputHatch) {
             event.shapeless(inputHatch, [outputHatch])
+            event.shapeless(outputHatch, [inputHatch])
         }
     }
 
