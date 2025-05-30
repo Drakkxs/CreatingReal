@@ -738,7 +738,7 @@
                 [
                     "ending", {
                         id: MACH_ID.concat("_ending"), name: "Draconic Encased Fan - Ending", color: Color.rgba(221, 104, 218, 0.99),
-                        coreItem: null, coreBlock: "minecraft:dragon_head", model: "minecraft:dragon_egg",
+                        coreItem: null, coreBlock: "minecraft:dragon_head", model: "minecraft:pink_glazed_terracotta",
                         restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
                         recipeType: ["create_dragons_plus:ending"],
                         gateItem: "createmechanisms:ender_mechanism"
