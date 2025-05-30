@@ -759,8 +759,8 @@
             ],
             [
                 "haunting", {
-                    id: MACH_ID.concat("_haunting"), name: "Engistic Encased Fan - Haunting", color: Color.rgba(99, 23, 148, 0.99),
-                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/haunting", model: "minecraft:purple_glazed_terracotta",
+                    id: MACH_ID.concat("_haunting"), name: "Engistic Encased Fan - Haunting", color: Color.rgba(21, 119, 136, 0.99),
+                    coreItem: null, coreBlock: "#create:fan_processing_catalysts/haunting", model: "minecraft:cyan_glazed_terracotta",
                     restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
                     recipeType: ["create:haunting"],
                     gateItem: "createmechanisms:heat_mechanism"
