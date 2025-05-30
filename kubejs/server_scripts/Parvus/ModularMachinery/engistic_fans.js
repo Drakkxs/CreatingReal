@@ -750,7 +750,7 @@
             ],
             [
                 "splashing", {
-                    id: MACH_ID.concat("_splashing"), name: "Engistic Encased Fan - Splashing", color: Color.rgba(69, 119, 211, 0.99),
+                    id: MACH_ID.concat("_splashing"), name: "Engistic Encased Fan - Splashing", color: Color.rgba(44, 46, 143, 0.99),
                     coreItem: null, coreBlock: "#create:fan_processing_catalysts/splashing", model: "minecraft:blue_glazed_terracotta",
                     restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems,
                     recipeType: ["create:splashing"],
