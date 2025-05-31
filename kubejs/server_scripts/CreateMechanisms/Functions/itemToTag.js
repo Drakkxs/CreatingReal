@@ -1,6 +1,6 @@
 /**
  * Given an item string, returns a tag object with the relevant unified tag for that item or what was passed in
- * @param {$ItemStack_} maybeStack
+ * @param {$ItemStack_ | any} maybeStack
  * @returns
  * @see {@link getUnifiedTag}
  */
