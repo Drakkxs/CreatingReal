@@ -658,27 +658,45 @@
                             if (recipe.getOriginalRecipeResult().count != 8 && recipe.getOriginalRecipeResult().count != 1) {
                                 return false;
                             }
-                            /** Ingredients including dyes */
+                            
+                            /** Minimized Ingredients including dyes */
                             catalyst["allRecipeIngs"] = () => {
-                                /** A map for the filtering of ingredients */
-                                let combMap = new Set();
-                                return recipe.getOriginalRecipeIngredients().toArray()
-                                    .map(i => Ingredient.of(i))
-                                    .filter(i => !(i.empty))
-                                    .filter(i => {
-                                        // Filter out duplicate ingredients
-                                        let key = String(i.toJson());
-                                        if (combMap.has(key)) return false;
-                                        combMap.add(key);
-                                        return true;
-                                    })
+                                return {
+                                    minimized: () => {
+                                        /** A map for the filtering of ingredients */
+                                        let combMap = new Set();
+                                        return recipe.getOriginalRecipeIngredients().toArray()
+                                            .map(i => Ingredient.of(i))
+                                            .filter(i => !(i.empty))
+                                            .filter(i => {
+                                                // Filter out duplicate ingredients
+                                                let key = String(i.toJson());
+                                                if (combMap.has(key)) return false;
+                                                combMap.add(key);
+                                                return true;
+                                            })
+                                    },
+
+                                    normal: () => {
+                                        return recipe.getOriginalRecipeIngredients().toArray()
+                                            .map(i => Ingredient.of(i))
+                                            .filter(i => !(i.empty))
+                                    }
+                                }
                             };
-                            /** Ingredients excluding dyes */
-                            catalyst["recipeIngs"] = catalyst.allRecipeIngs().filter(i => {
+
+                            // For normal coloring recipes:
+                            // 1 Uncolored + 1 Dye = 2 | 8 Uncolored + 1 Dye = 9
+                            // Therfore, there can only be nine or two total ingredients.
+                            if (!([2,9].indexOf(catalyst.allRecipeIngs().normal().length) != -1)) return false;
+
+
+                            /** Minimized Ingredients excluding dyes */
+                            catalyst["recipeIngs"] = catalyst.allRecipeIngs().minimized().filter(i => {
                                 // For a ingredient to not be a dye, all stacks must fail the DYE_SET test
                                 return i.stackArray.every(stack => !(catalyst.allCatIng.test(stack)));
                             })
-                            catalyst["dyeIngs"] = catalyst.allRecipeIngs().filter(i => {
+                            catalyst["dyeIngs"] = catalyst.allRecipeIngs().minimized().filter(i => {
                                 // For a ingredient to be a dye, all stacks must pass the DYE_SET test
                                 return i.stackArray.every(stack => catalyst.allCatIng.test(stack));
                             })
@@ -719,7 +737,7 @@
                             // What recipe is this?
                             if (debug) console.log(`Result: ${recipe.getOriginalRecipeResult().toJson()}`)
                             if (debug) console.log(`Path: ${recipe.path}`)
-                            if (debug) console.log(`Ingredients: ${catalyst.allRecipeIngs().map(i => i.toJson()).join(", ")}
+                            if (debug) console.log(`Ingredients: ${catalyst.allRecipeIngs().minimized().map(i => i.toJson()).join(", ")}
                             Excluded: ${catalyst.recipeIngs.map(i => i.toJson()).join(", ")}
                             DyePresent: ${catalyst.dyeIngs.map(i => i.toJson()).join(", ")}`)
 
