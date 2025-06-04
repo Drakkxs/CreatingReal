@@ -5,6 +5,8 @@
 !config/
 !config/almostunified/
 !config/almostunified/**
+!config/modular_machinery_reborn/
+!config/modular_machinery_reborn/**
 !kubejs/
 !kubejs/**
 !scripts/
