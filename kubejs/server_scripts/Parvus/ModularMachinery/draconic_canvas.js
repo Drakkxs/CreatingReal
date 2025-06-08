@@ -480,11 +480,8 @@
                     time: boostedTime,
                     XP_ID: XP_ID
                 }
-                debug = true
-                console.log(`Recipe Data: ${JSON.stringify(data)}`)
                 // @ts-expect-error
                 this.recipeMap.set(`${recipe.path}`, data)
-                debug = false
             },
 
             /**
