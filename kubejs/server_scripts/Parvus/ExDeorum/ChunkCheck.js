@@ -17,11 +17,26 @@
         cobalt: "nether"
     };
 
+    /**
+     * Extracts the chunk name from a given chunk ID string.
+     *
+     * The function uses a regular expression to match and capture the chunk name,
+     * ignoring common prefixes and suffixes such as "ore_", "_ore", "_chunk", etc.
+     *
+     * @param {string} chunkId - The chunk ID string to extract the name from.
+     * @returns {string|null} The extracted chunk name, or null if no match is found.
+     */
     function getChunkName(chunkId) {
         const match = chunkId.match(/:(?:_)?(?:ore_)?(\w+?)(?:_ore)?(?:_chunk)?(?:_)?$/);
         return match ? match[1] : null;
     }
 
+    /**
+     * Retrieves the item ID associated with a given ore tag using AlmostUnified.
+     *
+     * @param {string} tagKJS - The ore tag string, possibly prefixed with '#'.
+     * @returns {string} The item ID location as a string, or an empty string if not found or on error.
+     */
     function getOreItem(tagKJS) {
         try {
             let a = AlmostUnified.getTagTargetItem(tagKJS.replace("#", ""));
@@ -56,7 +71,7 @@
 
 
             // If there is already a recipe that outputs the ore using this chunk, skip it.
-            const existingRecipe = event.findRecipes({ output: chunkOreId, input: chunkId });
+            const existingRecipe = event.findRecipes({ output: chunkOreId, input: chunkId, or: [{ type: "minecraft:crafting_shaped" }, { type: "minecraft:crafting_shapeless" }] });
             if (!existingRecipe.isEmpty() && debug) console.log(`Recipe already exists for ${chunkId} to ${chunkOreId}`);
             if (!existingRecipe.isEmpty()) return;
 
@@ -73,7 +88,7 @@
                     .filter(id => id.match(regex))
                     // Collect the first match that is the unified mod.
                     .find(id => AlmostUnified.getVariantItemTarget(id).idLocation.toString() === id);
-                    // If none found then we fall back to the original ore item.
+                // If none found then we fall back to the original ore item.
                 chunkOreId = chunky || chunkOreId;
             }
             if (debug) console.log(`Final Ore Item for ${chunkName}: ${chunkOreId}`);
