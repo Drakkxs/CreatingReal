@@ -8,11 +8,18 @@
     let basicCloche = "cloche:cloche"
     let betaClocheId = "opolisutilities:cloche" // Beta Cloche
 
+    /**
+     * Returns the variant item ID for the given item if it is a valid ingredient,
+     * otherwise returns the original item.
+     *
+     * @param {string} item - The item identifier to check for a variant.
+     * @returns {string} The variant item ID if valid, or the original item.
+     */
     function getVariantItem(item) {
         let a = AlmostUnified.getVariantItemTarget(item).idLocation.toString()
         return Ingredient.isIngredient(a) ? a : item;
     }
-    
+
     ServerEvents.recipes(event => {
 
         // If there is already a recipe that outputs the Beta Cloche skip adding a recipe.
