@@ -1,7 +1,7 @@
 // priority: 0
 // requires: minecraft
 // @ts-check
-// Iron bucket from a copper bucket.
+// Rotten Flesh to Leather smelting
 
 // Immidately Invoked Function Expression to prevent polluting the global namespace
 (() => {
@@ -17,17 +17,15 @@
         let a = AlmostUnified.getVariantItemTarget(item).idLocation.toString()
         return Ingredient.isIngredient(a) ? a : item;
     }
-    
-    let ingot = getVariantItem("minecraft:copper_ingot");
+
+    let rottenFlesh = getVariantItem("minecraft:rotten_flesh");
+    let leather = getVariantItem("minecraft:leather");
+    /** @type number & $TickDuration_, */
+    let cookingTime = 200;
     ServerEvents.recipes(event => {
 
-        // If there is already a recipe that outputs a bucket using copper ingots, override it.
-        event.remove({ output: "minecraft:bucket", type: "minecraft:crafting_shaped", input: ingot });
-        event.shaped("minecraft:bucket", [
-            "C C",
-            " C "
-        ], {
-            C: ingot
-        })
+        // If there is already a recipe that outputs leather using rotten flesh, skip adding this
+        if (event.findRecipes({ output: leather, input: rottenFlesh }).size()) return;
+        event.smelting(leather, rottenFlesh).xp(0.1).cookingTime(cookingTime);
     })
 })()
