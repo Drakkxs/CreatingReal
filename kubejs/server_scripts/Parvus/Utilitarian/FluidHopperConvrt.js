@@ -1,5 +1,4 @@
 // priority: 0
-// requires: minecraft
 // @ts-check
 // Convert Fluid Hoppers to normal hoppers.
 

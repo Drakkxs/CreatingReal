@@ -1,5 +1,4 @@
 // priority: 0
-// requires: minecraft
 // @ts-check
 // Recipe for the Beta Cloche and a better recipe for the Basic Cloche
 

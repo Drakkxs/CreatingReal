@@ -1,5 +1,4 @@
 // priority: 0
-// requires: minecraft
 // @ts-check
 // Iron bucket from a copper bucket.
 
