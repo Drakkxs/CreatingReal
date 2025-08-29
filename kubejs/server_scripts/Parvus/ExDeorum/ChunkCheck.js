@@ -5,7 +5,7 @@
 
 // Immidately Invoked Function Expression to prevent polluting the global namespace
 (() => {
-    let debug = true; // Want some debug?
+    let debug = false; // Want some debug?
 
     const chunkTag = "#exdeorum:ore_chunks";
     const chunkItems = Ingredient.of(chunkTag).itemIds;

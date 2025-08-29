@@ -9,7 +9,8 @@
     let betaClocheId = "opolisutilities:cloche" // Beta Cloche
 
     function getVariantItem(item) {
-        return AlmostUnified.getVariantItemTarget(item).idLocation.toString();
+        let a = AlmostUnified.getVariantItemTarget(item).idLocation.toString()
+        return Ingredient.isIngredient(a) ? a : item;
     }
     
     ServerEvents.recipes(event => {
@@ -20,7 +21,7 @@
         // Remove existing recipe for the Basic Cloche
         event.remove({ output: basicCloche, type: "minecraft:crafting_shaped" });
 
-        event.shaped(betaClocheId, [
+        event.shaped(basicCloche, [
             "MMM",
             "ICI",
             "MMM"
