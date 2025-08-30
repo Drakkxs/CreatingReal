@@ -156,7 +156,7 @@
                 },
                 "meltingTemp": oreCastingRecipe.get("meltingTemp").asNumber,
                 "output": {
-                    // The amount divided by four because four chunks equal one ore.
+                    // Chunks are melted down into their liquid form at the same efficiency as their ore form
                     "amount": oreCastingRecipe.get("output").asJsonObject.get("amount").asNumber,
                     "id": oreCastingRecipe.get("output").asJsonObject.get("id").asString
                 }
