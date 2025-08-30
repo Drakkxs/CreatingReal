@@ -133,7 +133,7 @@
 
         // If the gamerule is on, exit logic
         if (event.level.gameRules.get("doMobSpawning").commandResult) {
-            console.log("doMobSpawning gamerule is set, exiting logic")
+            if (debug) console.log("doMobSpawning gamerule is set, exiting logic")
             return
         }
 
