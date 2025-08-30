@@ -34,7 +34,7 @@
 
     let pullerUpgrade = getVariantItem("functionalstorage:puller_upgrade");
     let pusherUpgrade = getVariantItem("functionalstorage:pusher_upgrade");
-    let redstoneDust = getTagItem("#c:dusts/redstone");
+    let redstoneDust = "#c:dusts/redstone"
 
     ServerEvents.recipes(event => {
 
