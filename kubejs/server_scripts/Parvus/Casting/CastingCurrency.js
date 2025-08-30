@@ -87,20 +87,20 @@
             if (debug) console.log(`Transferable ID: ${coinTransferrableID}`);
 
             // Find melting recipes for the nugget
-            const nuggetMeltingRecipe = event.findRecipes({
+            const transferrableRecipe = event.findRecipes({
                 input: coinTransferrableID,
                 type: castingRecipeType
             }).stream().findFirst().orElse(null);
 
-            if (!nuggetMeltingRecipe) {
+            if (!transferrableRecipe) {
                 if (debug) console.log(`No melting recipe found for ${coinTransferrableID}`);
                 return;
             }
 
             // Retrieve the JSON
-            let nuggetCastingRecipe = nuggetMeltingRecipe.json
+            let transferrableCasting = transferrableRecipe.json
             // Add error handling for missing or invalid recipe data
-            if (!nuggetCastingRecipe.has("meltingTemp") || !nuggetCastingRecipe.has("output")) {
+            if (!transferrableCasting.has("meltingTemp") || !transferrableCasting.has("output")) {
                 console.error(`Invalid recipe data for nugget ${coinTransferrableID}`);
                 return;
             }
@@ -127,11 +127,11 @@
                     "count": 1,
                     "item": coinId
                 },
-                "meltingTemp": nuggetCastingRecipe.get("meltingTemp").asNumber,
+                "meltingTemp": transferrableCasting.get("meltingTemp").asNumber,
                 "output": {
                     // Coins melt into nuggets so they provided just as much liquid as their nugget form
-                    "amount": nuggetCastingRecipe.get("output").asJsonObject.get("amount").asNumber,
-                    "id": nuggetCastingRecipe.get("output").asJsonObject.get("id").asString
+                    "amount": transferrableCasting.get("output").asJsonObject.get("amount").asNumber,
+                    "id": transferrableCasting.get("output").asJsonObject.get("id").asString
                 }
             })
 
