@@ -3,7 +3,7 @@
 // @ts-check
 // Cobblemon doesn't listen to the doMobSpawning Gamerule. This script will make it so they do.
 
-// Immidately Invoked Function Expression to prevent polluting the global namespace
+// Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
 
     /**

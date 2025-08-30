@@ -6,7 +6,7 @@
 // @ts-check
 // An upgrade to create's encased fan.
 
-// Immidately Invoked Function Expression to prevent polluting the global namespace
+// Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
 
     /**

@@ -1,11 +1,14 @@
 // priority: 0
-// requires: bblcore
+// requires: mekanism
+// requires: createaddition
 // @ts-check
-// Recipe for the upgrade base
+// Allow crafting upwards from BioFuel to Biomass Pallets.
 
 // Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
-    let upgradeBase = "bblcore:upgrade_base"
+
+    let bioFuel = "mekanism:block_bio_fuel"
+    let biomassPallet = "createaddition:biomass_pellet_block"
 
     /**
      * Returns the variant item ID for the given item if it is a valid ingredient,
@@ -18,19 +21,11 @@
         let a = AlmostUnified.getVariantItemTarget(item).idLocation.toString()
         return Ingredient.isIngredient(a) ? a : item;
     }
-
+    
+    let ingot = getVariantItem("minecraft:copper_ingot");
     ServerEvents.recipes(event => {
 
-        // If there is already a recipe that outputs the Upgrade Base skip adding a recipe.
-        if (event.findRecipes({ output: upgradeBase }).size()) return;
-
-        event.shaped(upgradeBase, [
-            " M ",
-            "MCM",
-            " M "
-        ], {
-            M: getVariantItem("minecraft:copper_ingot"),
-            C: getVariantItem("minecraft:iron_ingot")
-        })
+        // Allow crafting upwards from BioFuel to Biomass Pallets.
+        event.shapeless(biomassPallet, [].fill(bioFuel, 0, 8))
     })
 })()

@@ -2,7 +2,7 @@
 // @ts-check
 // Convert Fluid Hoppers to normal hoppers.
 
-// Immidately Invoked Function Expression to prevent polluting the global namespace
+// Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
     let fluidHopper = "utilitarian:fluid_hopper"
     let itemHopper = "minecraft:hopper" // Item Hopper

@@ -4,7 +4,7 @@
 // @ts-check
 // Recipe for the Beta Cloche and a better recipe for the Released Cloche
 
-// Immidately Invoked Function Expression to prevent polluting the global namespace
+// Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
     let releaseCloche = "cloche:cloche"
     let betaClocheId = "opolisutilities:cloche" // Beta Cloche

@@ -3,7 +3,7 @@
 // requires: createcompounds
 // @ts-check
 
-// Immidately Invoked Function Expression to prevent polluting the global namespace
+// Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
     ServerEvents.recipes(event => {
         

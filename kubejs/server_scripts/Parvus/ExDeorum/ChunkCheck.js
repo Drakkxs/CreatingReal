@@ -3,7 +3,7 @@
 // @ts-check
 // ExDeorum chunks don't have recipes so let's add some.
 
-// Immidately Invoked Function Expression to prevent polluting the global namespace
+// Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
     let debug = false; // Want some debug?
 

@@ -2,7 +2,7 @@
 // @ts-check
 // A script to help with broken recipes or tags.
 
-// Immidately Invoked Function Expression to prevent polluting the global namespace
+// Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
 
     /**

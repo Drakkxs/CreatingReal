@@ -2,7 +2,7 @@
 // @ts-check
 // Iron bucket from a copper bucket.
 
-// Immidately Invoked Function Expression to prevent polluting the global namespace
+// Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
 
     /**
