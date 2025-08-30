@@ -43,5 +43,10 @@
             copperDust, copperDust, copperDust,
             cinnabarDust
         ])
+
+        // Bonemeal from Cinnabar Dust
+        event.shapeless(`2x minecraft:bone_meal`, [
+            cinnabarDust
+        ])
     })
 })()
