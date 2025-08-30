@@ -26,6 +26,6 @@
     ServerEvents.recipes(event => {
 
         // Allow crafting upwards from BioFuel to Biomass Pallets.
-        event.shapeless(biomassPallet, [].fill(bioFuel, 0, 8))
+        event.shapeless(biomassPallet, Array(9).fill(bioFuel))
     })
 })()
