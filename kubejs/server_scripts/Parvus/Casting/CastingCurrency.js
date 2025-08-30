@@ -81,9 +81,9 @@
             if (debug) console.log(`Transferrable tags: ${coinNuggetTag},  ${coinOreTag}`);
 
             // Map the nugget based on the tag and then the ore as a fall back for calculation
-            let coinTransferrableID = [getTagItem(coinNuggetTag), getTagItem(coinOreTag)].find(id => !(Ingredient.of(id).isEmpty()));
-            if (Ingredient.of(coinTransferrableID).isEmpty() && debug) console.warn(`No transferable item found for tag: ${coinNuggetTag}`);
-            if (Ingredient.of(coinTransferrableID).isEmpty()) return;
+            let coinTransferrableID = [getTagItem(coinNuggetTag), getTagItem(coinOreTag)].find(id => Ingredient.isIngredient(id));
+            if (!coinTransferrableID && debug) console.warn(`No transferable item found for tag: ${coinNuggetTag}`);
+            if (!coinTransferrableID) return;
             if (debug) console.log(`Transferable ID: ${coinTransferrableID}`);
 
 
