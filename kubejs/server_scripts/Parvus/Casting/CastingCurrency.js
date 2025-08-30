@@ -13,6 +13,7 @@
     const coinTag = "#lightmanscurrency:coins";
     const coinItems = Ingredient.of(coinTag).itemIds;
     const nuggetTag = "#c:nuggets"; // General nugget tag
+    const oreTag = "#c:ores"; // General ore tag
     const blacklist = ["chocolate", "ancient"];
     // Coin type materials that will be allowed
     const materials = ["copper", "gold", "iron", "emerald", "diamond", "netherite"];
@@ -74,35 +75,36 @@
                 return;
             }
 
-            // Get the nugget tag from the coin name
+            // Get the nugget tag from the coin name and the ore tag
             const coinNuggetTag = `${nuggetTag}/${coinMaterial}`;
-            if (debug) console.log(`Nugget Tag: ${coinNuggetTag}`);
+            const coinOreTag = `${oreTag}/${coinMaterial}`;
+            if (debug) console.log(`Transferrable tags: ${coinNuggetTag},  ${coinOreTag}`);
 
-            // Map the nugget based on which type it comes from.
-            let coinNuggetID = getTagItem(coinNuggetTag);
-            if (!coinNuggetID.match(/\w+/) && debug) console.warn(`No nugget item found for tag: ${coinNuggetTag}`);
-            if (!coinNuggetID.match(/\w+/)) return;
-            if (debug) console.log(`Nugget Item: ${coinNuggetID}`);
+            // Map the nugget based on the tag and then the ore as a fall back for calculation
+            let coinTransferrableID = [getTagItem(coinNuggetTag), getTagItem(coinOreTag)].find(id => !(Ingredient.of(id).isEmpty()));
+            if (Ingredient.of(coinTransferrableID).isEmpty() && debug) console.warn(`No transferable item found for tag: ${coinNuggetTag}`);
+            if (Ingredient.of(coinTransferrableID).isEmpty()) return;
+            if (debug) console.log(`Transferable ID: ${coinTransferrableID}`);
 
 
             // If there is already a casting recipe that outputs the nugget using this coin, skip it.
             const existingCast = event.findRecipes({
-                output: coinNuggetID, input: coinId, or: [
+                output: coinTransferrableID, input: coinId, or: [
                     { type: "casting:melting" }
                 ]
             });
 
-            if (!existingCast.isEmpty() && debug) console.log(`Recipe already exists for ${coinId} to ${coinNuggetID}`);
+            if (!existingCast.isEmpty() && debug) console.log(`Recipe already exists for ${coinId} to ${coinTransferrableID}`);
             if (!existingCast.isEmpty()) return;
 
             // Find melting recipes for the nugget
             const nuggetMeltingRecipe = event.findRecipes({
-                input: coinNuggetID,
+                input: coinTransferrableID,
                 type: castingRecipeType
             }).stream().findFirst().orElse(null);
 
             if (!nuggetMeltingRecipe) {
-                if (debug) console.log(`No melting recipe found for ${coinNuggetID}`);
+                if (debug) console.log(`No melting recipe found for ${coinTransferrableID}`);
                 return;
             }
 
@@ -110,7 +112,7 @@
             let nuggetCastingRecipe = nuggetMeltingRecipe.json
             // Add error handling for missing or invalid recipe data
             if (!nuggetCastingRecipe.has("meltingTemp") || !nuggetCastingRecipe.has("output")) {
-                console.error(`Invalid recipe data for nugget ${coinNuggetID}`);
+                console.error(`Invalid recipe data for nugget ${coinTransferrableID}`);
                 return;
             }
 
