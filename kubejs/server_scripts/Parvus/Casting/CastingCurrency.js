@@ -86,17 +86,6 @@
             if (!coinTransferrableID) return;
             if (debug) console.log(`Transferable ID: ${coinTransferrableID}`);
 
-
-            // If there is already a casting recipe that outputs the nugget using this coin, skip it.
-            const existingCast = event.findRecipes({
-                output: coinTransferrableID, input: coinId, or: [
-                    { type: "casting:melting" }
-                ]
-            });
-
-            if (!existingCast.isEmpty() && debug) console.log(`Recipe already exists for ${coinId} to ${coinTransferrableID}`);
-            if (!existingCast.isEmpty()) return;
-
             // Find melting recipes for the nugget
             const nuggetMeltingRecipe = event.findRecipes({
                 input: coinTransferrableID,
