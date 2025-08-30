@@ -35,6 +35,7 @@
     let cinnabarDust = getVariantItem("alltheores:cinnabar_dust")
     let redstoneDust = getVariantItem("minecraft:redstone")
     let copperDust = getTagItem("#c:dusts/copper")
+    let boneMeal = getVariantItem("minecraft:bone_meal")
 
     ServerEvents.recipes(event => {
 
@@ -45,7 +46,7 @@
         ])
 
         // Bonemeal from Cinnabar Dust
-        event.shapeless(`2x minecraft:bone_meal`, [
+        event.shapeless(`2x ${boneMeal}`, [
             cinnabarDust
         ])
     })
