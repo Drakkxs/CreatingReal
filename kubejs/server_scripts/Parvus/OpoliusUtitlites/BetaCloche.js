@@ -1,10 +1,12 @@
 // priority: 0
+// requires: opolisutilities
+// requires: cloche
 // @ts-check
-// Recipe for the Beta Cloche and a better recipe for the Basic Cloche
+// Recipe for the Beta Cloche and a better recipe for the Released Cloche
 
 // Immidately Invoked Function Expression to prevent polluting the global namespace
 (() => {
-    let basicCloche = "cloche:cloche"
+    let releaseCloche = "cloche:cloche"
     let betaClocheId = "opolisutilities:cloche" // Beta Cloche
 
     /**
@@ -22,12 +24,12 @@
     ServerEvents.recipes(event => {
 
         // If there is already a recipe that outputs the Beta Cloche skip adding a recipe.
-        if (event.findRecipes({ output: betaClocheId }).size()) return;
+        if (event.findRecipes({ output: betaClocheId, type: "minecraft:crafting_shaped" }).size()) return;
+        
+        // Remove existing recipe for the Release Cloche
+        event.remove({ output: releaseCloche, type: "minecraft:crafting_shaped" });
 
-        // Remove existing recipe for the Basic Cloche
-        event.remove({ output: basicCloche, type: "minecraft:crafting_shaped" });
-
-        event.shaped(basicCloche, [
+        event.shaped(betaClocheId, [
             "MMM",
             "ICI",
             "MMM"
@@ -37,14 +39,18 @@
             I: getVariantItem("minecraft:water_bucket")
         })
 
-        event.shaped(betaClocheId, [
+        event.shaped(releaseCloche, [
             "MMM",
             "ICI",
             "MMM"
         ], {
             M: getVariantItem("minecraft:iron_ingot"),
-            C: basicCloche,
+            C: betaClocheId,
             I: getVariantItem("minecraft:water_bucket")
         })
+
+        // Combine with a piece of redstone to switch between the varaints.
+        event.shapeless(releaseCloche, [betaClocheId, getVariantItem("minecraft:redstone")])
+        event.shapeless(betaClocheId, [releaseCloche, getVariantItem("minecraft:redstone")])
     })
 })()
