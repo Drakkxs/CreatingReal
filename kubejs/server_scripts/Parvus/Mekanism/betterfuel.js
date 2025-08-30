@@ -22,7 +22,6 @@
         return Ingredient.isIngredient(a) ? a : item;
     }
     
-    let ingot = getVariantItem("minecraft:copper_ingot");
     ServerEvents.recipes(event => {
 
         // Allow crafting upwards from BioFuel to Biomass Pallets.
