@@ -13,7 +13,7 @@ ServerEvents.recipes(event => {
         for (let key in mapping) {
             let value = mapping[key];
             // Only call getUnifiedTag if value is a string (item ID), otherwise pass through (e.g., Ingredient)
-            result[key] = (Item.isItem(value)) ? getUnifiedTag(value) : value;
+            result[key] = (!Ingredient.of(value).isEmpty()) ? getUnifiedTag(value) : value;
         }
         return result
     }

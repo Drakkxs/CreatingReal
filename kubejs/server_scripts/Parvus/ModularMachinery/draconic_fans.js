@@ -509,7 +509,7 @@
                 let cleanResults = oriMap.results.concat(newResults).reduce((map, res) => {
                     if (debug) console.log(`Cleaning result: ${JSON.stringify(res)}`)
                     // If this isn't a valid item, ignore it
-                    if (!Ingredient.of(res.item)) {
+                    if (!Ingredient.of(res.item).isEmpty()) {
                         throw new Error(`Item |${res.item}| is not a valid item.`)
                     }
 

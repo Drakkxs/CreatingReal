@@ -14,7 +14,7 @@
      */
     function getVariantItem(item) {
         let a = AlmostUnified.getVariantItemTarget(item).idLocation.toString()
-        return Ingredient.isIngredient(a) ? a : item;
+        return !Ingredient.of(a).isEmpty() ? a : item;
     }
     
     let ingot = getVariantItem("minecraft:copper_ingot");
