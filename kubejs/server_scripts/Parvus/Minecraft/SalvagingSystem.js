@@ -34,7 +34,7 @@
     ServerEvents.recipes(event => {
 
         // Smash a hopper to get iron
-        event.shapeless(`5x ${getVariantItem("minecraft:iron_ingot")}`, [
+        event.shapeless(`3x ${getVariantItem("minecraft:iron_ingot")}`, [
             getVariantItem("minecraft:hopper"), "#minecraft:pickaxes"
         ]).damageIngredient(1);
 
