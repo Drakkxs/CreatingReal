@@ -81,10 +81,10 @@
             if (debug) console.log(`Transferrable tags: ${coinTransferrableSources.join(", ")}`);
 
             // Map the nugget based on the tag and then the ore as a fall back for calculation
-            let coinTransferrableID = coinTransferrableSources.map(id => getTagItem(id)).find(id => Item.isItem(id));
+            let coinTransferrableID = coinTransferrableSources.map(id => getTagItem(id)).find(id => Item.exists(id));
             if (!coinTransferrableID && debug) console.warn(`No transferable item found for tag: ${coinTransferrableSources.join(", ")}`);
             if (!coinTransferrableID) return;
-            if (debug) console.log(`Transferable ID: ${coinTransferrableID}`);
+            if (debug) console.log(`Transferable ID: ${coinTransferrableID} Sources: ${coinTransferrableSources.join(", ")}`);
 
             // Find melting recipes for the nugget
             const transferrableRecipe = event.findRecipes({
