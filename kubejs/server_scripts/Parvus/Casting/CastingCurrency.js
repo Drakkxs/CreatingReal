@@ -12,8 +12,7 @@
     const castingRecipeType = "casting:melting";
     const coinTag = "#lightmanscurrency:coins";
     const coinItems = Ingredient.of(coinTag).itemIds;
-    const nuggetTag = "#c:nuggets"; // General nugget tag
-    const oreTag = "#c:ores"; // General ore tag
+    const generalTagList = ["#c:nuggets", "#c:raw_materials", "#c:ores", "#c:dusts", "#c:ingots", "#c:gems"];
     const blacklist = ["chocolate", "ancient"];
     // Coin type materials that will be allowed
     const materials = ["copper", "gold", "iron", "emerald", "diamond", "netherite"];
@@ -47,7 +46,7 @@
     function getTagItem(tagKJS) {
         try {
             let a = AlmostUnified.getTagTargetItem(tagKJS.replace("#", ""));
-            if (debug) console.log(`Almost Unified result for ${tagKJS}: ${a}`);
+            if (debug) console.log(`Almost Unified result for ${tagKJS}: ${a} -> ${a ? String(a.idLocation) : "null"}`);
             return String(a.idLocation)
         }
         catch (e) { if (debug) console.log(`Error getting tag target item for ${tagKJS}: ${e}`); return ""; }
@@ -76,13 +75,12 @@
             }
 
             // Get the nugget tag from the coin name and the ore tag
-            const coinNuggetTag = `${nuggetTag}/${coinMaterial}`;
-            const coinOreTag = `${oreTag}/${coinMaterial}`;
-            if (debug) console.log(`Transferrable tags: ${coinNuggetTag},  ${coinOreTag}`);
+            const coinTransferrableSources = generalTagList.map(tag => `${tag}/${coinMaterial}`);
+            if (debug) console.log(`Transferrable tags: ${coinTransferrableSources.join(", ")}`);
 
             // Map the nugget based on the tag and then the ore as a fall back for calculation
-            let coinTransferrableID = [getTagItem(coinNuggetTag), getTagItem(coinOreTag)].find(id => Ingredient.isIngredient(id));
-            if (!coinTransferrableID && debug) console.warn(`No transferable item found for tag: ${coinNuggetTag}`);
+            let coinTransferrableID = coinTransferrableSources.map(id => getTagItem(id)).find(id => Ingredient.isIngredient(id));
+            if (!coinTransferrableID && debug) console.warn(`No transferable item found for tag: ${coinTransferrableSources.join(", ")}`);
             if (!coinTransferrableID) return;
             if (debug) console.log(`Transferable ID: ${coinTransferrableID}`);
 
