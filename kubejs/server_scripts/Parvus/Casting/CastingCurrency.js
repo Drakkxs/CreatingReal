@@ -34,6 +34,7 @@
      * @returns {boolean} True if the item ID is blacklisted, false otherwise.
      */
     function isBlacklisted(itemId) {
+        if (debug) console.log(`Checking if blacklisted: ${itemId}`);
         return itemId.match(new RegExp(`:(?:\\w+_)?(${blacklist.join("|")})(?:_\\w+)?$`)) !== null;
     }
 
@@ -73,6 +74,7 @@
                 if (debug) console.log(`Invalid material for coin: ${coinId}`);
                 return;
             }
+            if (debug) console.log(`Valid coin material: ${coinMaterial}`);
 
             // Get the nugget tag from the coin name and the ore tag
             const coinTransferrableSources = generalTagList.map(tag => `${tag}/${coinMaterial}`);
