@@ -71,33 +71,55 @@ heatSources = [
 		"5",
 		"",
 	],
+
+	# Added:
+	[
+        "block_state",
+        "minecraft:furnace",
+        "3",
+        "Active Furnace",
+    ],
+    [
+        "block_state",
+        "mekanism:resistive_heater",
+        "5",
+        "Active Resistive Heater",
+    ],
+    [
+        "block_state",
+        "mekanismgenerators:heat_generator",
+        "5",
+        "Active Heat Generator",
+    ],
+    [
+        "block_state",
+        "mekanism:fuelwood_heater",
+        "5",
+        "Active Fuelwood Heater",
+    ],
+
+	# Default:
 	[
 		"block_state",
-		"mekanismgenerators:heat_generator/[active=true]",
-		"5",
-		"Active",
-	],
-	[
-		"block_state",
-		"create:blaze_burner/[blaze=fading]",
+		"create:blaze_burner/fading",
 		"6",
 		"Fading",
 	],
 	[
 		"block_state",
-		"create:blaze_burner/[blaze=kindled]",
-		"6",
+		"create:blaze_burner/kindled",
+		"8",
 		"Kindled",
 	],
 	[
 		"block_state",
-		"create:blaze_burner/[blaze=smouldering]",
-		"8",
+		"create:blaze_burner/smouldering",
+		"6",
 		"Smouldering",
 	],
 	[
 		"block_state",
-		"create:blaze_burner/[blaze=seething]",
+		"create:blaze_burner/seething",
 		"10",
 		"Seething Super-Heated",
 	],
