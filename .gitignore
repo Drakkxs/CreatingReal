@@ -7,6 +7,10 @@
 !config/almostunified/**
 !config/modular_machinery_reborn/
 !config/modular_machinery_reborn/**
+!config/lightmanscurrency/
+!config/lightmanscurrency/**
+!config/mekanism/
+!config/mekanism/**
 !kubejs/
 !kubejs/**
 !scripts/
@@ -14,8 +18,6 @@
 !*.md
 !*.gitattributes
 !*.gitignore
-
-# Allow these specific files and directories
 
 # Re-Ignore these files and directories
 kubejs/jsconfig.json
