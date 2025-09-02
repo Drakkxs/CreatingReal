@@ -586,6 +586,8 @@
             }
             fan.init(MACH_TYPE, recipe);
         })
+        // TEMPORARY BREAKPOINT
+        return
         if (debug) console.log(`Finalizing Unification`)
         let recipe = JSON.stringify(Array.from(fan.recipeMap.entries())[0][1]);
         if (debug) console.log(`A recipe: ${recipe}`)
@@ -611,14 +613,13 @@
                 [
                     "heat_mekanism", {
                         id: MACH_ID.concat("_heat_mekanism"), name: "Phoneix Matrix - Heat Mekanism", color: Color.rgba(245, 251, 252, 0.99),
-                        coreItem: "#c:buckets/dye", coreBlock: "mekanism:fuelwood_heater", model: "minecraft:white_glazed_terracotta",
+                        coreItem: "#minecraft:coals", coreBlock: "mekanism:fuelwood_heater", model: "minecraft:white_glazed_terracotta",
                         restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems.concat(["minecraft:cauldron"]),
                         /**
                          * The filter that is used in the forEachRecipe function.
                          */
                         inspectorFilter: {
-                            input: ["#c:dyes", "#c:buckets/dye"],
-                            or: [{ type: "minecraft:crafting_shaped" }, { type: "minecraft:crafting_shapeless" }]
+                            or: [{ type: "immersiveengineering:generator_fuel" }]
                         },
                         /**
                          * A map of generated recipes from the inspector function.
@@ -647,113 +648,10 @@
                          * @returns - Whether the recipe should be handled by this machine
                          */
                         inspector(event, recipe) {
-                            let catalyst = {}
-                            catalyst["allCatIng"] = Ingredient.of(["#c:dyes", "#c:buckets/dye"])
-                            catalyst["dyeCatIng"] = Ingredient.of("#c:dyes")
-                            catalyst["buckCatIng"] = Ingredient.of("#c:buckets/dye")
-                            if (recipe.getOriginalRecipeResult().count != 8 && recipe.getOriginalRecipeResult().count != 1) {
-                                return false;
-                            }
-                            
-                            /** Minimized Ingredients including dyes */
-                            catalyst["allRecipeIngs"] = () => {
-                                return {
-                                    minimized: () => {
-                                        /** A map for the filtering of ingredients */
-                                        let combMap = new Set();
-                                        return recipe.getOriginalRecipeIngredients().toArray()
-                                            .map(i => Ingredient.of(i))
-                                            .filter(i => !(i.empty))
-                                            .filter(i => {
-                                                // Filter out duplicate ingredients
-                                                let key = String(i.toJson());
-                                                if (combMap.has(key)) return false;
-                                                combMap.add(key);
-                                                return true;
-                                            })
-                                    },
-
-                                    normal: () => {
-                                        return recipe.getOriginalRecipeIngredients().toArray()
-                                            .map(i => Ingredient.of(i))
-                                            .filter(i => !(i.empty))
-                                    }
-                                }
-                            };
-
-                            // For normal coloring recipes:
-                            // 1 Uncolored + 1 Dye = 2 | 8 Uncolored + 1 Dye = 9
-                            // Therfore, there can only be nine or two total ingredients.
-                            if (!([2,9].indexOf(catalyst.allRecipeIngs().normal().length) != -1)) return false;
-
-
-                            /** Minimized Ingredients excluding dyes */
-                            catalyst["recipeIngs"] = catalyst.allRecipeIngs().minimized().filter(i => {
-                                // For a ingredient to not be a dye, all stacks must fail the DYE_SET test
-                                return i.stackArray.every(stack => !(catalyst.allCatIng.test(stack)));
-                            })
-                            catalyst["dyeIngs"] = catalyst.allRecipeIngs().minimized().filter(i => {
-                                // For a ingredient to be a dye, all stacks must pass the DYE_SET test
-                                return i.stackArray.every(stack => catalyst.allCatIng.test(stack));
-                            })
-
-                            // If more than one dye ingredient is present, we don't handle it
-                            if (catalyst.dyeIngs.length > 1) return false;
-                            // There can only be one coloured ingredient in the recipe
-                            if (catalyst.recipeIngs.length > 1) return false;
-
-                            catalyst["buckNamespace"] = catalyst.buckCatIng.stacks.first.idLocation.namespace
-                            // Convert the dye in the recipe to a bucket
-                            catalyst["catalystIng"] = catalyst.dyeIngs.map(ing => {
-                                // Ingredient is already a bucket
-                                let isBucket = ing.stackArray.every(stack => catalyst.buckCatIng.test(stack))
-                                let isDYE = ing.stackArray.every(stack => catalyst.dyeCatIng.test(stack))
-                                if (isBucket && !isDYE) return
-                                // If the ingredient is a tag, we need to convert it to a bucket tag
-                                let isTag = `${ing.toJson()}`.includes("{tag:")
-                                if (debug) console.log(`Is Bucket: ${isBucket}, Is Dye: ${isDYE}, Is Tag: ${isTag} for ${ing.toJson()}`)
-                                // Ingredient is a dye, convert it to a bucket
-                                if (isDYE) {
-                                    // Convert the dye ingredient to a bucket
-                                    let fs = ing.stackArray.map(stack => Fluid.of(`${catalyst.buckNamespace}:${stack.idLocation.path}`))
-                                        .map(f => {
-                                            // Converting the bucket to a tag or item
-                                            let item = (f.asHolder().value().bucket)
-                                            let tag = (isTag ? (`#c:buckets/dye/${f.idLocation.path.replace("_dye", "")}`) : null);
-                                            let final = (tag ? tag : item);
-                                            // Return the ingredient of the bucket
-                                            if (debug) console.log(`Tag or Item: ${final}`)
-                                            return Ingredient.of(`${final}`)
-                                        });
-                                    if (debug) console.log(`Converting dye ingredient ${ing.toJson()} to bucket: ${fs.map(f => f.toJson()).join(", ")}`)
-                                    return fs.find(v => v)
-                                }
-                            }).find(v => v)
-
-                            // What recipe is this?
-                            if (debug) console.log(`Result: ${recipe.getOriginalRecipeResult().toJson()}`)
-                            if (debug) console.log(`Path: ${recipe.path}`)
-                            if (debug) console.log(`Ingredients: ${catalyst.allRecipeIngs().minimized().map(i => i.toJson()).join(", ")}
-                            Excluded: ${catalyst.recipeIngs.map(i => i.toJson()).join(", ")}
-                            DyePresent: ${catalyst.dyeIngs.map(i => i.toJson()).join(", ")}`)
-
-                            if (debug) console.log(`\n`)
-                            // Add the recipe to the inspectorRecipes map
-                            this.inspectorRecipes.set(`${recipe.path}`, {
-                                recipe: recipe,
-                                MACH_TYPE: "coloring",
-                                // Stil don't know why typescript doesn't like this
-                                // @ts-expect-error $ItemStack$$Type != $ItemStack
-                                result: recipe.getOriginalRecipeResult(),
-                                // @ts-expect-error $Ingredient$$Type != $Ingredient
-                                ingredient: catalyst.recipeIngs[0],
-                                // This has carefully named properties to avoid collisions when the recipe init wants the catalyst
-                                // @ts-expect-error $Ingredient$$Type != $Ingredient inside the object
-                                catalyst: catalyst
-                            })
-                            return true;
+                            console.log(`I want to inspect the recipe: ${String(recipe.json)}`);
+                            return false;
                         },
-                        gateItem: "createmechanisms:rubber_mechanism"
+                        gateItem: "mekanismgenerators:heat_generator"
                     },
                 ]
             ]),
@@ -904,6 +802,7 @@
                         .pattern([
                             // Each array represents a row from left to right, front to back
                             // m is the controller, a space is available space.
+                            // Middle, 
                             [" m ", "   ", "   "],
                             ["   ", " a ", "   "],
                             ["   ", "   ", "   "]
@@ -934,6 +833,36 @@
 
     ServerEvents.recipes(event => {
 
+        function stackWithComponent(ItemStack) {
+            try {
+                return `${ItemStack.idLocation}${ItemStack.componentString}`
+            } catch (e) {
+                return ""
+            }
+        }
+
+        function createBurnableItem(ItemStack) {
+            try {
+
+                let stackComponent = stackWithComponent(ItemStack)
+                if (!stackComponent.length) return null
+                return {
+                    item: ItemStack,
+                    component: stackComponent,
+                    burntime: ItemStack.getBurnTime("minecraft:smelting")
+                };
+            } catch (e) {
+                return null
+            }
+        }
+
+        let allburnables = Ingredient.all.stacks.toArray().map(s => {
+            let burnable = createBurnableItem(s)
+            if (!burnable || !burnable.burntime) return null
+            return `${[].concat(burnable.burntime, burnable.item, burnable.component)}`
+        }).filter(b => b ? true : false)
+        console.log(`All burnables: ${allburnables.join("   NEXT ITEM:   ")}`) // Debug line to see all burnable items
+        return
         chromaticFAN.machineType.forEach((type, typeKey) => {
             recipesMACH(event, typeKey, type.inspectorFilter);
             // ===============
