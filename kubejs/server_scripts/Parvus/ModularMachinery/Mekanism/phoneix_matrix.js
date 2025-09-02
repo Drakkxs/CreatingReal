@@ -1,4 +1,5 @@
 // priority: -10
+// ignored: true
 // requires: create
 // requires: mekanism
 // requires: modular_machinery_reborn
