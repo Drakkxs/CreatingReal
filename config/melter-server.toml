@@ -71,34 +71,30 @@ heatSources = [
 		"5",
 		"",
 	],
-
-	# Added:
 	[
-        "block_state",
+        "block",
         "minecraft:furnace",
         "3",
         "Active Furnace",
     ],
     [
-        "block_state",
+        "block",
         "mekanism:resistive_heater",
         "5",
         "Active Resistive Heater",
     ],
     [
-        "block_state",
+        "block",
         "mekanismgenerators:heat_generator",
         "5",
         "Active Heat Generator",
     ],
     [
-        "block_state",
+        "block",
         "mekanism:fuelwood_heater",
         "5",
         "Active Fuelwood Heater",
     ],
-
-	# Default:
 	[
 		"block_state",
 		"create:blaze_burner/fading",
