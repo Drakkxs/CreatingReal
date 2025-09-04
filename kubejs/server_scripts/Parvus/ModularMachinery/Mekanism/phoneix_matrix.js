@@ -1,17 +1,48 @@
 // priority: -10
-// requires: create
 // requires: mekanism
 // requires: modular_machinery_reborn
 // @ts-check
-// An upgrade to create's encased fan.
+// An alternative to mekanism's methods of generating power and heat.
+
 
 // Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
+
+
 
     /**
      * Want some debug?
      */
     let debug = false;
+
+
+    let burnables = {
+        /**
+         * Gets burn time for any ItemStack on demand
+         * @param {import("net.minecraft.world.item.ItemStack").$ItemStack} stack - The item stack to check
+         * @returns {number} - Burn time in ticks, 0 if not burnable
+         */
+        getBurnTime: (stack) => {
+            try {
+                return stack.getBurnTime("minecraft:smelting");
+            } catch (e) {
+                return 0;
+            }
+        },
+
+        /**
+        * Checks if an item can be used as fuel
+        * @param {import("net.minecraft.world.item.ItemStack").$ItemStack} stack - The item stack to check
+        * @returns {boolean} - True if burnable
+        */
+        isBurnable: (stack) => {
+            try {
+                return stack.getBurnTime("minecraft:smelting") > 0;
+            } catch (e) {
+                return false;
+            }
+        }
+    }
 
     /**
      * Constructs an object with methods to calculate real and center values based on input and offset.
@@ -586,8 +617,7 @@
             }
             fan.init(MACH_TYPE, recipe);
         })
-        // TEMPORARY BREAKPOINT
-        return
+
         if (debug) console.log(`Finalizing Unification`)
         let recipe = JSON.stringify(Array.from(fan.recipeMap.entries())[0][1]);
         if (debug) console.log(`A recipe: ${recipe}`)
@@ -610,52 +640,80 @@
             baseMachineID: MACH_ID,
             traitItem: traitItem,
             machineType: new Map([
-                [
-                    "heat_mekanism", {
-                        id: MACH_ID.concat("_heat_mekanism"), name: "Phoneix Matrix - Heat Mekanism", color: Color.rgba(245, 251, 252, 0.99),
-                        coreItem: "#minecraft:coals", coreBlock: "mekanism:fuelwood_heater", model: "minecraft:white_glazed_terracotta",
-                        restrictedBlocks: bannedBlocks, restrictedFluids: bannedFluids, restrictedItems: bannedItems.concat(["minecraft:cauldron"]),
-                        /**
-                         * The filter that is used in the forEachRecipe function.
-                         */
-                        inspectorFilter: {
-                            or: [{ type: "immersiveengineering:generator_fuel" }]
-                        },
-                        /**
-                         * A map of generated recipes from the inspector function.
-                         * @type {Map<string, {
-                         * recipe: $KubeRecipe_,
-                         * MACH_TYPE: string,
-                         * result: $ItemStack_,
-                         * ingredient: $Ingredient_,
-                         * catalyst: {
-                            * allCatIng: $Ingredient_
-                            * dyeCatIng: $Ingredient_
-                            * buckCatIng: $Ingredient_
-                            * allRecipeIngs(): $Ingredient_[]
-                            * recipeIngs: $Ingredient_[]
-                            * dyeIngs: $Ingredient_[]
-                            * buckNamespace: string
-                            * catalystIng: $Ingredient_[]
-                         * }
-                         * }>}
-                         */
-                        inspectorRecipes: new Map(),
-                        /**
-                         * Extra Filtering for recipes.
-                         * @param {$RecipesKubeEvent_} event - The event to handle recipes
-                         * @param {$KubeRecipe_} recipe - The recipe to handle
-                         * @returns - Whether the recipe should be handled by this machine
-                         */
-                        inspector(event, recipe) {
-                            console.log(`I want to inspect the recipe: ${String(recipe.json)}`);
-                            return false;
-                        },
-                        gateItem: "mekanismgenerators:heat_generator"
+                ["heat_mekanism", {
+                    id: MACH_ID.concat("_heat_mekanism"),
+                    name: "Phoneix Matrix - Heat Mekanism",
+                    color: Color.rgba(245, 251, 252, 0.99),
+                    coreItem: "mekanism:steel_casing",
+                    coreBlock: "mekanismgenerators:heat_generator",
+                    model: "minecraft:white_glazed_terracotta",
+                    restrictedBlocks: bannedBlocks,
+                    restrictedFluids: bannedFluids,
+                    restrictedItems: bannedItems,
+                    /** A filter for incoming recipes */
+                    inspectorFilter: {
+                        or: [{ type: "createaddition:liquid_burning" }]
                     },
-                ]
+                    /**
+                     * A map of generated recipes from the inspector function. Keyed by recipe path.
+                     * @type {Map<string, {
+                     * recipe: $KubeRecipe_,
+                     * MACH_TYPE: string,
+                     * result: import("net.minecraft.world.item.ItemStack").$ItemStack,
+                     * fluidResult: import("net.neoforged.neoforge.fluids.FluidStack").$FluidStack,
+                     * ingredient: import("java.util.List").$List<import("net.minecraft.world.item.crafting.Ingredient").$Ingredient>,
+                     * fluidIngredient: import("net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient").$SizedFluidIngredient[],
+                     * burntime: number
+                     * }>}
+                     */
+                    inspectorRecipes: new Map(),
+                    /**
+                     * Extra Filtering for recipes.
+                     * @param {$RecipesKubeEvent_} event - The event to handle recipes
+                     * @param {$KubeRecipe_} recipe - The recipe to handle
+                     * @returns - Whether the recipe should be handled by this machine
+                     */
+                    inspector(event, recipe) {
+                        const path = recipe.path;
+                        const json = recipe.json;
+                        let fluidResult = Fluid.water();
+                        let fluidIngredient = [Fluid.EMPTY_SIZED];
+                        let burnticks = 0;
+                        const jsonAsMap = json.asMap();
+                        jsonAsMap.forEach((jsonKey, jsonValue) => {
+                            let k = jsonKey; // String key
+                            let v = JsonUtils.toString(jsonValue); // JsonElement
+                            // Catch: result or output (exact match only).
+                            if (k.match(/^(result(?:s)?|output(?:s)?)$/)) {
+                                let data = Fluid.ofString(null, v);
+                                fluidResult = data ? data : null;
+                            }
+                            // Catch: ingredient or input (exact match only).
+                            if (k.match(/^(ingredient(?:s)?|input(?:s)?)$/)) {
+                                let data = Fluid.sizedIngredientOfString(null, v);
+                                fluidIngredient = data ? [data] : null;
+                            }
+                            // Catch: burntime or burn_time (exact match only).
+                            if (k.match(/^(burntime|burn_time)$/)) {
+                                burnticks = jsonValue.asInt;
+                            }
+                        });
+                        this.inspectorRecipes.set(path, {
+                            recipe: recipe,
+                            MACH_TYPE: "heat_mekanism",
+                            result: recipe.getOriginalRecipeResult(),
+                            fluidResult: fluidResult,
+                            ingredient: recipe.getOriginalRecipeIngredients(),
+                            fluidIngredient: fluidIngredient,
+                            burntime: burnticks
+                        });
+                        // Returns true if the recipe was successfully added to inspectorRecipes, false otherwise.
+                        // A return value of false means the recipe did not meet the criteria and was not registered for this machine type.
+                        return this.inspectorRecipes.has(path);
+                    },
+                    gateItem: "mekanismgenerators:heat_generator"
+                }]
             ]),
-
             /**
              * Converts a fluid bucket item to its fluid equivalent.
              * @param {string} item - The item ID of the fluid bucket
@@ -832,37 +890,6 @@
     })
 
     ServerEvents.recipes(event => {
-
-        function stackWithComponent(ItemStack) {
-            try {
-                return `${ItemStack.idLocation}${ItemStack.componentString}`
-            } catch (e) {
-                return ""
-            }
-        }
-
-        function createBurnableItem(ItemStack) {
-            try {
-
-                let stackComponent = stackWithComponent(ItemStack)
-                if (!stackComponent.length) return null
-                return {
-                    item: ItemStack,
-                    component: stackComponent,
-                    burntime: ItemStack.getBurnTime("minecraft:smelting")
-                };
-            } catch (e) {
-                return null
-            }
-        }
-
-        let allburnables = Ingredient.all.stacks.toArray().map(s => {
-            let burnable = createBurnableItem(s)
-            if (!burnable || !burnable.burntime) return null
-            return `${[].concat(burnable.burntime, burnable.item, burnable.component)}`
-        }).filter(b => b ? true : false)
-        console.log(`All burnables: ${allburnables.join("   NEXT ITEM:   ")}`) // Debug line to see all burnable items
-        return
         chromaticFAN.machineType.forEach((type, typeKey) => {
             recipesMACH(event, typeKey, type.inspectorFilter);
             // ===============
