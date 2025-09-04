@@ -18,6 +18,9 @@
 !config/melter*
 !config/melter/
 !config/melter/**
+!config/shutdowner*
+!config/shutdowner/
+!config/shutdowner/**
 !kubejs/
 !kubejs/**
 !scripts/
