@@ -5,7 +5,7 @@
   },
   "maxShutDownTime": {
     "desc:": "The maximum time the shutdown is allowed to take. default: 120s",
-    "maxShutDownTime": 7200000
+    "maxShutDownTime": 120
   },
   "printThreads": {
     "desc:": "Print remaining threads to log? default:true",
@@ -21,7 +21,7 @@
   },
   "shouldDetectHang": {
     "desc:": "Whether to detect and close the server hang during runtime default: true",
-    "shouldDetectHang": true
+    "shouldDetectHang": false
   },
   "shutdownTimes": {
     "desc:": "Shutdown timepoints, format: [\"time1\",\"time2\"] e.g. [\"18:00\",\"23:00\"]",
