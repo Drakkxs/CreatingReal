@@ -5,7 +5,7 @@
   },
   "maxShutDownTime": {
     "desc:": "The maximum time the shutdown is allowed to take. default: 120s",
-    "maxShutDownTime": 1200
+    "maxShutDownTime": 3600
   },
   "printThreads": {
     "desc:": "Print remaining threads to log? default:true",
