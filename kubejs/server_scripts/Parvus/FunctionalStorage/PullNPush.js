@@ -5,7 +5,7 @@
 
 // Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
-    
+
     /**
      * Retrieves the item ID associated with a given tag using AlmostUnified.
      *
@@ -32,11 +32,11 @@
         return !Ingredient.of(a).isEmpty() ? a : item;
     }
 
-    let pullerUpgrade = getVariantItem("functionalstorage:puller_upgrade");
-    let pusherUpgrade = getVariantItem("functionalstorage:pusher_upgrade");
-    let redstoneDust = "#c:dusts/redstone"
-
     ServerEvents.recipes(event => {
+
+        let pullerUpgrade = getVariantItem("functionalstorage:puller_upgrade");
+        let pusherUpgrade = getVariantItem("functionalstorage:pusher_upgrade");
+        let redstoneDust = "#c:dusts/redstone"
 
         // Swap Hopper Upgrades
         event.shapeless(pullerUpgrade, [
