@@ -302,6 +302,7 @@
                 // If the machine has a custom retriever, use it
                 let inspection = (
                     Object.keys(inspectorRecipes)
+                        // Because some recipes may have fluids but no items, we need to account for that
                         .filter(key => searchTerms.some(srch => key.includes(srch)))
                         .map(key => {
                             let ing = Ingredient.of(inspectorRecipes[key]);
@@ -312,8 +313,7 @@
                             }
                             // Return the ingredient as a JSON string
                             return ing
-                            // @ts-expect-error Ingredient.of() can handle most types
-                        }).map(v => Ingredient.of(v).asIngredient())
+                        })
                 )
                 if (debug) console.log(`Inspection: ${inspection}`)
                 // If the inspection is defined, use it, otherwise use the raw data
@@ -661,9 +661,10 @@
                      * MACH_TYPE: string,
                      * result: import("net.minecraft.world.item.ItemStack").$ItemStack,
                      * fluidResult: import("net.neoforged.neoforge.fluids.FluidStack").$FluidStack,
-                     * ingredient: import("java.util.List").$List<import("net.minecraft.world.item.crafting.Ingredient").$Ingredient>,
-                     * fluidIngredient: import("net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient").$SizedFluidIngredient[],
-                     * burntime: number
+                     * ingredient: import("net.minecraft.world.item.crafting.Ingredient").$Ingredient[],
+                     * fluidIngredient: import("net.neoforged.neoforge.fluids.crafting.FluidIngredient").$FluidIngredient[],
+                     * burntime: number,
+                     * superheated: boolean
                      * }>}
                      */
                     inspectorRecipes: new Map(),
@@ -676,36 +677,70 @@
                     inspector(event, recipe) {
                         const path = recipe.path;
                         const json = recipe.json;
-                        let fluidResult = Fluid.water();
-                        let fluidIngredient = [Fluid.EMPTY_SIZED];
+                        /** @type {import("net.neoforged.neoforge.fluids.FluidStack").$FluidStack} */
+                        let fluidResult;
+                        /** @type {import("net.neoforged.neoforge.fluids.crafting.FluidIngredient").$FluidIngredient[]} */
+                        let fluidIngredient = [];
                         let burnticks = 0;
+                        let superheated = false;
                         const jsonAsMap = json.asMap();
                         jsonAsMap.forEach((jsonKey, jsonValue) => {
                             let k = jsonKey; // String key
                             let v = JsonUtils.toString(jsonValue); // JsonElement
+                            console.log(`Found Key: ${k} With Value: ${v}`);
                             // Catch: result or output (exact match only).
                             if (k.match(/^(result(?:s)?|output(?:s)?)$/)) {
-                                let data = Fluid.ofString(null, v);
+                                console.log(`Result Phrasing: ${v} of ${k}`);
+                                let data = Fluid.of(v);
+                                console.log(`Fluid Result: ${data}`);
                                 fluidResult = data ? data : null;
                             }
                             // Catch: ingredient or input (exact match only).
                             if (k.match(/^(ingredient(?:s)?|input(?:s)?)$/)) {
-                                let data = Fluid.sizedIngredientOfString(null, v);
-                                fluidIngredient = data ? [data] : null;
+                                console.log(`Ingredient Phrasing: ${v} of ${k}`);
+                                if (jsonValue.jsonArray) {
+                                    let data = jsonValue.asJsonArray.asList().toArray()
+                                        .map(js => Fluid.ingredientOf(JsonUtils.toString(js)))
+                                    console.log(`Fluid Ingredients: ${data.join(", ")}`);
+                                    fluidIngredient = data ? data : null;
+                                } else {
+                                    let data = Fluid.ingredientOf(JsonUtils.toString(jsonValue));
+                                    console.log(`Fluid Ingredient: ${data}`);
+                                    fluidIngredient = data ? [data] : null;
+                                }
                             }
                             // Catch: burntime or burn_time (exact match only).
                             if (k.match(/^(burntime|burn_time)$/)) {
-                                burnticks = jsonValue.asInt;
+                                console.log(`Burntime Phrasing: ${v} of ${k}`);
+                                let data = Number(v);
+                                console.log(`Burnticks: ${data}`);
+                                burnticks = data < 0 ? 0 : data;
+                            }
+                            // Catch: superheated (exact match only).
+                            if (k.match(/^(superheated)$/)) {
+                                console.log(`Superheated Phrasing: ${v} of ${k}`);
+                                let data = Boolean(v);
+                                console.log(`Superheated: ${data}`);
+                                superheated = data ? true : false;
                             }
                         });
+
+                        console.log(`Finished Json Map for ${path}`)
+                        // ItemStack, non-fluids.
+                        let result = recipe.getOriginalRecipeResult();
+                        console.log(`Result: ${result}`);
+                        // Ingredient, non-fluids.
+                        let ingredient = recipe.getOriginalRecipeIngredients().toArray();
+                        console.log(`Ingredients: ${ingredient.join(", ")}`);
                         this.inspectorRecipes.set(path, {
                             recipe: recipe,
                             MACH_TYPE: "heat_mekanism",
-                            result: recipe.getOriginalRecipeResult(),
+                            result: result,
                             fluidResult: fluidResult,
-                            ingredient: recipe.getOriginalRecipeIngredients(),
+                            ingredient: ingredient,
                             fluidIngredient: fluidIngredient,
-                            burntime: burnticks
+                            burntime: burnticks,
+                            superheated: superheated
                         });
                         // Returns true if the recipe was successfully added to inspectorRecipes, false otherwise.
                         // A return value of false means the recipe did not meet the criteria and was not registered for this machine type.
