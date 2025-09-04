@@ -17,7 +17,7 @@
   },
   "disconnectMessage": {
     "desc:": "Set the disconnect message for the players",
-    "disconnectMessage": "Server shutting down"
+    "disconnectMessage": "Server shutting down through Shutdowner Mod"
   },
   "shouldDetectHang": {
     "desc:": "Whether to detect and close the server hang during runtime default: true",
