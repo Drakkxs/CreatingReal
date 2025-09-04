@@ -622,7 +622,7 @@
                             or: [{ type: "minecraft:crafting_shaped" }, { type: "minecraft:crafting_shapeless" }]
                         },
                         /**
-                         * A map of generated recipes from the inspector function.
+                         * A map of generated recipes from the inspector function. Keyed by recipe path.
                          * @type {Map<string, {
                          * recipe: $KubeRecipe_,
                          * MACH_TYPE: string,
