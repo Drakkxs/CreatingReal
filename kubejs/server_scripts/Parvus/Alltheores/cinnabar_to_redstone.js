@@ -5,7 +5,7 @@
 
 // Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
-    
+
     /**
      * Retrieves the item ID associated with a given tag using AlmostUnified.
      *
@@ -32,13 +32,13 @@
         return !Ingredient.of(a).isEmpty() ? a : item;
     }
 
-    let cinnabarDust = getVariantItem("alltheores:cinnabar_dust")
-    let redstoneDust = getVariantItem("minecraft:redstone")
-    let copperDust = getTagItem("#c:dusts/copper")
-    let boneMeal = getVariantItem("minecraft:bone_meal")
-    let ironDust = getTagItem("#c:dusts/iron")
-
     ServerEvents.recipes(event => {
+
+        let cinnabarDust = getVariantItem("alltheores:cinnabar_dust")
+        let redstoneDust = getVariantItem("minecraft:redstone")
+        let copperDust = getTagItem("#c:dusts/copper")
+        let boneMeal = getVariantItem("minecraft:bone_meal")
+        let ironDust = getTagItem("#c:dusts/iron")
 
         // Alloying of redstone.
         event.shapeless(`4x ${redstoneDust}`, [

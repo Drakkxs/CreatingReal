@@ -16,9 +16,9 @@
         let a = AlmostUnified.getVariantItemTarget(item).idLocation.toString()
         return !Ingredient.of(a).isEmpty() ? a : item;
     }
-    
-    let ingot = getVariantItem("minecraft:copper_ingot");
     ServerEvents.recipes(event => {
+
+        let ingot = getVariantItem("minecraft:copper_ingot");
 
         // If there is already a recipe that outputs a bucket using copper ingots, override it.
         event.remove({ output: "minecraft:bucket", type: "minecraft:crafting_shaped", input: ingot });
