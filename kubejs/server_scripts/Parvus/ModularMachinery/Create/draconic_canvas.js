@@ -655,7 +655,7 @@
                             if (recipe.getOriginalRecipeResult().count != 8 && recipe.getOriginalRecipeResult().count != 1) {
                                 return false;
                             }
-                            
+
                             /** Minimized Ingredients including dyes */
                             catalyst["allRecipeIngs"] = () => {
                                 return {
@@ -685,7 +685,7 @@
                             // For normal coloring recipes:
                             // 1 Uncolored + 1 Dye = 2 | 8 Uncolored + 1 Dye = 9
                             // Therfore, there can only be nine or two total ingredients.
-                            if (!([2,9].indexOf(catalyst.allRecipeIngs().normal().length) != -1)) return false;
+                            if (!([2, 9].indexOf(catalyst.allRecipeIngs().normal().length) != -1)) return false;
 
 
                             /** Minimized Ingredients excluding dyes */

@@ -524,7 +524,7 @@
              */
             doRecipes() {
                 this.recipeMap.forEach((recipe, key) => {
-                    
+
                     // If any part of the recipe is missing throw error.
                     let badparts = Object.keys(recipe).filter(key => !recipe[key])
                     if (badparts.length) throw new Error
