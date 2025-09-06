@@ -14,9 +14,12 @@
      * Want some debug?
      */
     let debug = true;
+    const $FluidIngredient = Java.loadClass("net.neoforged.neoforge.fluids.crafting.FluidIngredient");
 
+    const $SizedFluidIngredient = Java.loadClass("net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient");
 
     let burnables = {
+
         /**
          * Gets burn time for any ItemStack on demand
          * @param {import("net.minecraft.world.item.ItemStack").$ItemStack} stack - The item stack to check
@@ -41,7 +44,43 @@
             } catch (e) {
                 return false;
             }
+        },
+
+        /**
+         * Parses a fluid object from a recipe definition, creates a SizedFluidIngredient,
+         * and pushes it to the parent `fluidIngredient` array.
+         *
+         * The input object can define a fluid by a tag or a specific fluid ID.
+         * The amount defaults to 1000 mB (1 bucket) if not specified.
+         *
+         * @param {import("com.google.gson.JsonElement").$JsonElement} arrVal - The fluid object from the recipe definition.
+         */
+        createFluidIngredient: (arrVal) => {
+            let data = JSON.parse(JsonUtils.toString(arrVal));
+            if (debug) console.log(`Data: ${JsonUtils.toString(data)}`);
+
+            let fluIng;
+            let amount = data.amount || 1000; // Default to 1 bucket
+
+            if (data.fluid_tag) {
+                // Create an ingredient from the tag.
+                fluIng = $FluidIngredient.tag(data.fluid_tag);
+            } else if (data.fluid) {
+                // Create an ingredient from a single fluid ID.
+                // @ts-expect-error
+                fluIng = $FluidIngredient.single(Fluid.of(data.fluid));
+            }
+
+            if (fluIng) {
+                // Combine the ingredient and the amount into a SizedFluidIngredient.
+                // @ts-expect-error
+                let sizedFluidIngredient = new $SizedFluidIngredient(fluIng, amount);
+                if (debug) console.log(`Created SizedFluidIngredient: ${sizedFluidIngredient.getFluids().join(" ,")}`);
+                return sizedFluidIngredient;
+            }
         }
+
+
     }
 
     /**
@@ -139,7 +178,7 @@
                 // Check if the position is already reserved
                 if (this.reservations.find(pos => pos.x === x && pos.y === y)) return;
                 this.reservations.push({ x: x, y: y, party: party });
-                if (debug) console.log(`Reserved position for ${this.reservations.slice(-1).map(pos => [pos.x, pos.y, pos.party])[0]}`);
+                if (debug) console.log(`Reserved position for ${JsonUtils.toString(this.reservations.slice(-1).map(pos => [pos.x, pos.y, pos.party])[0])}`);
             },
 
             /**
@@ -164,7 +203,7 @@
             getTilePosition(index, party, makeReservation, col, row) {
                 let slot = { x: 0, y: 0 };
                 let orgIndex = index;
-                if (debug) console.log(`Getting tile position for: ${party}`);
+                if (debug) console.log(`Getting tile position for: ${JsonUtils.toString(party)}`);
 
                 // Find next available position
                 while (this.reservations.some(pos => pos.x === slot.x && pos.y === slot.y)) {
@@ -271,7 +310,7 @@
                 raw.count = raw.count || 1;
                 raw.chance = raw.chance || 1;
 
-                if (debug) console.log(`PARSED ITEM: ${JSON.stringify(raw)}`);
+                if (debug) console.log(`PARSED ITEM: ${JsonUtils.toString(raw)}`);
                 return raw;
             },
 
@@ -291,12 +330,16 @@
             getItems(searchTerms) {
                 let inspectorRecipes = chromaticFAN.machineType.get(MACH_TYPE).inspectorRecipes.get(`${recipe.path}`);
                 if (debug) console.log(`Search Terms: ${searchTerms}`)
-                let recipeKeys = this.recipeJson.keySet().toArray()
-                // Does the recipe even have the search terms?
-                if (searchTerms.findIndex(term => recipeKeys.findIndex(key => key.includes(term)) === -1) !== -1) {
+                let recipeKeys = this.recipeJson.keySet().stream().toList().toArray()
+                    // Do not include fluid keys
+                    .filter(key => !key.includes("fluid"));
+
+                // If there are no keys matching the search terms return a empty array
+                if (!recipeKeys.some(key => searchTerms.some(term => key.includes(term)))) {
                     if (debug) console.log(`Recipe does not have terms: ${searchTerms.join(", ")}`);
                     return [];
                 }
+
                 // Retrieve raw data by filtering and mapping keys in the recipe JSON
                 let rawIng = (
                     recipeKeys
@@ -304,29 +347,33 @@
                         .map(key => this.recipeJson.get(key))
                         .map(i => Ingredient.of(`${i}`))
                 )
-                if (debug) console.log(`RawIng: ${rawIng}`)
+
+                if (debug) console.log(`RawIng: ${JsonUtils.toString(rawIng)}`)
                 // If the machine has a custom retriever, use it
                 let inspection = (
                     Object.keys(inspectorRecipes)
+                        // Do not include fluid keys
+                        .filter(key => !key.includes("fluid"))
                         .filter(key => searchTerms.some(srch => key.includes(srch)))
                         .map(key => {
                             let ing = Ingredient.of(inspectorRecipes[key]);
                             if (ing.empty) {
                                 // Search deeper to find the actual ingredient
                                 let k = Object.keys(inspectorRecipes[key]).find(v => v.includes(key))
-                                ing = Ingredient.of(inspectorRecipes[key][k])
+                                if (k) ing = Ingredient.of(inspectorRecipes[key][k])
                             }
                             // Return the ingredient as a JSON string
                             return ing
                         })
                 )
-                if (debug) console.log(`Inspection: ${inspection}`)
+
+                if (debug) console.log(`Inspection: ${JsonUtils.toString(inspection)}`)
                 // If the inspection is defined, use it, otherwise use the raw data
                 let raw = inspection ? inspection : rawIng;
                 // If no raw data is found, throw an error
-                if (raw.some(ing => ing.empty)) {
-                    throw new Error(`No items found for search terms: ${searchTerms.join(", ")}`);
-                }
+                // if (raw.some(ing => ing.empty)) {
+                //     throw new Error(`No items found for search terms: ${searchTerms.join(", ")}`);
+                // }
                 // Return the ingredient
                 return raw
 
@@ -578,8 +625,8 @@
                         // Filter out the XP_ID
                         .forEach((obItem, index) => {
                             // A new position for the item, and then produce the item
-                            let pos = ui.getNewPos(index, [`Result ${JSON.stringify(obItem)}`], cols, rows)
-                            if (debug) console.log(`Adding item: ${JSON.stringify(obItem)} at ${pos.x}, ${pos.y}`)
+                            let pos = ui.getNewPos(index, [`Result ${JsonUtils.toString(obItem)}`], cols, rows)
+                            if (debug) console.log(`Adding item: ${JsonUtils.toString(obItem)} at ${pos.x}, ${pos.y}`)
                             // @ts-expect-error This can handle ingredients despite what ts says
                             machine.produceItem(obItem, 1, pos.x, pos.y)
                         })
@@ -599,11 +646,7 @@
                         console.log('Reserved positions:');
                         console.log(ui.reservations.map(pos => [pos.x, pos.y, pos.party]).join('\n'));
                     }
-
-
                 });
-
-
             }
         }
     };
@@ -627,7 +670,7 @@
         })
 
         if (debug) console.log(`Finalizing Unification`)
-        let recipe = JSON.stringify(Array.from(fan.recipeMap.entries())[0][1]);
+        let recipe = JsonUtils.toString(Array.from(fan.recipeMap.entries())[0][1]);
         if (debug) console.log(`A recipe: ${recipe}`)
         fan.doRecipes();
     }
@@ -694,45 +737,57 @@
                         let burnticks = 0;
                         let superheated = false;
                         let jsonAsMap = json.asMap();
+                        // We still need these classes, but the usage will be much simpler.
+
+
+
                         jsonAsMap.forEach((jsonKey, jsonValue) => {
                             let k = jsonKey; // String key
                             let v = JsonUtils.toString(jsonValue); // JsonElement
+                            // There is no point in continuing if there is no value.
                             if (debug) console.log(`Found Key: ${k} With Value: ${v}`);
-                            // Catch: result or output (exact match only).
+                            if (!v || v === "null" || v === "[]" || v === "{}") {
+                                if (debug) console.log(`Skipping Key: ${k} With No Value`);
+                                return;
+                            }
                             if (k.match(/^(result(?:s)?|output(?:s)?)$/)) {
                                 if (debug) console.log(`Result Phrasing: ${v} of ${k}`);
                                 let data = Fluid.of(v);
                                 if (debug) console.log(`Fluid Result: ${data}`);
-                                fluidResult = data ? data : null;
+                                fluidResult = data.isEmpty() ? null : data;
                             }
-                            // Catch: ingredient or input (exact match only).
+
                             if (k.match(/^(ingredient(?:s)?|input(?:s)?)$/)) {
-                                if (debug) console.log(`Ingredient Phrasing: ${v} of ${k}`);
-                                if (jsonValue.jsonArray) {
-                                    let data = jsonValue.asJsonArray.asList().toArray()
-                                        .map(js => Fluid.ingredientOf(JsonUtils.toString(js)))
-                                    if (debug) console.log(`Fluid Ingredients: ${JsonUtils.toString(data)}`);
-                                    fluidIngredient = data ? data : null;
+                                if (jsonValue.isJsonArray()) {
+                                    if (debug) console.log(`Ingredient Array Phrasing: ${v} of ${k}`);
+                                    jsonValue.asJsonArray.forEach(arrVal => {
+                                        // Note: Your array is for FluidIngredient, but this is what you likely need.
+                                        // We can adjust the type later if needed.
+                                        // @ts-expect-error             
+                                        fluidIngredient.push(burnables.createFluidIngredient(arrVal));
+                                    });
                                 } else {
-                                    let data = Fluid.ingredientOf(JsonUtils.toString(jsonValue));
-                                    if (debug) console.log(`Fluid Ingredient: ${JsonUtils.toString(data)}`);
-                                    fluidIngredient = data ? [data] : null;
+                                    // @ts-expect-error                         
+                                    fluidIngredient.push(burnables.createFluidIngredient(jsonValue));
                                 }
                             }
-                            // Catch: burntime or burn_time (exact match only).
+
                             if (k.match(/^(burntime|burn_time)$/)) {
                                 if (debug) console.log(`Burntime Phrasing: ${v} of ${k}`);
                                 let data = Number(v);
                                 if (debug) console.log(`Burnticks: ${data}`);
                                 burnticks = data < 0 ? 0 : data;
                             }
-                            // Catch: superheated (exact match only).
+
                             if (k.match(/^(superheated)$/)) {
                                 if (debug) console.log(`Superheated Phrasing: ${v} of ${k}`);
                                 let data = Boolean(v);
                                 if (debug) console.log(`Superheated: ${data}`);
                                 superheated = data ? true : false;
                             }
+
+                            if (debug) console.log(`Finished Key: ${k} With Value: ${v}`);
+
                         });
 
                         if (debug) console.log(`Finished Json Map for ${path}`)
@@ -741,10 +796,9 @@
                         if (debug) console.log(`Result: ${result}`);
                         // Ingredient, non-fluids.
                         let ingredient = recipe.getOriginalRecipeIngredients().toArray();
-                        // Insert placeholder if not found.
-                        if (ingredient.length === 0) ingredient = [Ingredient.of("minecraft:air")];
                         if (debug) console.log(`Ingredients: ${ingredient.join(", ")}`);
-                        let tester = {
+                        // We test the data before sending it off.
+                        this.inspectorRecipes.set(path, {
                             recipe: recipe,
                             MACH_TYPE: "heat_mekanism",
                             burntime: burnticks,
@@ -754,11 +808,7 @@
                             fluidResult: fluidResult,
                             ingredient: ingredient,
                             fluidIngredient: fluidIngredient
-                        };
-                        // We test the data before sending it off.
-                        let covered = Object.keys(tester).join(", ")
-                        if (debug) console.log(`Final Keys: ${covered}`);
-                        this.inspectorRecipes.set(path, tester);
+                        });
                         // Returns true if the recipe was successfully added to inspectorRecipes, false otherwise.
                         // A return value of false means the recipe did not meet the criteria and was not registered for this machine type.
                         return this.inspectorRecipes.has(path);
