@@ -15,6 +15,9 @@
 !config/mekanism*
 !config/mekanism/
 !config/mekanism/**
+!config/incontrol*
+!config/incontrol/
+!config/incontrol/**
 !config/melter*
 !config/melter/
 !config/melter/**
