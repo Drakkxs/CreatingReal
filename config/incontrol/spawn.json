@@ -1,1 +1,153 @@
-[]
+[
+    {
+        "mob": "minecraft:zombie_horse",
+        "when": "onjoin",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:skeleton_horse",
+        "when": "onjoin",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:zombie",
+        "when": "onjoin",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:cave_spider",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:bogged",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:bat",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:slime",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:skeleton",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:spider",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:creeper",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:witch",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:enderman",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:blaze",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:ghast",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:magma_cube",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:guardian",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:husk",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:phantom",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:shulker",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:silverfish",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:skeleton_horse",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:stray",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:vex",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:vindicator",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:wither_skeleton",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:zombie_horse",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:zombie_villager",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:evoker",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:illusioner",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:pillager",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:ravager",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:hoglin",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:piglin",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:strider",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:zoglin",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:zombified_piglin",
+        "result": "deny"
+    },
+    {
+        "mob": "minecraft:drowned",
+        "result": "deny"
+    }
+]
