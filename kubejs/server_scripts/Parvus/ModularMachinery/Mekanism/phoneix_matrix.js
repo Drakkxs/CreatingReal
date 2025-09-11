@@ -628,7 +628,7 @@
                     // Place the energy bar if there is produced energy
                     if (fuelData.producedEnergy) {
                         if (debug) console.log(`Produced energy: ${fuelData.producedEnergy}`);
-                        // Attempt to produce 1 tick worth of energy for testing
+                        // Attempt to produce 1 tick worth of energy.
                         machine.produceEnergy(1, energyBarPos.x, energyBarPos.y)
                         matrixUtil.fuelRecipeData.energy = fuelData.producedEnergy;
                         machine.requireFunctionOnEnd("forceEnergy")
@@ -685,14 +685,13 @@
     };
 
     MMREvents.recipeFunction("forceEnergy", event => {
-        // @ts-expect-error Argument of type '$IOType' is not assignable to parameter of type '$IOType$$Type'.ts(2345)
-        let energyStored = event.machine.getEnergyStored($IOType.OUTPUT)
-        if (energyStored > 1) {
-            event.machine.addEnergy(Math.max(matrixUtil.fuelRecipeData.energy - 1, 0));
-            // Reset
-            matrixUtil.fuelRecipeData.energy = 0;
-        }
+        // Subtracted by one to account for the "test" energy.
+        let energyAdded = event.machine.addEnergy(Math.max(matrixUtil.fuelRecipeData.energy - 1, 0));
+        // Reset the energy for the next recipe
+        matrixUtil.fuelRecipeData.energy = 0
     })
+
+    
 
     /**
      * A front facing function to assign machine recipes
