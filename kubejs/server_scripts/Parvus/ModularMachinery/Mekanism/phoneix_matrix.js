@@ -621,7 +621,6 @@
                     // Place the energy bar if there is produced energy
                     if (fuelData.producedEnergy) {
                         if (debug) console.log(`Produced energy: ${fuelData.producedEnergy}`);
-                        // This is the ONLY thing that it's display only
                         machine.produceEnergy(fuelData.producedEnergy, energyBarPos.x, energyBarPos.y)
                         ui.reserveBarPos(energyBarPos.x, energyBarPos.y, ["Energy Bar"]);
                     }
@@ -662,8 +661,8 @@
                             // recipeDisplay.produceFluid(fluid, 1, pos.x, pos.y)
                         })
                     let dim = ui.getReservedBoundingBox()
-                    // recipeDisplay.width(dim.width)
-                    // recipeDisplay.height(dim.height)
+                    machine.width(dim.width)
+                    machine.height(dim.height)
 
                     // Display the reserved positions
                     if (debug) {
