@@ -44,7 +44,13 @@
             "minecraft:illusioner",
             "minecraft:witch",
             "minecraft:pillager",
-            "minecraft:skeleton"
+            "minecraft:skeleton",
+            "minecraft:creeper",
+            "minecraft:spider",
+            "minecraft:cave_spider",
+            "minecraft:enderman",
+            "minecraft:slime",
+            "minecraft:witch"
         ],
         "spawntype": "natural",
         "result": "deny"
