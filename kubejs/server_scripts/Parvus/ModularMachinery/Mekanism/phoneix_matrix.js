@@ -877,7 +877,7 @@
                 ["heat_mekanism", {
                     id: MACH_TYPE.concat("_heat_mekanism"),
                     name: "Phoneix Matrix - Heat Mekanism",
-                    color: Color.rgba(245, 251, 252, 0.99),
+                    color: Color.rgba(51, 54, 57, 0.99),
                     coreItem: ["modular_machinery_reborn:casing_firebox"],
                     gateItem: "mekanism:steel_casing",
                     coreBlock: "mekanism:steel_casing",
