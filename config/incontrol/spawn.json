@@ -35,6 +35,8 @@
         "mob": [
             "minecraft:bat",
             "minecraft:zombie_villager",
+            "minecraft:zombie",
+            "minecraft:baby_zombie",
             "minecraft:husk",
             "minecraft:stray",
             "minecraft:drowned",

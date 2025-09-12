@@ -21,17 +21,12 @@
 
     let matrixUtil = {
 
-        fuelRecipeData: {
-            // Store recipe data here as it is processed
-            energy: 0
-        },
-
         /**
          * Gets burn time for any ItemStack on demand
          * @param {import("net.minecraft.world.item.ItemStack").$ItemStack} stack - The item stack to check
          * @returns {number} - Burn time in ticks, 0 if not burnable
          */
-        getBurnTime: (stack) => {
+        getBurnTime(stack) {
             try {
                 return stack.getBurnTime("minecraft:smelting");
             } catch (e) {
@@ -44,11 +39,41 @@
         * @param {import("net.minecraft.world.item.ItemStack").$ItemStack} stack - The item stack to check
         * @returns {boolean} - True if burnable
         */
-        isBurnable: (stack) => {
+        isBurnable(stack) {
             try {
-                return stack.getBurnTime("minecraft:smelting") > 0;
+                return this.getBurnTime(stack) > 0;
             } catch (e) {
                 return false;
+            }
+        },
+
+        /**
+         * Checks if an item can be superheated
+         * @param {import("net.minecraft.world.item.ItemStack").$ItemStack} stack - The item stack to check
+         * @returns {boolean} - True if superheatable
+         */
+        canSuperHeat(stack) {
+            try {
+                // This is a tag used by Create to define special blaze burner fuels. A blaze cake is one such item.
+                return this.getBurnTime(stack) > 0 && stack.hasTag("#create:blaze_burner_fuel/special".replace("#", ""));
+            } catch (e) {
+                return false;
+            }
+        },
+
+        /**
+         * Validates an ItemStack, ensuring it is not empty and has a positive count.
+         * @param {import("net.minecraft.world.item.ItemStack").$ItemStack} stack - The item stack to check
+         * @returns {import("net.minecraft.world.item.ItemStack").$ItemStack} - The valid stack or empty if invalid
+         */
+        getValidStack(stack) {
+            try {
+                if (debug) console.log(`Validating stack: ${JsonUtils.toString(stack)}`);
+                // @ts-expect-error Argument of type '$ItemStack' is not assignable to parameter of type '$ItemStack$$Type'. 
+                let item = Item.of(stack); // This will throw if the stack is invalid
+                return (item && item.getCount() > 0 ? item : Item.getEmpty());
+            } catch (e) {
+                return Item.getEmpty();
             }
         },
 
@@ -517,8 +542,88 @@
                                 specRecipes.superheated,
                                 producedEnergy,
                                 producedHeat,
-                                specRecipes.solidByproducts,
+                                specRecipes.solidByproducts.concat(Item.of("minecraft:bucket", bucket.count)),
                                 specRecipes.fluidByproducts
+                            );
+                        }
+                    }
+                }
+            },
+
+            /**
+             * Initialize a custom fuel.
+             * This is where you can add fuels that are not part of a recipe.
+             * @param {string} fuelStrJson - The json string of the fuel to add.
+             * @param {{
+             *  solidFuel: import("net.minecraft.world.item.crafting.Ingredient").$Ingredient,
+             *  fluidFuel: import("net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient").$SizedFluidIngredient,
+             *  burntime: number,
+             *  superheated: boolean,
+             *  solidByproducts: import("net.minecraft.world.item.ItemStack").$ItemStack[],
+             *  fluidByproducts: import("net.neoforged.neoforge.fluids.FluidStack").$FluidStack[]
+             *  }} customFuelRecipe - A custom recipe object to add as a fuel.
+             */
+            initCustom(fuelStrJson, customFuelRecipe) {
+
+                // For custom fuels do not have a recipe path. 
+                // They are mentioned by their fuelStrJson and will return null when asked about their recipe path.
+                if (!customFuelRecipe) { if (debug) console.log(`No inspector recipes found for ${fuelStrJson}`); return; }
+
+                if (!customFuelRecipe.solidFuel && !customFuelRecipe.fluidFuel) { if (debug) console.log(`No fuel found for ${fuelStrJson}`); return; }
+                let producedEnergy = customFuelRecipe.burntime; // The higher the burntime the more instant energy we produce
+                let producedHeat = customFuelRecipe.superheated ? customFuelRecipe.burntime : 0; // Superheated fuels produce heat
+
+                // Map every stack of a ingredient
+                if (customFuelRecipe.solidFuel) {
+                    for (let stack of customFuelRecipe.solidFuel.stacks) {
+                        if (stack.count <= 0) continue; // Ignore empty stacks
+                        this.updateFuelMap(
+                            JsonUtils.toString(stack),
+                            "solid",
+                            null,
+                            customFuelRecipe.burntime,
+                            customFuelRecipe.superheated,
+                            producedEnergy,
+                            producedHeat,
+                            customFuelRecipe.solidByproducts,
+                            customFuelRecipe.fluidByproducts
+                        );
+                    }
+                }
+
+                // Map every fluid of a fluid ingredient
+                if (customFuelRecipe.fluidFuel) {
+                    for (let fluid of customFuelRecipe.fluidFuel.fluids) {
+                        if (fluid.id.match(/(?:[\b:]flowing_)|(?:_flowing$)/)) continue; // Ignore flowing fluids
+                        if (fluid.amount <= 0) continue; // Ignore empty fluids
+                        this.updateFuelMap(
+                            JsonUtils.toString(fluid),
+                            "fluid",
+                            null,
+                            customFuelRecipe.burntime,
+                            customFuelRecipe.superheated,
+                            producedEnergy,
+                            producedHeat,
+                            customFuelRecipe.solidByproducts,
+                            customFuelRecipe.fluidByproducts
+                        );
+
+                        // Also add the bucket form if it exists
+                        let bucket = fluid.fluid.bucket.asIngredient().stacks.first;
+                        let bucketJson = JsonUtils.toString(bucket);
+                        // Calculate the amount of buckets worth of fluid we had
+                        bucket.setCount(Math.floor(fluid.amount / 1000));
+                        if (bucket && bucketJson.length) {
+                            if (bucket.count <= 0) continue; // Ignore empty stacks
+                            this.updateFuelMap(bucketJson,
+                                "solid",
+                                null,
+                                customFuelRecipe.burntime,
+                                customFuelRecipe.superheated,
+                                producedEnergy,
+                                producedHeat,
+                                customFuelRecipe.solidByproducts.concat(Item.of("minecraft:bucket", bucket.count)),
+                                customFuelRecipe.fluidByproducts
                             );
                         }
                     }
@@ -538,13 +643,11 @@
                     // Create the machine builder
                     // @ts-expect-error time:ticks takes numbers.
                     let machine = MACH_EVENT.recipes.modular_machinery_reborn.machine_recipe(MACH_ID, 1)
-
                     /** 
                      * Anything that needs to be displayed needs to be included onto this variable
                      * Any requirements that are not included here will not be shown in JEI.
                      * This is display only and does not affect the actual recipe in any way.
                      */
-                    // let recipeDisplay = machine.jei();
                     let solidFuel = null;
                     let fluidFuel = null;
                     const scale = 1; // Scale to per second values for fluids, 1 to turn off scaling
@@ -609,9 +712,8 @@
                     // If there is fuel add it to the recipe and the UI
                     if (solidFuel && solidFuel.id !== "minecraft:air") {
                         if (debug) console.log(`Solid fuel found: ${JsonUtils.toString(solidFuel)}`);
-                        // @ts-expect-error Ts complianing about itemstack type and itemstacks, etc
+                        // @ts-expect-error Ts complaining about itemstack type and itemstacks, etc
                         machine.requireItem(solidFuel, 1, solidFuelPos.x, solidFuelPos.y);
-                        // recipeDisplay.requireItem(solidFuel, 1, solidFuelPos.x, solidFuelPos.y);
                         ui.reservePos(solidFuelPos.x, solidFuelPos.y, ["Solid Fuel"]);
                     }
 
@@ -619,19 +721,18 @@
                     // We have to account for the bar being three tiles high
                     if (fluidFuel) {
                         if (debug) console.log(`Fluid fuel found: ${JsonUtils.toString(fluidFuel)}`);
-                        // @ts-expect-error Ts complianing about itemstack type and itemstacks, etc
+                        // @ts-expect-error Ts complaining about itemstack type and itemstacks, etc
                         machine.requireFluid(fluidFuel, 1, fluidBarPos.x, fluidBarPos.y);
-                        // recipeDisplay.requireFluid(fluidFuel, 1, fluidBarPos.x, fluidBarPos.y);
                         ui.reservePos(fluidBarPos.x, fluidBarPos.y, ["Fluid Bar"]);
                     }
 
                     // Place the energy bar if there is produced energy
                     if (fuelData.producedEnergy) {
                         if (debug) console.log(`Produced energy: ${fuelData.producedEnergy}`);
-                        // Attempt to produce 1 tick worth of energy.
-                        machine.produceEnergy(1, energyBarPos.x, energyBarPos.y)
-                        matrixUtil.fuelRecipeData.energy = fuelData.producedEnergy;
-                        machine.requireFunctionOnEnd("forceEnergy")
+                        // Attempt to produce 1 tick worth of energy for testing
+                        // But actually produce the full amount for display and JEI purposes
+                        machine.produceEnergy(1, energyBarPos.x, energyBarPos.y);
+                        machine.requireFunctionOnEnd("storeEnergy", `${fuelData.producedEnergy}`);
                         ui.reserveBarPos(energyBarPos.x, energyBarPos.y, ["Energy Bar"]);
                     }
 
@@ -649,6 +750,8 @@
                             ui.reservePos(cIndex, rIndex * ui.tilesize, [`Column ${cIndex}`]);
                         }
                     }
+                    let solidByproductPos = [];
+                    let fluidByproductPos = [];
 
                     // Add the solid byproducts to the UI and the recipe
                     solidByproducts
@@ -656,9 +759,9 @@
                             // A new position for the item, and then produce the item
                             let pos = ui.getNewPos(index, [`Result ${JsonUtils.toString(stack)}`], false, cols, rows)
                             if (debug) console.log(`Adding item: ${JsonUtils.toString(stack)} at ${pos.x}, ${pos.y}`)
-                            // @ts-expect-error Ts complianing about itemstack type and itemstacks, etc
+                            // @ts-expect-error Ts complaining about itemstack type and itemstacks, etc
                             machine.produceItem(stack, 1, pos.x, pos.y)
-                            // recipeDisplay.produceItem(stack, 1, pos.x, pos.y)
+                            solidByproductPos.push({ stack: stack, pos: pos });
                         })
                     // Add the fluid byproducts to the UI and the recipe
                     fluidByproducts
@@ -666,9 +769,9 @@
                             // A new position for the fluid, and then produce the fluid
                             let pos = ui.getNewPos(index, [`Fluid Result ${JsonUtils.toString(fluid)}`], true, cols, rows)
                             if (debug) console.log(`Adding fluid: ${JsonUtils.toString(fluid)} at ${pos.x}, ${pos.y}`)
-                            // @ts-expect-error Ts complianing about itemstack type and itemstacks, etc
+                            // @ts-expect-error Ts complaining about itemstack type and itemstacks, etc
                             machine.produceFluid(fluid, 1, pos.x, pos.y)
-                            // recipeDisplay.produceFluid(fluid, 1, pos.x, pos.y)
+                            fluidByproductPos.push({ fluid: fluid, pos: pos });
                         })
                     let dim = ui.getReservedBoundingBox()
                     machine.width(dim.width)
@@ -679,19 +782,29 @@
                         console.log('Reserved positions:');
                         console.log(ui.reservations.map(pos => [pos.x, pos.y, pos.party]).join('\n'));
                     }
+
+
+                    // JEI section. Must be done after everything else.
+                    let machineJEI = machine.jei()
+                    if (fuelData.producedEnergy) machineJEI.produceEnergy(fuelData.producedEnergy, energyBarPos.x, energyBarPos.y);
+                    // @ts-expect-error Ts complaining about itemstack type and itemstacks, etc
+                    if (solidFuel && solidFuel.id !== "minecraft:air") machineJEI.requireItem(solidFuel, 1, solidFuelPos.x, solidFuelPos.y);
+                    // @ts-expect-error Ts complaining about itemstack type and itemstacks, etc
+                    if (fluidFuel) machineJEI.requireFluid(fluidFuel, 1, fluidBarPos.x, fluidBarPos.y);
+                    if (solidByproductPos.length) {
+                        solidByproductPos.forEach(data => {
+                            machineJEI.produceItem(data.stack, 1, data.pos.x, data.pos.y)
+                        });
+                    }
+                    if (fluidByproductPos.length) {
+                        fluidByproductPos.forEach(data => {
+                            machineJEI.produceFluid(data.fluid, 1, data.pos.x, data.pos.y)
+                        });
+                    }
                 });
             }
         }
     };
-
-    MMREvents.recipeFunction("forceEnergy", event => {
-        // Subtracted by one to account for the "test" energy.
-        let energyAdded = event.machine.addEnergy(Math.max(matrixUtil.fuelRecipeData.energy - 1, 0));
-        // Reset the energy for the next recipe
-        matrixUtil.fuelRecipeData.energy = 0
-    })
-
-    
 
     /**
      * A front facing function to assign machine recipes
@@ -710,6 +823,34 @@
             }
             matrix.init(MACH_TYPE, recipe);
         })
+
+        // Only add custom fuels if this is the heat mekanism machine
+        if (MACH_TYPE === "heat_mekanism") {
+            Ingredient.all.itemIds.forEach(id => {
+                try {
+                    let stack = Item.of(id);
+                    if (!stack.count) {
+                        if (debug) console.warn(`Skipping invalid or empty item: ${JsonUtils.toString(stack)}`);
+                        return;
+                    }
+                    // Custom fuels must have burntime to be considered
+                    let burntime = matrixUtil.getBurnTime(stack)
+                    if (!burntime || burntime <= 0) return;
+                    let superheated = matrixUtil.canSuperHeat(stack);
+                    matrix.initCustom(JsonUtils.toString(stack), {
+                        // @ts-expect-error Ts complaining about itemstack type and itemstacks, etc
+                        solidFuel: Ingredient.of(stack),
+                        fluidFuel: null,
+                        burntime: burntime,
+                        superheated: superheated,
+                        solidByproducts: [],
+                        fluidByproducts: []
+                    });
+                } catch (error) {
+                    if (debug) console.warn(`Unable to process ${id}: ${error}`);
+                }
+            })
+        }
 
         if (debug) console.log(`Finalizing Unification`)
         let recipe = JsonUtils.toString(matrix.fuelMap.entries().next().value);
@@ -740,7 +881,7 @@
                     coreItem: ["modular_machinery_reborn:casing_firebox"],
                     gateItem: "mekanism:steel_casing",
                     coreBlock: "mekanism:steel_casing",
-                    model: "minecraft:chiseled_polished_blackstone",
+                    model: "minecraft:gray_glazed_terracotta",
                     restrictedBlocks: bannedBlocks,
                     restrictedFluids: bannedFluids,
                     restrictedItems: bannedItems.concat("mekanism:steel_casing"),
@@ -963,12 +1104,11 @@
                 builder.structure(
                     MMRStructureBuilder.create()
                         .pattern([
-                            // Each array represents a row from left to right, front to back
-                            // m is the controller, a space is available space.
-                            // Middle, 
-                            [" m ", "   ", "   "],
-                            ["   ", " a ", "   "],
-                            ["   ", "   ", "   "]
+                            // Structure stick is the best way is to define a structure
+                            // Each letter represents a block or a group of blocks
+                            // Spaces are air. m = controller.
+                            [" m ", " a "],
+                            ["   ", "   "]
                         ])
                         .keys({
                             "a": this.allBlockStates(machineType.coreBlock, MACH_TYPE),
@@ -982,15 +1122,66 @@
 
     /** The Chromatic Fan */
     let mekanismMatrix = machBuilder("mmr:matrix", "mekanism:fuelwood_heater");
+    const MMRTYPES = new Set(Array.from(mekanismMatrix.machineType.values()).map(t => t.id));
+    const $MachineControllerEntity = Java.loadClass("es.degrassi.mmreborn.common.entity.MachineControllerEntity");
+    const SAFE_LONG_MAX = 2147483647; // A safe max value for stored energy to prevent overflow errors.
 
     MMREvents.machines(event => {
         // TODO: MACHINE SOUNDS
-
+        
         /** All types of chromatic fans */
         mekanismMatrix.machineType.forEach((_, typeKey) => {
             mekanismMatrix.buildMACH(event, typeKey);
         })
     });
+
+    MMREvents.recipeFunction("storeEnergy", event => {
+        // Store the energy to be acted on later.
+        let energy = parseInt(event.get(0)) || 0;
+        // To account for the test energy.
+        energy -= 1;
+        // If there is no energy, do nothing.
+        if (energy <= 0) return;
+        // Get the stored energy, defaulting to 0 if it doesn't exist.
+        let storedEnergy = event.tile.persistentData.getLong("storedEnergy") || 0;
+        // If the stored energy and the incoming energy is more than that, we stop the recipe.
+        // In reality this can be much higher, but we use this as a safe limit.
+        if (storedEnergy + energy >= SAFE_LONG_MAX) {
+            event.machine.removeEnergy(1); // Remove the test energy
+            event.error("Controller Capacity Reached. Cannot store more energy.");
+        }
+        // Store the new energy value.
+        event.tile.persistentData.putLong("storedEnergy", storedEnergy + energy);
+    });
+
+    PowerfulEvents.interceptTicking(event => {
+        if (debug) console.log(`Setting up controller tick interception`);
+        event.forceTicker("modular_machinery_reborn:controller", true);
+        event.intercept("modular_machinery_reborn:controller", () => [
+            Rules.every(1).effect(Effects.custom(container => {
+                let tile = container.entity;
+                if (!tile) return;
+                // Is this a machine controller?
+                if (!(tile instanceof $MachineControllerEntity)) return;
+                let foundMachine = `${tile.foundMachine.registryName}`;
+                // Is this one of the machines we care about?
+                if (!MMRTYPES.has(foundMachine)) return;
+                let controller = MachineController.of(tile);
+                if (debug) console.log(`Controller found: ${JsonUtils.toString(controller)}`);
+                if (!controller) return;
+                // Does it have energy to drain?
+                let storedEnergy = tile.persistentData.getLong("storedEnergy") || 0;
+                if (debug) console.log(`Controller has ${storedEnergy} stored energy.`);
+                if (storedEnergy <= 0) return;
+                // Output the energy, check how much was outputed, then remove that from the stored energy.
+                let output = controller.addEnergy(storedEnergy);
+                // Diminish the stored energy by the amount that was actually output.
+                tile.persistentData.putLong("storedEnergy", Math.max(storedEnergy - output, 0));
+                // Debug
+                if (debug) console.log(`Controller ${foundMachine} distributed ${output} energy, ${storedEnergy - output} remaining.`);
+            }))
+        ])
+    })
 
     ServerEvents.recipes(event => {
         mekanismMatrix.machineType.forEach((type, typeKey) => {
