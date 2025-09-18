@@ -12,7 +12,7 @@
 		#The ID of the item to use for Ex Deorum recipes that craft into Aluminum Ore. Leave as air for default preference, which chooses alphabetically by mod name.
 		preferred_aluminum_ore = "minecraft:air"
 		#The ID of the item to use for Ex Deorum recipes that craft into Cobalt Ore. Leave as air for default preference, which chooses alphabetically by mod name.
-		preferred_cobalt_ore = "tconstruct:cobalt_ore"
+		preferred_cobalt_ore = "minecraft:air"
 		#The ID of the item to use for Ex Deorum recipes that craft into Silver Ore. Leave as air for default preference, which chooses alphabetically by mod name.
 		preferred_silver_ore = "minecraft:air"
 		#The ID of the item to use for Ex Deorum recipes that craft into Lead Ore. Leave as air for default preference, which chooses alphabetically by mod name.
