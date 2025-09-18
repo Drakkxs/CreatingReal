@@ -6,7 +6,9 @@
         "translate": "lightmanscurrency.money.chain.main"
       },
       "displayType": "lightmanscurrency:number",
-      "displayFormat": { "text": "${value}" },
+      "displayFormat": {
+        "text": "${value}"
+      },
       "InputType": "DEFAULT",
       "CoreChain": [
         {
@@ -20,7 +22,8 @@
         },
         {
           "Coin": "lightmanscurrency:coin_iron",
-          "exchangeRate": 10,
+          "baseUnit": true,
+          "exchangeRate": 100,
           "initial": {
             "translate": "item.lightmanscurrency.coin_iron.initial"
           },
