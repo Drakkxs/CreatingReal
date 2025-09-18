@@ -21,6 +21,9 @@
 !config/melter*
 !config/melter/
 !config/melter/**
+!config/exdeorum*
+!config/exdeorum/
+!config/exdeorum/**
 !config/shutdowner*
 !config/shutdowner/
 !config/shutdowner/**
