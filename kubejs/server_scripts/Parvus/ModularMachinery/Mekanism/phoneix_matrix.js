@@ -1107,8 +1107,8 @@
                             // Structure stick is the best way is to define a structure
                             // Each letter represents a block or a group of blocks
                             // Spaces are air. m = controller.
-                            [" m ", " a "],
-                            ["   ", "   "]
+                            [" m ", "   "],
+                            ["   ", " a "]
                         ])
                         .keys({
                             "a": this.allBlockStates(machineType.coreBlock, MACH_TYPE),
@@ -1158,7 +1158,7 @@
         if (debug) console.log(`Setting up controller tick interception`);
         event.forceTicker("modular_machinery_reborn:controller", true);
         event.intercept("modular_machinery_reborn:controller", () => [
-            Rules.every(1).effect(Effects.custom(container => {
+            Rules.always().effect(Effects.custom(container => {
                 let tile = container.entity;
                 if (!tile) return;
                 // Is this a machine controller?
