@@ -1,0 +1,29 @@
+{
+  "comment": "Use the in-game commands to edit this file",
+  "entries": [
+    {
+      "id": "lightmanscurrency:coin_copper",
+      "emc": 1
+    },
+    {
+      "id": "lightmanscurrency:coin_iron",
+      "emc": 100
+    },
+    {
+      "id": "lightmanscurrency:coin_gold",
+      "emc": 1000
+    },
+    {
+      "id": "lightmanscurrency:coin_emerald",
+      "emc": 10000
+    },
+    {
+      "id": "lightmanscurrency:coin_diamond",
+      "emc": 100000
+    },
+    {
+      "id": "lightmanscurrency:coin_netherite",
+      "emc": 1000000
+    }
+  ]
+}

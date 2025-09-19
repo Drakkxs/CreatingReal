@@ -24,6 +24,9 @@
 !config/exdeorum*
 !config/exdeorum/
 !config/exdeorum/**
+!config/projecte/*
+!config/projecte/
+!config/projecte/**
 !config/shutdowner*
 !config/shutdowner/
 !config/shutdowner/**
@@ -49,3 +52,8 @@ kubejs/jsconfig.json
 *.debug
 *.bak
 .probe
+
+# Re-Allow these files and directories
+!config/lightmanscurrency*
+!config/lightmanscurrency/
+!config/lightmanscurrency/**
