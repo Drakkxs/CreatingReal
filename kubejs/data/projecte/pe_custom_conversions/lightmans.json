@@ -1,5 +1,10 @@
 {
   "groups": {
+    "fuels": {
+      "comment": "Basic Fuel Conversions",
+      "conversions": [
+      ]
+    },
     "farming": {
       "comment": "Basic Farming Conversions",
       "conversions": [
@@ -48,58 +53,6 @@
             "amount": 1000,
             "type": "projecte:fluid",
             "id": "minecraft:lava"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "amount": 1000,
-              "type": "projecte:fluid",
-              "id": "minecraft:water"
-            }
-          ],
-          "output": {
-            "count": 1,
-            "type": "projecte:item",
-            "id": "minecraft:water_bucket"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "amount": 1000,
-              "type": "projecte:fluid",
-              "id": "exdeorum:witch_water"
-            },
-            {
-              "count": 1,
-              "type": "projecte:item",
-              "id": "minecraft:bucket"
-            }
-          ],
-          "output": {
-            "count": 1,
-            "type": "projecte:item",
-            "id": "exdeorum:witch_water_bucket"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "amount": 1000,
-              "type": "projecte:fluid",
-              "id": "minecraft:lava"
-            },
-            {
-              "count": 1,
-              "type": "projecte:item",
-              "id": "minecraft:bucket"
-            }
-          ],
-          "output": {
-            "count": 1,
-            "type": "projecte:item",
-            "id": "minecraft:lava_bucket"
           }
         }
       ]
@@ -206,23 +159,6 @@
         {
           "ingredients": [
             {
-              "type": "projecte:item",
-              "id": "minecraft:bucket"
-            },
-            {
-              "type": "projecte:fluid",
-              "amount": 1000,
-              "tag": "c:molten_copper"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "id": "casting:molten_copper_bucket"
-          }
-        },
-        {
-          "ingredients": [
-            {
               "count": 100,
               "type": "projecte:item",
               "id": "lightmanscurrency:coin_iron"
@@ -231,23 +167,6 @@
           "output": {
             "type": "projecte:fluid",
             "id": "casting:molten_iron"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "type": "projecte:item",
-              "id": "minecraft:bucket"
-            },
-            {
-              "type": "projecte:fluid",
-              "amount": 1000,
-              "tag": "c:molten_iron"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "id": "casting:molten_iron_bucket"
           }
         },
         {
@@ -266,23 +185,6 @@
         {
           "ingredients": [
             {
-              "type": "projecte:item",
-              "id": "minecraft:bucket"
-            },
-            {
-              "type": "projecte:fluid",
-              "amount": 1000,
-              "tag": "c:molten_gold"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "tag": "casting:molten_gold_bucket"
-          }
-        },
-        {
-          "ingredients": [
-            {
               "count": 100,
               "type": "projecte:item",
               "id": "lightmanscurrency:coin_emerald"
@@ -291,23 +193,6 @@
           "output": {
             "type": "projecte:fluid",
             "id": "casting:molten_emerald"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "type": "projecte:item",
-              "id": "minecraft:bucket"
-            },
-            {
-              "type": "projecte:fluid",
-              "amount": 1000,
-              "tag": "c:molten_emerald"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "id": "casting:molten_emerald_bucket"
           }
         },
         {
@@ -326,23 +211,6 @@
         {
           "ingredients": [
             {
-              "type": "projecte:item",
-              "id": "minecraft:bucket"
-            },
-            {
-              "type": "projecte:fluid",
-              "amount": 1000,
-              "tag": "c:molten_diamond"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "id": "casting:molten_diamond_bucket"
-          }
-        },
-        {
-          "ingredients": [
-            {
               "count": 100,
               "type": "projecte:item",
               "id": "lightmanscurrency:coin_netherite"
@@ -352,24 +220,6 @@
             "type": "projecte:fluid",
             "id": "casting:molten_netherite"
           }
-        },
-        {
-          "comment": "Netherite Bucket",
-          "ingredients": [
-            {
-              "type": "projecte:item",
-              "id": "minecraft:bucket"
-            },
-            {
-              "type": "projecte:fluid",
-              "amount": 1000,
-              "tag": "c:molten_netherite"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "id": "casting:molten_netherite_bucket"
-          }
         }
       ]
     }
@@ -378,13 +228,13 @@
     "before": [
       {
         "type": "projecte:item",
-        "emc_value": 1,
-        "tag": "c:dirt"
+        "emc_value": 64,
+        "tag": "c:cobblestones"
       },
       {
         "type": "projecte:item",
-        "emc_value": 1,
-        "tag": "c:cobblestones"
+        "emc_value": 64,
+        "tag": "c:dirt"
       },
       {
         "type": "projecte:item",
