@@ -9,9 +9,6 @@
 !config/modular_machinery_reborn*
 !config/modular_machinery_reborn/
 !config/modular_machinery_reborn/**
-!config/lightmanscurrency*
-!config/lightmanscurrency/
-!config/lightmanscurrency/**
 !config/mekanism*
 !config/mekanism/
 !config/mekanism/**
@@ -30,6 +27,9 @@
 !config/shutdowner*
 !config/shutdowner/
 !config/shutdowner/**
+!config/farmingforblockheads*
+!config/farmingforblockheads/
+!config/farmingforblockheads/**
 !kubejs/
 !kubejs/**
 !scripts/
