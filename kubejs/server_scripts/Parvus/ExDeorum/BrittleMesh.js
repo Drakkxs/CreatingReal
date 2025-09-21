@@ -25,17 +25,21 @@
      * @param {string} str
      * @param {string} oldKey 
      * @param {string} newKey 
-     * @returns 
+     * @returns {Object}
      */
     function transposeKey(str, oldKey, newKey) {
         if (debug) console.log(`Transposing key ${oldKey} to ${newKey} in ${str}`);
         let obj = JsonUtils.toObject(JsonUtils.fromString(str));
+        if (!(oldKey in obj)) {
+            if (debug) console.log(`Key ${oldKey} not found in object.`);
+            return obj;
+        }
         if (debug) console.log(`Parsed object: ${JsonUtils.toString(obj)}`);
         obj[newKey] = obj[oldKey];
         delete obj[oldKey];
-        let newStr = obj
-        if (debug) console.log(`Transposed object: ${JsonUtils.toString(newStr)}`);
-        return newStr;
+        let mappedObject = obj
+        if (debug) console.log(`Transposed object: ${JsonUtils.toString(mappedObject)}`);
+        return mappedObject;
     }
 
     /**
