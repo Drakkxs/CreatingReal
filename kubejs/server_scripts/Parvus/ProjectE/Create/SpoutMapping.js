@@ -1,4 +1,4 @@
-// priority: 0
+// priority: -20
 // requires: projecte
 // requires: create
 // @ts-check
@@ -168,15 +168,29 @@
             });
 
 
-            // Resolve output items
+            // Resolve output items and fluids
             if (!rawResults.isJsonArray()) return;
             let resultsArray = rawResults.asJsonArray;
             resultsArray.forEach(result => {
                 if (!result.isJsonObject()) return;
                 let resultObj = result.asJsonObject;
-                resultObj.add("type", "projecte:item");
-                // Change "item" key to "id"
-                resultObj = transposeKey(JsonUtils.toString(resultObj), "item", "id");
+                let isfluid = resultObj.get("amount")
+                if (isfluid) {
+                    resultObj.add("type", "projecte:fluid");
+                    // Take out nested "basePredicate" if exists
+                    resultObj = flattenKey(JsonUtils.toString(resultObj), "basePredicate");
+                    // Change "fluid" key to "id"
+                    resultObj = transposeKey(JsonUtils.toString(resultObj), "fluid", "id");
+                    // Change "fluid_tag" key to "tag"
+                    resultObj = transposeKey(JsonUtils.toString(resultObj), "fluid_tag", "tag");
+                } else {
+                    resultObj.add("type", "projecte:item");
+                    // Take out nested "basePredicate" if exists
+                    resultObj = flattenKey(JsonUtils.toString(resultObj), "basePredicate");
+                    // Change "item" key to "id"
+                    resultObj = transposeKey(JsonUtils.toString(resultObj), "item", "id");
+                }
+                
                 output.push(JsonUtils.toObject(resultObj));
             });
 

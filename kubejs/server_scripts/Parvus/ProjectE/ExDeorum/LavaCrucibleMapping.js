@@ -1,13 +1,13 @@
 // priority: -20
 // requires: projecte
-// requires: casting
+// requires: exdeorum
 // @ts-check
-// Automatically map Mixing recipes to ProjectE conversions.
+// Automatically map Lava Crucible recipes to ProjectE conversions.
 
 // Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
     let debug = false; // Want some debug?
-    const filePath = 'kubejs/data/projecte/pe_custom_conversions/generated_mixing.json';
+    const filePath = 'kubejs/data/projecte/pe_custom_conversions/lava_crucible.json';
 
     /**
      * @param {string} name
@@ -87,10 +87,10 @@
     }
 
     ServerEvents.recipes(event => {
-        const name = "mixing";
-        const comment = "BBL Mixing recipes mapped to ProjectE conversions.";
+        const name = "lava_crucible";
+        const comment = "Lava Crucible recipes mapped to ProjectE conversions.";
         const conversions = [];
-        
+
         if (JsonIO.read(filePath)) {
             if (debug) console.log(`File ${filePath} already exists. Skipping generation.`);
             return;
@@ -99,11 +99,11 @@
 
         event.forEachRecipe({
             or: [
-                { type: "casting:mixing" }
+                { type: "exdeorum:lava_crucible" }
             ]
         }, recipe => {
             if (debug) {
-                console.log(`Found BBL Mixing recipe: ${recipe.id}`);
+                console.log(`Found Lava Crucible recipe: ${recipe.id}`);
                 console.log(JsonUtils.toPrettyString(recipe.json));
             }
             let json = recipe.json;
@@ -113,13 +113,14 @@
             // Unprocessed recipe data
             let rawIngredients = JsonUtils.of([].concat(
                 json.get("ingredient"), json.get("ingredients"),
-                json.get("input"), json.get("inputs"),
-                json.get("fluid"), json.get("fluids")
+                json.get("input"), json.get("inputs")
             ));
 
             let rawResults = JsonUtils.of([].concat(
                 json.get("result"), json.get("results"),
-                json.get("output"), json.get("outputs")
+                json.get("output"), json.get("outputs"),
+                // For crucibles, the output is a fluid
+                json.get("fluid"), json.get("fluids")
             ));
 
             // Default to empty arrays if null

@@ -1,0 +1,42 @@
+{
+  "groups": {
+    "farming": {
+      "comment": "Basic Farming Conversions",
+      "conversions": [
+        {
+          "ingredients": [
+            {
+              "count": 1,
+              "type": "projecte:item",
+              "id": "minecraft:mycelium"
+            },
+            {
+              "amount": 1000,
+              "type": "projecte:fluid",
+              "id": "minecraft:water"
+            }
+          ],
+          "output": {
+            "amount": 1000,
+            "type": "projecte:fluid",
+            "id": "exdeorum:witch_water"
+          }
+        }
+      ]
+    }
+  },
+  "values": {
+    "before": [
+      {
+        "type": "projecte:item",
+        "emc_value": 64,
+        "tag": "c:cobblestones"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 64,
+        "tag": "c:dirt"
+      }
+    ]
+  }
+}

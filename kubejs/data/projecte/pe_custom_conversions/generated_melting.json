@@ -14,7 +14,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_gold",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -28,7 +28,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_osmium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -42,7 +42,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_gold",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -56,7 +56,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_uranium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -70,7 +70,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_lumium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -84,7 +84,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_lumium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -98,7 +98,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_aluminum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -112,7 +112,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_black_brick",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -126,7 +126,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_tin",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -140,7 +140,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_lead",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -154,7 +154,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_iridium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -168,7 +168,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_nickel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -182,7 +182,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_steel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -196,7 +196,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_zinc",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -210,7 +210,7 @@
 					"output": {
 						"amount": 80,
 						"id": "casting:molten_coal",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -224,7 +224,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_ruby",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -238,7 +238,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_uranium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -252,7 +252,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_debris",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -266,7 +266,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_redstone",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -280,7 +280,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_iron",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -294,7 +294,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_lapis",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -308,7 +308,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_silver",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -322,7 +322,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_nickel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -336,7 +336,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_iron",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -350,7 +350,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_iridium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -364,7 +364,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_uranium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -378,7 +378,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_sapphire",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -392,7 +392,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_copper",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -406,7 +406,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_emerald",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -420,7 +420,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_silver",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -434,7 +434,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_platinum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -448,7 +448,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_steel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -462,7 +462,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_lumium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -476,7 +476,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_invar",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -490,7 +490,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_invar",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -504,7 +504,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_gold",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -518,7 +518,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_diamond",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -532,7 +532,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_diamond",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -546,7 +546,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_iron",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -560,7 +560,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_zinc",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -574,7 +574,7 @@
 					"output": {
 						"amount": 250,
 						"id": "casting:molten_ender",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -588,7 +588,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_lumium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -602,7 +602,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_iron",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -616,7 +616,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_silver",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -630,7 +630,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_signalum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -644,7 +644,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_netherite",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -658,7 +658,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_signalum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -672,7 +672,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_nickel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -686,7 +686,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_netherite",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -700,7 +700,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_steel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -714,7 +714,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_silver",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -728,7 +728,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_zinc",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -742,7 +742,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_signalum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -756,7 +756,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_peridot",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -770,7 +770,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_bronze",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -784,7 +784,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_enderium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -798,7 +798,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_iridium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -812,7 +812,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_steel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -826,7 +826,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_nickel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -840,7 +840,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_emerald",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -854,7 +854,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_redstone",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -868,7 +868,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_lead",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -882,7 +882,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_zinc",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -896,7 +896,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_invar",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -910,7 +910,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_uranium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -924,7 +924,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_lead",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -938,7 +938,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_osmium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -952,7 +952,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_copper",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -966,7 +966,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_lapis",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -980,7 +980,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_diamond",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -994,7 +994,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_ruby",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1008,7 +1008,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_bronze",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1022,7 +1022,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_steel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1036,7 +1036,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_iron",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1050,7 +1050,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_constantan",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1064,7 +1064,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_bronze",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1078,7 +1078,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_quartz",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1092,7 +1092,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_invar",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1106,7 +1106,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_brass",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1120,7 +1120,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_uranium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1134,7 +1134,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_glowstone",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1148,7 +1148,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_signalum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1162,7 +1162,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_nickel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1176,7 +1176,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_iridium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1190,7 +1190,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_quartz",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1204,7 +1204,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_copper",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1218,7 +1218,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:chilled_water",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1232,7 +1232,7 @@
 					"output": {
 						"amount": 720,
 						"id": "casting:molten_coal",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1246,7 +1246,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_diamond",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1260,7 +1260,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_sapphire",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1274,7 +1274,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_diamond",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1288,7 +1288,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_uranium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1302,7 +1302,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_iron",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1316,7 +1316,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_black_brick",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1330,7 +1330,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_aluminum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1344,7 +1344,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_nickel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1358,7 +1358,7 @@
 					"output": {
 						"amount": 250,
 						"id": "casting:molten_quartz",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1372,7 +1372,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_lead",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1386,7 +1386,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_blaze",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1400,7 +1400,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_steel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1414,7 +1414,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_uranium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1428,7 +1428,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_signalum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1442,7 +1442,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_bronze",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1456,7 +1456,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_electrum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1470,7 +1470,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_platinum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1484,7 +1484,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_copper",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1498,7 +1498,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_gold",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1512,7 +1512,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_iron",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1526,7 +1526,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_diamond",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1540,7 +1540,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_ruby",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1554,7 +1554,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_gold",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1568,7 +1568,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_uranium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1582,7 +1582,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_iron",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1596,7 +1596,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_osmium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1610,7 +1610,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_peridot",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1624,7 +1624,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_platinum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1638,7 +1638,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_brass",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1652,7 +1652,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_electrum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1666,7 +1666,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_peridot",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1680,7 +1680,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_constantan",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1694,7 +1694,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_lead",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1708,7 +1708,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_lumium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1722,7 +1722,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_bronze",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1736,7 +1736,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_gold",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1750,7 +1750,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_iridium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1764,7 +1764,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_emerald",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1778,7 +1778,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_quartz",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1792,7 +1792,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_signalum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1806,7 +1806,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_constantan",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1820,7 +1820,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_iridium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1834,7 +1834,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_lumium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1848,7 +1848,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_enderium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1862,7 +1862,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_netherite",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1876,7 +1876,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_silver",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1890,7 +1890,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_aluminum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1904,7 +1904,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_tin",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1918,7 +1918,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_tin",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1932,7 +1932,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_gold",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1946,7 +1946,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_osmium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1960,7 +1960,7 @@
 					"output": {
 						"amount": 81000,
 						"id": "casting:iced_water",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1974,7 +1974,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_constantan",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -1988,7 +1988,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_zinc",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2002,7 +2002,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_platinum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2016,7 +2016,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_nickel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2030,7 +2030,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_platinum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2044,7 +2044,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_brass",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2058,7 +2058,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_enderium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2072,7 +2072,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_gold",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2086,7 +2086,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_signalum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2100,7 +2100,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_gold",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2114,7 +2114,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_electrum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2128,7 +2128,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_silver",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2142,7 +2142,7 @@
 					"output": {
 						"amount": 250,
 						"id": "casting:molten_black_brick",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2156,7 +2156,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_tin",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2170,7 +2170,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_lead",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2184,7 +2184,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_aluminum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2198,7 +2198,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_silver",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2212,7 +2212,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_invar",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2226,7 +2226,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_copper",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2240,7 +2240,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_sapphire",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2254,7 +2254,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_sapphire",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2268,7 +2268,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_electrum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2282,7 +2282,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_iron",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2296,7 +2296,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_lead",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2310,7 +2310,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_constantan",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2324,7 +2324,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_emerald",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2338,7 +2338,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_platinum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2352,7 +2352,7 @@
 					"output": {
 						"amount": 250,
 						"id": "casting:molten_quartz",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2366,7 +2366,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_aluminum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2380,7 +2380,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_aluminum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2394,7 +2394,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_brass",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2408,7 +2408,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_osmium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2422,7 +2422,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_nickel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2436,7 +2436,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_tin",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2450,7 +2450,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_silver",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2464,7 +2464,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_osmium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2478,7 +2478,7 @@
 					"output": {
 						"amount": 80,
 						"id": "casting:molten_coal",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2492,7 +2492,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_electrum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2506,7 +2506,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_platinum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2520,7 +2520,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_copper",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2534,7 +2534,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_lead",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2548,7 +2548,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_copper",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2562,7 +2562,7 @@
 					"output": {
 						"amount": 250,
 						"id": "casting:molten_glowstone",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2576,7 +2576,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_peridot",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2590,7 +2590,7 @@
 					"output": {
 						"amount": 250,
 						"id": "casting:molten_quartz",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2604,7 +2604,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_electrum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2618,7 +2618,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_end_stone",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2632,7 +2632,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_brass",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2646,7 +2646,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_redstone",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2660,7 +2660,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_copper",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2674,7 +2674,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_lead",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2688,7 +2688,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_bronze",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2702,7 +2702,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_steel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2716,7 +2716,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_tin",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2730,7 +2730,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_zinc",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2744,7 +2744,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_glass",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2758,7 +2758,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_platinum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2772,7 +2772,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_diamond",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2786,7 +2786,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_osmium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2800,7 +2800,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_netherite",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2814,7 +2814,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_iridium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2828,7 +2828,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_tin",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2842,7 +2842,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_constantan",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2856,7 +2856,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_enderium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2870,7 +2870,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_nickel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2884,7 +2884,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_iridium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2898,7 +2898,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_zinc",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2912,7 +2912,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_lead",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2926,7 +2926,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_iridium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2940,7 +2940,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_copper",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2954,7 +2954,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_gold",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2968,7 +2968,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_osmium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2982,7 +2982,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_uranium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -2996,7 +2996,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_iron",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3010,7 +3010,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_silver",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3024,7 +3024,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_bronze",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3038,7 +3038,7 @@
 					"output": {
 						"amount": 250,
 						"id": "casting:molten_black_brick",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3052,7 +3052,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_enderium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3066,7 +3066,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_lapis",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3080,7 +3080,7 @@
 					"output": {
 						"amount": 9000,
 						"id": "casting:iced_water",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3094,7 +3094,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_electrum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3108,7 +3108,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_aluminum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3122,7 +3122,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_glass",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3136,7 +3136,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_zinc",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3150,7 +3150,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_invar",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3164,7 +3164,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_nickel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3178,7 +3178,7 @@
 					"output": {
 						"amount": 250,
 						"id": "casting:chilled_water",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3192,7 +3192,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_tin",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3206,7 +3206,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_osmium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3220,7 +3220,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_aluminum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3234,7 +3234,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_gold",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3248,7 +3248,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_tin",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3262,7 +3262,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:iced_water",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3276,7 +3276,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_steel",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3290,7 +3290,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_brass",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3304,7 +3304,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_netherite",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3318,7 +3318,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_uranium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3332,7 +3332,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_zinc",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3346,7 +3346,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_copper",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3360,7 +3360,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_tin",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3374,7 +3374,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_invar",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3388,7 +3388,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_lead",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3402,7 +3402,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_quartz",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3416,7 +3416,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_quartz",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3430,7 +3430,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_brass",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3444,7 +3444,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_platinum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3458,7 +3458,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_enderium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3472,7 +3472,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_lumium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3486,7 +3486,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_silver",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3500,7 +3500,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_iridium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3514,7 +3514,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_copper",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3528,7 +3528,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_blaze",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3542,7 +3542,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_soul",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3556,7 +3556,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_stone",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3570,7 +3570,7 @@
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_osmium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3584,7 +3584,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_platinum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3598,7 +3598,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_aluminum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3612,7 +3612,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_netherite",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3626,7 +3626,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_aluminum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3640,7 +3640,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_constantan",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3654,7 +3654,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_enderium",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3668,7 +3668,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_lapis",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3682,7 +3682,7 @@
 					"output": {
 						"amount": 10,
 						"id": "casting:molten_netherite",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3696,7 +3696,7 @@
 					"output": {
 						"amount": 250,
 						"id": "casting:molten_silicon",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3710,7 +3710,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_zinc",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3724,7 +3724,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_iron",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3738,7 +3738,7 @@
 					"output": {
 						"amount": 45,
 						"id": "casting:molten_electrum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3752,7 +3752,7 @@
 					"output": {
 						"amount": 810,
 						"id": "casting:molten_aluminum",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3766,7 +3766,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_obsidian",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3780,7 +3780,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_ruby",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3794,7 +3794,7 @@
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_stone",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3808,7 +3808,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_emerald",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				},
 				{
@@ -3822,7 +3822,7 @@
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_diamond",
-						"type": "projecte:item"
+						"type": "projecte:fluid"
 					}
 				}
 			]

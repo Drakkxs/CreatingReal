@@ -1,0 +1,447 @@
+{
+	"groups": {
+		"water_crucible": {
+			"comment": "Water Crucible recipes mapped to ProjectE conversions.",
+			"conversions": [
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:spore_blossom"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 150,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:carrot"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:beetroot"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:sea_pickle"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 200,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:vine"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:moss_block"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 150,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:melon"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 250,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:potato"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:lily_pad"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 150,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "c:mushrooms",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:moss_carpet"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:apple"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "c:seeds",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 50,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:small_flowers",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 250,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:tall_flowers",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 200,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:pumpkin"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 250,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:cactus"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 250,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:grass_block"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 150,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 50,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:saplings",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:melon_slice"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 50,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 50,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:seagrass"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:sugar_cane"
+						},
+						{
+							"type": "projecte:fake",
+							"amount": 64,
+							"description": "single_emc"
+						}
+					],
+					"output": {
+						"amount": 100,
+						"id": "minecraft:water",
+						"type": "projecte:fluid"
+					}
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"groups": {
+		"lava_crucible": {
+			"comment": "Lava Crucible recipes mapped to ProjectE conversions.",
+			"conversions": [
+				{
+					"ingredients": [
+						{
+							"tag": "c:stones",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"amount": 250,
+						"id": "minecraft:lava",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "c:cobblestones",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"amount": 250,
+						"id": "minecraft:lava",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "c:gravels",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"amount": 250,
+						"id": "minecraft:lava",
+						"type": "projecte:fluid"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "c:netherracks",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"amount": 500,
+						"id": "minecraft:lava",
+						"type": "projecte:fluid"
+					}
+				}
+			]
+		}
+	}
+}
