@@ -31,7 +31,6 @@
             addHeatSource({ "block": id, "state": { "active": "true" } }, 5);
         });
 
-        
     });
 
     
