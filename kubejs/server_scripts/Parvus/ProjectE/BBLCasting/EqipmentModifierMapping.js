@@ -91,12 +91,12 @@
         const comment = "BBL Equipment Modifier recipes mapped to ProjectE conversions.";
         const conversions = [];
         
-        if (!JsonIO.read(filePath).empty) {
+        if (JsonIO.read(filePath)) {
             if (debug) console.log(`File ${filePath} already exists. Skipping generation.`);
             return;
         }
 
-        
+
         event.forEachRecipe({
             or: [
                 { type: "casting:equipment_modifier" }

@@ -1,0 +1,185 @@
+{
+	"groups": {
+		"mixing": {
+			"comment": "BBL Mixing recipes mapped to ProjectE conversions.",
+			"conversions": [
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 270,
+						"id": "casting:molten_invar",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 360,
+						"id": "casting:molten_quartz_enriched_iron",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 90,
+						"id": "casting:molten_conductive_alloy",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 90,
+						"id": "casting:molten_vibrant_alloy",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 360,
+						"id": "casting:molten_signalum",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 2000,
+						"id": "casting:super_coolant",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 360,
+						"id": "casting:molten_bronze",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 90,
+						"id": "casting:molten_steel",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 90,
+						"id": "casting:molten_redstone_alloy",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 360,
+						"id": "casting:molten_brass",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 90,
+						"id": "casting:molten_soularium",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 360,
+						"id": "casting:molten_enderium",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 90,
+						"id": "casting:molten_dark_steel",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 360,
+						"id": "casting:molten_lumium",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 180,
+						"id": "casting:molten_constantan",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 90,
+						"id": "casting:molten_energetic_alloy",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 90,
+						"id": "casting:molten_copper_alloy",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 90,
+						"id": "casting:molten_pulsating_alloy",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 1000,
+						"id": "casting:molten_obsidian",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 90,
+						"id": "casting:molten_end_steel",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 90,
+						"id": "casting:molten_netherite",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [],
+					"output": {
+						"amount": 180,
+						"id": "casting:molten_electrum",
+						"type": "projecte:item"
+					}
+				}
+			]
+		}
+	}
+}

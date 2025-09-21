@@ -130,7 +130,7 @@
         const comment = "Bucket Mappings";
         const conversions = [];
         
-        if (!JsonIO.read(filePath).empty) {
+        if (JsonIO.read(filePath)) {
             if (debug) console.log(`File ${filePath} already exists. Skipping generation.`);
             return;
         }

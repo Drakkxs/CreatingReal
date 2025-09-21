@@ -1,0 +1,1557 @@
+{
+	"groups": {
+		"bottler": {
+			"comment": "Immersive Engineering Bottling Machine",
+			"conversions": [
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/zinc",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "alltheores:zinc_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_aluminum",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "alltheores:aluminum_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/uranium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "mekanism:shard_uranium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:cyan_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:cyan_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/iron",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "mekanism:shard_iron"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/tin",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "mekanism:shard_tin"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:magenta_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:magenta_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_osmium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "mekanism:shard_osmium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_iridium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "alltheores:iridium_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/nickel",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "alltheores:nickel_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/zinc",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "alltheores:zinc_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:brown_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:brown_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_uranium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "mekanism:shard_uranium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "tmted:wheat_flour"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "farmersdelight:wheat_dough"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:light_blue_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:light_blue_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:dirt"
+						}
+					],
+					"output": {
+						"id": "minecraft:mud",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:light_gray_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:light_gray_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:white_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:white_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/silver",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "alltheores:silver_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/iron",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "mekanism:shard_iron"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/lead",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "mekanism:shard_lead"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/silver",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "alltheores:silver_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_platinum",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "alltheores:platinum_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/nickel",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "alltheores:nickel_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:blue_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:blue_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/iridium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "alltheores:iridium_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "forge:ethanol",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:glass_bottle"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "tmted:bottle_of_wodka"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:green_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:green_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "c:redstone_acid",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:exposed_copper"
+						}
+					],
+					"output": {
+						"id": "minecraft:weathered_copper",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "c:redstone_acid",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:weathered_copper"
+						}
+					],
+					"output": {
+						"id": "minecraft:oxidized_copper",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/osmium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "mekanism:shard_osmium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/aluminum",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "alltheores:aluminum_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/silver",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "alltheores:silver_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/gold",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "mekanism:shard_gold"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "forge:tomato_sauce",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bowl"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "farmersdelight:tomato_sauce"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/zinc",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "alltheores:zinc_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "forge:apple_cider",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:glass_bottle"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "farmersdelight:apple_cider"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_gold",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "mekanism:shard_gold"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/iron",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "mekanism:shard_iron"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1000,
+							"tag": "c:creosote",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "immersiveengineering:mold_rod"
+						},
+						{
+							"count": 4,
+							"type": "projecte:item",
+							"tag": "c:dusts/hop_graphite"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:graphite_electrode",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:pink_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:pink_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/gold",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "mekanism:shard_gold"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "farmersdelight:organic_compost"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "farmersdelight:rich_soil"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:orange_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:orange_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_iron",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "mekanism:shard_iron"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/uranium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "mekanism:shard_uranium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/copper",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "mekanism:shard_copper"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_lead",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "mekanism:shard_lead"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/copper",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "mekanism:shard_copper"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/osmium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "mekanism:shard_osmium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "c:redstone_acid",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/copper",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"id": "minecraft:exposed_copper",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/iridium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "alltheores:iridium_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/platinum",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "alltheores:platinum_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/aluminum",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "alltheores:aluminum_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_silver",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "alltheores:silver_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:red_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:red_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/osmium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "mekanism:shard_osmium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:purple_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:purple_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:black_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:black_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/aluminum",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "alltheores:aluminum_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:gray_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:gray_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/lead",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "mekanism:shard_lead"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 500,
+							"tag": "c:phenolic_resin",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "immersiveengineering:mold_gear"
+						},
+						{
+							"count": 6,
+							"type": "projecte:item",
+							"tag": "c:dusts/aluminum"
+						},
+						{
+							"count": 8,
+							"type": "projecte:item",
+							"tag": "c:fiber_hemp"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:grindingdisk",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/lead",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "mekanism:shard_lead"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "c:plantoil",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "immersiveengineering:mold_plate"
+						},
+						{
+							"tag": "c:fabric_hemp",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:ersatz_leather",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_nickel",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "alltheores:nickel_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/copper",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "mekanism:shard_copper"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 4000,
+							"tag": "c:phenolic_resin",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "immersiveengineering:mold_packing_4"
+						}
+					],
+					"output": {
+						"count": 4,
+						"id": "immersiveengineering:duroplast",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/platinum",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "alltheores:platinum_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_tin",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "mekanism:shard_tin"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/nickel",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "alltheores:nickel_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:yellow_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:yellow_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:phenolic_resin",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "immersiveengineering:mold_plate"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:plate_duroplast",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/tin",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "mekanism:shard_tin"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/tin",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "mekanism:shard_tin"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1000,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:sponge"
+						}
+					],
+					"output": {
+						"id": "minecraft:wet_sponge",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "forge:melon_juice",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:glass_bottle"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "farmersdelight:melon_juice"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:creosote",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "immersiveengineering:mold_plate"
+						},
+						{
+							"tag": "c:dusts/hop_graphite",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:plate_hop_graphite",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:ores/gold",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 4,
+						"type": "projecte:item",
+						"id": "mekanism:shard_gold"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "c:phenolic_resin",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "immersiveengineering:mold_bullet_casing"
+						},
+						{
+							"count": 3,
+							"type": "projecte:item",
+							"tag": "c:nuggets/copper"
+						}
+					],
+					"output": {
+						"count": 2,
+						"id": "immersiveengineering:empty_shell",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"tag": "forge:milk",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:glass_bottle"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "farmersdelight:milk_bottle"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_zinc",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "alltheores:zinc_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/iridium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "alltheores:iridium_shard"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 150,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:raw_materials/uranium",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 2,
+						"type": "projecte:item",
+						"id": "mekanism:shard_uranium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 450,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:storage_blocks/raw_copper",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"count": 24,
+						"type": "projecte:item",
+						"id": "mekanism:shard_copper"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 125,
+							"tag": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:lime_concrete_powder"
+						}
+					],
+					"output": {
+						"id": "minecraft:lime_concrete",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 300,
+							"tag": "c:hydrogen_chloride",
+							"type": "projecte:fluid"
+						},
+						{
+							"tag": "c:crystals/platinum",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"type": "projecte:item",
+						"id": "alltheores:platinum_shard"
+					}
+				}
+			]
+		}
+	}
+}

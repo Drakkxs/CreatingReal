@@ -1,0 +1,426 @@
+{
+	"groups": {
+		"equipment_modifier": {
+			"comment": "BBL Equipment Modifier recipes mapped to ProjectE conversions.",
+			"conversions": [
+				{
+					"ingredients": [
+						{
+							"count": 4,
+							"type": "projecte:item",
+							"id": "minecraft:feather"
+						}
+					],
+					"output": {
+						"id": "casting:feather_falling",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 3200,
+							"id": "casting:molten_soul",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:soulbound",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_diamond",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:excavation",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1350,
+							"id": "casting:molten_lapis",
+							"type": "projecte:fluid"
+						},
+						{
+							"count": 8,
+							"tag": "c:gems/emerald",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"id": "casting:looting",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"count": 4,
+							"type": "projecte:item",
+							"id": "minecraft:sticky_piston"
+						}
+					],
+					"output": {
+						"id": "casting:step_assist",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1350,
+							"id": "casting:molten_redstone",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:efficiency",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"count": 8,
+							"type": "projecte:item",
+							"id": "minecraft:magma_block"
+						}
+					],
+					"output": {
+						"id": "casting:lava_walker",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1350,
+							"id": "casting:molten_quartz",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:sharpness",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 8000,
+							"id": "minecraft:lava",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:auto_smelt",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 720,
+							"id": "casting:molten_emerald",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:silk_touch",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"count": 8,
+							"type": "projecte:item",
+							"id": "minecraft:golden_carrot"
+						}
+					],
+					"output": {
+						"id": "casting:night_vision",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"count": 1,
+							"tag": "minecraft:skulls",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"id": "casting:beheading",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 640,
+							"id": "casting:molten_ender",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:teleporting",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 8000,
+							"id": "casting:molten_obsidian",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:unbreaking",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1350,
+							"id": "casting:molten_lapis",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:fortune",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"count": 1,
+							"type": "projecte:item",
+							"id": "minecraft:nether_star"
+						}
+					],
+					"output": {
+						"id": "casting:flight",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"count": 4,
+							"type": "projecte:item",
+							"id": "minecraft:piston"
+						}
+					],
+					"output": {
+						"id": "casting:knockback",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 540,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						},
+						{
+							"count": 6,
+							"tag": "c:ingots/iron",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"id": "casting:magnet",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 8000,
+							"id": "casting:molten_glowstone",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:repairing",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 720,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						},
+						{
+							"count": 1,
+							"type": "projecte:item",
+							"id": "minecraft:golden_apple"
+						}
+					],
+					"output": {
+						"id": "casting:lifesteal",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"count": 12,
+							"type": "projecte:item",
+							"id": "minecraft:sugar"
+						}
+					],
+					"output": {
+						"id": "casting:speed",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"count": 8,
+							"type": "projecte:item",
+							"id": "minecraft:sponge"
+						}
+					],
+					"output": {
+						"id": "casting:water_walker",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 720,
+							"id": "casting:molten_blaze",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:jets",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 5120,
+							"id": "casting:molten_coal",
+							"type": "projecte:fluid"
+						},
+						{
+							"count": 64,
+							"tag": "c:rods/wooden",
+							"type": "projecte:item"
+						}
+					],
+					"output": {
+						"id": "casting:torch_placing",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 8000,
+							"id": "minecraft:lava",
+							"type": "projecte:fluid"
+						},
+						{
+							"count": 1,
+							"type": "projecte:item",
+							"id": "minecraft:flint_and_steel"
+						}
+					],
+					"output": {
+						"id": "casting:ignite",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 720,
+							"id": "casting:molten_steel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:protection",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 500,
+							"id": "casting:molten_experience",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"id": "casting:equipment_level",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"count": 2,
+							"type": "projecte:item",
+							"id": "minecraft:pufferfish"
+						}
+					],
+					"output": {
+						"id": "casting:water_breathing",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				}
+			]
+		}
+	}
+}

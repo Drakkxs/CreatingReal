@@ -90,12 +90,12 @@
         const comment = "Immersive Engineering Bottling Machine";
         const conversions = [];
         
-        if (!JsonIO.read(filePath).empty) {
+        if (JsonIO.read(filePath)) {
             if (debug) console.log(`File ${filePath} already exists. Skipping generation.`);
             return;
         }
 
-        
+
         event.forEachRecipe({ type: "immersiveengineering:bottling_machine" }, recipe => {
             if (debug) {
                 console.log(`Found Immersive Engineering Bottling Machine recipe: ${recipe.id}`);

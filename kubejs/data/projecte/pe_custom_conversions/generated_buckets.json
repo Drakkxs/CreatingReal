@@ -1,0 +1,3249 @@
+{
+	"groups": {
+		"buckets": {
+			"comment": "Bucket Mappings",
+			"conversions": [
+				{
+					"ingredients": [
+						{
+							"id": "minecraft:water",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "minecraft:water_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "minecraft:lava",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "minecraft:lava_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "exdeorum:witch_water",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "exdeorum:witch_water_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "minecraft:milk",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "minecraft:milk_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "supplementaries:lumisene",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "supplementaries:lumisene_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_aluminum",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_aluminum_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_lead",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_lead_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_nickel",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_nickel_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_osmium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_osmium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_platinum",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_platinum_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_silver",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_silver_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_tin",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_tin_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_uranium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_uranium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_zinc",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_zinc_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_iridium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_iridium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_steel",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_steel_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_invar",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_invar_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_electrum",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_electrum_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_bronze",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_bronze_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_brass",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_brass_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_enderium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_enderium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_lumium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_lumium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_signalum",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_signalum_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_constantan",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_constantan_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_copper",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_copper_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_iron",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_iron_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_gold",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_gold_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "alltheores:molten_netherite",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "alltheores:molten_netherite_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "industrialforegoing:latex",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "industrialforegoing:latex_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "industrialforegoing:meat",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "industrialforegoing:meat_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "industrialforegoing:sewage",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "industrialforegoing:sewage_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "industrialforegoing:essence",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "industrialforegoing:essence_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "industrialforegoing:sludge",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "industrialforegoing:sludge_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "industrialforegoing:pink_slime",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "industrialforegoing:pink_slime_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "industrialforegoing:biofuel",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "industrialforegoing:biofuel_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "industrialforegoing:ether_gas",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "industrialforegoing:ether_gas_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "industrialforegoing:raw_ore_meat",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "industrialforegoing:raw_ore_meat_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "industrialforegoing:fermented_ore_meat",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "industrialforegoing:fermented_ore_meat_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:hydrogen",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:hydrogen_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:oxygen",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:oxygen_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:chlorine",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:chlorine_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:sulfur_dioxide",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:sulfur_dioxide_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:sulfur_trioxide",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:sulfur_trioxide_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:sulfuric_acid",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:sulfuric_acid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:hydrogen_chloride",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:hydrogen_chloride_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:hydrofluoric_acid",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:hydrofluoric_acid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:uranium_oxide",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:uranium_oxide_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:uranium_hexafluoride",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:uranium_hexafluoride_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:ethene",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:ethene_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:sodium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:sodium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:superheated_sodium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:superheated_sodium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:brine",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:brine_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:lithium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:lithium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:steam",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:steam_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:heavy_water",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:heavy_water_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanism:nutritional_paste",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanism:nutritional_paste_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "immersiveengineering:creosote",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:creosote_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "immersiveengineering:plantoil",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:plantoil_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "immersiveengineering:ethanol",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:ethanol_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "immersiveengineering:biodiesel",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:biodiesel_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "immersiveengineering:high_power_biodiesel",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:high_power_biodiesel_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "immersiveengineering:concrete",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:concrete_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "immersiveengineering:herbicide",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:herbicide_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "immersiveengineering:redstone_acid",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:redstone_acid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "immersiveengineering:potion",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:potion_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "immersiveengineering:acetaldehyde",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:acetaldehyde_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "immersiveengineering:phenolic_resin",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "immersiveengineering:phenolic_resin_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "evilcraft:blood",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "evilcraft:bucket_blood",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "evilcraft:poison",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "evilcraft:bucket_poison",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "sophisticatedcore:xp_still",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "sophisticatedcore:xp_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanismgenerators:bioethanol",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanismgenerators:bioethanol_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanismgenerators:deuterium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanismgenerators:deuterium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanismgenerators:fusion_fuel",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanismgenerators:fusion_fuel_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mekanismgenerators:tritium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mekanismgenerators:tritium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "mob_grinding_utils:fluid_xp",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "mob_grinding_utils:fluid_xp_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_quartz_enriched_iron",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_quartz_enriched_iron_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_black_quartz",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_black_quartz_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_iron",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_iron_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_gold",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_gold_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_coal",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_coal_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_copper",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_copper_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_lapis",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_lapis_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_redstone",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_redstone_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_quartz",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_quartz_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_obsidian",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_obsidian_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_diamond",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_diamond_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_emerald",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_emerald_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_glass",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_glass_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_debris",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_debris_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_ender",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_ender_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_glowstone",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_glowstone_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_end_stone",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_end_stone_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_soul",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_soul_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_stone",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_stone_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_blaze",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_blaze_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:chilled_water",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:chilled_water_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:iced_water",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:iced_water_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:super_coolant",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:super_coolant_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_black_brick",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_black_brick_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_experience",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_experience_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_ruby",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_ruby_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_sapphire",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_sapphire_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_peridot",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_peridot_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_tin",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_tin_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_lead",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_lead_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_osmium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_osmium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_uranium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_uranium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_silver",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_silver_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_nickel",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_nickel_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_zinc",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_zinc_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_platinum",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_platinum_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_aluminum",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_aluminum_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_iridium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_iridium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_silicon",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_silicon_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_netherite",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_netherite_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_bronze",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_bronze_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_electrum",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_electrum_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_steel",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_steel_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_invar",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_invar_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_signalum",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_signalum_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_lumium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_lumium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_enderium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_enderium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_brass",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_brass_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_constantan",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_constantan_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_end_steel",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_end_steel_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_soularium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_soularium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_dark_steel",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_dark_steel_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_pulsating_alloy",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_pulsating_alloy_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_conductive_alloy",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_conductive_alloy_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_copper_alloy",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_copper_alloy_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_vibrant_alloy",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_vibrant_alloy_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_energetic_alloy",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_energetic_alloy_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "casting:molten_redstone_alloy",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "casting:molten_redstone_alloy_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "bigreactors:steam",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "bigreactors:steam_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "bigreactors:yellorium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "bigreactors:yellorium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "bigreactors:cyanite",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "bigreactors:cyanite_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "bigreactors:blutonium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "bigreactors:blutonium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "bigreactors:magentite",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "bigreactors:magentite_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "bigreactors:verderium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "bigreactors:verderium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "bigreactors:rossinite",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "bigreactors:rossinite_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "bigreactors:cryomisi",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "bigreactors:cryomisi_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "bigreactors:tangerium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "bigreactors:tangerium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "bigreactors:redfrigium",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "bigreactors:redfrigium_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "productivebees:honey",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "productivebees:honey_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "justdirethings:polymorphic_fluid_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "justdirethings:polymorphic_fluid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "justdirethings:portal_fluid_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "justdirethings:portal_fluid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "justdirethings:time_fluid_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "justdirethings:time_fluid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "justdirethings:unstable_portal_fluid_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "justdirethings:unstable_portal_fluid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "justdirethings:unrefined_t2_fluid_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "justdirethings:unrefined_t2_fluid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "justdirethings:refined_t2_fluid_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "justdirethings:refined_t2_fluid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "justdirethings:unrefined_t3_fluid_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "justdirethings:unrefined_t3_fluid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "justdirethings:refined_t3_fluid_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "justdirethings:refined_t3_fluid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "justdirethings:unrefined_t4_fluid_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "justdirethings:unrefined_t4_fluid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "justdirethings:refined_t4_fluid_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "justdirethings:refined_t4_fluid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "justdirethings:xp_fluid_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "justdirethings:xp_fluid_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "createmechanisms:enderiam",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "createmechanisms:enderiam_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create:honey",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create:honey_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create:chocolate",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create:chocolate_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_mechanical_chicken:chicken_nutrient",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_mechanical_chicken:chicken_nutrient_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:white_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:white_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:orange_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:orange_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:magenta_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:magenta_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:light_blue_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:light_blue_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:yellow_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:yellow_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:lime_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:lime_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:pink_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:pink_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:gray_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:gray_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:light_gray_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:light_gray_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:cyan_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:cyan_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:purple_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:purple_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:blue_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:blue_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:brown_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:brown_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:green_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:green_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:red_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:red_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:black_dye",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:black_dye_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_dragons_plus:dragon_breath",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_dragons_plus:dragon_breath_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "advanced_ae:quantum_infusion_source",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "advanced_ae:quantum_infusion_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "create_enchantment_industry:experience",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "create_enchantment_industry:experience_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "createaddition:seed_oil",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "createaddition:seed_oil_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"id": "createaddition:bioethanol",
+							"amount": 1000,
+							"type": "projecte:fluid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bucket"
+						}
+					],
+					"output": {
+						"id": "createaddition:bioethanol_bucket",
+						"count": 1,
+						"type": "projecte:item"
+					}
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,3075 @@
+{
+	"groups": {
+		"solidifier": {
+			"comment": "BBL Solidifier recipes mapped to ProjectE conversions.",
+			"conversions": [
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "create:copper_nugget"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_enderium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:enderium_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:dust_iron"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_osmium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:osmium_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_nickel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:dust_nickel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1000,
+							"id": "casting:molten_stone",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:stone"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_bronze",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:block_bronze"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_electrum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:electrum_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_uranium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:uranium_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"id": "casting:molten_quartz",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"tag": "c:dusts/quartz",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:dust_gold"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_silver",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:silver_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_tin",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:block_tin"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1000,
+							"id": "casting:molten_glowstone",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:glowstone"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_electrum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:electrum_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_nickel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:ingot_nickel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_invar",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:invar_nugget"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_constantan",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:storage_constantan"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_invar",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:invar_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_peridot",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:peridot_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_debris",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:netherite_scrap"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_lumium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:lumium_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_zinc",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "create:zinc_nugget"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:iron_wire"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_netherite",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:netherite_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_lapis",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:lapis_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:gold_wire"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_redstone",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"tag": "c:storage_blocks/redstone",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_emerald",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:emerald_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1000,
+							"id": "casting:molten_glass",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:glass"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_blaze",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:blaze_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_peridot",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:peridot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_sapphire",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:sapphire_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_osmium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:osmium_plate"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_uranium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:plate_uranium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_platinum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:platinum_plate"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_emerald",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:emerald"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_aluminum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:storage_aluminum"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_zinc",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:zinc_sheet"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_lead",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:lead_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:copper_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:copper_wire"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_brass",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:brass_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_peridot",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:peridot_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_bronze",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:nugget_bronze"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_electrum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:electrum_nugget"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_steel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:dust_steel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_bronze",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createmechanisms:bronze"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_bronze",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:bronze_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 4000,
+							"id": "casting:molten_black_brick",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "casting:multiblock_controller"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_brass",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:brass_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_enderium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:enderium_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "create:iron_sheet"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_aluminum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:stick_aluminum"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_electrum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:dust_electrum"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_tin",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:nugget_tin"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_nickel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:nickel_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_iridium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:iridium_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:dust_copper"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_constantan",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:dust_constantan"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1000,
+							"id": "casting:molten_end_stone",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:end_stone"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_enderium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:enderium_plate"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_constantan",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:plate_constantan"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_steel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:ingot_steel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_lumium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:lumium_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_electrum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:electrum_wire"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_signalum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:signalum_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_silver",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:silver_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_blaze",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:blaze_powder"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_platinum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:platinum_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_diamond",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:diamond"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_electrum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:electrum_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_constantan",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:constantan_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_platinum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:platinum_nugget"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_iridium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:iridium_plate"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_diamond",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"tag": "c:nuggets/diamond",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"id": "casting:molten_black_brick",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "casting:black_brick"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_sapphire",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:sapphire_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_signalum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:signalum_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_diamond",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:diamond_plate"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_netherite",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:netherite_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:gold_nugget"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_zinc",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "create:zinc_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_aluminum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:ingot_aluminum"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_tin",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:dust_tin"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_nickel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:storage_nickel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_steel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:steel_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_netherite",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:netherite_plate"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_brass",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "create:brass_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_netherite",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:nugget_netherite"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_lead",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:dust_lead"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:gold_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_lead",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:wire_lead"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_zinc",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "create:zinc_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_brass",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:brass_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "create:golden_sheet"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_signalum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:signalum_nugget"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_bronze",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:bronze_plate"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_aluminum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:nugget_aluminum"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"id": "casting:molten_ender",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:ender_pearl"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_uranium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:ingot_uranium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_uranium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:dust_uranium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_zinc",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:zinc_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 80,
+							"id": "casting:molten_coal",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:coal"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_osmium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:dust_osmium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_lapis",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:lapis_lazuli"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:gold_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_iridium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:iridium_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_sapphire",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:sapphire"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_lapis",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:dust_lapis_lazuli"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_uranium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:storage_uranium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:copper_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_aluminum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:dust_aluminum"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_platinum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:platinum_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_constantan",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:constantan_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:copper_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_nickel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:nugget_nickel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_signalum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:signalum_plate"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_iridium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:iridium_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 4000,
+							"id": "casting:molten_black_brick",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "casting:multiblock_coolant_tank"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:iron_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_uranium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:nugget_uranium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"id": "casting:molten_silicon",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"tag": "c:silicon",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_enderium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:enderium_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_ruby",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:ruby"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_osmium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:block_osmium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_silver",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:dust_silver"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_brass",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "create:brass_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_electrum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:electrum_sheet"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_steel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:stick_steel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 100,
+							"id": "casting:molten_experience",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:experience_bottle"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_invar",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:invar_plate"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_iridium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:iridium_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_platinum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:platinum_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_lead",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:plate_lead"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_silver",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:nugget_silver"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"id": "casting:molten_glowstone",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:glowstone_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_tin",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:tin_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_bronze",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:bronze_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_electrum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:electrum_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_zinc",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:zinc_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_invar",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:invar_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_constantan",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:ingot_constantan"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_osmium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:ingot_osmium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_silver",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:plate_silver"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_signalum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:signalum_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_netherite",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:dust_netherite"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_steel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:plate_steel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_tin",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:tin_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_enderium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:enderium_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_emerald",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"tag": "c:nuggets/emerald",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_diamond",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "industrialforegoing:diamond_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_netherite",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:stick_netherite"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_diamond",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:diamond_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_aluminum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:wire_aluminum"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_constantan",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:nugget_constantan"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1000,
+							"id": "casting:molten_quartz",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:quartz_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_emerald",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:dust_emerald"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_uranium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:uranium_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_tin",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:ingot_tin"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_lumium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:lumium_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_zinc",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:zinc_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_lumium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:lumium_plate"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_aluminum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:plate_aluminum"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:iron_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_steel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:storage_steel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:iron_nugget"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_redstone",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"tag": "c:dusts/redstone",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:copper_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_osmium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:osmium_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1000,
+							"id": "casting:molten_obsidian",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:obsidian"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_ruby",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:ruby_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 250,
+							"id": "casting:molten_quartz",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:quartz"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 4000,
+							"id": "casting:molten_black_brick",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "casting:multiblock_fuel_tank"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1000,
+							"id": "casting:molten_soul",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"tag": "minecraft:soul_fire_base_blocks",
+						"type": "projecte:item"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_aluminum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:aluminum_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "industrialforegoing:iron_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_lead",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:nugget_lead"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_brass",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "create:brass_sheet"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_platinum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:platinum_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 4000,
+							"id": "casting:molten_black_brick",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "casting:multiblock_mixer"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_lead",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:lead_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:gold_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_tin",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:tin_plate"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 720,
+							"id": "casting:molten_coal",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:coal_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_iridium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:iridium_nugget"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_silver",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:storage_silver"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 4000,
+							"id": "casting:molten_black_brick",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "casting:multiblock_solidifier"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 4000,
+							"id": "casting:molten_black_brick",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "casting:multiblock_valve"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "industrialforegoing:gold_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_lead",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:storage_lead"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_lumium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:lumium_nugget"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_invar",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:invar_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_platinum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:platinum_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_nickel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:plate_nickel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_steel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:nugget_steel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_brass",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "create:brass_nugget"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_osmium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:nugget_osmium"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_steel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:wire_steel"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_invar",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:invar_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_diamond",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:diamond_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_invar",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:invar_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_netherite",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:netherite_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_lumium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:lumium_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_signalum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:signalum_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_lead",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:ingot_lead"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_bronze",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "mekanism:dust_bronze"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 1000,
+							"id": "casting:molten_black_brick",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "casting:black_bricks"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_nickel",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:nickel_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_iridium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:iridium_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_enderium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:enderium_gear"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_diamond",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "createaddition:diamond_grit"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_silver",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "immersiveengineering:ingot_silver"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_ruby",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:ruby_dust"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "create:copper_sheet"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_signalum",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:signalum_ingot"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 810,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "minecraft:iron_block"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 45,
+							"id": "casting:molten_lumium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:lumium_rod"
+					}
+				},
+				{
+					"ingredients": [
+						{
+							"amount": 10,
+							"id": "casting:molten_enderium",
+							"type": "projecte:fluid"
+						}
+					],
+					"output": {
+						"count": 1,
+						"type": "projecte:item",
+						"id": "alltheores:enderium_nugget"
+					}
+				}
+			]
+		}
+	}
+}
