@@ -46,28 +46,28 @@
      * @param {string} str
      * @param {string} oldKey 
      * @param {string} newKey 
-     * @returns {Object}
+     * @returns
      */
     function transposeKey(str, oldKey, newKey) {
         if (debug) console.log(`Transposing key ${oldKey} to ${newKey} in ${str}`);
         let obj = JsonUtils.toObject(JsonUtils.fromString(str));
         if (!(oldKey in obj)) {
             if (debug) console.log(`Key ${oldKey} not found in object.`);
-            return obj;
+            return JsonUtils.fromString(JsonUtils.toString(obj)).asJsonObject;
         }
         if (debug) console.log(`Parsed object: ${JsonUtils.toString(obj)}`);
         obj[newKey] = obj[oldKey];
         delete obj[oldKey];
         let mappedObject = obj
         if (debug) console.log(`Transposed object: ${JsonUtils.toString(mappedObject)}`);
-        return mappedObject;
+        return JsonUtils.fromString(JsonUtils.toString(mappedObject)).asJsonObject;
     }
 
     /**
      * This function flattens a key in an object.
      * @param {string} str 
      * @param {string} key
-     * @return {Object}
+     * @return
      */
     function flattenKey(str, key) {
         if (debug) console.log(`Flattening key ${key} in ${str}`);
@@ -82,14 +82,14 @@
         }
         delete obj[key];
         if (debug) console.log(`Flattened object: ${JsonUtils.toString(obj)}`);
-        return obj;
+        return JsonUtils.fromString(JsonUtils.toString(obj)).asJsonObject;
     }
 
     ServerEvents.recipes(event => {
         const name = "bottler";
         const comment = "Immersive Engineering Bottling Machine";
         const conversions = [];
-        
+
         if (JsonIO.read(filePath)) {
             if (debug) console.log(`File ${filePath} already exists. Skipping generation.`);
             return;
@@ -159,22 +159,27 @@
                 if (!result.isJsonObject()) return;
                 let resultObj = result.asJsonObject;
                 let isfluid = resultObj.get("amount")
+
+                // Take out nested "basePredicate" if exists
+                resultObj = flattenKey(JsonUtils.toString(resultObj), "basePredicate");
+
                 if (isfluid) {
                     resultObj.add("type", "projecte:fluid");
-                    // Take out nested "basePredicate" if exists
-                    resultObj = flattenKey(JsonUtils.toString(resultObj), "basePredicate");
                     // Change "fluid" key to "id"
                     resultObj = transposeKey(JsonUtils.toString(resultObj), "fluid", "id");
                     // Change "fluid_tag" key to "tag"
                     resultObj = transposeKey(JsonUtils.toString(resultObj), "fluid_tag", "tag");
                 } else {
                     resultObj.add("type", "projecte:item");
-                    // Take out nested "basePredicate" if exists
-                    resultObj = flattenKey(JsonUtils.toString(resultObj), "basePredicate");
                     // Change "item" key to "id"
                     resultObj = transposeKey(JsonUtils.toString(resultObj), "item", "id");
                 }
-                
+
+                // Sometimes ID is nested in a ID object after item transpose
+                if (resultObj.get("id") && !(resultObj.get("id").isJsonPrimitive())) {
+                    resultObj = flattenKey(JsonUtils.toString(resultObj), "id");
+                }
+
                 output.push(JsonUtils.toObject(resultObj));
             });
 

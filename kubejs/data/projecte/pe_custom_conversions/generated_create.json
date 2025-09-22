@@ -92,10 +92,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:moss_block"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -182,10 +179,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:prismarine_bricks"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -225,10 +219,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:wither_rose"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -245,10 +236,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:honeycomb_block"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -319,10 +307,7 @@
 					"output": {
 						"chance": 0.1,
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:ghast_tear"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -380,10 +365,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:sea_lantern"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -418,10 +400,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:basalt"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -490,10 +469,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:dark_prismarine"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -621,10 +597,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:player_head"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -682,10 +655,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:zombie_head"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -737,10 +707,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:prismarine"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -757,10 +724,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:tinted_glass"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -783,10 +747,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:player_head"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -879,10 +840,7 @@
 					"output": {
 						"chance": 0.05,
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:breeze_rod"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -970,10 +928,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:wet_sponge"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -1122,10 +1077,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:mycelium"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -1249,10 +1201,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:ink_sac"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -1292,10 +1241,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:wither_skeleton_skull"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -1318,10 +1264,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:podzol"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -1443,10 +1386,7 @@
 					"output": {
 						"chance": 0.05,
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:blaze_rod"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -1463,10 +1403,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:warped_wart_block"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -1500,10 +1437,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:magma_block"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -1520,10 +1454,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:nether_wart_block"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{
@@ -1720,10 +1651,7 @@
 					],
 					"output": {
 						"count": 1,
-						"type": "projecte:item",
-						"id": {
-							"id": "minecraft:honey_block"
-						}
+						"type": "projecte:item"
 					}
 				},
 				{

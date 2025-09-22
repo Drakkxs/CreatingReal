@@ -25,21 +25,21 @@
      * @param {string} str
      * @param {string} oldKey 
      * @param {string} newKey 
-     * @returns {Object}
+     * @returns
      */
     function transposeKey(str, oldKey, newKey) {
         if (debug) console.log(`Transposing key ${oldKey} to ${newKey} in ${str}`);
         let obj = JsonUtils.toObject(JsonUtils.fromString(str));
         if (!(oldKey in obj)) {
             if (debug) console.log(`Key ${oldKey} not found in object.`);
-            return obj;
+            return JsonUtils.fromString(JsonUtils.toString(obj)).asJsonObject;
         }
         if (debug) console.log(`Parsed object: ${JsonUtils.toString(obj)}`);
         obj[newKey] = obj[oldKey];
         delete obj[oldKey];
         let mappedObject = obj
         if (debug) console.log(`Transposed object: ${JsonUtils.toString(mappedObject)}`);
-        return mappedObject;
+        return JsonUtils.fromString(JsonUtils.toString(mappedObject)).asJsonObject;
     }
 
     /**
@@ -121,9 +121,9 @@
         if (!sieveBlk) return "noblock"; // No block, not active
         const sieveNBT = sieveBlk.entityData;
         const mesh = sieveNBT.getCompound("mesh");
-        const meshItem = Item.of(transposeKey(JsonUtils.toString(NBT.toJson(mesh)), "id", "item"));
+        const meshItem = Item.of(JsonUtils.toObject(transposeKey(JsonUtils.toString(NBT.toJson(mesh)), "id", "item")));
         const contents = sieveNBT.getCompound("contents");
-        const contentsItem = Item.of(transposeKey(JsonUtils.toString(NBT.toJson(contents)), "id", "item"));
+        const contentsItem = Item.of(JsonUtils.toObject(transposeKey(JsonUtils.toString(NBT.toJson(contents)), "id", "item")));
 
         // Check if the sieve has input and a mesh
         if (contentsItem.empty) return "noinput"; // Input slot empty, not active
