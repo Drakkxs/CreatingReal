@@ -1,7 +1,7 @@
 // priority: -20
 // requires: projecte
 // @ts-check
-// Automatically map recipes to ProjectE conversions.
+// Automatically map Bucket recipes to ProjectE conversions.
 
 // Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {

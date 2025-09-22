@@ -2,7 +2,7 @@
 // requires: projecte
 // requires: casting
 // @ts-check
-// Automatically map recipes to ProjectE conversions.
+// Automatically map Solidifier recipes to ProjectE conversions.
 
 // Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {

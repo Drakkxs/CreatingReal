@@ -2,7 +2,7 @@
 // requires: projecte
 // requires: immersiveengineering
 // @ts-check
-// Automatically map recipes to ProjectE conversions.
+// Automatically map Bottling Machine recipes to ProjectE conversions.
 
 // Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
