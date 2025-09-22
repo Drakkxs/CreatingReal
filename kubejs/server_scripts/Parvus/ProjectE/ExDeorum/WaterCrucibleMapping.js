@@ -207,15 +207,6 @@
                 output.push(JsonUtils.toObject(resultObj));
             });
 
-            // Feed EMC into the conversion
-            if (ingredients.length) {
-                ingredients.push({
-                    type: "projecte:fake",
-                    amount: 64,
-                    description: "single_emc"
-                });
-            }
-
             let conversion = {
                 "ingredients": ingredients,
                 "output": output.find(o => o) // ProjectE only supports single output
