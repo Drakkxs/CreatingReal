@@ -6,7 +6,7 @@
 
 // Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
-    let debug = true; // Want some debug?
+    let debug = false; // Want some debug?
     const filePath = 'kubejs/data/projecte/pe_custom_conversions/generated_spout.json';
 
     /**
