@@ -248,6 +248,12 @@
                 throw new Error(`Invalid conversion generated from recipe ${recipe.id}: ${JsonUtils.toPrettyString(conversion)}`);
             }
 
+            // Gracefully ignore recipes with chanced outputs. ProjectE does this normally.
+            if (conversion.output.chance && conversion.output.chance < 1) {
+                if (debug) console.log(`Ignoring chanced output from recipe ${recipe.id}: ${JsonUtils.toPrettyString(conversion)}`);
+                return;
+            }
+
             if (debug) {
                 console.log(`Conversion: ${JsonUtils.toPrettyString(conversion)}`); // Debug output
             }
