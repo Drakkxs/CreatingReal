@@ -1,7 +1,7 @@
 {
   "groups": {
-    "farming": {
-      "comment": "Basic Farming Conversions",
+    "inworldinteractions": {
+      "comment": "Basic Inworld Interactions",
       "conversions": [
         {
           "ingredients": [
@@ -29,13 +29,16 @@
     "before": [
       {
         "type": "projecte:item",
-        "emc_value": 64,
+        "emc_value": 8,
         "tag": "c:cobblestones"
       },
       {
         "type": "projecte:item",
-        "emc_value": 64,
+        "emc_value": 8,
         "tag": "c:dirt"
+      },
+      {
+        
       }
     ]
   }

@@ -6,7 +6,7 @@
 
 // Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
-    let debug = false; // Want some debug?
+    let debug = true; // Want some debug?
     const filePath = 'kubejs/data/projecte/pe_custom_conversions/generated_solidifier.json';
 
     /**
@@ -122,9 +122,37 @@
                 json.get("output"), json.get("outputs")
             ));
 
+            // Only certain molds are allowed as rawIngredients
+            let rawMold = JsonUtils.of([].concat(
+                json.get("mold"), json.get("molds")
+            ))
+
             // Default to empty arrays if null
             let rawInputs = JsonUtils.of([]).asJsonArray;
             let rawFluids = JsonUtils.of([]).asJsonArray;
+            if (rawMold.isJsonArray()) {
+                let moldArray = rawMold.asJsonArray;
+                moldArray.forEach(mold => {
+                    if (!mold.isJsonObject()) return;
+                    let moldObj = mold.asJsonObject;
+                    let isfluid = moldObj.get("amount")
+                    if (isfluid) {
+                        if (!rawIngredients.isJsonArray()) return;
+                        let fluidList = rawIngredients.asJsonArray.asList();
+                        fluidList.add(mold);
+                        rawIngredients = JsonUtils.of(fluidList);
+                    } else {
+                        if (!rawIngredients.isJsonArray()) return;
+                        let itemList = rawIngredients.asJsonArray.asList();
+
+                        // Ignore mold items as they are not consumed
+                        if (JsonUtils.toString(mold).match(/(\bc:molds\b)/)) return;
+
+                        itemList.add(mold);
+                        rawIngredients = JsonUtils.of(itemList);
+                    }
+                });
+            }
 
             // Resolve ingredients into item and fluid lists
             if (!rawIngredients.isJsonArray()) return;

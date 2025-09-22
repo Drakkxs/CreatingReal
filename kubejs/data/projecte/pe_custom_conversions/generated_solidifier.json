@@ -695,6 +695,11 @@
 							"amount": 4000,
 							"id": "casting:molten_black_brick",
 							"type": "projecte:fluid"
+						},
+						{
+							"count": 1,
+							"type": "projecte:item",
+							"id": "casting:controller"
 						}
 					],
 					"output": {
@@ -1675,6 +1680,11 @@
 							"amount": 4000,
 							"id": "casting:molten_black_brick",
 							"type": "projecte:fluid"
+						},
+						{
+							"count": 1,
+							"type": "projecte:item",
+							"id": "minecraft:glass"
 						}
 					],
 					"output": {
@@ -1829,6 +1839,11 @@
 							"amount": 100,
 							"id": "casting:molten_experience",
 							"type": "projecte:fluid"
+						},
+						{
+							"count": 1,
+							"type": "projecte:item",
+							"id": "minecraft:glass_bottle"
 						}
 					],
 					"output": {
@@ -2431,6 +2446,11 @@
 							"amount": 4000,
 							"id": "casting:molten_black_brick",
 							"type": "projecte:fluid"
+						},
+						{
+							"count": 1,
+							"type": "projecte:item",
+							"id": "casting:tank"
 						}
 					],
 					"output": {
@@ -2529,6 +2549,11 @@
 							"amount": 4000,
 							"id": "casting:molten_black_brick",
 							"type": "projecte:fluid"
+						},
+						{
+							"count": 1,
+							"type": "projecte:item",
+							"id": "casting:mixer"
 						}
 					],
 					"output": {
@@ -2627,6 +2652,11 @@
 							"amount": 4000,
 							"id": "casting:molten_black_brick",
 							"type": "projecte:fluid"
+						},
+						{
+							"count": 1,
+							"type": "projecte:item",
+							"id": "casting:solidifier"
 						}
 					],
 					"output": {
@@ -2641,6 +2671,11 @@
 							"amount": 4000,
 							"id": "casting:molten_black_brick",
 							"type": "projecte:fluid"
+						},
+						{
+							"count": 1,
+							"type": "projecte:item",
+							"id": "casting:multiblock_fuel_tank"
 						}
 					],
 					"output": {
