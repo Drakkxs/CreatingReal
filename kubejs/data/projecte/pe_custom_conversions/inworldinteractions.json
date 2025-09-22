@@ -36,6 +36,16 @@
         "type": "projecte:item",
         "emc_value": 8,
         "tag": "c:dirt"
+      },
+      {
+        "type": "projecte:fluid",
+        "emc_value": 8,
+        "id": "minecraft:water"
+      },
+      {
+        "type": "projecte:fluid",
+        "emc_value": 8,
+        "id": "minecraft:lava"
       }
     ]
   }
