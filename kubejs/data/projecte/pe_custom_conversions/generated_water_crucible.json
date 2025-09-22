@@ -8,11 +8,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:spore_blossom"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -34,11 +29,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:carrot"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -52,11 +42,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:beetroot"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -70,11 +55,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:sea_pickle"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -88,11 +68,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:vine"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -106,11 +81,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:moss_block"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -124,11 +94,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:melon"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -142,11 +107,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:potato"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -160,11 +120,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:lily_pad"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -178,11 +133,6 @@
 						{
 							"tag": "c:mushrooms",
 							"type": "projecte:item"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -196,11 +146,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:moss_carpet"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -214,11 +159,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:apple"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -232,11 +172,6 @@
 						{
 							"tag": "c:seeds",
 							"type": "projecte:item"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -250,11 +185,6 @@
 						{
 							"tag": "minecraft:small_flowers",
 							"type": "projecte:item"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -268,11 +198,6 @@
 						{
 							"tag": "minecraft:leaves",
 							"type": "projecte:item"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -286,11 +211,6 @@
 						{
 							"tag": "minecraft:tall_flowers",
 							"type": "projecte:item"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -304,11 +224,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:pumpkin"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -322,11 +237,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:cactus"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -340,11 +250,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:grass_block"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -366,11 +271,6 @@
 						{
 							"tag": "minecraft:saplings",
 							"type": "projecte:item"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -384,11 +284,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:melon_slice"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -410,11 +305,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:seagrass"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {
@@ -428,11 +318,6 @@
 						{
 							"type": "projecte:item",
 							"id": "minecraft:sugar_cane"
-						},
-						{
-							"type": "projecte:fake",
-							"amount": 64,
-							"description": "single_emc"
 						}
 					],
 					"output": {

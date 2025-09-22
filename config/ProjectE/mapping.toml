@@ -226,7 +226,7 @@ logFoundExploits = false
 		#ProjectE-Integration Recipe Mapper for Immersive Engineering Alloy Mapper. Required Mods: [immersiveengineering]
 		[mappers.Crafting-Mapper.ImmersiveEngineeringAlloyMapper]
 			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = false
+			enabled = true
 
 		#ProjectE-Integration Recipe Mapper for Farming For Blockheads Market Mapper. Required Mods: [farmingforblockheads]
 		[mappers.Crafting-Mapper.FarmingForBlockheadsMarketMapper]

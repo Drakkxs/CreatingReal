@@ -74,14 +74,10 @@
         if (debug) console.log(`Flattening key ${key} in ${str}`);
         let obj = JsonUtils.toObject(JsonUtils.fromString(str));
         let nested = obj[key];
-        if (typeof nested === "string") {
-            nested = JsonUtils.toObject(JsonUtils.fromString(nested));
-        }
-        // Merge properties
-        for (const prop in nested) {
-            obj[prop] = nested[prop];
-        }
+        if (!nested) return JsonUtils.fromString(JsonUtils.toString(obj)).asJsonObject;
+        // Remove the key and merge its contents into the parent object
         delete obj[key];
+        Object.assign(obj, nested);
         if (debug) console.log(`Flattened object: ${JsonUtils.toString(obj)}`);
         return JsonUtils.fromString(JsonUtils.toString(obj)).asJsonObject;
     }
@@ -231,7 +227,12 @@
                 "output": output.find(o => o) // ProjectE only supports single output
             };
 
-            if (Object.keys(conversion).map(k => conversion[k]).some(v => !v)) {
+            if (
+                // No keys are null/undefined
+                (Object.keys(conversion).map(k => conversion[k]).some(v => !v))
+                // Output must have id or tag
+                || (!conversion.output.id && !conversion.output.tag)
+            ) {
                 throw new Error(`Invalid conversion generated from recipe ${recipe.id}: ${JsonUtils.toPrettyString(conversion)}`);
             }
 
