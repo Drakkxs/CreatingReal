@@ -5,13 +5,13 @@
     "create_sa",
     "createaddition",
     "createmechanisms",
+    "casting",
     "exdeorum",
     "farmersdelight",
     "immersiveengineering",
     "industrialforegoing",
     "mekanism",
     "supplementaries",
-
     "alltheores",
     "moremekanismprocessing"
   ],
@@ -40,14 +40,12 @@
     "c:wires/{material}",
     "c:fuels/bio",
     "almostunified:straws",
-
     "c:crystals/{material}",
     "c:shards/{material}",
     "c:clumps/{material}",
     "c:dirty_dusts/{material}"
   ],
-  "ignored_tags": [
-  ],
+  "ignored_tags": [],
   "ignored_items": [],
   "ignored_recipe_types": [
     "cucumber:shaped_tag"
