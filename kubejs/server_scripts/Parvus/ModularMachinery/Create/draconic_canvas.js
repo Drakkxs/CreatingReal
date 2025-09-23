@@ -727,7 +727,7 @@
                                             return Ingredient.of(`${final}`)
                                         });
                                     if (debug) console.log(`Converting dye ingredient ${ing.toJson()} to bucket: ${fs.map(f => f.toJson()).join(", ")}`)
-                                    return fs.find(v => v)
+                                    return fs.find(v => v && !v.empty); // Return the first valid ingredient
                                 }
                             }).find(v => v)
 
@@ -738,7 +738,6 @@
                             Excluded: ${catalyst.recipeIngs.map(i => i.toJson()).join(", ")}
                             DyePresent: ${catalyst.dyeIngs.map(i => i.toJson()).join(", ")}`)
 
-                            if (debug) console.log(`\n`)
                             // Add the recipe to the inspectorRecipes map
                             this.inspectorRecipes.set(`${recipe.path}`, {
                                 recipe: recipe,
@@ -752,6 +751,7 @@
                                 // @ts-expect-error $Ingredient$$Type != $Ingredient inside the object
                                 catalyst: catalyst
                             })
+                            if (debug) console.log(`Catalyst: ${JsonUtils.toPrettyString(this.inspectorRecipes.get(`${recipe.path}`))}`)
                             return true;
                         },
                         gateItem: "createmechanisms:rubber_mechanism"
