@@ -258,6 +258,7 @@
                 console.log(`Conversion: ${JsonUtils.toPrettyString(conversion)}`); // Debug output
             }
             conversions.push(conversion);
+
         });
 
         if (!conversions.length) {
