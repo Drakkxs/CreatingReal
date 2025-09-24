@@ -233,7 +233,7 @@
                 // If either aren't ingredients, skip
                 if (!outIng || !inIngs.length) return true;
                 if (debug) console.log(`Output as Ingredient: ${JsonUtils.toString(outIng)}, Inputs as Ingredients: ${JsonUtils.toString(inIngs)}`);
-                return inIngs.some(i => outIng.test(i));
+                return inIngs.some(i => !(Object.is(outIng, i)));
             });
 
             let conversion = {
