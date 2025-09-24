@@ -300,25 +300,6 @@
 					"ingredients": [
 						{
 							"type": "projecte:fluid",
-							"amount": 100,
-							"id": "minecraft:water"
-						},
-						{
-							"type": "projecte:item",
-							"id": "minecraft:fire_charge"
-						}
-					],
-					"output": {
-						"chance": 0.1,
-						"count": 1,
-						"type": "projecte:item",
-						"id": "minecraft:ghast_tear"
-					}
-				},
-				{
-					"ingredients": [
-						{
-							"type": "projecte:fluid",
 							"amount": 150,
 							"tag": "c:hydrogen_chloride"
 						},
@@ -830,31 +811,6 @@
 					"output": {
 						"id": "minecraft:experience_bottle",
 						"type": "projecte:item"
-					}
-				},
-				{
-					"ingredients": [
-						{
-							"type": "projecte:fluid",
-							"amount": 100,
-							"components": {
-								"create:potion_fluid_bottle_type": "regular",
-								"minecraft:potion_contents": {
-									"potion": "minecraft:swiftness"
-								}
-							},
-							"id": "create:potion"
-						},
-						{
-							"type": "projecte:item",
-							"id": "minecraft:stick"
-						}
-					],
-					"output": {
-						"chance": 0.05,
-						"count": 1,
-						"type": "projecte:item",
-						"id": "minecraft:breeze_rod"
 					}
 				},
 				{
@@ -1388,25 +1344,6 @@
 						"id": "alltheores:nickel_shard",
 						"count": 4,
 						"type": "projecte:item"
-					}
-				},
-				{
-					"ingredients": [
-						{
-							"type": "projecte:fluid",
-							"amount": 100,
-							"id": "minecraft:lava"
-						},
-						{
-							"type": "projecte:item",
-							"id": "minecraft:stick"
-						}
-					],
-					"output": {
-						"chance": 0.05,
-						"count": 1,
-						"type": "projecte:item",
-						"id": "minecraft:blaze_rod"
 					}
 				},
 				{

@@ -1,0 +1,2579 @@
+{
+	"groups": {
+		"cloche": {
+			"comment": "Cloche recipes automatically mapped from Botany Pots recipes.",
+			"conversions": [
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:yellow_log"
+						},						{
+							"count": 1,
+							"id": "colors:yellow_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:yellow_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:blue_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:blue_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:blue_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:white_tulip"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:white_tulip"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:peony"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:peony"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:brown_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:brown_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "farmersdelight:onion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "farmersdelight:onion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:jungle_logs",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:vine"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:vine"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:cornflower"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:cornflower"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "minecraft:warped_stem"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:warped_fungus"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:pink_tulip"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:pink_tulip"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "farmersdelight:cabbage"
+						},
+						{
+							"type": "projecte:item",
+							"id": "farmersdelight:cabbage_seeds"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:lily_of_the_valley"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:lily_of_the_valley"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:purple_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:purple_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:light_blue_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:light_blue_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:light_blue_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:jungle_logs",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:cocoa_beans",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:cocoa_beans"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:purple_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:purple_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "minecraft:dark_oak_log"
+						},
+						{
+							"count": 2,
+							"id": "minecraft:dark_oak_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:dark_oak_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:blue_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:blue_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "minecraft:cherry_log"
+						},
+						{
+							"count": 2,
+							"id": "minecraft:cherry_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:cherry_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "minecraft:acacia_log"
+						},
+						{
+							"count": 2,
+							"id": "minecraft:acacia_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:acacia_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:soul_sand"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:nether_wart"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:nether_wart"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "c:buckets/water",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:seagrass"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:seagrass"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 2,
+							"id": "minecraft:warped_stem",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:warped_fungus"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:cyan_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:cyan_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:cyan_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:pink_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:pink_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "c:buckets/water",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:kelp"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:kelp"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:red_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:red_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:sweet_berries"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:sweet_berries"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:gray_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:gray_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "farmersdelight:tomato"
+						},
+						{
+							"type": "projecte:item",
+							"id": "farmersdelight:tomato_seeds"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:potato"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:potato"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:black_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:black_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:sand",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:cactus",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:cactus"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:brown_mushroom"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:brown_mushroom"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:blue_orchid"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:blue_orchid"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 2,
+							"id": "minecraft:cherry_log",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:cherry_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "immersiveengineering:hemp_fiber"
+						},
+						{
+							"type": "projecte:item",
+							"id": "immersiveengineering:seed"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:allium"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:allium"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:gray_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:gray_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:gray_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:lilac"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:lilac"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:white_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:white_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:wheat"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:wheat_seeds"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:end_stone"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:chorus_fruit"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:chorus_fruit"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 2,
+							"id": "minecraft:birch_log",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:birch_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:red_tulip"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:red_tulip"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:sugar_cane",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:sugar_cane"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:wheat",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:wheat_seeds"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:red_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:red_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:jungle_logs",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:vine",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:vine"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:green_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:green_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:azure_bluet"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:azure_bluet"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:jungle_logs",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:cocoa_beans"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:cocoa_beans"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:gray_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:gray_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:green_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:green_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:green_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:light_gray_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:light_gray_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:magenta_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:magenta_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "minecraft:birch_log"
+						},
+						{
+							"count": 2,
+							"id": "minecraft:birch_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:birch_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:yellow_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:yellow_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:oxeye_daisy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:oxeye_daisy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:pink_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:pink_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:pink_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:yellow_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:yellow_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:blue_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:blue_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:sugar_cane"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:sugar_cane"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "minecraft:mangrove_log"
+						},
+						{
+							"count": 2,
+							"id": "minecraft:mangrove_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:mangrove_propagule"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:white_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:white_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:light_blue_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:light_blue_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "minecraft:jungle_log"
+						},
+						{
+							"count": 2,
+							"id": "minecraft:jungle_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:jungle_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:red_mushroom"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:red_mushroom"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:orange_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:orange_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:white_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:white_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:white_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "c:buckets/water",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:lily_pad"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:lily_pad"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "minecraft:oak_log"
+						},
+						{
+							"count": 2,
+							"id": "minecraft:oak_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:oak_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:carrot",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:carrot"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:pumpkin"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:pumpkin_seeds"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:beetroot"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:beetroot_seeds"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "c:buckets/water",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:sea_pickle"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:sea_pickle"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:short_grass"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:short_grass"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 2,
+							"id": "minecraft:spruce_log",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:spruce_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:melon",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:melon_seeds"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:pink_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:pink_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:red_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:red_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:red_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:orange_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:orange_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 2,
+							"id": "minecraft:mangrove_log",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:mangrove_propagule"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:light_gray_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:light_gray_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "farmersdelight:rice_panicle"
+						},
+						{
+							"type": "projecte:item",
+							"id": "farmersdelight:rice"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 2,
+							"id": "minecraft:oak_log",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:oak_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:beetroot",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:beetroot_seeds"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:carrot"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:carrot"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:sunflower"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:sunflower"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:lime_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:lime_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:lime_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:lime_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:cyan_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:cyan_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:orange_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:orange_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:orange_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:black_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:black_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:light_blue_dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:light_blue_dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:magenta_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:magenta_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:magenta_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:brown_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:brown_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:brown_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 2,
+							"id": "minecraft:jungle_log",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:jungle_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:magenta_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:magenta_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:fern"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:fern"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:brown_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:brown_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:rose_bush"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:rose_bush"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:orange_tulip"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:orange_tulip"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "c:stones",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:glow_lichen",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:glow_lichen"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 2,
+							"id": "minecraft:crimson_stem",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:crimson_fungus"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "minecraft:spruce_log"
+						},
+						{
+							"count": 2,
+							"id": "minecraft:spruce_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:spruce_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:sand",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:cactus"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:cactus"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:spore_blossom"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:spore_blossom"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 2,
+							"id": "minecraft:acacia_log",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:acacia_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:wither_rose"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:wither_rose"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:pink_petals"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:pink_petals"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:lime_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:lime_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:lime_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:black_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:black_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:black_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:brown_mushroom",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:brown_mushroom"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:purple_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:purple_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:purple_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:green_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:green_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "colors:light_gray_log"
+						},
+						{
+							"count": 1,
+							"id": "colors:light_gray_leaves",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:light_gray_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:potato",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:potato"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:dandelion"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:dandelion"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:red_mushroom",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:red_mushroom"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:pumpkin",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:pumpkin_seeds"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "colors:cyan_poppy"
+						},
+						{
+							"type": "projecte:item",
+							"id": "colors:cyan_poppy"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 1,
+							"id": "minecraft:bamboo",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bamboo"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:bamboo"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:bamboo"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "c:stones",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:glow_lichen"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:glow_lichen"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"count": 2,
+							"id": "minecraft:dark_oak_log",
+							"type": "projecte:item"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:dark_oak_sapling"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 2,
+							"id": "minecraft:crimson_stem"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:crimson_fungus"
+						}
+					]
+				},
+				{
+					"ingredients": [
+						{
+							"tag": "minecraft:dirt",
+							"type": "projecte:item"
+						}
+					],
+					"output": [
+						{
+							"type": "projecte:item",
+							"count": 1,
+							"id": "minecraft:melon"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:melon_seeds"
+						}
+					]
+				}
+			]
+		}
+	}
+}

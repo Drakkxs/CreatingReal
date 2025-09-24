@@ -17,7 +17,16 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:short_grass"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:tall_grass"
+						}
+					],
 					"output": {
 						"amount": 100,
 						"id": "minecraft:water",
@@ -259,7 +268,16 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "minecraft:sweet_berries"
+						},
+						{
+							"type": "projecte:item",
+							"id": "minecraft:glow_berries"
+						}
+					],
 					"output": {
 						"amount": 50,
 						"id": "minecraft:water",
@@ -293,7 +311,24 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"type": "projecte:item",
+							"id": "exdeorum:grass_seeds"
+						},
+						{
+							"type": "projecte:item",
+							"id": "exdeorum:mycelium_spores"
+						},
+						{
+							"type": "projecte:item",
+							"id": "exdeorum:warped_nylium_spores"
+						},
+						{
+							"type": "projecte:item",
+							"id": "exdeorum:crimson_nylium_spores"
+						}
+					],
 					"output": {
 						"amount": 50,
 						"id": "minecraft:water",

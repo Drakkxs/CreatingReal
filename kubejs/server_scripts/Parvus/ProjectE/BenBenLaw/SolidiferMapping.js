@@ -150,9 +150,30 @@
                 });
             }
 
+            /**
+             * Flattens a JsonArray by one level.
+             * @param {import("com.google.gson.JsonArray").$JsonArray} jsonArray
+             * @returns
+             */
+            function flattenArray(jsonArray) {
+                let flat = [];
+                jsonArray.forEach(e => {
+                    let json = JsonUtils.of(e);
+                    if (json && json.jsonNull) return;
+                    if (e && e.isJsonArray()) {
+                        flat = flat.concat(e.asJsonArray.asList().toArray());
+                    } else if (e != null) {
+                        flat.push(e);
+                    }
+                });
+                if (debug) console.log(`Flattened Array: ${flat}`)
+                jsonArray = JsonUtils.of(flat).asJsonArray;
+                return jsonArray;
+            }
+
             // Resolve ingredients into item and fluid lists
             if (!rawIngredients.isJsonArray()) return;
-            let ingredientsArray = rawIngredients.asJsonArray;
+            let ingredientsArray = flattenArray(rawIngredients.asJsonArray);
             ingredientsArray.forEach(ing => {
                 if (!ing.isJsonObject()) return;
                 let ingObj = ing.asJsonObject;
@@ -201,7 +222,7 @@
 
             // Resolve output items and fluids
             if (!rawResults.isJsonArray()) return;
-            let resultsArray = rawResults.asJsonArray;
+            let resultsArray = flattenArray(rawResults.asJsonArray);
             resultsArray.forEach(result => {
                 if (!result.isJsonObject()) return;
                 let resultObj = result.asJsonObject;
@@ -231,23 +252,19 @@
             });
 
             let conversion = {
-                "ingredients": ingredients,
-                "output": output.find(o => o) // ProjectE only supports single output
+                "ingredients": ingredients
+                    // Filter out invalid ingredients
+                    .filter(i => (i.id || i.tag) || (i.type == "projecte:fake")),
+                "output": output
+                    // Filter out chanced outputs. Allow those without a chance tag.
+                    .filter(o => (!o.chance || o.chance >= 1) && (o.id || o.tag))
+                    .find(o => o.id || o.tag)
             };
 
             if (
-                // No keys are null/undefined
-                (Object.keys(conversion).map(k => conversion[k]).some(v => !v))
-                // Output must have id or tag
-                || (!conversion.output.id && !conversion.output.tag)
+                (!conversion.ingredients || !conversion.ingredients.length) || (!conversion.output || !Object.keys(conversion.output).length)
             ) {
-                throw new Error(`Invalid conversion generated from recipe ${recipe.id}: ${JsonUtils.toPrettyString(conversion)}`);
-            }
-
-            // Gracefully ignore recipes with chanced outputs. ProjectE does this normally.
-            if (conversion.output.chance && conversion.output.chance < 1) {
-                if (debug) console.log(`Ignoring chanced output from recipe ${recipe.id}: ${JsonUtils.toPrettyString(conversion)}`);
-                return;
+                throw new Error(`Invalid conversion generated from recipe: ${JsonUtils.toPrettyString(recipe.json)} Converted: ${JsonUtils.toPrettyString(conversion)}`);
             }
 
             if (debug) {

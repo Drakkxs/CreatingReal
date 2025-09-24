@@ -166,7 +166,7 @@ logFoundExploits = false
 		#ProjectE-Integration Recipe Mapper for Immersive Engineering Sawmill Mapper. Required Mods: [immersiveengineering]
 		[mappers.Crafting-Mapper.ImmersiveEngineeringSawmillMapper]
 			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = false
+			enabled = true
 
 		#ProjectE-Integration Recipe Mapper for Immersive Engineering Refinery Mapper. Required Mods: [immersiveengineering]
 		[mappers.Crafting-Mapper.ImmersiveEngineeringRefineryMapper]

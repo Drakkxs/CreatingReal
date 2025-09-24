@@ -4,7 +4,18 @@
 			"comment": "BBL Mixing recipes mapped to ProjectE conversions.",
 			"conversions": [
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 180,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_nickel",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 270,
 						"id": "casting:molten_invar",
@@ -12,7 +23,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 270,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 250,
+							"id": "casting:molten_quartz",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_quartz_enriched_iron",
@@ -20,7 +42,23 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_redstone",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 1000,
+							"id": "casting:molten_copper_alloy",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_conductive_alloy",
@@ -28,7 +66,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 250,
+							"id": "casting:molten_ender",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_energetic_alloy",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_vibrant_alloy",
@@ -36,7 +85,23 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 270,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_silver",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 360,
+							"id": "casting:molten_redstone",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_signalum",
@@ -44,7 +109,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 1000,
+							"id": "casting:iced_water",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 1000,
+							"id": "casting:chilled_water",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 2000,
 						"id": "casting:super_coolant",
@@ -52,7 +128,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 270,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_tin",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_bronze",
@@ -60,7 +147,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 160,
+							"id": "casting:molten_coal",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_steel",
@@ -68,7 +166,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 250,
+							"id": "casting:molten_silicon",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_redstone",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_redstone_alloy",
@@ -76,7 +185,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 270,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_zinc",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_brass",
@@ -84,7 +204,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 1000,
+							"id": "casting:molten_soul",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_soularium",
@@ -92,7 +223,23 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 270,
+							"id": "casting:molten_lead",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_platinum",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 500,
+							"id": "casting:molten_ender",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_enderium",
@@ -100,7 +247,23 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 160,
+							"id": "casting:molten_coal",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 1000,
+							"id": "casting:molten_obsidian",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_dark_steel",
@@ -108,7 +271,23 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 270,
+							"id": "casting:molten_tin",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_silver",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 500,
+							"id": "casting:molten_glowstone",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 360,
 						"id": "casting:molten_lumium",
@@ -116,7 +295,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_nickel",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 180,
 						"id": "casting:molten_constantan",
@@ -124,7 +314,23 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_redstone",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 250,
+							"id": "casting:molten_glowstone",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_energetic_alloy",
@@ -132,7 +338,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 500,
+							"id": "casting:molten_silicon",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_copper",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_copper_alloy",
@@ -140,7 +357,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 250,
+							"id": "casting:molten_ender",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_iron",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_pulsating_alloy",
@@ -148,7 +376,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 1000,
+							"id": "minecraft:water",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 1000,
+							"id": "minecraft:lava",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 1000,
 						"id": "casting:molten_obsidian",
@@ -156,7 +395,23 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 1000,
+							"id": "casting:molten_end_stone",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_dark_steel",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 1000,
+							"id": "casting:molten_obsidian",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_end_steel",
@@ -164,7 +419,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 360,
+							"id": "casting:molten_debris",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 360,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 90,
 						"id": "casting:molten_netherite",
@@ -172,7 +438,18 @@
 					}
 				},
 				{
-					"ingredients": [],
+					"ingredients": [
+						{
+							"amount": 90,
+							"id": "casting:molten_gold",
+							"type": "projecte:fluid"
+						},
+						{
+							"amount": 90,
+							"id": "casting:molten_silver",
+							"type": "projecte:fluid"
+						}
+					],
 					"output": {
 						"amount": 180,
 						"id": "casting:molten_electrum",

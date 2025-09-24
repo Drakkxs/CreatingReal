@@ -1,13 +1,15 @@
 // priority: -20
 // requires: projecte
-// requires: immersiveengineering
+// requires: cloche
 // @ts-check
-// Automatically map Bottling Machine recipes to ProjectE conversions.
+// Automatically map Cloche recipes to ProjectE conversions.
+
 
 // Immediately Invoked Function Expression to prevent polluting the global namespace
 (() => {
-    let debug = false; // Want some debug?
-    const filePath = 'kubejs/data/projecte/pe_custom_conversions/generated_immersiveengineering.json';
+    let debug = true; // Want some debug?
+    const filePath = 'kubejs/data/projecte/pe_custom_conversions/generated_cloche.json';
+
     /**
      * @param {string} name
      * @param {string} comment
@@ -82,19 +84,18 @@
     }
 
     ServerEvents.recipes(event => {
-        const name = "bottler";
-        const comment = "Immersive Engineering Bottling Machine";
+        const name = "cloche";
+        const comment = "Cloche recipes automatically mapped from Botany Pots recipes.";
         const conversions = [];
 
         if (JsonIO.read(filePath)) {
             if (debug) console.log(`File ${filePath} already exists. Skipping generation.`);
             return;
-        }
+        };
 
-
-        event.forEachRecipe({ type: "immersiveengineering:bottling_machine" }, recipe => {
+        event.forEachRecipe({ or: [{ type: "opolisutilities:cloche" }, { type: "cloche:cloche" }] }, recipe => {
             if (debug) {
-                console.log(`Found Immersive Engineering Bottling Machine recipe: ${recipe.id}`);
+                console.log(`Found Cloche recipe: ${recipe.id}`);
                 console.log(JsonUtils.toPrettyString(recipe.json));
             }
             let json = recipe.json;
@@ -103,11 +104,23 @@
 
 
             // Unprocessed recipe data
-            let rawFluid = json.get("fluid");
-            let rawFluids = json.get("fluids");
-            let rawInput = json.get("input");
-            let rawInputs = json.get("inputs");
-            let rawResults = json.get("results");
+            let rawIngredients = JsonUtils.of([].concat(
+                json.get("ingredient"), json.get("ingredients"),
+                json.get("input"), json.get("inputs"),
+                json.get("fluid"), json.get("fluids"),
+                json.get("soil"), json.get("catalyst"),
+                json.get("seed")
+            ));
+
+            let rawResults = JsonUtils.of([].concat(
+                json.get("result"), json.get("results"),
+                json.get("output"), json.get("outputs"),
+                json.get("mainOutput"), json.get("shears_result")
+            ));
+
+            // Default to empty arrays if null
+            let rawInputs = JsonUtils.of([]).asJsonArray;
+            let rawFluids = JsonUtils.of([]).asJsonArray;
 
             /**
              * Flattens a JsonArray by one level.
@@ -130,13 +143,23 @@
                 return jsonArray;
             }
 
-
-            // If no array inputs, use single input as array
-            if (rawInput && !rawInputs) rawInputs = JsonUtils.fromString(`[${JsonUtils.toString(rawInput)}]`);
-
-            // If no array fluids, use single fluid as array
-            if (rawFluid && !rawFluids) rawFluids = JsonUtils.fromString(`[${JsonUtils.toString(rawFluid)}]`);
-
+            // Resolve ingredients into item and fluid lists
+            if (!rawIngredients.isJsonArray()) return;
+            let ingredientsArray = flattenArray(rawIngredients.asJsonArray);
+            ingredientsArray.forEach(ing => {
+                if (!ing.isJsonObject()) return;
+                let ingObj = ing.asJsonObject;
+                let isfluid = ingObj.get("amount")
+                if (isfluid) {
+                    let fluidList = rawFluids.asList()
+                    fluidList.add(ing);
+                    rawFluids = JsonUtils.of(fluidList).getAsJsonArray();
+                } else {
+                    let itemList = rawInputs.asList()
+                    itemList.add(ing);
+                    rawInputs = JsonUtils.of(itemList).getAsJsonArray();
+                }
+            });
 
             // Resolve fluid ingredients
             if (!rawFluids.isJsonArray()) return;
@@ -173,6 +196,7 @@
             if (!rawResults.isJsonArray()) return;
             let resultsArray = flattenArray(rawResults.asJsonArray);
             resultsArray.forEach(result => {
+                if (debug) console.log(`Processing result: ${result}, isJsonObject: ${result.isJsonObject()}`);
                 if (!result.isJsonObject()) return;
                 let resultObj = result.asJsonObject;
                 let isfluid = resultObj.get("amount")
@@ -200,6 +224,18 @@
                 output.push(JsonUtils.toObject(resultObj));
             });
 
+            // If the output is the same as the input, take it out.
+            // This prevents infinite loops and useless conversions.
+            output = output.filter(o => {
+                if (debug) console.log(`Checking output ${JsonUtils.toString(o)} against inputs.`)
+                let outIng = Ingredient.of(o.id || o.tag);
+                let inIngs = ingredients.map(i => Ingredient.of(i.id || i.tag));
+                // If either aren't ingredients, skip
+                if (!outIng || !inIngs.length) return true;
+                if (debug) console.log(`Output as Ingredient: ${JsonUtils.toString(outIng)}, Inputs as Ingredients: ${JsonUtils.toString(inIngs)}`);
+                return inIngs.some(i => outIng.test(i));
+            });
+
             let conversion = {
                 "ingredients": ingredients
                     // Filter out invalid ingredients
@@ -207,11 +243,16 @@
                 "output": output
                     // Filter out chanced outputs. Allow those without a chance tag.
                     .filter(o => (!o.chance || o.chance >= 1) && (o.id || o.tag))
-                    .find(o => o.id || o.tag)
             };
 
+            // Skip if no valid output
+            if (conversion.output.length == 0) {
+                if (debug) console.log("No valid output found, skipping conversion.");
+                return;
+            }
+
             if (
-                (!conversion.ingredients || !conversion.ingredients.length) || (!conversion.output || !Object.keys(conversion.output).length)
+                !conversion.ingredients.length || !conversion.output.length
             ) {
                 throw new Error(`Invalid conversion generated from recipe: ${JsonUtils.toPrettyString(recipe.json)} Converted: ${JsonUtils.toPrettyString(conversion)}`);
             }
