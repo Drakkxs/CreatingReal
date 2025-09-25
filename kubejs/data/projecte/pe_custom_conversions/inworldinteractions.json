@@ -11,6 +11,7 @@
               "id": "minecraft:mycelium"
             },
             {
+              "comment": "Can comments be here?",
               "amount": 1000,
               "type": "projecte:fluid",
               "id": "minecraft:water"
@@ -21,6 +22,20 @@
             "type": "projecte:fluid",
             "id": "exdeorum:witch_water"
           }
+        },
+        {
+          "ingredients": [
+            {
+              "count": 100,
+              "type": "projecte:item",
+              "tag": "c:rods/wooden"
+            }
+          ],
+          "output": {
+            "count": 1,
+            "type": "projecte:item",
+            "tag": "c:dusts/wood"
+          }
         }
       ]
     }
@@ -29,13 +44,73 @@
     "before": [
       {
         "type": "projecte:item",
-        "emc_value": 8,
+        "emc_value": 8192,
+        "tag": "c:dusts/redstone"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 80000,
+        "tag": "c:dusts/glowstone"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 640768,
+        "id": "projecte:philosophers_stone"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 8000,
         "tag": "c:cobblestones"
       },
       {
         "type": "projecte:item",
-        "emc_value": 8,
+        "emc_value": 8000,
+        "tag": "c:ores"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 8000,
         "tag": "c:dirt"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 8000,
+        "tag": "c:obsidians/normal"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 576000,
+        "tag": "minecraft:logs"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 576000,
+        "tag": "c:coal"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 576000,
+        "tag": "c:mushrooms"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 576000,
+        "tag": "minecraft:saplings"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 576000,
+        "tag": "minecraft:flowers"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 576000,
+        "tag": "c:crops"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 576000,
+        "tag": "c:seeds"
       },
       {
         "type": "projecte:fluid",

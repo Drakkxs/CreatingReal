@@ -96,7 +96,7 @@ logFoundExploits = false
 		#Maps Mekanism Machine recipes that go from item, chemical to item. (Compressing, Purifying, Injecting, Metallurgic Infusing, Painting, Nucleosynthesizing)
 		[mappers.Crafting-Mapper.Mekanism-IC2I]
 			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
+			enabled = false
 
 		#Maps Mekanism evaporating recipes.
 		[mappers.Crafting-Mapper.Mekanism-Evaporating]
@@ -151,7 +151,7 @@ logFoundExploits = false
 		#ProjectE-Integration Recipe Mapper for Industrial Foregoing Dissolution Chamber Mapper. Required Mods: [industrialforegoing]
 		[mappers.Crafting-Mapper.IndustrialForegoingDissolutionChamberMapper]
 			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
+			enabled = false
 
 		#ProjectE-Integration Recipe Mapper for Industrial Foregoing Crusher Mapper. Required Mods: [industrialforegoing]
 		[mappers.Crafting-Mapper.IndustrialForegoingCrusherMapper]
@@ -161,12 +161,12 @@ logFoundExploits = false
 		#ProjectE-Integration Recipe Mapper for Immersive Engineering Squeezer Mapper. Required Mods: [immersiveengineering]
 		[mappers.Crafting-Mapper.ImmersiveEngineeringSqueezerMapper]
 			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
+			enabled = false
 
 		#ProjectE-Integration Recipe Mapper for Immersive Engineering Sawmill Mapper. Required Mods: [immersiveengineering]
 		[mappers.Crafting-Mapper.ImmersiveEngineeringSawmillMapper]
 			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
+			enabled = false
 
 		#ProjectE-Integration Recipe Mapper for Immersive Engineering Refinery Mapper. Required Mods: [immersiveengineering]
 		[mappers.Crafting-Mapper.ImmersiveEngineeringRefineryMapper]
@@ -196,7 +196,7 @@ logFoundExploits = false
 		#ProjectE-Integration Recipe Mapper for Immersive Engineering Coke Oven Mapper. Required Mods: [immersiveengineering]
 		[mappers.Crafting-Mapper.ImmersiveEngineeringCokeOvenMapper]
 			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
+			enabled = false
 
 		#ProjectE-Integration Recipe Mapper for Immersive Engineering Cloche Mapper. Required Mods: [immersiveengineering] NOTE: Disabled by default because its plants
 		[mappers.Crafting-Mapper.ImmersiveEngineeringClocheMapper]
@@ -286,12 +286,12 @@ logFoundExploits = false
 		#ProjectE-Integration Recipe Mapper for Create Mechanical Crafting Mapper. Required Mods: [create]
 		[mappers.Crafting-Mapper.CreateMechanicalCraftingMapper]
 			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = false
+			enabled = true
 
 		#ProjectE-Integration Recipe Mapper for Create Item Application Mapper. Required Mods: [create]
 		[mappers.Crafting-Mapper.CreateItemApplicationMapper]
 			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = false
+			enabled = true
 
 		#ProjectE-Integration Recipe Mapper for Create Haunting Mapper. Required Mods: [create]
 		[mappers.Crafting-Mapper.CreateHauntingMapper]

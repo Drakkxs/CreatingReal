@@ -13,13 +13,14 @@
         "exdeorum:barrel_mixing",
         "justdirethings:fluiddroprecipe",
         "justdirethings:goospreadrecipe",
-        "powah:energizing"
+        "powah:energizing",
     ],
     "notes": [
         "The following mapping tasks are more difficult and likely need to be done manually:",
         "Botany Pots (Its data involves lootables and blocks, seemingly generated on a per-world basis)",
         "Exdeorum Sieveing (Chanced outputs, many of which ProjectE would not normally map)",
-        "Just Dire things (Not that it's difficult, but I doubt this is a simple json situation."
+        "Just Dire things (Not that it's difficult, but I doubt this is a simple json situation.)",
+        "Hostile Networks (Its data doesn't seem to be in JSON format)."
     ],
     "warnings": [
         "Do not map the immersiveengineering:crusher, it will remove EMC values from various ores, ingots, and dusts.",

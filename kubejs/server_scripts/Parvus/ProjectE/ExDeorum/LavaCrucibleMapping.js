@@ -30,6 +30,10 @@
      * }>} conversions
      */
     function addConversionGroup(name, comment, conversions) {
+        // Output conversion must be a JsonObject
+        if (!(conversions.find(c => JsonUtils.of(c.output).isJsonObject()))) {
+            throw new Error("Output conversion must be a JsonObject");
+        }
         JsonIO.write(filePath, {
             "groups": (function () {
                 let obj = {};

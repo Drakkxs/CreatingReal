@@ -1,172 +1,4 @@
 {
-  "groups": {
-    "materials": {
-      "comment": "Base material conversions",
-      "conversions": [
-        {
-          "ingredients": [
-            {
-              "amount": 90,
-              "type": "projecte:fluid",
-              "tag": "c:molten_copper"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "id": "minecraft:copper_ingot"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "amount": 90,
-              "type": "projecte:fluid",
-              "tag": "c:molten_iron"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "id": "minecraft:iron_ingot"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "amount": 90,
-              "type": "projecte:fluid",
-              "tag": "c:molten_gold"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "id": "minecraft:gold_ingot"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "amount": 90,
-              "type": "projecte:fluid",
-              "tag": "c:molten_emerald"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "id": "minecraft:emerald"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "amount": 90,
-              "type": "projecte:fluid",
-              "tag": "c:molten_diamond"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "id": "minecraft:diamond"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "amount": 90,
-              "type": "projecte:fluid",
-              "tag": "c:molten_netherite"
-            }
-          ],
-          "output": {
-            "type": "projecte:item",
-            "id": "minecraft:netherite_ingot"
-          }
-        }
-      ]
-    },
-    "fluid": {
-      "comment": "Adds various fluid conversions for Lightman's Currency coins.",
-      "conversions": [
-        {
-          "ingredients": [
-            {
-              "count": 100,
-              "type": "projecte:item",
-              "id": "lightmanscurrency:coin_copper"
-            }
-          ],
-          "output": {
-            "type": "projecte:fluid",
-            "id": "casting:molten_copper"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "count": 100,
-              "type": "projecte:item",
-              "id": "lightmanscurrency:coin_iron"
-            }
-          ],
-          "output": {
-            "type": "projecte:fluid",
-            "id": "casting:molten_iron"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "count": 100,
-              "type": "projecte:item",
-              "id": "lightmanscurrency:coin_gold"
-            }
-          ],
-          "output": {
-            "type": "projecte:fluid",
-            "id": "casting:molten_gold"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "count": 100,
-              "type": "projecte:item",
-              "id": "lightmanscurrency:coin_emerald"
-            }
-          ],
-          "output": {
-            "type": "projecte:fluid",
-            "id": "casting:molten_emerald"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "count": 100,
-              "type": "projecte:item",
-              "id": "lightmanscurrency:coin_diamond"
-            }
-          ],
-          "output": {
-            "type": "projecte:fluid",
-            "id": "casting:molten_diamond"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "count": 100,
-              "type": "projecte:item",
-              "id": "lightmanscurrency:coin_netherite"
-            }
-          ],
-          "output": {
-            "type": "projecte:fluid",
-            "id": "casting:molten_netherite"
-          }
-        }
-      ]
-    }
-  },
   "values": {
     "before": [
       {
@@ -176,8 +8,28 @@
       },
       {
         "type": "projecte:item",
+        "emc_value": 90,
+        "tag": "c:ingots/copper" 
+      },
+      {
+        "type": "projecte:fluid",
+        "emc_value": 1,
+        "tag": "c:molten_copper"
+      },
+      {
+        "type": "projecte:item",
         "emc_value": 100,
         "id": "lightmanscurrency:coin_iron"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 9000,
+        "tag": "c:ingots/iron"
+      },
+      {
+        "type": "projecte:fluid",
+        "emc_value": 100,
+        "tag": "c:molten_iron"
       },
       {
         "type": "projecte:item",
@@ -186,8 +38,28 @@
       },
       {
         "type": "projecte:item",
+        "emc_value": 72000,
+        "tag": "c:ingots/gold"
+      },
+      {
+        "type": "projecte:fluid",
+        "emc_value": 1000,
+        "tag": "c:molten_gold"
+      },
+      {
+        "type": "projecte:item",
         "emc_value": 10000,
         "id": "lightmanscurrency:coin_emerald"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 576000,
+        "tag": "c:gems/emerald"
+      },
+      {
+        "type": "projecte:fluid",
+        "emc_value": 10000,
+        "tag": "c:molten_emerald"
       },
       {
         "type": "projecte:item",
@@ -196,8 +68,28 @@
       },
       {
         "type": "projecte:item",
+        "emc_value": 288000,
+        "tag": "c:gems/diamond"
+      },
+      {
+        "type": "projecte:fluid",
+        "emc_value": 32000,
+        "tag": "c:molten_diamond"
+      },
+      {
+        "type": "projecte:item",
         "emc_value": 1000000,
         "id": "lightmanscurrency:coin_netherite"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 90000000,
+        "tag": "c:ingots/netherite"
+      },
+      {
+        "type": "projecte:fluid",
+        "emc_value": 1000000,
+        "tag": "c:molten_netherite"
       }
     ]
   }
