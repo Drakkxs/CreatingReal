@@ -96,7 +96,6 @@
             return;
         }
 
-
         event.forEachRecipe({
             or: [
                 { type: "exdeorum:lava_crucible" }

@@ -96,7 +96,7 @@
             return;
         }
 
-        // Recipes will include their workstation to help truly identify the cost of the conversion
+        // Recipes can include their workstation to help truly identify the cost of the conversion
         // This is to ensure cheap conversions aren't favored from a workstation that is hard to make.
         const workstationMap = new Map([
             ["casting:melting", {
