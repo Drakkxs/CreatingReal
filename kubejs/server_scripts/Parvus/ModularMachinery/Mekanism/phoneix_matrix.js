@@ -1128,7 +1128,7 @@
 
     MMREvents.machines(event => {
         // TODO: MACHINE SOUNDS
-        
+
         /** All types of chromatic fans */
         mekanismMatrix.machineType.forEach((_, typeKey) => {
             mekanismMatrix.buildMACH(event, typeKey);
