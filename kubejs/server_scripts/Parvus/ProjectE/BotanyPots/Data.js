@@ -114,7 +114,7 @@
         return jsonArray;
     }
 
-    
+
 
     ServerEvents.recipes(event => {
         const name = "cloche";

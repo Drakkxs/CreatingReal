@@ -96,6 +96,16 @@
             return;
         }
 
+        // Recipes can include their workstation to help truly identify the cost of the conversion
+        // This is to ensure cheap conversions aren't favored from a workstation that is hard to make.
+        const workstationMap = new Map([
+            ["casting:solidifier", {
+                "comment": "workstation",
+                "type": "projecte:item",
+                "id": "casting:solidifier",
+                "count": 1
+            }]
+        ]);
 
         event.forEachRecipe({
             or: [
@@ -109,6 +119,8 @@
             let json = recipe.json;
             let ingredients = [];
             let output = [];
+            let workstation = workstationMap.get(`${recipe.type}`);
+            if (!workstation) throw new Error(`No workstation mapping found for recipe type: ${recipe.type}`);
 
             // Unprocessed recipe data
             let rawIngredients = JsonUtils.of([].concat(
@@ -256,7 +268,7 @@
             });
 
             let conversion = {
-                "ingredients": ingredients
+                "ingredients": ingredients.concat(workstation)
                     // Filter out invalid ingredients
                     .filter(i => (i.id || i.tag) || (i.type == "projecte:fake")),
                 "output": output
