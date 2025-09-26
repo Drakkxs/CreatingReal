@@ -1,40 +1,19 @@
 {
   "groups": {
-    "inworldinteractions": {
-      "comment": "Basic Inworld Interactions",
+    "minecraft": {
+    "comment": "Minecraft Conversions",
       "conversions": [
         {
           "ingredients": [
             {
-              "count": 1,
-              "type": "projecte:item",
-              "id": "minecraft:mycelium"
-            },
-            {
-              "comment": "Can comments be here?",
-              "amount": 1000,
-              "type": "projecte:fluid",
-              "id": "minecraft:water"
-            }
-          ],
-          "output": {
-            "amount": 1000,
-            "type": "projecte:fluid",
-            "id": "exdeorum:witch_water"
-          }
-        },
-        {
-          "ingredients": [
-            {
-              "count": 100,
               "type": "projecte:item",
               "tag": "c:rods/wooden"
             }
           ],
           "output": {
-            "count": 1,
             "type": "projecte:item",
-            "tag": "c:dusts/wood"
+            "tag": "c:dusts/wood",
+            "count": 2
           }
         }
       ]
@@ -51,11 +30,6 @@
         "type": "projecte:item",
         "emc_value": 80000,
         "tag": "c:dusts/glowstone"
-      },
-      {
-        "type": "projecte:item",
-        "emc_value": 640768,
-        "id": "projecte:philosophers_stone"
       },
       {
         "type": "projecte:item",

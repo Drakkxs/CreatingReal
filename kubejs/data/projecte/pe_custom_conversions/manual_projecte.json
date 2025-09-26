@@ -1,0 +1,11 @@
+{
+  "values": {
+    "before": [
+      {
+        "type": "projecte:item",
+        "emc_value": 640768,
+        "id": "projecte:philosophers_stone"
+      }
+    ]
+  }
+}

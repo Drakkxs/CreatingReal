@@ -1,0 +1,33 @@
+{
+  "groups": {
+    "inworldinteractions": {
+      "comment": "Basic Inworld Interactions",
+      "conversions": [
+        {
+          "ingredients": [
+            {
+              "count": 1,
+              "type": "projecte:item",
+              "id": "minecraft:mycelium"
+            },
+            {
+              "comment": "Can comments be here?",
+              "amount": 1000,
+              "type": "projecte:fluid",
+              "id": "minecraft:water"
+            }
+          ],
+          "output": {
+            "amount": 1000,
+            "type": "projecte:fluid",
+            "id": "exdeorum:witch_water"
+          }
+        }
+      ]
+    }
+  },
+  "values": {
+    "before": [
+    ]
+  }
+}

@@ -9,6 +9,12 @@
 							"count": 1,
 							"tag": "c:nuggets/gold",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -23,6 +29,12 @@
 							"count": 1,
 							"tag": "c:nuggets/osmium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -37,6 +49,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/gold",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -51,6 +69,12 @@
 							"count": 1,
 							"tag": "c:ores/uranium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -65,6 +89,12 @@
 							"count": 1,
 							"tag": "c:rods/lumium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -79,6 +109,12 @@
 							"count": 1,
 							"tag": "c:dusts/lumium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -93,6 +129,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/aluminum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -107,6 +149,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "casting:black_bricks"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -121,6 +169,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_tin",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -135,6 +189,12 @@
 							"count": 1,
 							"tag": "c:wires/lead",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -149,6 +209,12 @@
 							"count": 1,
 							"tag": "c:ores/iridium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -163,6 +229,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/nickel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -177,6 +249,12 @@
 							"count": 1,
 							"tag": "c:wires/steel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -191,6 +269,12 @@
 							"count": 1,
 							"tag": "c:dusts/zinc",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -205,6 +289,12 @@
 							"count": 1,
 							"tag": "c:ores/coal",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -219,6 +309,12 @@
 							"count": 1,
 							"tag": "c:gems/ruby",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -233,6 +329,12 @@
 							"count": 1,
 							"tag": "c:dusts/uranium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -247,6 +349,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:ancient_debris"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -261,6 +369,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/redstone",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -275,6 +389,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_iron",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -289,6 +409,12 @@
 							"count": 1,
 							"tag": "c:gems/lapis",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -303,6 +429,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/silver",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -317,6 +449,12 @@
 							"count": 1,
 							"tag": "c:gears/nickel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -331,6 +469,12 @@
 							"count": 1,
 							"tag": "c:gears/iron",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -345,6 +489,12 @@
 							"count": 1,
 							"tag": "c:gears/iridium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -359,6 +509,12 @@
 							"count": 1,
 							"tag": "c:rods/uranium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -373,6 +529,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/sapphire",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -387,6 +549,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_copper",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -401,6 +569,12 @@
 							"count": 1,
 							"tag": "c:nuggets/emerald",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -415,6 +589,12 @@
 							"count": 1,
 							"tag": "c:ores/silver",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -429,6 +609,12 @@
 							"count": 1,
 							"tag": "c:plates/platinum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -443,6 +629,12 @@
 							"count": 1,
 							"tag": "c:dusts/steel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -457,6 +649,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/lumium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -471,6 +669,12 @@
 							"count": 1,
 							"tag": "c:gears/invar",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -485,6 +689,12 @@
 							"count": 1,
 							"tag": "c:nuggets/invar",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -499,6 +709,12 @@
 							"count": 1,
 							"tag": "c:plates/gold",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -513,6 +729,12 @@
 							"count": 1,
 							"tag": "c:dusts/diamond",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -527,6 +749,12 @@
 							"count": 1,
 							"tag": "c:gems/diamond",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -541,6 +769,12 @@
 							"count": 1,
 							"tag": "c:ores/iron",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -555,6 +789,12 @@
 							"count": 1,
 							"tag": "c:nuggets/zinc",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -569,6 +809,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:ender_pearl"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -583,6 +829,12 @@
 							"count": 1,
 							"tag": "c:ingots/lumium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -597,6 +849,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/iron",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -611,6 +869,12 @@
 							"count": 1,
 							"tag": "c:rods/silver",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -625,6 +889,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/signalum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -639,6 +909,12 @@
 							"count": 1,
 							"tag": "c:ingots/netherite",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -653,6 +929,12 @@
 							"count": 1,
 							"tag": "c:gears/signalum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -667,6 +949,12 @@
 							"count": 1,
 							"tag": "c:nuggets/nickel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -681,6 +969,12 @@
 							"count": 1,
 							"tag": "c:rods/netherite",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -695,6 +989,12 @@
 							"count": 1,
 							"tag": "c:nuggets/steel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -709,6 +1009,12 @@
 							"count": 1,
 							"tag": "c:plates/silver",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -723,6 +1029,12 @@
 							"count": 1,
 							"tag": "c:plates/zinc",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -737,6 +1049,12 @@
 							"count": 1,
 							"tag": "c:plates/signalum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -751,6 +1069,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/peridot",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -765,6 +1089,12 @@
 							"count": 1,
 							"tag": "c:nuggets/bronze",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -779,6 +1109,12 @@
 							"count": 1,
 							"tag": "c:ingots/enderium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -793,6 +1129,12 @@
 							"count": 1,
 							"tag": "c:rods/iridium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -807,6 +1149,12 @@
 							"count": 1,
 							"tag": "c:rods/steel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -821,6 +1169,12 @@
 							"count": 1,
 							"tag": "c:plates/nickel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -835,6 +1189,12 @@
 							"count": 1,
 							"tag": "c:gems/emerald",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -849,6 +1209,12 @@
 							"count": 1,
 							"tag": "c:ores/redstone",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -863,6 +1229,12 @@
 							"count": 1,
 							"tag": "c:dusts/lead",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -877,6 +1249,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_zinc",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -891,6 +1269,12 @@
 							"count": 1,
 							"tag": "c:ingots/invar",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -905,6 +1289,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_uranium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -919,6 +1309,12 @@
 							"count": 1,
 							"tag": "c:rods/lead",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -933,6 +1329,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/osmium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -947,6 +1349,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/copper",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -961,6 +1369,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/lapis",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -975,6 +1389,12 @@
 							"count": 1,
 							"tag": "c:rods/diamond",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -989,6 +1409,12 @@
 							"count": 1,
 							"tag": "c:ores/ruby",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1003,6 +1429,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/bronze",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1017,6 +1449,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/steel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1031,6 +1469,12 @@
 							"count": 1,
 							"tag": "c:dusts/iron",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1045,6 +1489,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/constantan",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1059,6 +1509,12 @@
 							"count": 1,
 							"tag": "c:rods/bronze",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1073,6 +1529,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:quartz_bricks"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1087,6 +1549,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/invar",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1101,6 +1569,12 @@
 							"count": 1,
 							"tag": "c:rods/brass",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1115,6 +1589,12 @@
 							"count": 1,
 							"tag": "c:gears/uranium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1129,6 +1609,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:glowstone"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1143,6 +1629,12 @@
 							"count": 1,
 							"tag": "c:nuggets/signalum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1157,6 +1649,12 @@
 							"count": 1,
 							"tag": "c:ores/nickel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1171,6 +1669,12 @@
 							"count": 1,
 							"tag": "c:dusts/iridium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1185,6 +1689,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:quartz_pillar"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1199,6 +1709,12 @@
 							"count": 1,
 							"tag": "c:ingots/copper",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1213,6 +1729,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:snow_block"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1227,6 +1749,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:coal_block"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1241,6 +1769,12 @@
 							"count": 1,
 							"tag": "c:ores/diamond",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1255,6 +1789,12 @@
 							"count": 1,
 							"tag": "c:gems/sapphire",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1269,6 +1809,12 @@
 							"count": 1,
 							"tag": "c:gears/diamond",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1283,6 +1829,12 @@
 							"count": 1,
 							"tag": "c:nuggets/uranium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1297,6 +1849,12 @@
 							"count": 1,
 							"tag": "c:nuggets/iron",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1311,6 +1869,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:clay"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1325,6 +1889,12 @@
 							"count": 1,
 							"tag": "c:gears/aluminum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1339,6 +1909,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/nickel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1353,6 +1929,12 @@
 							"count": 1,
 							"tag": "c:ores/quartz",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1367,6 +1949,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/lead",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1381,6 +1969,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:blaze_powder"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1395,6 +1989,12 @@
 							"count": 1,
 							"tag": "c:plates/steel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1409,6 +2009,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/uranium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1423,6 +2029,12 @@
 							"count": 1,
 							"tag": "c:dusts/signalum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1437,6 +2049,12 @@
 							"count": 1,
 							"tag": "c:plates/bronze",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1451,6 +2069,12 @@
 							"count": 1,
 							"tag": "c:wires/electrum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1465,6 +2089,12 @@
 							"count": 1,
 							"tag": "c:ingots/platinum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1479,6 +2109,12 @@
 							"count": 1,
 							"tag": "c:gears/copper",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1493,6 +2129,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_gold",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1507,6 +2149,12 @@
 							"count": 1,
 							"tag": "c:wires/iron",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1521,6 +2169,12 @@
 							"count": 1,
 							"tag": "c:nuggets/diamond",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1535,6 +2189,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/ruby",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1549,6 +2209,12 @@
 							"count": 1,
 							"tag": "c:rods/gold",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1563,6 +2229,12 @@
 							"count": 1,
 							"tag": "c:plates/uranium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1577,6 +2249,12 @@
 							"count": 1,
 							"tag": "c:plates/iron",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1591,6 +2269,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/osmium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1605,6 +2289,12 @@
 							"count": 1,
 							"tag": "c:dusts/peridot",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1619,6 +2309,12 @@
 							"count": 1,
 							"tag": "c:dusts/platinum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1633,6 +2329,12 @@
 							"count": 1,
 							"tag": "c:gears/brass",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1647,6 +2349,12 @@
 							"count": 1,
 							"tag": "c:dusts/electrum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1661,6 +2369,12 @@
 							"count": 1,
 							"tag": "c:gems/peridot",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1675,6 +2389,12 @@
 							"count": 1,
 							"tag": "c:rods/constantan",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1689,6 +2409,12 @@
 							"count": 1,
 							"tag": "c:gears/lead",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1703,6 +2429,12 @@
 							"count": 1,
 							"tag": "c:gears/lumium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1717,6 +2449,12 @@
 							"count": 1,
 							"tag": "c:gears/bronze",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1731,6 +2469,12 @@
 							"count": 1,
 							"tag": "c:wires/gold",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1745,6 +2489,12 @@
 							"count": 1,
 							"tag": "c:plates/iridium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1759,6 +2509,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/emerald",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1773,6 +2529,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:smooth_quartz"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1787,6 +2549,12 @@
 							"count": 1,
 							"tag": "c:ingots/signalum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1801,6 +2569,12 @@
 							"count": 1,
 							"tag": "c:nuggets/constantan",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1815,6 +2589,12 @@
 							"count": 1,
 							"tag": "c:ingots/iridium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1829,6 +2609,12 @@
 							"count": 1,
 							"tag": "c:nuggets/lumium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1843,6 +2629,12 @@
 							"count": 1,
 							"tag": "c:nuggets/enderium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1857,6 +2649,12 @@
 							"count": 1,
 							"tag": "c:gears/netherite",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1871,6 +2669,12 @@
 							"count": 1,
 							"tag": "c:ingots/silver",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1885,6 +2689,12 @@
 							"count": 1,
 							"tag": "c:ingots/aluminum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1899,6 +2709,12 @@
 							"count": 1,
 							"tag": "c:dusts/tin",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1913,6 +2729,12 @@
 							"count": 1,
 							"tag": "c:ores/tin",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1927,6 +2749,12 @@
 							"count": 1,
 							"tag": "c:dusts/gold",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1941,6 +2769,12 @@
 							"count": 1,
 							"tag": "c:plates/osmium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1955,6 +2789,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:blue_ice"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1969,6 +2809,12 @@
 							"count": 1,
 							"tag": "c:dusts/constantan",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1983,6 +2829,12 @@
 							"count": 1,
 							"tag": "c:ingots/zinc",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1997,6 +2849,12 @@
 							"count": 1,
 							"tag": "c:nuggets/platinum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2011,6 +2869,12 @@
 							"count": 1,
 							"tag": "c:ingots/nickel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2025,6 +2889,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/platinum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2039,6 +2909,12 @@
 							"count": 1,
 							"tag": "c:ingots/brass",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2053,6 +2929,12 @@
 							"count": 1,
 							"tag": "c:gears/enderium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2067,6 +2949,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/gold",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2081,6 +2969,12 @@
 							"count": 1,
 							"tag": "c:rods/signalum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2095,6 +2989,12 @@
 							"count": 1,
 							"tag": "c:ores/gold",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2109,6 +3009,12 @@
 							"count": 1,
 							"tag": "c:ingots/electrum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2123,6 +3029,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_silver",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2137,6 +3049,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "casting:black_brick"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2151,6 +3069,12 @@
 							"count": 1,
 							"tag": "c:rods/tin",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2165,6 +3089,12 @@
 							"count": 1,
 							"tag": "c:plates/lead",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2179,6 +3109,12 @@
 							"count": 1,
 							"tag": "c:ores/aluminum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2193,6 +3129,12 @@
 							"count": 1,
 							"tag": "c:nuggets/silver",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2207,6 +3149,12 @@
 							"count": 1,
 							"tag": "c:plates/invar",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2221,6 +3169,12 @@
 							"count": 1,
 							"tag": "c:wires/copper",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2235,6 +3189,12 @@
 							"count": 1,
 							"tag": "c:dusts/sapphire",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2249,6 +3209,12 @@
 							"count": 1,
 							"tag": "c:ores/sapphire",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2263,6 +3229,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/electrum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2277,6 +3249,12 @@
 							"count": 1,
 							"tag": "c:ingots/iron",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2291,6 +3269,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_lead",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2305,6 +3289,12 @@
 							"count": 1,
 							"tag": "c:plates/constantan",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2319,6 +3309,12 @@
 							"count": 1,
 							"tag": "c:dusts/emerald",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2333,6 +3329,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_platinum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2347,6 +3349,12 @@
 							"count": 1,
 							"tag": "c:dusts/quartz",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2361,6 +3369,12 @@
 							"count": 1,
 							"tag": "c:nuggets/aluminum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2375,6 +3389,12 @@
 							"count": 1,
 							"tag": "c:dusts/aluminum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2389,6 +3409,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/brass",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2403,6 +3429,12 @@
 							"count": 1,
 							"tag": "c:dusts/osmium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2417,6 +3449,12 @@
 							"count": 1,
 							"tag": "c:rods/nickel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2431,6 +3469,12 @@
 							"count": 1,
 							"tag": "c:ingots/tin",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2445,6 +3489,12 @@
 							"count": 1,
 							"tag": "c:gears/silver",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2459,6 +3509,12 @@
 							"count": 1,
 							"tag": "c:ores/osmium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2473,6 +3529,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:coal"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2487,6 +3549,12 @@
 							"count": 1,
 							"tag": "c:nuggets/electrum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2501,6 +3569,12 @@
 							"count": 1,
 							"tag": "c:gears/platinum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2515,6 +3589,12 @@
 							"count": 1,
 							"tag": "c:dusts/copper",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2529,6 +3609,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/lead",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2543,6 +3629,12 @@
 							"count": 1,
 							"tag": "c:rods/copper",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2557,6 +3649,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:glowstone_dust"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2571,6 +3669,12 @@
 							"count": 1,
 							"tag": "c:ores/peridot",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2585,6 +3689,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:quartz"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2599,6 +3709,12 @@
 							"count": 1,
 							"tag": "c:gears/electrum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2613,6 +3729,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:end_stone"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2627,6 +3749,12 @@
 							"count": 1,
 							"tag": "c:dusts/brass",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2641,6 +3769,12 @@
 							"count": 1,
 							"tag": "c:dusts/redstone",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2655,6 +3789,12 @@
 							"count": 1,
 							"tag": "c:nuggets/copper",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2669,6 +3809,12 @@
 							"count": 1,
 							"tag": "c:ores/lead",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2683,6 +3829,12 @@
 							"count": 1,
 							"tag": "c:dusts/bronze",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2697,6 +3849,12 @@
 							"count": 1,
 							"tag": "c:ingots/steel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2711,6 +3869,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/tin",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2725,6 +3889,12 @@
 							"count": 1,
 							"tag": "c:ores/zinc",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2739,6 +3909,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:glass"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2753,6 +3929,12 @@
 							"count": 1,
 							"tag": "c:rods/platinum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2767,6 +3949,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/diamond",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2781,6 +3969,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_osmium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2795,6 +3989,12 @@
 							"count": 1,
 							"tag": "c:dusts/netherite",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2809,6 +4009,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/iridium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2823,6 +4029,12 @@
 							"count": 1,
 							"tag": "c:gears/tin",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2837,6 +4049,12 @@
 							"count": 1,
 							"tag": "c:gears/constantan",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2851,6 +4069,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/enderium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2865,6 +4089,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_nickel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2879,6 +4109,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_iridium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2893,6 +4129,12 @@
 							"count": 1,
 							"tag": "c:gears/zinc",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2907,6 +4149,12 @@
 							"count": 1,
 							"tag": "c:ingots/lead",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2921,6 +4169,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/iridium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2935,6 +4189,12 @@
 							"count": 1,
 							"tag": "c:ores/copper",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2949,6 +4209,12 @@
 							"count": 1,
 							"tag": "c:gears/gold",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2963,6 +4229,12 @@
 							"count": 1,
 							"tag": "c:rods/osmium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2977,6 +4249,12 @@
 							"count": 1,
 							"tag": "c:ingots/uranium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2991,6 +4269,12 @@
 							"count": 1,
 							"tag": "c:rods/iron",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3005,6 +4289,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/silver",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3019,6 +4309,12 @@
 							"count": 1,
 							"tag": "c:ingots/bronze",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3033,6 +4329,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:clay_ball"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3047,6 +4349,12 @@
 							"count": 1,
 							"tag": "c:rods/enderium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3061,6 +4369,12 @@
 							"count": 1,
 							"tag": "c:ores/lapis",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3075,6 +4389,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:packed_ice"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3089,6 +4409,12 @@
 							"count": 1,
 							"tag": "c:plates/electrum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3103,6 +4429,12 @@
 							"count": 1,
 							"tag": "c:wires/aluminum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3117,6 +4449,12 @@
 							"count": 1,
 							"tag": "minecraft:sand",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3131,6 +4469,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/zinc",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3145,6 +4489,12 @@
 							"count": 1,
 							"tag": "c:rods/invar",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3159,6 +4509,12 @@
 							"count": 1,
 							"tag": "c:dusts/nickel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3173,6 +4529,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:snowball"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3187,6 +4549,12 @@
 							"count": 1,
 							"tag": "c:plates/tin",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3201,6 +4569,12 @@
 							"count": 1,
 							"tag": "c:ingots/osmium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3215,6 +4589,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/aluminum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3229,6 +4609,12 @@
 							"count": 1,
 							"tag": "c:ingots/gold",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3243,6 +4629,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/tin",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3257,6 +4649,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:ice"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3271,6 +4669,12 @@
 							"count": 1,
 							"tag": "c:gears/steel",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3285,6 +4689,12 @@
 							"count": 1,
 							"tag": "c:nuggets/brass",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3299,6 +4709,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/netherite",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3313,6 +4729,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/uranium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3327,6 +4749,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/zinc",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3341,6 +4769,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/copper",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3355,6 +4789,12 @@
 							"count": 1,
 							"tag": "c:nuggets/tin",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3369,6 +4809,12 @@
 							"count": 1,
 							"tag": "c:dusts/invar",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3383,6 +4829,12 @@
 							"count": 1,
 							"tag": "c:nuggets/lead",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3397,6 +4849,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:quartz_block"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3411,6 +4869,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:chiseled_quartz_block"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3425,6 +4889,12 @@
 							"count": 1,
 							"tag": "c:plates/brass",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3439,6 +4909,12 @@
 							"count": 1,
 							"tag": "c:ores/platinum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3453,6 +4929,12 @@
 							"count": 1,
 							"tag": "c:dusts/enderium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3467,6 +4949,12 @@
 							"count": 1,
 							"tag": "c:plates/lumium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3481,6 +4969,12 @@
 							"count": 1,
 							"tag": "c:dusts/silver",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3495,6 +4989,12 @@
 							"count": 1,
 							"tag": "c:nuggets/iridium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3509,6 +5009,12 @@
 							"count": 1,
 							"tag": "c:plates/copper",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3523,6 +5029,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:blaze_rod"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3537,6 +5049,12 @@
 							"count": 1,
 							"tag": "minecraft:soul_fire_base_blocks",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3551,6 +5069,12 @@
 							"count": 1,
 							"tag": "c:cobblestones",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3565,6 +5089,12 @@
 							"count": 1,
 							"tag": "c:gears/osmium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3579,6 +5109,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/platinum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3593,6 +5129,12 @@
 							"count": 1,
 							"tag": "c:plates/aluminum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3607,6 +5149,12 @@
 							"count": 1,
 							"tag": "c:plates/netherite",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3621,6 +5169,12 @@
 							"count": 1,
 							"tag": "c:rods/aluminum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3635,6 +5189,12 @@
 							"count": 1,
 							"tag": "c:ingots/constantan",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3649,6 +5209,12 @@
 							"count": 1,
 							"tag": "c:plates/enderium",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3663,6 +5229,12 @@
 							"count": 1,
 							"tag": "c:dusts/lapis",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3677,6 +5249,12 @@
 							"count": 1,
 							"tag": "c:nuggets/netherite",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3691,6 +5269,12 @@
 							"count": 1,
 							"tag": "c:silicon",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3705,6 +5289,12 @@
 							"count": 1,
 							"tag": "c:rods/zinc",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3719,6 +5309,12 @@
 							"count": 1,
 							"tag": "c:raw_materials/iron",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3733,6 +5329,12 @@
 							"count": 1,
 							"tag": "c:rods/electrum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3747,6 +5349,12 @@
 							"count": 1,
 							"tag": "c:storage_blocks/raw_aluminum",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3761,6 +5369,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:obsidian"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3775,6 +5389,12 @@
 							"count": 1,
 							"tag": "c:dusts/ruby",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3789,6 +5409,12 @@
 							"count": 1,
 							"tag": "c:stones",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3803,6 +5429,12 @@
 							"count": 1,
 							"tag": "c:ores/emerald",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3817,6 +5449,12 @@
 							"count": 1,
 							"tag": "c:plates/diamond",
 							"type": "projecte:item"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:controller",
+							"count": 1
 						}
 					],
 					"output": {

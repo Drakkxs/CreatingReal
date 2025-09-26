@@ -94,14 +94,15 @@
             if (debug) console.log(`File ${filePath} already exists. Skipping generation.`);
             return;
         }
-
+        
 
         event.forEachRecipe({ type: "immersiveengineering:bottling_machine" }, recipe => {
             if (debug) {
                 console.log(`Found Immersive Engineering Bottling Machine recipe: ${recipe.id}`);
                 console.log(JsonUtils.toPrettyString(recipe.json));
             }
-            let json = recipe.json;
+            // Copy to avoid mutating the original recipe
+            let json = JsonUtils.of(recipe.json).asJsonObject;
             let ingredients = [];
             let output = [];
 
@@ -217,7 +218,7 @@
             if (
                 (!conversion.ingredients || !conversion.ingredients.length) || (!conversion.output || !Object.keys(conversion.output).length)
             ) {
-                throw new Error(`Invalid conversion generated from recipe: ${JsonUtils.toPrettyString(recipe.json)} Converted: ${JsonUtils.toPrettyString(conversion)}`);
+                throw new Error(`Invalid conversion generated from recipe: ${JsonUtils.toPrettyString(json)} Converted: ${JsonUtils.toPrettyString(conversion)}`);
             }
 
             if (debug) {

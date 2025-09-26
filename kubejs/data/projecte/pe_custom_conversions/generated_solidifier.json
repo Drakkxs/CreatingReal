@@ -9,6 +9,12 @@
 							"amount": 10,
 							"id": "casting:molten_copper",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -23,6 +29,12 @@
 							"amount": 45,
 							"id": "casting:molten_enderium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -37,6 +49,12 @@
 							"amount": 90,
 							"id": "casting:molten_iron",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -51,6 +69,12 @@
 							"amount": 45,
 							"id": "casting:molten_osmium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -65,6 +89,12 @@
 							"amount": 90,
 							"id": "casting:molten_nickel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -79,6 +109,12 @@
 							"amount": 1000,
 							"id": "casting:molten_stone",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -93,6 +129,12 @@
 							"amount": 810,
 							"id": "casting:molten_bronze",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -107,6 +149,12 @@
 							"amount": 360,
 							"id": "casting:molten_electrum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -121,6 +169,12 @@
 							"amount": 45,
 							"id": "casting:molten_uranium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -135,6 +189,12 @@
 							"amount": 250,
 							"id": "casting:molten_quartz",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -149,6 +209,12 @@
 							"amount": 90,
 							"id": "casting:molten_gold",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -163,6 +229,12 @@
 							"amount": 45,
 							"id": "casting:molten_silver",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -177,6 +249,12 @@
 							"amount": 810,
 							"id": "casting:molten_tin",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -191,6 +269,12 @@
 							"amount": 1000,
 							"id": "casting:molten_glowstone",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -205,6 +289,12 @@
 							"amount": 810,
 							"id": "casting:molten_electrum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -219,6 +309,12 @@
 							"amount": 90,
 							"id": "casting:molten_nickel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -233,6 +329,12 @@
 							"amount": 10,
 							"id": "casting:molten_invar",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -247,6 +349,12 @@
 							"amount": 810,
 							"id": "casting:molten_constantan",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -261,6 +369,12 @@
 							"amount": 90,
 							"id": "casting:molten_invar",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -275,6 +389,12 @@
 							"amount": 90,
 							"id": "casting:molten_peridot",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -289,6 +409,12 @@
 							"amount": 90,
 							"id": "casting:molten_debris",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -303,6 +429,12 @@
 							"amount": 360,
 							"id": "casting:molten_lumium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -317,6 +449,12 @@
 							"amount": 10,
 							"id": "casting:molten_zinc",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -331,6 +469,12 @@
 							"amount": 45,
 							"id": "casting:molten_iron",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -345,6 +489,12 @@
 							"amount": 810,
 							"id": "casting:molten_netherite",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -359,6 +509,12 @@
 							"amount": 810,
 							"id": "casting:molten_lapis",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -373,6 +529,12 @@
 							"amount": 45,
 							"id": "casting:molten_gold",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -387,6 +549,12 @@
 							"amount": 810,
 							"id": "casting:molten_redstone",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -401,6 +569,12 @@
 							"amount": 810,
 							"id": "casting:molten_emerald",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -415,6 +589,12 @@
 							"amount": 1000,
 							"id": "casting:molten_glass",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -429,6 +609,12 @@
 							"amount": 90,
 							"id": "casting:molten_blaze",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -443,6 +629,12 @@
 							"amount": 90,
 							"id": "casting:molten_peridot",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -457,6 +649,12 @@
 							"amount": 90,
 							"id": "casting:molten_sapphire",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -471,6 +669,12 @@
 							"amount": 90,
 							"id": "casting:molten_osmium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -485,6 +689,12 @@
 							"amount": 90,
 							"id": "casting:molten_uranium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -499,6 +709,12 @@
 							"amount": 90,
 							"id": "casting:molten_platinum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -513,6 +729,12 @@
 							"amount": 90,
 							"id": "casting:molten_emerald",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -527,6 +749,12 @@
 							"amount": 810,
 							"id": "casting:molten_aluminum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -541,6 +769,12 @@
 							"amount": 90,
 							"id": "casting:molten_zinc",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -555,6 +789,12 @@
 							"amount": 360,
 							"id": "casting:molten_lead",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -569,6 +809,12 @@
 							"amount": 810,
 							"id": "casting:molten_copper",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -583,6 +829,12 @@
 							"amount": 45,
 							"id": "casting:molten_copper",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -597,6 +849,12 @@
 							"amount": 90,
 							"id": "casting:molten_brass",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -611,6 +869,12 @@
 							"amount": 810,
 							"id": "casting:molten_peridot",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -625,6 +889,12 @@
 							"amount": 10,
 							"id": "casting:molten_bronze",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -639,6 +909,12 @@
 							"amount": 10,
 							"id": "casting:molten_electrum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -653,6 +929,12 @@
 							"amount": 90,
 							"id": "casting:molten_steel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -667,6 +949,12 @@
 							"amount": 90,
 							"id": "casting:molten_bronze",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -681,6 +969,12 @@
 							"amount": 45,
 							"id": "casting:molten_bronze",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -700,6 +994,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "casting:controller"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -714,6 +1014,12 @@
 							"amount": 45,
 							"id": "casting:molten_brass",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -728,6 +1034,12 @@
 							"amount": 810,
 							"id": "casting:molten_enderium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -742,6 +1054,12 @@
 							"amount": 90,
 							"id": "casting:molten_iron",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -756,6 +1074,12 @@
 							"amount": 45,
 							"id": "casting:molten_aluminum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -770,6 +1094,12 @@
 							"amount": 90,
 							"id": "casting:molten_electrum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -784,6 +1114,12 @@
 							"amount": 10,
 							"id": "casting:molten_tin",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -798,6 +1134,12 @@
 							"amount": 360,
 							"id": "casting:molten_nickel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -812,6 +1154,12 @@
 							"amount": 90,
 							"id": "casting:molten_iridium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -826,6 +1174,12 @@
 							"amount": 90,
 							"id": "casting:molten_copper",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -840,6 +1194,12 @@
 							"amount": 90,
 							"id": "casting:molten_constantan",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -854,6 +1214,12 @@
 							"amount": 1000,
 							"id": "casting:molten_end_stone",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -868,6 +1234,12 @@
 							"amount": 90,
 							"id": "casting:molten_enderium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -882,6 +1254,12 @@
 							"amount": 90,
 							"id": "casting:molten_constantan",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -896,6 +1274,12 @@
 							"amount": 90,
 							"id": "casting:molten_steel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -910,6 +1294,12 @@
 							"amount": 90,
 							"id": "casting:molten_lumium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -924,6 +1314,12 @@
 							"amount": 45,
 							"id": "casting:molten_electrum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -938,6 +1334,12 @@
 							"amount": 90,
 							"id": "casting:molten_signalum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -952,6 +1354,12 @@
 							"amount": 360,
 							"id": "casting:molten_silver",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -966,6 +1374,12 @@
 							"amount": 90,
 							"id": "casting:molten_blaze",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -980,6 +1394,12 @@
 							"amount": 810,
 							"id": "casting:molten_platinum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -994,6 +1414,12 @@
 							"amount": 90,
 							"id": "casting:molten_diamond",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1008,6 +1434,12 @@
 							"amount": 90,
 							"id": "casting:molten_electrum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1022,6 +1454,12 @@
 							"amount": 45,
 							"id": "casting:molten_constantan",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1036,6 +1474,12 @@
 							"amount": 10,
 							"id": "casting:molten_platinum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1050,6 +1494,12 @@
 							"amount": 90,
 							"id": "casting:molten_iridium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1064,6 +1514,12 @@
 							"amount": 10,
 							"id": "casting:molten_diamond",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1078,6 +1534,12 @@
 							"amount": 250,
 							"id": "casting:molten_black_brick",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1092,6 +1554,12 @@
 							"amount": 810,
 							"id": "casting:molten_sapphire",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1106,6 +1574,12 @@
 							"amount": 810,
 							"id": "casting:molten_signalum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1120,6 +1594,12 @@
 							"amount": 90,
 							"id": "casting:molten_diamond",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1134,6 +1614,12 @@
 							"amount": 360,
 							"id": "casting:molten_netherite",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1148,6 +1634,12 @@
 							"amount": 10,
 							"id": "casting:molten_gold",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1162,6 +1654,12 @@
 							"amount": 810,
 							"id": "casting:molten_zinc",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1176,6 +1674,12 @@
 							"amount": 90,
 							"id": "casting:molten_aluminum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1190,6 +1694,12 @@
 							"amount": 90,
 							"id": "casting:molten_tin",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1204,6 +1714,12 @@
 							"amount": 810,
 							"id": "casting:molten_nickel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1218,6 +1734,12 @@
 							"amount": 360,
 							"id": "casting:molten_steel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1232,6 +1754,12 @@
 							"amount": 90,
 							"id": "casting:molten_netherite",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1246,6 +1774,12 @@
 							"amount": 810,
 							"id": "casting:molten_brass",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1260,6 +1794,12 @@
 							"amount": 10,
 							"id": "casting:molten_netherite",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1274,6 +1814,12 @@
 							"amount": 90,
 							"id": "casting:molten_lead",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1288,6 +1834,12 @@
 							"amount": 810,
 							"id": "casting:molten_gold",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1302,6 +1854,12 @@
 							"amount": 45,
 							"id": "casting:molten_lead",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1316,6 +1874,12 @@
 							"amount": 90,
 							"id": "casting:molten_zinc",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1330,6 +1894,12 @@
 							"amount": 360,
 							"id": "casting:molten_brass",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1344,6 +1914,12 @@
 							"amount": 90,
 							"id": "casting:molten_gold",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1358,6 +1934,12 @@
 							"amount": 10,
 							"id": "casting:molten_signalum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1372,6 +1954,12 @@
 							"amount": 90,
 							"id": "casting:molten_bronze",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1386,6 +1974,12 @@
 							"amount": 10,
 							"id": "casting:molten_aluminum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1400,6 +1994,12 @@
 							"amount": 250,
 							"id": "casting:molten_ender",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1414,6 +2014,12 @@
 							"amount": 90,
 							"id": "casting:molten_uranium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1428,6 +2034,12 @@
 							"amount": 90,
 							"id": "casting:molten_uranium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1442,6 +2054,12 @@
 							"amount": 360,
 							"id": "casting:molten_zinc",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1456,6 +2074,12 @@
 							"amount": 80,
 							"id": "casting:molten_coal",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1470,6 +2094,12 @@
 							"amount": 90,
 							"id": "casting:molten_osmium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1484,6 +2114,12 @@
 							"amount": 90,
 							"id": "casting:molten_lapis",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1498,6 +2134,12 @@
 							"amount": 45,
 							"id": "casting:molten_gold",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1512,6 +2154,12 @@
 							"amount": 360,
 							"id": "casting:molten_iridium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1526,6 +2174,12 @@
 							"amount": 90,
 							"id": "casting:molten_sapphire",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1540,6 +2194,12 @@
 							"amount": 90,
 							"id": "casting:molten_lapis",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1554,6 +2214,12 @@
 							"amount": 810,
 							"id": "casting:molten_uranium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1568,6 +2234,12 @@
 							"amount": 360,
 							"id": "casting:molten_copper",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1582,6 +2254,12 @@
 							"amount": 90,
 							"id": "casting:molten_aluminum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1596,6 +2274,12 @@
 							"amount": 90,
 							"id": "casting:molten_platinum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1610,6 +2294,12 @@
 							"amount": 360,
 							"id": "casting:molten_constantan",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1624,6 +2314,12 @@
 							"amount": 45,
 							"id": "casting:molten_copper",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1638,6 +2334,12 @@
 							"amount": 10,
 							"id": "casting:molten_nickel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1652,6 +2354,12 @@
 							"amount": 90,
 							"id": "casting:molten_signalum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1666,6 +2374,12 @@
 							"amount": 45,
 							"id": "casting:molten_iridium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1685,6 +2399,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:glass"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1699,6 +2419,12 @@
 							"amount": 90,
 							"id": "casting:molten_iron",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1713,6 +2439,12 @@
 							"amount": 10,
 							"id": "casting:molten_uranium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1727,6 +2459,12 @@
 							"amount": 250,
 							"id": "casting:molten_silicon",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1741,6 +2479,12 @@
 							"amount": 90,
 							"id": "casting:molten_enderium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1755,6 +2499,12 @@
 							"amount": 90,
 							"id": "casting:molten_ruby",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1769,6 +2519,12 @@
 							"amount": 810,
 							"id": "casting:molten_osmium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1783,6 +2539,12 @@
 							"amount": 90,
 							"id": "casting:molten_silver",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1797,6 +2559,12 @@
 							"amount": 90,
 							"id": "casting:molten_brass",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1811,6 +2579,12 @@
 							"amount": 90,
 							"id": "casting:molten_electrum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1825,6 +2599,12 @@
 							"amount": 45,
 							"id": "casting:molten_steel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1844,6 +2624,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "minecraft:glass_bottle"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1858,6 +2644,12 @@
 							"amount": 90,
 							"id": "casting:molten_invar",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1872,6 +2664,12 @@
 							"amount": 810,
 							"id": "casting:molten_iridium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1886,6 +2684,12 @@
 							"amount": 90,
 							"id": "casting:molten_platinum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1900,6 +2704,12 @@
 							"amount": 90,
 							"id": "casting:molten_lead",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1914,6 +2724,12 @@
 							"amount": 10,
 							"id": "casting:molten_silver",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1928,6 +2744,12 @@
 							"amount": 250,
 							"id": "casting:molten_glowstone",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1942,6 +2764,12 @@
 							"amount": 360,
 							"id": "casting:molten_tin",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1956,6 +2784,12 @@
 							"amount": 360,
 							"id": "casting:molten_bronze",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1970,6 +2804,12 @@
 							"amount": 45,
 							"id": "casting:molten_electrum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1984,6 +2824,12 @@
 							"amount": 45,
 							"id": "casting:molten_zinc",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -1998,6 +2844,12 @@
 							"amount": 45,
 							"id": "casting:molten_invar",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2012,6 +2864,12 @@
 							"amount": 90,
 							"id": "casting:molten_constantan",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2026,6 +2884,12 @@
 							"amount": 90,
 							"id": "casting:molten_osmium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2040,6 +2904,12 @@
 							"amount": 90,
 							"id": "casting:molten_silver",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2054,6 +2924,12 @@
 							"amount": 360,
 							"id": "casting:molten_signalum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2068,6 +2944,12 @@
 							"amount": 90,
 							"id": "casting:molten_netherite",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2082,6 +2964,12 @@
 							"amount": 90,
 							"id": "casting:molten_steel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2096,6 +2984,12 @@
 							"amount": 45,
 							"id": "casting:molten_tin",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2110,6 +3004,12 @@
 							"amount": 90,
 							"id": "casting:molten_enderium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2124,6 +3024,12 @@
 							"amount": 10,
 							"id": "casting:molten_emerald",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2138,6 +3044,12 @@
 							"amount": 360,
 							"id": "casting:molten_diamond",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2152,6 +3064,12 @@
 							"amount": 45,
 							"id": "casting:molten_netherite",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2166,6 +3084,12 @@
 							"amount": 45,
 							"id": "casting:molten_diamond",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2180,6 +3104,12 @@
 							"amount": 45,
 							"id": "casting:molten_aluminum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2194,6 +3124,12 @@
 							"amount": 10,
 							"id": "casting:molten_constantan",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2208,6 +3144,12 @@
 							"amount": 1000,
 							"id": "casting:molten_quartz",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2222,6 +3164,12 @@
 							"amount": 90,
 							"id": "casting:molten_emerald",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2236,6 +3184,12 @@
 							"amount": 360,
 							"id": "casting:molten_uranium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2250,6 +3204,12 @@
 							"amount": 90,
 							"id": "casting:molten_tin",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2264,6 +3224,12 @@
 							"amount": 810,
 							"id": "casting:molten_lumium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2278,6 +3244,12 @@
 							"amount": 90,
 							"id": "casting:molten_zinc",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2292,6 +3264,12 @@
 							"amount": 90,
 							"id": "casting:molten_lumium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2306,6 +3284,12 @@
 							"amount": 90,
 							"id": "casting:molten_aluminum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2320,6 +3304,12 @@
 							"amount": 45,
 							"id": "casting:molten_iron",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2334,6 +3324,12 @@
 							"amount": 810,
 							"id": "casting:molten_steel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2348,6 +3344,12 @@
 							"amount": 10,
 							"id": "casting:molten_iron",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2362,6 +3364,12 @@
 							"amount": 90,
 							"id": "casting:molten_redstone",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2376,6 +3384,12 @@
 							"amount": 90,
 							"id": "casting:molten_copper",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2390,6 +3404,12 @@
 							"amount": 360,
 							"id": "casting:molten_osmium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2404,6 +3424,12 @@
 							"amount": 1000,
 							"id": "casting:molten_obsidian",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2418,6 +3444,12 @@
 							"amount": 810,
 							"id": "casting:molten_ruby",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2432,6 +3464,12 @@
 							"amount": 250,
 							"id": "casting:molten_quartz",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2451,6 +3489,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "casting:tank"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2465,6 +3509,12 @@
 							"amount": 1000,
 							"id": "casting:molten_soul",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2479,6 +3529,12 @@
 							"amount": 360,
 							"id": "casting:molten_aluminum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2493,6 +3549,12 @@
 							"amount": 360,
 							"id": "casting:molten_iron",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2507,6 +3569,12 @@
 							"amount": 10,
 							"id": "casting:molten_lead",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2521,6 +3589,12 @@
 							"amount": 90,
 							"id": "casting:molten_brass",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2535,6 +3609,12 @@
 							"amount": 360,
 							"id": "casting:molten_platinum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2554,6 +3634,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "casting:mixer"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2568,6 +3654,12 @@
 							"amount": 45,
 							"id": "casting:molten_lead",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2582,6 +3674,12 @@
 							"amount": 90,
 							"id": "casting:molten_gold",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2596,6 +3694,12 @@
 							"amount": 90,
 							"id": "casting:molten_tin",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2610,6 +3714,12 @@
 							"amount": 720,
 							"id": "casting:molten_coal",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2624,6 +3734,12 @@
 							"amount": 10,
 							"id": "casting:molten_iridium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2638,6 +3754,12 @@
 							"amount": 810,
 							"id": "casting:molten_silver",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2657,6 +3779,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "casting:solidifier"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2676,6 +3804,12 @@
 							"count": 1,
 							"type": "projecte:item",
 							"id": "casting:multiblock_fuel_tank"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2690,6 +3824,12 @@
 							"amount": 360,
 							"id": "casting:molten_gold",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2704,6 +3844,12 @@
 							"amount": 810,
 							"id": "casting:molten_lead",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2718,6 +3864,12 @@
 							"amount": 10,
 							"id": "casting:molten_lumium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2732,6 +3884,12 @@
 							"amount": 90,
 							"id": "casting:molten_invar",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2746,6 +3904,12 @@
 							"amount": 45,
 							"id": "casting:molten_platinum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2760,6 +3924,12 @@
 							"amount": 90,
 							"id": "casting:molten_nickel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2774,6 +3944,12 @@
 							"amount": 10,
 							"id": "casting:molten_steel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2788,6 +3964,12 @@
 							"amount": 10,
 							"id": "casting:molten_brass",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2802,6 +3984,12 @@
 							"amount": 10,
 							"id": "casting:molten_osmium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2816,6 +4004,12 @@
 							"amount": 45,
 							"id": "casting:molten_steel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2830,6 +4024,12 @@
 							"amount": 810,
 							"id": "casting:molten_invar",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2844,6 +4044,12 @@
 							"amount": 810,
 							"id": "casting:molten_diamond",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2858,6 +4064,12 @@
 							"amount": 360,
 							"id": "casting:molten_invar",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2872,6 +4084,12 @@
 							"amount": 90,
 							"id": "casting:molten_netherite",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2886,6 +4104,12 @@
 							"amount": 90,
 							"id": "casting:molten_lumium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2900,6 +4124,12 @@
 							"amount": 45,
 							"id": "casting:molten_signalum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2914,6 +4144,12 @@
 							"amount": 90,
 							"id": "casting:molten_lead",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2928,6 +4164,12 @@
 							"amount": 90,
 							"id": "casting:molten_bronze",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2942,6 +4184,12 @@
 							"amount": 1000,
 							"id": "casting:molten_black_brick",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2956,6 +4204,12 @@
 							"amount": 45,
 							"id": "casting:molten_nickel",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2970,6 +4224,12 @@
 							"amount": 90,
 							"id": "casting:molten_iridium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2984,6 +4244,12 @@
 							"amount": 360,
 							"id": "casting:molten_enderium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -2998,6 +4264,12 @@
 							"amount": 90,
 							"id": "casting:molten_diamond",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3012,6 +4284,12 @@
 							"amount": 90,
 							"id": "casting:molten_silver",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3026,6 +4304,12 @@
 							"amount": 90,
 							"id": "casting:molten_ruby",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3040,6 +4324,12 @@
 							"amount": 90,
 							"id": "casting:molten_copper",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3054,6 +4344,12 @@
 							"amount": 90,
 							"id": "casting:molten_signalum",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3068,6 +4364,12 @@
 							"amount": 810,
 							"id": "casting:molten_iron",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3082,6 +4384,12 @@
 							"amount": 45,
 							"id": "casting:molten_lumium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {
@@ -3096,6 +4404,12 @@
 							"amount": 10,
 							"id": "casting:molten_enderium",
 							"type": "projecte:fluid"
+						},
+						{
+							"comment": "workstation",
+							"type": "projecte:item",
+							"id": "casting:solidifier",
+							"count": 1
 						}
 					],
 					"output": {

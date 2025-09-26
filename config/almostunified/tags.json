@@ -3,6 +3,9 @@
     "almostunified:straws": [
       "industrialforegoing:straw", 
       "createaddition:straw"
+    ],
+    "c:dusts/wood": [
+      "exdeorum:wood_chippings"
     ]
   },
   "tag_substitutions": {

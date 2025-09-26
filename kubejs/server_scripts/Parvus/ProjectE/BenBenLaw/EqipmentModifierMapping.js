@@ -117,11 +117,12 @@
                 console.log(`Found BBL recipe: ${recipe.id}`);
                 console.log(JsonUtils.toPrettyString(recipe.json));
             }
-            let json = recipe.json;
+            // Copy to avoid mutating the original recipe
+            let json = JsonUtils.of(recipe.json).asJsonObject;
             let ingredients = [];
             let output = [];
-            let workstation = workstationMap.get(`${recipe.type}`);
-            if (!workstation) throw new Error(`No workstation mapping found for recipe type: ${recipe.type}`);
+            let workstation = workstationMap.get(`${json.get("type").asString}`);
+            if (!workstation) throw new Error(`No workstation mapping found for recipe type: ${json.get("type").asString}`);
 
             // Unprocessed recipe data
             let rawIngredients = JsonUtils.of([].concat(
@@ -273,7 +274,7 @@
             if (
                 (!conversion.ingredients || !conversion.ingredients.length) || (!conversion.output || !Object.keys(conversion.output).length)
             ) {
-                throw new Error(`Invalid conversion generated from recipe: ${JsonUtils.toPrettyString(recipe.json)} Converted: ${JsonUtils.toPrettyString(conversion)}`);
+                throw new Error(`Invalid conversion generated from recipe: ${JsonUtils.toPrettyString(json)} Converted: ${JsonUtils.toPrettyString(conversion)}`);
             }
 
             if (debug) {
